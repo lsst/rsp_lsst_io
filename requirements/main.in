@@ -1,0 +1,9 @@
+# Editable Sphinx project dependencies
+# Add direct Sphinx build dependencies, such as
+# documenteer and Sphinx extensions beyond those provided by
+# the Documenteer user guide configuration.
+#
+# After editing, update requirements/main.txt by running:
+#     make update-deps
+
+documenteer[guide]

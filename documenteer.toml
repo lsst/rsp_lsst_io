@@ -1,0 +1,6 @@
+[project]
+title = "Rubin Science Platform"
+copyright = "2022 Association of Universities for Research in Astronomy, Inc. (AURA)"
+base_url = "https://rsp.lsst.io"
+github_url = "https://github.com/lsst/rsp_lsst_io"
+version = "Current"
