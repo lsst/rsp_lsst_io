@@ -1,0 +1,148 @@
+name: CI
+
+"on":
+  push:
+    branches-ignore:
+      # These should always correspond to pull requests, so ignore them for
+      # the push trigger and let them be triggered by the pull_request
+      # trigger, avoiding running the workflow twice.  This is a minor
+      # optimization so there's no need to ensure this is comprehensive.
+      - "dependabot/**"
+      - "renovate/**"
+      - "tickets/**"
+      - "u/**"
+    tags:
+      - "*"
+  pull_request: {}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Run pre-commit hooks
+        uses: pre-commit/action@v3.0.0
+
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        rsp:
+          - "base"
+          - "idfdev"
+          - "idfint"
+          - "idfprod"
+          - "summit"
+          - "tucson-teststand"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Run tox
+        uses: lsst-sqre/run-tox@v1
+        with:
+          python-version: ${{ matrix.python }}
+          tox-envs: "sphinx-${{ matrix.rsp }},linkcheck-${{ matrix.rsp }}"
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.rsp }}
+          path: _build/html/${{ matrix.rsp }}/
+          if-no-files-found: error
+
+  # For ticket branch previews of the primary environment's docs
+  upload-for-branch:
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: ${{ (github.event_name == 'pull_request') && startsWith(github.head_ref, "tickets/") }}
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: idfprod
+          path: _build/html/idfprod
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install LTD Conveyor
+        run: python -m pip install "ltd-conveyor<2.0.0"
+
+      - name: Upload primary
+        env:
+          LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
+          LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
+        run: |
+          ltd upload --gh --dir _build/html/idfprod --product nb
+
+      - name: Upload to LSST the Docs
+        uses: lsst-sqre/ltd-upload@v1
+        with:
+          project: "rsp"
+          dir: "_build/html/idfprod"
+          username: ${{ secrets.LTD_USERNAME }}
+          password: ${{ secrets.LTD_PASSWORD }}
+
+  # For merges to main, run an upload for all environments
+  upload-all:
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: ${{ (github.event_name == 'push') && (github.ref == 'refs/heads/main') }}
+
+    strategy:
+      matrix:
+        rsp:
+          - "base"
+          - "idfdev"
+          - "idfint"
+          - "idfprod"
+          - "summit"
+          - "tucson-teststand"
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: ${{ matrix.rsp }}
+          path: _build/html/${{ matrix.rsp }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install LTD Conveyor
+        run: python -m pip install "ltd-conveyor<2.0.0"
+
+      - name: Upload primary
+        if: ${{ matrix.rsp == 'idfprod' }}
+        uses: lsst-sqre/ltd-upload@v1
+        with:
+          project: "rsp"
+          dir: "_build/html/${{ matrix.rsp }}"
+          username: ${{ secrets.LTD_USERNAME }}
+          password: ${{ secrets.LTD_PASSWORD }}
+
+      # Don't use the ltd-upload action because we ned to override the "git-ref"
+      # as the environment name.
+      - name: Upload non-primary
+        if: ${{ matrix.rsp != 'idfprod' }}
+        env:
+          LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
+          LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
+        run: |
+          ltd upload --dir _build/html/${{ matrix.rsp }} --product rsp --git-ref ${{ matrix.rsp }}
