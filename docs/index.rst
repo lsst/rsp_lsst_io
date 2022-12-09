@@ -2,6 +2,8 @@
 Rubin Science Platform Documentation
 ####################################
 
+Learn how to do science on the |rsp-at|.
+
 .. toctree::
    :hidden:
 

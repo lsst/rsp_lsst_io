@@ -92,3 +92,8 @@ class EnvironmentDict(UserDict[str, PhalanxEnv]):
     def primary(self) -> PhalanxEnv:
         """Quick access to the primary environment."""
         return self[PRIMARY_ENV]
+
+    @property
+    def env_names(self) -> list[str]:
+        """The names of available environments."""
+        return list(self.keys())

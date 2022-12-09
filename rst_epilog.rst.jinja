@@ -1,0 +1,11 @@
+.. |rsp| replace:: `Rubin Science Platform <{{ env.squareone_url }}>`__
+{% if env.is_primary %}
+.. |rsp-at| replace:: `Rubin Science Platform <{{ env.squareone_url }}>`__
+{% else %}
+.. |rsp-at| replace:: `Rubin Science Platform at the {{ env.title }} <{{ env.squareone_url }}>`__
+{% endif %}
+.. |rsp-env| replace:: {{ env.title_full }}
+.. |rsp-env-link| replace:: `{{ env.title_full }} <{{ env.squareone_url }}>`__
+.. |rsp-api-url| replace:: ``{{ env.api_url }}``
+.. |log-in| replace:: `Log into the Notebook Aspect <{{ env.nb_url }}>`__
+.. |open-nb-aspect| replace:: `Open the Notebook Aspect <{{ env.nb_url }}>`__
