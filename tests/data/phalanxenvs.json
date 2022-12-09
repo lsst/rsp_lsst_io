@@ -59,6 +59,18 @@
       "api_url": "https://summit-lsp.lsst.codes/api/",
       "gafaelfawr_tokens_url": "https://summit-lsp.lsst.codes/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/summit/index.html"
+    },
+    "tucson-teststand": {
+      "name": "tucson-teststand",
+      "title": "Tucson Teststand",
+      "title_full": "Tucson Teststand (NOIRLab)",
+      "domain": "tucston-teststand.lsst.codes",
+      "squareone_url": "https://tucson-teststand.lsst.codes/",
+      "portal_url": "https://tucson-teststand.lsst.codes/portal/app",
+      "nb_url": "https://tucson-teststand.lsst.codes/nb/",
+      "api_url": "https://tucson-teststand.lsst.codes/api/",
+      "gafaelfawr_tokens_url": "https://tucson-teststand.lsst.codes/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/tucson-teststand/index.html"
     }
   }
 }
