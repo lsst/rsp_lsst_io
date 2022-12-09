@@ -32,6 +32,13 @@ rst_epilog = _jinja_env.get_template("rst_epilog.rst.jinja").render(
 # Configure Jinja Sphinx extension
 jinja_contexts = {"rsp": {"env": rsp_env, "all_envs": env_service.envs}}
 
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+exclude_patterns = [
+    "**/*.in.rst",  # rst files meant to be used for include directives
+    "**/*.rst.jinja",  # Jinja templates for sphinx-jinja
+]
+
 # Delete any objects that needen't be picked with the Sphinx configuration
 del _config_template_loader
 del _jinja_env
