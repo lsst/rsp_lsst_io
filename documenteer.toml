@@ -7,3 +7,14 @@ version = "Current"
 
 [sphinx]
 extensions = ["sphinx_jinja"]
+
+[sphinx.linkcheck]
+ignore = [
+    'https://rsp.lsst.io',
+    'https://base-lsp.lsst.codes',
+    'https://data-dev.lsst.cloud',
+    'https://data-int.lsst.cloud',
+    'https://data.lsst.cloud',
+    'https://summit-lsp.lsst.codes',
+    'https://tucson-teststand.lsst.codes',
+]
