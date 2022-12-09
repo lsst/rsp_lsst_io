@@ -29,6 +29,9 @@ rst_epilog = _jinja_env.get_template("rst_epilog.rst.jinja").render(
     env=rsp_env
 )
 
+# Configure Jinja Sphinx extension
+jinja_contexts = {"rsp": {"env": rsp_env, "all_envs": env_service.envs}}
+
 # Delete any objects that needen't be picked with the Sphinx configuration
 del _config_template_loader
 del _jinja_env

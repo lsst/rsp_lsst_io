@@ -4,6 +4,15 @@ Rubin Science Platform Documentation
 
 Learn how to do science on the |rsp-at|.
 
+.. jinja:: rsp
+
+   {% if not env.is_primary %}
+   .. important::
+
+      This documentation covers the |rsp-at|, an environment for Rubin Observatory staff.
+      For :abbr:`DP0 (Data Preview 0)`\ , please use the `documentation for the {{all_envs.primary.title_full}} <{{all_envs.primary.ltd_url_prefix}}>`__\ .
+   {% endif %}
+
 .. toctree::
    :hidden:
 
