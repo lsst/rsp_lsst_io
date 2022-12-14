@@ -8,6 +8,9 @@ version = "Current"
 [sphinx]
 extensions = ["sphinx_jinja"]
 
+[sphinx.intersphinx.projects]
+python = "https://docs.python.org/3/"
+
 [sphinx.linkcheck]
 ignore = [
     'https://rsp.lsst.io',
