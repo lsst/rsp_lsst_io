@@ -8,7 +8,8 @@
       "squareone_url": "https://base-lsp.lsst.codes/",
       "portal_url": "https://base-lsp.lsst.codes/portal/app",
       "nb_url": "https://base-lsp.lsst.codes/nb/",
-      "api_url": "https://base-lsp.lsst.codes/api/",
+      "api_url": null,
+      "api_tap_url": null,
       "gafaelfawr_tokens_url": "https://base-lsp.lsst.codes/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/base/index.html"
     },
@@ -21,6 +22,7 @@
       "portal_url": "https://data-dev.lsst.cloud/portal/app",
       "nb_url": "https://data-dev.lsst.cloud/nb/",
       "api_url": "https://data-dev.lsst.cloud/api/",
+      "api_tap_url": "https://data-dev.lsst.cloud/api/",
       "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html"
     },
@@ -33,6 +35,7 @@
       "portal_url": "https://data-int.lsst.cloud/portal/app",
       "nb_url": "https://data-int.lsst.cloud/nb/",
       "api_url": "https://data-int.lsst.cloud/api/",
+      "api_tap_url": "https://data-int.lsst.cloud/api/",
       "gafaelfawr_tokens_url": "https://data-int.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfint/index.html"
     },
@@ -45,6 +48,7 @@
       "portal_url": "https://data.lsst.cloud/portal/app",
       "nb_url": "https://data.lsst.cloud/nb/",
       "api_url": "https://data.lsst.cloud/api/",
+      "api_tap_url": "https://data.lsst.cloud/api/tap/",
       "gafaelfawr_tokens_url": "https://data.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfprod/index.html"
     },
@@ -56,7 +60,8 @@
       "squareone_url": "https://summit-lsp.lsst.codes/",
       "portal_url": "https://summit-lsp.lsst.codes/portal/app",
       "nb_url": "https://summit-lsp.lsst.codes/nb/",
-      "api_url": "https://summit-lsp.lsst.codes/api/",
+      "api_url": null,
+      "api_tap_url": null,
       "gafaelfawr_tokens_url": "https://summit-lsp.lsst.codes/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/summit/index.html"
     },
@@ -68,7 +73,8 @@
       "squareone_url": "https://tucson-teststand.lsst.codes/",
       "portal_url": "https://tucson-teststand.lsst.codes/portal/app",
       "nb_url": "https://tucson-teststand.lsst.codes/nb/",
-      "api_url": "https://tucson-teststand.lsst.codes/api/",
+      "api_url": null,
+      "api_tap_url": null,
       "gafaelfawr_tokens_url": "https://tucson-teststand.lsst.codes/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/tucson-teststand/index.html"
     }

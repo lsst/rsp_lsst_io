@@ -39,6 +39,17 @@ exclude_patterns = [
     "**/*.rst.jinja",  # Jinja templates for sphinx-jinja
 ]
 
+# Ignore specific files that are ignored because the relevant services
+# aren't available in that environment.
+if not rsp_env.portal_url:
+    exclude_patterns.append("guides/portal/**/*.rst")
+    exclude_patterns.append("guides/getting-started/portal-first-steps.rst")
+if not rsp_env.nb_url:
+    exclude_patterns.append("guides/nb/**/*.rst")
+    exclude_patterns.append("guides/getting-started/notebook-first-steps.rst")
+if not rsp_env.api_tap_url:
+    exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
+
 # Delete any objects that needen't be picked with the Sphinx configuration
 del _config_template_loader
 del _jinja_env

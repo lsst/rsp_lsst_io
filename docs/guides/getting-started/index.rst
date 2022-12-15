@@ -5,16 +5,18 @@ Get started on the Rubin Science Platform
 :doc:`Create an account and log into the Rubin Science Platform <get-an-account>`, and start exploring Rubin data.
 
 .. toctree::
-   :hidden:
    :caption: Account set up
    :name: getting-started-accounts
+   :titlesonly:
 
    get-an-account
 
-.. toctree::
-   :hidden:
-   :caption: Quick start tutorials
-   :name: getting-started-tutorials
+.. jinja:: rsp
 
-   portal-first-steps
-   notebook-first-steps
+   .. toctree::
+      :caption: Quick start tutorials
+      :name: getting-started-tutorials
+      :titlesonly:
+
+      {% if env.portal_url %}portal-first-steps{% endif %}
+      {% if env.nb_url %}notebook-first-steps{% endif %}

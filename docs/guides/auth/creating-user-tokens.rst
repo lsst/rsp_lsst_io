@@ -43,8 +43,11 @@ Follow these steps to create a user token.
    .. image:: images/create-token-result.png
       :alt: Create token result
 
+.. jinja:: rsp
 
-Next steps
-==========
+   {% if env.api_tap_url %}
+   Next steps
+   ==========
 
-- Follow :doc:`a tutorial for authenticating TOPCAT to the TAP (table) service <using-topcat-outside-rsp>` from your local computer.
+   - Follow :doc:`a tutorial for authenticating TOPCAT to the TAP (table) service <using-topcat-outside-rsp>` from your local computer.
+   {% endif %}

@@ -6,13 +6,21 @@
 {% endif %}
 .. |rsp-env| replace:: {{ env.title_full }}
 .. |rsp-env-link| replace:: `{{ env.title_full }} <{{ env.squareone_url }}>`__
+{% if env.api_url %}
 .. |rsp-api-url| replace:: ``{{ env.api_url }}``
+{% endif %}
+{% if env.nb_url %}
 .. |log-in| replace:: `Log into the Notebook Aspect <{{ env.nb_url }}>`__
 .. |open-nb-aspect| replace:: `Open the Notebook Aspect <{{ env.nb_url }}>`__
+{% endif %}
 .. |rsp-url| replace:: `{{env.squareone_url}} <{{env.squareone_url}}>`__
+{% if env.nb_url %}
 .. |nb-url| replace:: `{{env.nb_url}} <{{env.nb_url}}>`__
+{% endif %}
+{% if env.api_tap_url %}
 .. |rsp-tap-url| replace:: `{{env.api_tap_url}} <{{env.api_tap_url}}>`__
 .. |rsp-tap-url-code| replace:: ``{{env.api_tap_url}}``
+{% endif%}
 
 .. _`Homepage`: {{env.squareone_url}}
 
