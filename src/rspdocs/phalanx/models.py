@@ -84,6 +84,14 @@ class PhalanxEnv(BaseModel):
         """
         return self.name == PRIMARY_ENV
 
+    @property
+    def api_tap_url(self) -> Optional[str]:
+        """The root URL for the TAP service, or ``None`` if the TAP server is
+        not available.
+        """
+        # FIXME change this to return None if TAP isn't available on this RSP.
+        return f"{self.api_url}tap"
+
 
 class EnvironmentDict(UserDict[str, PhalanxEnv]):
     """Collection of `PhalanxEnv`, keyed by the environment name"""

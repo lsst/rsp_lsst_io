@@ -8,5 +8,6 @@ Rubin Science Platform Guides
    :hidden:
 
    getting-started/index
+   auth/index
    portal/index
    notebooks/index
