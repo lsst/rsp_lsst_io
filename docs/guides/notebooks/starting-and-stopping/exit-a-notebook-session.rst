@@ -1,6 +1,6 @@
-#################################
-Exiting a Notebook Aspect session
-#################################
+##########################
+Exiting a notebook session
+##########################
 
 Once you’re ready to take a break, exit from the Notebook Aspect to release computational resources to others.
 Don’t worry, all you opened notebook tabs are saved.

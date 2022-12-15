@@ -6,7 +6,8 @@ The Notebook aspect enables you to do scientific analysis in your web browser by
 The Notebook aspect is powered by JupyterLab_.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :titlesonly:
 
    starting-and-stopping/index
    science-pipelines/index

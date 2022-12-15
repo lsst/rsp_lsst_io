@@ -9,12 +9,16 @@ These pages highlight how to work with the Science Pipelines from the Notebook a
 For more details about the Science Pipelines, see the `LSST Science Pipelines documentation`_.
 
 .. toctree::
+   :titlesonly:
+   :maxdepth: 2
    :caption: How-to guides
 
    science-pipelines-in-terminal
    science-pipelines-in-notebook
 
 .. toctree::
+   :titlesonly:
+   :maxdepth: 2
    :caption: Tutorials
 
    science-pipelines-development

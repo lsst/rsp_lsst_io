@@ -19,7 +19,7 @@ Learn how to do science on the |rsp-at|.
    Guides <guides/index>
    Support <support/index>
 
-.. grid:: 2
+.. grid:: 3
 
    .. grid-item-card:: New to the Science Platform?
       :link: guides/getting-started/index
@@ -33,3 +33,9 @@ Learn how to do science on the |rsp-at|.
       :link-type: doc
 
       Learn how to use the Rubin Science Platform's portal, notebook, and API services.
+
+   .. grid-item-card:: Support
+      :link: support/index
+      :link-type: doc
+
+      Learn how to get additional help with the Rubin Science Platform and related Rubin Observatory projects.
