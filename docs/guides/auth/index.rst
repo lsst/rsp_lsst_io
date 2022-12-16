@@ -11,4 +11,5 @@ Learn about signing into the |rsp-at| and using security tokens to access VO ser
       :titlesonly:
 
       creating-user-tokens
+      token-scopes
       {% if env.api_tap_url %}using-topcat-outside-rsp{% endif %}
