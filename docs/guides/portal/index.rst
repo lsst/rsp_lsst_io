@@ -2,4 +2,6 @@
 Portal aspect
 #############
 
-TK Documentation pages for the portal.
+.. warning::
+
+   This page is a stub that we're working on.
