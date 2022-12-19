@@ -18,6 +18,7 @@ Learn how to do science on the |rsp-at|.
 
    Guides <guides/index>
    Support <support/index>
+   Contributing <contributing/index>
 
 .. grid:: 3
 

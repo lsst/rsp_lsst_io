@@ -1,3 +1,5 @@
+.. Templated substitutions ====================================================
+
 .. |rsp| replace:: `Rubin Science Platform <{{ env.squareone_url }}>`__
 {% if env.is_primary %}
 .. |rsp-at| replace:: `Rubin Science Platform <{{ env.squareone_url }}>`__
@@ -22,12 +24,21 @@
 .. |rsp-tap-url-code| replace:: ``{{env.api_tap_url}}``
 {% endif%}
 
+.. Templated link targets =====================================================
+
 .. _`Homepage`: {{env.squareone_url}}
 
+.. Non-templated link targets =================================================
+
 .. _`DP0.2 Guide`: https://dp0-2.lsst.io/
+.. _`file browser`: https://jupyterlab.readthedocs.io/en/latest/user/files.html
+.. _Jinja: https://jinja.palletsprojects.com/en/3.1.x/
 .. _JupyterLab: https://jupyterlab.readthedocs.io/en/latest/
 .. _`LSST Science Pipelines documentation`:
 .. _`LSST Science Pipelines`: https://pipelines.lsst.io
+.. _pre-commit: https://pre-commit.com
+.. _sphinx-jinja: https://github.com/tardyp/sphinx-jinja
 .. _JupyterLab terminal:
 .. _terminal: https://jupyterlab.readthedocs.io/en/latest/user/terminal.html
-.. _`file browser`: https://jupyterlab.readthedocs.io/en/latest/user/files.html
+.. _tox: https://tox.wiki/en/latest/
+.. _venv: https://docs.python.org/3/library/venv.html
