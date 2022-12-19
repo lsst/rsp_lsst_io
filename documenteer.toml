@@ -14,6 +14,7 @@ python = "https://docs.python.org/3/"
 [sphinx.linkcheck]
 ignore = [
     'https://rsp.lsst.io',
+    'https://github.com/lsst-rsp/rsp_lsst_io',
     'https://base-lsp.lsst.codes',
     'https://data-dev.lsst.cloud',
     'https://data-int.lsst.cloud',
