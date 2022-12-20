@@ -4,3 +4,21 @@ copyright = "2022 Association of Universities for Research in Astronomy, Inc. (A
 base_url = "https://rsp.lsst.io"
 github_url = "https://github.com/lsst/rsp_lsst_io"
 version = "Current"
+
+[sphinx]
+extensions = ["sphinx_jinja"]
+
+[sphinx.intersphinx.projects]
+python = "https://docs.python.org/3/"
+
+[sphinx.linkcheck]
+ignore = [
+    'https://rsp.lsst.io',
+    'https://github.com/lsst-rsp/rsp_lsst_io',
+    'https://base-lsp.lsst.codes',
+    'https://data-dev.lsst.cloud',
+    'https://data-int.lsst.cloud',
+    'https://data.lsst.cloud',
+    'https://summit-lsp.lsst.codes',
+    'https://tucson-teststand.lsst.codes',
+]

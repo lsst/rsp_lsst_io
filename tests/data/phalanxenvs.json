@@ -1,0 +1,82 @@
+{
+  "environments": {
+    "base": {
+      "name": "base",
+      "title": "Rubin Base Data Facility",
+      "title_full": null,
+      "domain": "base-lsp.lsst.codes",
+      "squareone_url": "https://base-lsp.lsst.codes/",
+      "portal_url": "https://base-lsp.lsst.codes/portal/app",
+      "nb_url": "https://base-lsp.lsst.codes/nb/",
+      "api_url": null,
+      "api_tap_url": null,
+      "gafaelfawr_tokens_url": "https://base-lsp.lsst.codes/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/base/index.html"
+    },
+    "idfdev": {
+      "name": "idfdev",
+      "title": "Rubin IDF (Dev)",
+      "title_full": "Rubin Interim Data Facility (Dev)",
+      "domain": "data-dev.lsst.cloud",
+      "squareone_url": "https://data-dev.lsst.cloud/",
+      "portal_url": "https://data-dev.lsst.cloud/portal/app",
+      "nb_url": "https://data-dev.lsst.cloud/nb/",
+      "api_url": "https://data-dev.lsst.cloud/api/",
+      "api_tap_url": "https://data-dev.lsst.cloud/api/",
+      "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html"
+    },
+    "idfint": {
+      "name": "idfint",
+      "title": "Rubin IDF (Int)",
+      "title_full": "Rubin Interim Data Facility (Int)",
+      "domain": "data-int.lsst.cloud",
+      "squareone_url": "https://data-int.lsst.cloud/",
+      "portal_url": "https://data-int.lsst.cloud/portal/app",
+      "nb_url": "https://data-int.lsst.cloud/nb/",
+      "api_url": "https://data-int.lsst.cloud/api/",
+      "api_tap_url": "https://data-int.lsst.cloud/api/",
+      "gafaelfawr_tokens_url": "https://data-int.lsst.cloud/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfint/index.html"
+    },
+    "idfprod": {
+      "name": "idfprod",
+      "title": "Rubin IDF",
+      "title_full": "Rubin Interim Data Facility",
+      "domain": "data.lsst.cloud",
+      "squareone_url": "https://data.lsst.cloud/",
+      "portal_url": "https://data.lsst.cloud/portal/app",
+      "nb_url": "https://data.lsst.cloud/nb/",
+      "api_url": "https://data.lsst.cloud/api/",
+      "api_tap_url": "https://data.lsst.cloud/api/tap/",
+      "gafaelfawr_tokens_url": "https://data.lsst.cloud/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfprod/index.html"
+    },
+    "summit": {
+      "name": "summit",
+      "title": "Rubin Summit",
+      "title_full": "Rubin Summit Data Facility",
+      "domain": "summit-lsp.lsst.codes",
+      "squareone_url": "https://summit-lsp.lsst.codes/",
+      "portal_url": "https://summit-lsp.lsst.codes/portal/app",
+      "nb_url": "https://summit-lsp.lsst.codes/nb/",
+      "api_url": null,
+      "api_tap_url": null,
+      "gafaelfawr_tokens_url": "https://summit-lsp.lsst.codes/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/summit/index.html"
+    },
+    "tucson-teststand": {
+      "name": "tucson-teststand",
+      "title": "Tucson Teststand",
+      "title_full": "Tucson Teststand (NOIRLab)",
+      "domain": "tucston-teststand.lsst.codes",
+      "squareone_url": "https://tucson-teststand.lsst.codes/",
+      "portal_url": "https://tucson-teststand.lsst.codes/portal/app",
+      "nb_url": "https://tucson-teststand.lsst.codes/nb/",
+      "api_url": null,
+      "api_tap_url": null,
+      "gafaelfawr_tokens_url": "https://tucson-teststand.lsst.codes/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/tucson-teststand/index.html"
+    }
+  }
+}
