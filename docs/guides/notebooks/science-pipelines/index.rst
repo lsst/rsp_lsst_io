@@ -1,8 +1,8 @@
-###########################
-Using the Science Pipelines
-###########################
+##################################################
+Using the Science Pipelines in the Notebook Aspect
+##################################################
 
-The `LSST Science Pipelines`_ are included in the Notebook aspect's conda environment.
+The `LSST Science Pipelines`_ are included in the Notebook Aspect's conda environment.
 With the Science Pipelines, you can access datasets through the Butler, run pipelines and tasks to process data.
 
 These pages highlight how to work with the Science Pipelines from the Notebook aspect.

@@ -10,5 +10,5 @@ The Notebook aspect is powered by JupyterLab_.
    :titlesonly:
 
    starting-and-stopping/index
-   science-pipelines/index
+   Using the Science Pipelines <science-pipelines/index>
    configuration/index
