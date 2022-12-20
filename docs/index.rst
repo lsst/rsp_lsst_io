@@ -2,7 +2,8 @@
 Rubin Science Platform Documentation
 ####################################
 
-Learn how to do science on the |rsp-at|.
+The Rubin Science Platform is an online service that enables you to access and analyze Rubin LSST data.
+This documentation will help you set up your user account and work with the Rubin Science Platform's software and services.
 
 .. jinja:: rsp
 
@@ -39,4 +40,10 @@ Learn how to do science on the |rsp-at|.
       :link: support/index
       :link-type: doc
 
-      Learn how to get additional help with the Rubin Science Platform and related Rubin Observatory projects.
+      Get additional help with the Rubin Science Platform and related Rubin Observatory projects.
+
+Related documentation
+=====================
+
+- `Data Preview 0.2`_ — Learn about the DESC DC2 simulated dataset and get tutorials for analyzing data with the Rubin Science Platform.
+- `LSST Science Pipelines`_ — Learn about the Rubin LSST's Python data processing, measurement, and access software, which you can use from the Rubin Science Platform.
