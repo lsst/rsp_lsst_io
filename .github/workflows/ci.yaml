@@ -139,4 +139,5 @@ jobs:
           LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
           LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
         run: |
+          pip install ltd-conveyor
           ltd upload --dir _build/html/${{ matrix.rsp }} --product rsp --git-ref ${{ matrix.rsp }}
