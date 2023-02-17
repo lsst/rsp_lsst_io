@@ -59,10 +59,11 @@ html_theme_options["switcher"] = {  # noqa: F405
     ),
     "version_match": rsp_env.name,
 }
-html_theme_options["navbar_start"] = [  # noqa: F405
-    "navbar-logo",
+html_theme_options["navbar_center"] = [  # noqa: F405
     "version-switcher",
+    "navbar-nav",
 ]
+html_theme_options["navbar_align"] = "left"  # noqa: F405
 
 # Delete any objects that needn't be pickled with the Sphinx configuration
 del _config_template_loader
