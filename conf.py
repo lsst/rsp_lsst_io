@@ -65,6 +65,8 @@ html_theme_options["navbar_center"] = [  # noqa: F405
 ]
 html_theme_options["navbar_align"] = "left"  # noqa: F405
 
+html_static_path.append("docs/_static/versions.json")  # noqa: F405
+
 # Delete any objects that needn't be pickled with the Sphinx configuration
 del _config_template_loader
 del _jinja_env
