@@ -22,6 +22,8 @@ Getting an account on the RSP
       Rubin staff *do not have access to your password or any other data from your institutional account besides your name.*
    -  Our `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ is in plain language - you should review it; your access is contingent on abiding by it.
 
+   .. vimeo:: 800911530
+
    Getting started
    ---------------
 
