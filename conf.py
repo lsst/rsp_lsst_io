@@ -52,11 +52,7 @@ if not rsp_env.api_tap_url:
 
 # Add environment switcher
 html_theme_options["switcher"] = {  # noqa: F405
-    "json_url": (
-        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d40173"
-        "f11a4a1a256/raw/345889140a6dff127a7a5c769e237449a086d721/"
-        "rsp-versions.json"
-    ),
+    "json_url": "https://rsp.lsst.io/_static/versions.json",
     "version_match": rsp_env.name,
 }
 html_theme_options["navbar_center"] = [  # noqa: F405
