@@ -18,5 +18,5 @@ Get started on the Rubin Science Platform
       :name: getting-started-tutorials
       :titlesonly:
 
-      {% if env.portal_url %}portal-first-steps{% endif %}
-      {% if env.nb_url %}notebook-first-steps{% endif %}
+      {% if env.portal_url %}First steps with the Portal <https://dp0-2.lsst.io/data-access-analysis-tools/portal-intro.html>{% endif %}
+      {% if env.nb_url %}First steps with the Notebooks <https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html>{% endif %}
