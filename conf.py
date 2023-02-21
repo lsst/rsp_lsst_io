@@ -51,9 +51,14 @@ if not rsp_env.api_tap_url:
     exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
 
 # Add environment switcher
+version = rsp_env.title  # noqa: F405
 html_theme_options["switcher"] = {  # noqa: F405
-    "json_url": "https://rsp.lsst.io/_static/versions.json",
-    "version_match": rsp_env.name,
+    "json_url": (
+        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d40173"
+        "f11a4a1a256/raw/547a1ada8db54aac2540ca8291f5aa0b79923251/"
+        "rsp-versions.json"
+    ),
+    "version_match": rsp_env.title,
 }
 html_theme_options["navbar_center"] = [  # noqa: F405
     "version-switcher",

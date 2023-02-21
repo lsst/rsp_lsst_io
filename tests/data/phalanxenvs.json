@@ -41,8 +41,8 @@
     },
     "idfprod": {
       "name": "idfprod",
-      "title": "Rubin IDF",
-      "title_full": "Rubin Interim Data Facility",
+      "title": "data.lsst.cloud",
+      "title_full": "data.lsst.cloud",
       "domain": "data.lsst.cloud",
       "squareone_url": "https://data.lsst.cloud/",
       "portal_url": "https://data.lsst.cloud/portal/app",

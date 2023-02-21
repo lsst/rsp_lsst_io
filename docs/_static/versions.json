@@ -1,11 +1,16 @@
 [
   {
-    "name": "IDF",
+    "name": "data.lsst.cloud",
     "version": "idfprod",
     "url": "https://rsp.lsst.io/"
   },
   {
-    "name": "IDF (integration)",
+    "name": "Rubin Summit",
+    "version": "summit",
+    "url": "https://rsp.lsst.io/v/summit/"
+  },
+  {
+    "name": "Rubin IDF (Int)",
     "version": "idfint",
     "url": "https://rsp.lsst.io/v/idfint/"
   },
@@ -13,10 +18,5 @@
     "name": "Tucson Teststand",
     "version": "tucson-teststand",
     "url": "https://rsp.lsst.io/v/tucson-teststand/"
-  },
-  {
-    "name": "Summit",
-    "version": "summit",
-    "url": "https://rsp.lsst.io/v/summit/"
   }
 ]
