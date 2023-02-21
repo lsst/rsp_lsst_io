@@ -50,6 +50,23 @@ if not rsp_env.nb_url:
 if not rsp_env.api_tap_url:
     exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
 
-# Delete any objects that needen't be picked with the Sphinx configuration
+# Add environment switcher
+html_theme_options["switcher"] = {  # noqa: F405
+    "json_url": (
+        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d40173"
+        "f11a4a1a256/raw/345889140a6dff127a7a5c769e237449a086d721/"
+        "rsp-versions.json"
+    ),
+    "version_match": rsp_env.name,
+}
+html_theme_options["navbar_center"] = [  # noqa: F405
+    "version-switcher",
+    "navbar-nav",
+]
+html_theme_options["navbar_align"] = "left"  # noqa: F405
+
+html_static_path.append("docs/_static/versions.json")  # noqa: F405
+
+# Delete any objects that needn't be pickled with the Sphinx configuration
 del _config_template_loader
 del _jinja_env

@@ -16,7 +16,7 @@ class PhalanxEnv(BaseModel):
     """A Pydantic model of a Phalanx environment."""
 
     name: str = Field(
-        descrption="The environment's name in Phalanx.", example="idfprod"
+        description="The environment's name in Phalanx.", example="idfprod"
     )
 
     title: str = Field(

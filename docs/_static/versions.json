@@ -1,0 +1,22 @@
+[
+  {
+    "name": "IDF",
+    "version": "idfprod",
+    "url": "https://rsp.lsst.io/"
+  },
+  {
+    "name": "IDF (integration)",
+    "version": "idfint",
+    "url": "https://rsp.lsst.io/v/idfint/"
+  },
+  {
+    "name": "Tucson Teststand",
+    "version": "tucson-teststand",
+    "url": "https://rsp.lsst.io/v/tucson-teststand/"
+  },
+  {
+    "name": "Summit",
+    "version": "summit",
+    "url": "https://rsp.lsst.io/v/summit/"
+  }
+]
