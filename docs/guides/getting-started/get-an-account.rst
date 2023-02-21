@@ -29,14 +29,30 @@ Getting an account on the RSP
 
    1. RSP landing page:
 
-      -  Go to the RSP at |rsp-url| in your browser
-      -  Click **Log In** at the upper right
+      .. grid:: 1 2 2 2
+
+         .. grid-item::
+
+            - Go to the RSP at |rsp-url| in your browser
+            - Click :guilabel:`Log In` at the upper right
+
+         .. grid-item::
+
+            .. image:: images/acc_login.png
 
    2. Identity provider choice page:
 
-      -  Chose an institution/provider with whom you have an established identity
-      -  You will be able to link additional identities later (if you have more than one)
-      -  Remember who you pick!
+      .. grid:: 1 2 2 2
+
+         .. grid-item::
+
+            - Chose an institution/provider with whom you have an established identity
+            - You will be able to link additional identities later (if you have more than one)
+            - Remember who you pick!
+
+         .. grid-item::
+
+            .. image:: images/acc_institution.png
 
    3. Institution login page(s)
 
@@ -46,8 +62,16 @@ Getting an account on the RSP
 
    4. RSP login page:
 
-      -  Chose whichever institution you picked above (should be set already - this is not the time to change your mind!).
-         This looks deceptively like Step 2.
+      .. grid:: 1 2 2 2
+
+         .. grid-item::
+
+            - Chose whichever institution you picked above (should be set already - this is not the time to change your mind!).
+              This looks deceptively like Step 2.
+
+         .. grid-item::
+
+            .. image:: images/acc_institution.png
 
    5. Self signup pages:
 
