@@ -5,20 +5,20 @@ Getting an account and logging in
 .. jinja:: rsp
 
    {% if env.is_primary %}
-   
+
    Signing up for an RSP account on |rsp-url|
    ==========================================
 
    Things to know before you get started:
    --------------------------------------
 
-   -  You can sign up for an account, however, your account will have to be approved by Rubin Observatory before becoming active and is subject to confirmation that you fulfill the criteria for being granted access. 
+   -  You can sign up for an account, however, your account will have to be approved by Rubin Observatory before becoming active and is subject to confirmation that you fulfill the criteria for being granted access.
    *At this time, this means having been invited to the pre-operations Data Preview program.*
    Visit the `DP0.2 Guide`_ for more information.
 
-   -  For |rsp-at|, the RSP uses the CILogon service (operated by NCSA) in order to allow you to gain RSP access with your institutional identity (via the InCommon federation) or certain other participating providers (such as Github or Orcid). 
+   -  For |rsp-at|, the RSP uses the CILogon service (operated by NCSA) in order to allow you to gain RSP access with your institutional identity (via the InCommon federation) or certain other participating providers (such as Github or Orcid).
    Simply put, our system asks your institution’s system if you are who you say you are.
-   You *must* have an account with one of the supported institutions or organizations to use the RSP and if you have account issues such as needing to reset your password, you should follow up with your institution as you would normally. 
+   You *must* have an account with one of the supported institutions or organizations to use the RSP and if you have account issues such as needing to reset your password, you should follow up with your institution as you would normally.
    Rubin staff *do not have access to your password or any other data from your institutional account besides your name.*
    -  Our `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ is in plain language - you should review it; your access is contingent on abiding by it.
 
@@ -44,15 +44,15 @@ Getting an account and logging in
 
    4. RSP login page:
 
-      -  Chose whichever institution you picked above (should be set already - this is not the time to change your mind!). 
+      -  Chose whichever institution you picked above (should be set already - this is not the time to change your mind!).
          This looks deceptively like Step 2.
 
    5. Self signup pages:
 
       -  You can now start the self-signup
-      -  You are asked for given and family name. *We do not require your legal name*; the reason you are being asked is to allow us to establish you are entitled to our data products. 
+      -  You are asked for given and family name. *We do not require your legal name*; the reason you are being asked is to allow us to establish you are entitled to our data products.
       You should supply whichever name you use for publications or are known to your colleagues as; for example, if you go by your middle name, supply your middle name as the given name; if you publish as Lady Gaga signing up as \****Stefani Joanne Angelina Germanotta would be just confusing to everybody.
-      -  You can provide any email you want provided you can immediately access it (for the confirmation). 
+      -  You can provide any email you want provided you can immediately access it (for the confirmation).
       Additionally, using your institutional email address (instead of say, a gmail account) helps our verification process; please do so if you can.
 
    6. Email confirmation step:
@@ -63,13 +63,13 @@ Getting an account and logging in
    7. Finishing steps:
 
       -  Clicking on the link in your email will take you to a page where you can accept your invitation
-      
+
       -  Your final job is to select a username; this has to be a valid unix username
       -  This completes the account petition process; you will receive an email at the address you provided when your account access has been approved by the project.
-   
-   
-   
-   
+
+
+
+
    {% else %}
    .. important::
 
