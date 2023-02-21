@@ -12,9 +12,10 @@ Getting an account on the RSP
    Things to know before you get started:
    --------------------------------------
 
-   -  You can sign up for an account, however, your account will have to be approved by Rubin Observatory before becoming active and is subject to confirmation that you fulfill the criteria for being granted access.
-      *At this time, this means having been invited to the pre-operations Data Preview program.*
-      Visit the `DP0.2 Guide`_ for more information.
+   - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
+     All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://lsst.org/scientists/international-drh-list>`__.
+     For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
+     If you’re not sure if you have data rights, contact Melissa Graham at `mlg3k@uw.ed <mailto:mlg3k@uw.ed>`__ or with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`__.
 
    -  For |rsp-at|, the RSP uses the CILogon service (operated by NCSA) in order to allow you to gain RSP access with your institutional identity (via the InCommon federation) or certain other participating providers (such as Github or Orcid).
       Simply put, our system asks your institution’s system if you are who you say you are.
