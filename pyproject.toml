@@ -20,7 +20,13 @@ classifiers = [
     "Typing :: Typed",
 ]
 requires-python = ">=3.8"
-dependencies = ["documenteer[guide]", "pydantic", "Jinja2", "sphinx-jinja"]
+dependencies = [
+    "documenteer[guide]",
+    "pydantic",
+    "Jinja2",
+    "sphinx-jinja",
+    "sphinxcontrib-youtube",
+]
 dynamic = ["version"]
 
 [project.optional-dependencies]
