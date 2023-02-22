@@ -21,4 +21,5 @@ ignore = [
     'https://data.lsst.cloud',
     'https://summit-lsp.lsst.codes',
     'https://tucson-teststand.lsst.codes',
+    'https://docushare.lsst.org',
 ]
