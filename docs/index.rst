@@ -23,11 +23,10 @@ This documentation will help you set up your user account and work with the Rubi
 
 .. grid:: 3
 
-   .. grid-item-card:: New to the Science Platform?
-      :link: guides/getting-started/index
+   .. grid-item-card:: Sign up for an account
+      :link: guides/getting-started/get-an-account
       :link-type: doc
 
-      Make your first query in the portal and launch your first notebook session.
       Learn how to request an account and log in.
 
    .. grid-item-card:: User guides
