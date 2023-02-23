@@ -64,7 +64,7 @@ Getting an account on the RSP
       - You are forwarded to your selected institution.
       - Log on as you normally would.
       - If your institution has additional authentication steps (such as 2FA) you will have to complete those too.
-      - At this point the RSP wii detect that you do not already have an established account and start the onboarding flow
+      - At this point the RSP will detect that you do not already have an established account and start the onboarding flow.
 
    4. Onboarding flow: Identity provider selection
 
