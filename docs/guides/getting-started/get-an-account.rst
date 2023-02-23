@@ -46,7 +46,7 @@ Getting an account on the RSP
 
             .. image:: images/acc_login.png
 
-   2. Identity provider choice page:
+   2. RSP (via CILogon) login page:
 
       .. grid:: 1 2 2 2
 
@@ -54,7 +54,6 @@ Getting an account on the RSP
 
             - Chose an institution/provider with whom you have an established account.
             - You will be able to link additional identities later (if you have more than one).
-            - Remember who you pick!
 
          .. grid-item::
 
@@ -65,21 +64,22 @@ Getting an account on the RSP
       - You are forwarded to your selected institution.
       - Log on as you normally would.
       - If your institution has additional authentication steps (such as 2FA) you will have to complete those too.
+      - At this point the RSP wii detect that you do not already have an established account and start the onboarding flow
 
-   4. RSP login page:
+   4. Onboarding flow: Identity provider selection
 
       .. grid:: 1 2 2 2
 
          .. grid-item::
 
-            - Chose whichever institution you picked above (should be set already - this is not the time to change your mind!).
+            - Chose whichever institution you picked above (should be selected on the menu already - this is not the time to change your mind!).
               This looks deceptively like Step 2.
 
          .. grid-item::
 
             .. image:: images/acc_institution.png
 
-   5. Self signup pages:
+   5. Onboarding flow: Self signup pages
 
       - You can now start the self signup.
       - Provide your given and family name.
@@ -90,14 +90,14 @@ Getting an account on the RSP
         If you publish as *Lady Gaga*, don't sign up as *Stefani Joanne Angelina Germanotta*.
 
       - Provide any email you want provided you can immediately access it (for the confirmation).
-        Additionally, using your institutional email address (instead of say, a Gmail account) helps our verification process; please do so if you can.
+        Additionally, using your main institutional email address (instead of say, a Gmail account) helps our verification process; please do so if you can.
 
-   6. Email confirmation step:
+   6. Onboarding flow: Email confirmation step
 
       -  You will receive an email to the address you provided.
          Please look out for it and click on the link inside it to complete the process.
 
-   7. Finishing steps:
+   7. Onboarding flow: Finishing steps:
 
       -  Clicking on the link in your email will take you to a page where you can accept your invitation.
       -  Your final job is to select a username; this has to be a valid Unix username.
