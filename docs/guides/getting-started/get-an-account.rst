@@ -97,7 +97,7 @@ Getting an account on the RSP
       -  You will receive an email to the address you provided.
          Please look out for it and click on the link inside it to complete the process.
 
-   7. Onboarding flow: Finishing steps:
+   7. Onboarding flow — Finishing steps:
 
       -  Clicking on the link in your email will take you to a page where you can accept your invitation.
       -  Your final job is to select a username; this has to be a valid Unix username.
