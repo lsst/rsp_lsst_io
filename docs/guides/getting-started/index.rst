@@ -11,6 +11,13 @@ Get started on the Rubin Science Platform
 
    get-an-account
 
+.. toctree::
+   :caption: More about your account
+   :name: linking-more-ids
+   :titlesonly:
+
+   linking-more-ids
+
 .. jinja:: rsp
 
    .. toctree::
