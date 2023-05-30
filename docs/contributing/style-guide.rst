@@ -65,5 +65,5 @@ Instead, make the relevant noun or phrase the link.
 Environment-specific documentation
 ==================================
 
-If the content is specific to an RSP environments, or is different across RSP environments, use the project's tools to write environment-specific content.
+If the content is specific to an RSP environment, or is different across RSP environments, use the project's tools to write environment-specific content.
 See :doc:`env-specific-docs`.

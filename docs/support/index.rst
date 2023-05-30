@@ -8,7 +8,7 @@ Getting help
    Data Preview 0 science questions
    ================================
 
-   For questions about the Data Preview dataset (DESC DC2) and analyzing that data (such as with the LSST Science Pipelines), `create a new topic in the Data Preview 0 Support category of the Community forum <https://community.lsst.org/c/support/dp0/49>`__.
+   For questions about the Data Preview dataset (DESC DC2) and analyzing those data (such as with the LSST Science Pipelines), `create a new topic in the Data Preview 0 Support category of the Community forum <https://community.lsst.org/c/support/dp0/49>`__.
 
    Rubin Science Platform technical support and feature requests
    =============================================================

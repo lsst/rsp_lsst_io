@@ -18,8 +18,8 @@ Each section covers an approach that handles different levels of content customi
 Besides this documentation, you can also learn from the existing documentation.
 The homepage (:file:`docs/index.rst`) and log-in (:file:`docs/guides/getting-started/get-an-account.rst`) pages demonstrate all the techniques described here.
 
-Information about the RSP environments is maintained in a file named :file:`.phalanxenvs.json` in the `documentation repository <https://github.com/lsst-rsp/rsp_lsst_io>`_.
-In the future, this information will be automatically scrapped from primary sources, like the Phalanx repository.
+Information about the RSP environments is maintained in a file named :file:`.phalanxenvs.json` in the `documentation repository <https://github.com/lsst/rsp_lsst_io>`_.
+In the future, this information will be automatically scraped from primary sources, like the Phalanx repository.
 
 .. _envdocs-substitutions:
 

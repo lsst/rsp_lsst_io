@@ -6,7 +6,7 @@ The Notebook Aspect combines all the facilities you need to develop for, or alon
 
 -  A base ``lsst_distrib`` installation
 -  Butler repositories
--  Compilers and other developer tools </environment/installed-software
+-  Compilers and other developer tools
 -  Jupyter notebooks and console
 -  A fully-featured bash shell
 
@@ -71,7 +71,7 @@ In the same terminal, run:
 Step 3: set up the package
 ==========================
 
-Next, you need to set up this cloned-version of ``pipe_tasks``, replacing the version built into the Notebook Aspect’s image.
+Next, you need to set up this cloned version of ``pipe_tasks``, replacing the version built into the Notebook Aspect’s image.
 In the same terminal, run:
 
 .. code-block:: bash

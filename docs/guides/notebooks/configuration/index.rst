@@ -1,5 +1,5 @@
 ###############################
-Configuring the Notebook aspect
+Configuring the Notebook Aspect
 ###############################
 
 .. toctree::

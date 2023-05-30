@@ -15,7 +15,8 @@ Raising an issue
 If you spot an issue with the documentation, the best thing to do is `raise a GitHub issue in the github.com/lsst/rsp_lsst_io repo <https://github.com/lsst/rsp_lsst_io/issues/new>`__.
 Include any relevant URLs with your issue description.
 
-If you need help with the Rubin Science Platform itself reach out on one of support channels, see :doc:`/support/index`.
+If you need help with the Rubin Science Platform itself, reach out on one of the support channels.
+See :doc:`/support/index`.
 
 .. _contributing-pr:
 
@@ -26,7 +27,7 @@ You can contribute directly to the https://github.com/lsst/rsp_lsst_io repo by c
 If you’re intending to make a substantial change, it’s a good idea to create a GitHub issue first with your proposal.
 Rubin Observatory can’t accept contributions that don’t fit with our strategy and roadmap.
 
-See the following guides learn how to writng and build the docs.
+See the following guides to learn how to write and build the docs.
 
 Guides
 ======

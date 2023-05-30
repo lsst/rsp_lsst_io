@@ -40,7 +40,7 @@ Switch an opened notebook to the LSST kernel
 
 You can open existing notebooks by double clicking on their icons in the JupyterLab `file browser`_.
 JupyterLab automatically opens notebooks in the same kernel that they were created with.
-If you’re opening an notebooks that wasn’t created in the Notebook Aspect, you may need to switch the kernel to LSST:
+If you’re opening a notebook that wasn’t created in the Notebook Aspect, you may need to switch the kernel to LSST:
 
 1. Look for the kernel name in the notebook’s upper right menu bar. It should read **LSST**. If it is **Python 3** (the default kernel) you’ll need to switch it.
 2. Click on the kernel name and select **LSST** from the menu.

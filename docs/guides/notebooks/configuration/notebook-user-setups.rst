@@ -1,9 +1,9 @@
 ###############################################################################
-Configure the shell environment for notebook kernels (~/notebooks/.user-setups)
+Configure the shell environment for notebook kernels (~/notebooks/.user_setups)
 ###############################################################################
 
 While the terminal_ in the Notebook Aspect sources :file:`~/.bashrc`, Jupyter Notebook kernels do not.
-Instead, you can configure the environment for Jupyter notebooks with the :file:`~/notebooks/.user-setups` file.
+Instead, you can configure the environment for Jupyter notebooks with the :file:`~/notebooks/.user_setups` file.
 With this file, you can set up environment variables and even set up LSST Science Pipelines packages, for your Jupyter notebooks.
 
 .. _user-setups-envvars:
