@@ -1,3 +1,5 @@
+:html_theme.sidebar_secondary.remove:
+
 ####################################
 Rubin Science Platform Documentation
 ####################################
