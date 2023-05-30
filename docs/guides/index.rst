@@ -57,16 +57,16 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
       :link: portal/index
       :link-type: doc
 
-      The Portal Aspect is a powerful graphical interface in your web browser for querying and visualization Rubin catalogs and images.
+      The Portal Aspect is a powerful graphical interface in your web browser for querying and visualizing Rubin catalogs and images.
 
    .. grid-item-card:: Notebooks
       :link: notebooks/index
       :link-type: doc
 
-      The Notebook Aspect enables your to run Jupyter Notebooks and scripts to analyze Rubin detail with your own code.
+      The Notebook Aspect enables you to run Jupyter Notebooks and scripts to analyze Rubin data with your own code.
 
    .. grid-item-card:: API
       :link: api/index
       :link-type: doc
 
-      The API Aspect connects you to Rubin data, from within the Rubin Science platform and beyond. It is based on IVOA Virtual Observatory standards.
+      The API Aspect connects you to Rubin data, from within the Rubin Science Platform and beyond. It is based on IVOA Virtual Observatory standards.

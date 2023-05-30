@@ -26,10 +26,10 @@ Setting up the LSST Science Pipelines
 
       setup lsst_distrib
 
-Now you can run the Pipelines’s commands.
+Now you can run LSST Science Pipelines commands.
 For example:
 
-TK update to a butler or pipeline command:
+.. TK update to a butler or pipeline command:
 
 .. code-block:: bash
 

@@ -3,7 +3,7 @@ Exiting a notebook session
 ##########################
 
 Once you’re ready to take a break, exit from the Notebook Aspect to release computational resources to others.
-Don’t worry, all you opened notebook tabs are saved.
+Don’t worry, all your opened notebook tabs are saved.
 When you log in later, you can pick right up.
 
 There are a few different menu commands to help you exit from your Notebook Aspect session.
