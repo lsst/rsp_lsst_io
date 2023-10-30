@@ -49,7 +49,6 @@ Follow the onscreen instructions to activate the LSST environment:
 
 .. code-block:: bash
 
-   source /opt/lsst/software/stack/loadLSST.bash
    setup lsst_distrib
 
 .. _eups-tutorial-clone:
@@ -201,11 +200,10 @@ Keep these steps in mind while developing LSST Science Pipelines software in the
 
 -  **In terminals:**
 
-   1. Load the LSST environment (``loadLSST.bash``).
-   2. ``setup lsst_distrib``.
-   3. Clone the package you're developing.
-   4. Set up the specific package you’re developing with ``setup -k -r {{path}}``.
-   5. Build the package by running ``scons``.
+   1. ``setup lsst_distrib``.
+   2. Clone the package you're developing.
+   3. Set up the specific package you’re developing with ``setup -k -r {{path}}``.
+   4. Build the package by running ``scons``.
 
 -  **For notebooks,** add a ``setup -k -r {{path}}`` command for your package to ``~/notebooks/.user_setups``.
 

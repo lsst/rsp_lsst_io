@@ -27,4 +27,4 @@ To learn how to create a token, see :doc:`creating-user-tokens`.
     Execute SELECT queries in the TAP interface on project datasets.
 
 ``user:token``
-    Create an modify user tokens.
+    Create and modify user tokens.

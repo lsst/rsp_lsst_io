@@ -14,13 +14,7 @@ Setting up the LSST Science Pipelines
 1. Open a `terminal`_.
    Click the :guilabel:`+` button in the `file browser`_ (or type :kbd:`command`\ -\ :kbd:`shift`\ -\ :kbd:`L`) and then click the :guilabel:`Terminal` icon.
 
-2. Load the LSST environment:
-
-   .. code-block:: bash
-
-      source /opt/lsst/software/stack/loadLSST.bash
-
-3. Set up LSST Science Pipelines packages:
+2. Set up LSST Science Pipelines packages:
 
    .. code-block:: bash
 
@@ -29,11 +23,9 @@ Setting up the LSST Science Pipelines
 Now you can run LSST Science Pipelines commands.
 For example:
 
-.. TK update to a butler or pipeline command:
-
 .. code-block:: bash
 
-   processCcd.py -h
+   pipetask -h
 
 See `Setting up installed LSST Science Pipelines`_ in the LSST Science Pipelines documentation for more information about EUPS and the :command:`setup` command.
 

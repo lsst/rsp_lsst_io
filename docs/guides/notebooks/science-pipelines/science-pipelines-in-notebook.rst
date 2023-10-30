@@ -27,7 +27,7 @@ For example, in a notebook cell, import ``lsst.afw`` and check the version:
 
    afw.version.__version__
 
-With the LSST kernel you don’t run the ``loadLSST.bash`` and ``setup`` commands that are needed for command-line usage. The LSST kernel does this for you. You can still customize how packages are set up, see :ref:`lsst-kernel-user-setups`.
+With the LSST kernel you don’t run the ``setup lsst_distrib`` command that is needed for command-line usage. The LSST kernel does this for you. You can still customize how packages are set up, see :ref:`lsst-kernel-user-setups`.
 
 .. seealso::
 

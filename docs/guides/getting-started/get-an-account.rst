@@ -17,7 +17,7 @@ Getting an account on the RSP
    - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) in order to allow you to gain RSP access with your institutional identity (via the InCommon federation) or certain other participating providers (such as GitHub or ORCiD).
      Simply put, our system asks your institution’s system if you are who you say you are.
 
-     You *must* have an account with one of the supported institutions or organizations to use the RSP
+     You *must* have an account with one of the supported institutions or organizations to use the RSP.
      If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
      *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
 
@@ -52,7 +52,7 @@ Getting an account on the RSP
 
          .. grid-item::
 
-            - Chose an institution/provider with whom you have an established account.
+            - Choose an institution/provider with whom you have an established account.
             - You will be able to link additional identities later (if you have more than one).
 
          .. grid-item::
@@ -72,7 +72,7 @@ Getting an account on the RSP
 
          .. grid-item::
 
-            - Chose whichever institution you picked above (should be selected on the menu already - this is not the time to change your mind!).
+            - Choose whichever institution you picked above (should be selected on the menu already - this is not the time to change your mind!).
               This looks deceptively like Step 2.
 
          .. grid-item::
