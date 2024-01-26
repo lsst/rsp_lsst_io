@@ -28,7 +28,8 @@ Follow these steps to create a user token.
    Usually you will want to name the token after the application you will use it with.
 
    Which scopes to select depends on what you're doing.
-   For example, to query the TAP service the scope you want is ``read:tap``.
+   For example, to query the TAP service the scope you want is ``read:tap``,
+   but to retrieve images *also* select ``read:image``.
 
    If you know that you'll only be using the token for a limited period of time, you can choose an expiration date.
    Otherwise, you can set the token to never expire.
