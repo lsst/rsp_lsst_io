@@ -78,6 +78,12 @@ class PhalanxEnv(BaseModel):
         example="https://phalanx.lsst.io/environments/base/index.html",
     )
 
+    times_square_url: Optional[HttpUrl] = Field(
+        None,
+        description="URL for root Times Square page (if deployed).",
+        example="https://data.lsst.cloud/times-square/",
+    )
+
     @property
     def ltd_url_prefix(self) -> str:
         """The root URL of the environment's documentation site."""
@@ -92,6 +98,14 @@ class PhalanxEnv(BaseModel):
         corresponding to the default documentation edition.
         """
         return self.name == PRIMARY_ENV
+
+    @property
+    def has_apps(self) -> bool:
+        """Flag for whether the environment has apps beyond the three
+        main aspects.
+        """
+        # Expand this test as we add more apps
+        return self.times_square_url is not None
 
 
 class EnvironmentDict(UserDict[str, PhalanxEnv]):

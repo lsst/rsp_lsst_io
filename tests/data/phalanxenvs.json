@@ -24,7 +24,8 @@
       "api_url": "https://data-dev.lsst.cloud/api/",
       "api_tap_url": "https://data-dev.lsst.cloud/api/",
       "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
-      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html"
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html",
+      "times_square_url": "https://data-dev.lsst.cloud/times-square/"
     },
     "idfint": {
       "name": "idfint",
@@ -89,7 +90,8 @@
       "api_url": "https://usdf-rsp-dev.slac.stanford.edu/api/",
       "api_tap_url": "https://usdf-rsp-dev.slac.stanford.edu/api/tap/",
       "gafaelfawr_tokens_url": "https://usdf-rsp-dev.slac.stanford.edu/auth/tokens/",
-      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfdev/index.html"
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfdev/index.html",
+      "times_square_url": "https://data-dev.lsst.cloud/times-square/"
     },
     "usdfprod": {
       "name": "usdfprod",
