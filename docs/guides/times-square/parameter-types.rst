@@ -6,23 +6,6 @@ Times Square notebooks use parameters to pass inputs into the notebook.
 Different types of parameters are supported, and these types inform the interface for users to enter values and the validation that's performaed on those values.
 This page lists the different types of parameters that are supported.
 
-Parameters are always strings in the the notebook
-=================================================
-
-Keep in mind that parameter types are only for constructing the user interface and for validating input.
-Parameters do not change the value's Python type in the notebook.
-Values in a notebook's parameter's cell are always strings.
-
-For example, an "integer" parameter is a string in the notebook. It's up to the notebook's code to further convert that string into the appropriate Python type.
-
-.. code-block:: python
-
-   # Parameters cell
-   parameter = "42"
-
-   # Notebook code transforms the parameter to a relevant type
-   param_int = int(parameter)
-
 Strings
 =======
 
