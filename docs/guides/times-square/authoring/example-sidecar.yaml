@@ -1,0 +1,19 @@
+title: Weather
+description: Synopsis of weather conditions for an observing night.
+authors:
+  - name: Jonathan Sick
+    slack: jonathansick
+tags:
+  - night-reports
+  - demo
+parameters:
+  date:
+    type: string
+    description: Night (YYYY-MM-DD)
+    default: "2024-01-08"
+  other_parameter:
+    type: integer
+    description: Another parameter
+    default: 42
+    minimum: 0
+    maximum: 100

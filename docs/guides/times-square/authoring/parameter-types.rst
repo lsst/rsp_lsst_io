@@ -3,8 +3,9 @@ Parameter types
 ###############
 
 Times Square notebooks use parameters to pass inputs into the notebook.
-Different types of parameters are supported, and these types inform the interface for users to enter values and the validation that's performaed on those values.
+Different types of parameters are supported, and these types inform the interface for users to enter values and the validation that's performed on those values.
 This page lists the different types of parameters that are supported.
+For information about the sidecar metadata file as a whole, see :doc:`sidecar-schema`.
 
 Strings
 =======
@@ -161,3 +162,8 @@ To convert the string into a Python boolean, you can compare the string:
    :caption: Notebook code
 
    switch_param = switch_param == "true"
+
+Related documentation
+=====================
+
+- :doc:`sidecar-schema`

@@ -82,7 +82,7 @@ The general process for parameterizing a notebook is:
 6. Create a metadata sidecar file
 =================================
 
-The metadata sidecar is a YAML file that contains metadata about the notebook for Times Square.
+The :doc:`metadata sidecar is a YAML file <sidecar-schema>` that contains information about the notebook and its parameterization.
 It's always has the same path and name as the notebook, but with a ``.yaml`` extension.
 This file always goes alongside its notebook, hence the term "sidecar."
 
@@ -108,6 +108,8 @@ This file always goes alongside its notebook, hence the term "sidecar."
           type: string
           description: Night (YYYY-MM-DD)
           default: "2024-02-01"
+
+   See :doc:`sidecar-schema` for more information about the sidecar file's schema.
 
 3. Save the file.
 

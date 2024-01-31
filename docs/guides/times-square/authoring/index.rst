@@ -8,3 +8,4 @@ Authoring notebooks
    authoring-howto
    notebook-requirements
    parameter-types
+   sidecar-schema
