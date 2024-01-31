@@ -10,6 +10,7 @@ Times Square is great for sharing reports and analyses.
    :caption: Authoring notebooks
    :titlesonly:
 
+   authoring-howto
    notebook-requirements
    parameter-types
 
