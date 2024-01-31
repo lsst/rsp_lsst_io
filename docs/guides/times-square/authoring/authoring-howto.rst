@@ -11,7 +11,7 @@ This page outlines the basic steps for adding and authoring a notebook for Times
 Although its not strictly necessary, the best place to create and edit notebooks for Times Square is from the Rubin Science Platform's Notebook Aspect.
 If the notebook runs from your interactive session, it will run on Times Square (provided it doesn't use user-specific software or data, see :ref:`ts-reqs-user-home-referencing`).
 
-First :doc:`start a JupyterLab session on the Notebook Aspect <../notebooks/starting-and-stopping/start-a-notebook-session>`.
+First :doc:`start a JupyterLab session on the Notebook Aspect <../../notebooks/starting-and-stopping/start-a-notebook-session>`.
 Then from a JupyterLab terminal, clone a GitHub repository that's already installed on Times Square:
 
 .. code-block:: bash
@@ -19,7 +19,7 @@ Then from a JupyterLab terminal, clone a GitHub repository that's already instal
    git clone https://github.com/lsst-sqre/times-square-usdf
    cd times-square-usdf
 
-Make sure you've set up GitHub access in your JupyterLab environment (see :doc:`../notebooks/configuration/git-configuration`).
+Make sure you've set up GitHub access in your JupyterLab environment (see :doc:`../../notebooks/configuration/git-configuration`).
 You'll "publish" your notebook to Times Square by pushing it to GitHub.
 
 2. Creating a new notebook
