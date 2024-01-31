@@ -112,6 +112,23 @@ In your code, cast the value to a Python integer for use in calculations:
 
    number = int(number)
 
+Validation constraints
+----------------------
+
+The ``integer`` type supports validation constraints.
+You can specify minimum values and maximum values (both or either):
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     number:
+       type: integer
+       description: An integer
+       default: 42
+       minimum: 0
+       maximum: 100
+
 Floating point numbers
 ======================
 
@@ -136,6 +153,23 @@ In your code, cast the value to a Python float for use in calculations:
    :caption: Notebook code
 
    number = float(number)
+
+Validation constraints
+----------------------
+
+Like the ``integer`` type, the ``number`` type supports validation constraints.
+You can specify minimum values and maximum values (both or either):
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     number:
+       type: number
+       description: A number
+       default: 27.5
+       minimum: 0
+       maximum: 100
 
 Booleans
 ========
