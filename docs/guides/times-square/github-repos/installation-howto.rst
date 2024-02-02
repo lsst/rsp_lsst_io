@@ -111,5 +111,5 @@ This organization is reflected in the presentation of notebooks in Times Square.
 Additional configuration options
 ================================
 
-- Set up pre-commit hooks
+- :doc:`pre-commit-howto`
 - Add branch protections

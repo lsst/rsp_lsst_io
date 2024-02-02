@@ -14,6 +14,7 @@ Once you have a repository set up, you can write notebooks following the :doc:`A
    :caption: How-to guides
 
    installation-howto
+   pre-commit-howto
 
 .. toctree::
    :titlesonly:
