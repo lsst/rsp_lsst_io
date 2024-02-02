@@ -70,3 +70,28 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
       :link-type: doc
 
       The API Aspect connects you to Rubin data, from within the Rubin Science Platform and beyond. It is based on IVOA Virtual Observatory standards.
+
+.. jinja:: rsp
+
+   {% if env.has_apps %}
+   Applications
+   ============
+
+   .. toctree::
+      :hidden:
+      :caption: Applications
+
+      {% if env.times_square_url %}times-square/index{% endif %}
+
+   .. grid:: 1
+
+      {% if env.times_square_url %}
+      .. grid-item-card:: Times Square
+         :link: times-square/index
+         :link-type: doc
+
+         Times Square lets you share Jupyter Notebooks as linkable web pages.
+         You can parameterize those notebooks for users to see results for different inputs.
+         Times Square is great for sharing reports and analyses.
+      {% endif %}
+   {% endif %}

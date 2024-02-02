@@ -24,7 +24,8 @@
       "api_url": "https://data-dev.lsst.cloud/api/",
       "api_tap_url": "https://data-dev.lsst.cloud/api/",
       "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
-      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html"
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html",
+      "times_square_url": "https://data-dev.lsst.cloud/times-square/"
     },
     "idfint": {
       "name": "idfint",
@@ -77,6 +78,33 @@
       "api_tap_url": null,
       "gafaelfawr_tokens_url": "https://tucson-teststand.lsst.codes/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/tucson-teststand/index.html"
+    },
+    "usdfdev": {
+      "name": "usdfdev",
+      "title": "Rubin USDF (Dev)",
+      "title_full": "Rubin US Data Facility (Dev)",
+      "domain": "usdf-rsp-dev.slac.stanford.edu",
+      "squareone_url": "https://usdf-rsp-dev.slac.stanford.edu/",
+      "portal_url": "https://usdf-rsp-dev.slac.stanford.edu/portal/app",
+      "nb_url": "https://usdf-rsp-dev.slac.stanford.edu/portal/app",
+      "api_url": "https://usdf-rsp-dev.slac.stanford.edu/api/",
+      "api_tap_url": "https://usdf-rsp-dev.slac.stanford.edu/api/tap/",
+      "gafaelfawr_tokens_url": "https://usdf-rsp-dev.slac.stanford.edu/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfdev/index.html",
+      "times_square_url": "https://data-dev.lsst.cloud/times-square/"
+    },
+    "usdfprod": {
+      "name": "usdfprod",
+      "title": "Rubin USDF",
+      "title_full": "Rubin US Data Facility",
+      "domain": "usdf-rsp.slac.stanford.edu",
+      "squareone_url": "https://usdf-rsp.slac.stanford.edu/",
+      "portal_url": "https://usdf-rsp.slac.stanford.edu/portal/app",
+      "nb_url": "https://usdf-rsp.slac.stanford.edu/portal/app",
+      "api_url": "https://usdf-rsp.slac.stanford.edu/api/",
+      "api_tap_url": "https://usdf-rsp.slac.stanford.edu/api/tap/",
+      "gafaelfawr_tokens_url": "https://usdf-rsp.slac.stanford.edu/auth/tokens/",
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfprod/index.html"
     }
   }
 }

@@ -49,6 +49,9 @@ if not rsp_env.nb_url:
     exclude_patterns.append("guides/getting-started/notebook-first-steps.rst")
 if not rsp_env.api_tap_url:
     exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
+if not rsp_env.times_square_url:
+    exclude_patterns.append("guides/times-square/*.rst")
+    exclude_patterns.append("guides/times-square/**/*.rst")
 
 # Add environment switcher
 version = rsp_env.title  # noqa: F405

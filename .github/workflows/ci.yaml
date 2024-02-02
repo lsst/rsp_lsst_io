@@ -54,6 +54,8 @@ jobs:
           - "idfprod"
           - "summit"
           - "tucson-teststand"
+          - "usdfdev"
+          - "usdfprod"
 
     steps:
       - uses: actions/checkout@v3
@@ -110,6 +112,8 @@ jobs:
           - "idfprod"
           - "summit"
           - "tucson-teststand"
+          - "usdfdev"
+          - "usdfprod"
 
     steps:
       - uses: actions/download-artifact@v3
