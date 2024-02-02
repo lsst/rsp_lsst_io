@@ -2,9 +2,8 @@
 Sidecar metadata YAML file reference
 ####################################
 
-Every notebook in Times Square GitHub repository has an associated sidecar metadata file.
+Every notebook in a Times Square GitHub repository has an associated sidecar metadata file.
 These files have the same path and name as the notebook, but with a ``.yaml`` extension.
-This file describes the notebook and its parameterization.
 
 This page explains the contents (schema) of the sidecar metadata files.
 For a more general introduction to authoring notebooks for Times Square, see :doc:`authoring-howto`.

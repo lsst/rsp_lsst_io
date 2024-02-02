@@ -42,7 +42,7 @@ Example with a date
    parameters:
      date:
        type: string
-       description: An ISO8601 daate
+       description: An ISO8601 date
        default: "2024-01-01"
 
 .. code-block:: python
@@ -70,7 +70,7 @@ Examples with a date and time
      date:
        type: string
        description: An ISO8601 date and time
-       default: "2024-01-01"
+       default: "2024-01-01T12:00:00+00:00"
 
 .. code-block:: python
    :caption: Notebook parameters cell

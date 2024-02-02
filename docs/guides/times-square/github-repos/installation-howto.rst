@@ -20,20 +20,20 @@ Follow the `GitHub documentation <https://docs.github.com/en/get-started/quickst
 2. Initial pull request
 =======================
 
-Once your repository is created, you'll need to create a pull request that adds the :file:`times-square.yaml` file needed by Times Square and that will make development easier.
+Once your repository is created, you'll need to create a pull request that adds the :file:`times-square.yaml` file needed by Times Square.
 
 To get set up:
 
 1. Clone the repository to your local machine
 2. Create a new branch
 
-Next, add or modify files as described below before pushes the changes to GitHub and creating a pull request.
+Next, add or modify files as described below before pushing the changes to GitHub and creating a pull request.
 
 Add a times-square.yaml file
 ----------------------------
 
 The :file:`times-square.yaml` file is required for Times Square to use a GitHub repository.
-A :file:`times-square.yaml` file consists of a description and a flag indicating the repository should be enabled for Times Square:
+A basic :file:`times-square.yaml` file consists of a description and a flag indicating the repository should be enabled for Times Square:
 
 .. code-block:: yaml
    :caption: times-square.yaml
@@ -64,7 +64,7 @@ Once you get going, you might also want to link to the notebooks on Times Square
 Push and merge the changes
 --------------------------
 
-Once you're ready, follow the usual procedure for creating commits, pushing your branch, and creating a GitHub pull request.
+Once you're ready, follow the usual procedure for creating commits, pushing your branch, and creating a GitHub pull request to merge your changes.
 
 3. Install the Times Square GitHub App
 ======================================
@@ -85,11 +85,11 @@ These are the Times Square GitHub Apps for each available environment:
      - `Times Square (data-dev.lsst.cloud) <https://github.com/apps/times-square-data-dev-lsst-cloud>`__
 
 From the GitHub App's page, click the :guilabel:`Install` button and select the repositories you want to enable for Times Square.
-For more information installing and uninstalling GitHub Apps, see `the GitHub documentation <https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-github-marketplace-for-your-organizations>`__.
+For more information installing and uninstalling GitHub Apps, see `GitHub's documentation <https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-github-marketplace-for-your-organizations>`__.
 
 While you can install Times Square's GitHub App on a whole organization, it's best to install it on a per-repository basis.
 
-Also be aware that the repository's needs to be on an "accept list" in Times Square's configuration.
+Also be aware that the repository's organization needs to be in an allowlist in Times Square's configuration.
 See the ``config.githubOrgs`` configuration in Times Square's `Phalanx documentation <https://phalanx.lsst.io/applications/times-square/values.html>`__.
 Send a message to ``dm-square`` on Slack to request additional organizations.
 

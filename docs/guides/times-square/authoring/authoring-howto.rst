@@ -1,6 +1,6 @@
-###############################################
-Overview of writing a notebook for Times Square
-###############################################
+########################################
+How to write a notebook for Times Square
+########################################
 
 If you know how to create a Jupyter notebook, publishing a notebook to Times Square will be familiar.
 This page outlines the basic steps for adding and authoring a notebook for Times Square, and links to further documentation.
@@ -8,7 +8,7 @@ This page outlines the basic steps for adding and authoring a notebook for Times
 1. Setting up on the Science Platform Notebook Aspect
 =====================================================
 
-Although its not strictly necessary, the best place to create and edit notebooks for Times Square is from the Rubin Science Platform's Notebook Aspect.
+Although its not strictly necessary, the best place to create and edit notebooks for Times Square is from the Rubin Science Platform's :doc:`Notebook Aspect <../../notebooks/index>`.
 If the notebook runs from your interactive session, it will run on Times Square (provided it doesn't use user-specific software or data, see :ref:`ts-reqs-user-home-referencing`).
 
 First :doc:`start a JupyterLab session on the Notebook Aspect <../../notebooks/starting-and-stopping/start-a-notebook-session>`.
@@ -49,7 +49,7 @@ It's useful to mark this cell with a comment so that you don't forget about its 
 .. figure:: screenshots/parameters-cell.png
    :alt: Screenshot of a notebook where the first code cell has a Python comment that says "Parameters cell."
 
-   The beginnings of a notebook for Times Square. The first code cell, labeled ``[1]`` has a Python commend to remind authors that this cell is used by Times Square for setting parameters.
+   The beginnings of a notebook for Times Square. The first code cell, labeled ``[1]`` has a Python comment to remind authors that this cell is used by Times Square for setting parameters.
    You can add Markdown prose cells before the parameters cell. This notebook has a Markdown cell with the notebook's title.
 
 4. Develop the notebook's content
@@ -57,6 +57,9 @@ It's useful to mark this cell with a comment so that you don't forget about its 
 
 Now you can develop the notebook's content as you would normally.
 Remember that in Times Square notebooks, the user will focus on the cell outputs, and by default the code cells are hidden.
+
+While writing the notebook, keep in mind the :doc:`requirements that Times Square places on notebooks <notebook-requirements>`.
+For example, your notebook can't access user-specific data or software and can't access modules or data within the GitHub repository.
 
 .. figure:: screenshots/code-setup.png
    :alt: Screenshot of a notebook that computes the moon's illumination on a given date.
@@ -83,12 +86,12 @@ The general process for parameterizing a notebook is:
 =================================
 
 The :doc:`metadata sidecar is a YAML file <sidecar-schema>` that contains information about the notebook and its parameterization.
-It's always has the same path and name as the notebook, but with a ``.yaml`` extension.
+It always has the same path and name as the notebook, but with a ``.yaml`` extension.
 This file always goes alongside its notebook, hence the term "sidecar."
 
 1. In the JupyterLab Launcher, create a new text file. Select :menuselection:`File --> Save Text file as...` to save the file with the same path and name as the notebook, but with a ``.yaml`` extension.
 
-   Alternatively you can edit the file with a terminal app like ``vim`` or ``emacs``.
+   Alternatively you can edit the file with a terminal app like ``vim`` or ``emacs``:
 
    .. prompt:: bash
 
@@ -145,15 +148,15 @@ Open a JupyterLab terminal and navigate to the repository:
 8. Create a pull request
 ========================
 
-Create a Pull Request on GitHub that proposes to merge your branch into main.
+Create a Pull Request on GitHub that proposes to merge your branch into ``main`` (or the default branch, in general).
 See the `GitHub Pull Request documentation <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests>`_ for more information.
 
 9. Review the notebook on Times Square
 ======================================
 
-While your pull request is opened, Times Square will run the notebooks and check the formatting of the sidecar metadata files.
+While your pull request is open, Times Square will run the notebooks and check the formatting of the sidecar metadata files.
 
-You can view the notebook on Times Square by click on the "Notebook execution" check towards the button of the pull request page and then click on the notebook's name from the check run status.
+You can view the notebook on Times Square by click on the "Notebook execution" check towards the bottom of the pull request page and then click on the notebook's name from the check run status.
 
 .. figure:: screenshots/pr-status-checks.png
    :alt: Screenshot of a GitHub pull request, highlighting the status checks area.

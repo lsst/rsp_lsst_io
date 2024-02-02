@@ -2,13 +2,13 @@
 Setting up pre-commit hooks to format notebooks
 ###############################################
 
-Pre-commit hooks are a great way to ensure that your notebooks are formatted consistently, and are therefore easier for your team and collaborate on.
-Pre-commit hooks are also great for stripping outputs out of notebooks, which makes them smaller in a GitHub repository.
+Pre-commit hooks are a great way to ensure that your notebooks are formatted consistently, and are therefore easier for your team to collaborate on.
+Pre-commit hooks are also great for stripping outputs from notebooks, which makes them smaller in a GitHub repository.
 
-Adding a pre-commit configuration file
+Adding a Pre-commit configuration file
 ======================================
 
-To set up pre-commit, you need to add a :file:`.pre-commit-config.yaml` file to the root of your repository. This file contains the configuration for the pre-commit hooks that run whenever a contributor makes a Git commit in the repository.
+To set up Pre-commit, you need to add a :file:`.pre-commit-config.yaml` file to the root of your repository. This file contains the configuration for the pre-commit hooks that run whenever a contributor makes a Git commit in the repository.
 
 This file is a good starting point:
 
@@ -28,17 +28,17 @@ More hooks to consider
 
 - black_nbconvert_ will reformat your notebooks with `black`_.
 
-Document how to install pre-commit
+Document how to install Pre-commit
 ==================================
 
-To help make sure your contributors use pre-commit, you should add a section to your README.md files that explains how to install pre-commit:
+To help make sure your contributors use Pre-commit, you should add a section to your README.md files that explains how to install pre-commit:
 
 .. code-block:: markdown
    :caption: README.md
 
    ## Development
 
-   This repository uses pre-commit to keep notebooks formatted and clean. Install pre-commit by running:
+   This repository uses Pre-commit to keep notebooks formatted and clean. Install Pre-commit by running:
 
    ```bash
    pip install pre-commit
@@ -62,17 +62,17 @@ Then mention this Makefile target in the README:
 
    ## Development
 
-   This repository uses pre-commit to keep notebooks formatted and clean. Install pre-commit by running:
+   This repository uses Pre-commit to keep notebooks formatted and clean. Install Pre-commit by running:
 
    ```bash
    make init
    ```
 
-Run pre-commit in a GitHub Actions workflow
+Run Pre-commit in a GitHub Actions workflow
 ===========================================
 
-Sometimes a contributor will forget to install pre-commit.
-To catch this, you can run pre-commit in a GitHub Actions workflow:
+Sometimes a contributor will forget to install Pre-commit.
+To catch this, you can run Pre-commit in a GitHub Actions workflow:
 
 .. code-block:: yaml
    :caption: .github/workflows/ci.yaml
@@ -104,7 +104,7 @@ Save this file to the :file:`.github/workflows` directory in your repository.
 
 Another option is to the the `Pre-commit.com CI service <https://pre-commit.com>`__ to run pre-commit hooks on pull requests.
 
-Require pre-commit to pass
+Require Pre-commit to pass
 ==========================
 
 You can require that pre-commit, either through a GitHub Actions workflow or through pre-commit.com, passes before a pull request can merge.

@@ -2,7 +2,7 @@
 How to add GitHub branch protections to a Times Square repository
 #################################################################
 
-On every pull request, Times Square runs GitHub Checks that validate the YAML configuration files and that executes the notebooks to validate that they run without errors.
+On every pull request, Times Square runs GitHub status checks that validate the YAML configuration files and that executes the notebooks to validate that they run without errors.
 You should protect the default branch (typically ``main``) to ensure that these checks pass before allowing a pull request to be merged.
 To perform this configuration, you need to be an administrator of the GitHub repository.
 
@@ -36,7 +36,7 @@ Adding branch protections
      - :guilabel:`Notebook execution`
 
    You can also enable or configure other rules as needed.
-   For example, if you have a GitHub Actions workflow that runs pre-commit checks, you can add it to the list of required status checks (see :doc:`pre-commit-howto`).
+   For example, if you have a GitHub Actions workflow that runs Pre-commit checks, you can add it to the list of required status checks (see :doc:`pre-commit-howto`).
 
 5. Click on the :guilabel:`Create` button.
 
