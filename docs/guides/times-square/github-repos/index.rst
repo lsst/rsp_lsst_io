@@ -11,5 +11,12 @@ Once you have a repository set up, you can write notebooks following the :doc:`A
 
 .. toctree::
    :titlesonly:
+   :caption: How-to guides
 
    installation-howto
+
+.. toctree::
+   :titlesonly:
+   :caption: Reference
+
+   times-square-yaml-schema

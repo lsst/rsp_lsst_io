@@ -43,6 +43,8 @@ A :file:`times-square.yaml` file consists of a description and a flag indicating
      A sentence or two describing what kinds of notebooks
      this repository provides.
 
+To see the full range of configurations provided by :file:`times-square.yaml`, see :doc:`times-square-yaml-schema`.
+
 Add a .gitignore file
 ---------------------
 
