@@ -103,3 +103,10 @@ To catch this, you can run pre-commit in a GitHub Actions workflow:
 Save this file to the :file:`.github/workflows` directory in your repository.
 
 Another option is to the the `Pre-commit.com CI service <https://pre-commit.com>`__ to run pre-commit hooks on pull requests.
+
+Require pre-commit to pass
+==========================
+
+You can require that pre-commit, either through a GitHub Actions workflow or through pre-commit.com, passes before a pull request can merge.
+This is done by adding the status check to the default branch's protection settings.
+See :doc:`branch-protections-howto` for more information.

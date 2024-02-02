@@ -112,4 +112,4 @@ Additional configuration options
 ================================
 
 - :doc:`pre-commit-howto`
-- Add branch protections
+- :doc:`branch-protections-howto`
