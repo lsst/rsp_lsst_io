@@ -11,3 +11,4 @@ Times Square is great for sharing reports and analyses.
    :maxdepth: 2
 
    authoring/index
+   github-repos/index
