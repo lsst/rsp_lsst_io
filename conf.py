@@ -57,9 +57,9 @@ if not rsp_env.times_square_url:
 version = rsp_env.title  # noqa: F405
 html_theme_options["switcher"] = {  # noqa: F405
     "json_url": (
-        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d40173"
-        "f11a4a1a256/raw/547a1ada8db54aac2540ca8291f5aa0b79923251/"
-        "rsp-versions.json"
+        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d4017"
+        "3f11a4a1a256/raw/50267ee4dc957bd817e93a12c79a1702377e6ae1"
+        "/rsp-versions.json"
     ),
     "version_match": rsp_env.title,
 }
