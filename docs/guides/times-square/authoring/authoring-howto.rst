@@ -2,7 +2,7 @@
 How to write a notebook for Times Square
 ########################################
 
-If you know how to create a Jupyter notebook, publishing a notebook to Times Square will be familiar.
+If you know how to create a Jupyter notebook, publishing a notebook to |times-square| will be familiar.
 This page outlines the basic steps for adding and authoring a notebook for Times Square, and links to further documentation.
 
 1. Setting up on the Science Platform Notebook Aspect
@@ -181,4 +181,4 @@ Whenever you push an update, Times Square will re-check and re-run the notebook.
 Therefore you can keep trying your notebook on Times Square until you're satisfied with the results.
 
 When you're ready to merge the pull request, click the "Merge pull request" button on the pull request page.
-At this point, the notebook will be available from the Times Square homepage.
+At this point, the notebook will be available from the |times-square| homepage.

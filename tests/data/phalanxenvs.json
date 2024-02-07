@@ -91,7 +91,7 @@
       "api_tap_url": "https://usdf-rsp-dev.slac.stanford.edu/api/tap/",
       "gafaelfawr_tokens_url": "https://usdf-rsp-dev.slac.stanford.edu/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfdev/index.html",
-      "times_square_url": "https://data-dev.lsst.cloud/times-square/"
+      "times_square_url": "https://usdf-rsp-dev.slac.stanford.edu/times-square/"
     },
     "usdfprod": {
       "name": "usdfprod",
