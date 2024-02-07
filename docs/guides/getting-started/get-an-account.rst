@@ -10,7 +10,7 @@ Getting an account on the RSP
    =====================================
 
    - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
-     All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://lsst.org/scientists/international-drh-list>`__.
+     All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
      For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
      If you’re not sure if you have Rubin data rights, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
 
