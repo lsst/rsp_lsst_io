@@ -22,7 +22,10 @@
 {% if env.api_tap_url %}
 .. |rsp-tap-url| replace:: `{{env.api_tap_url}} <{{env.api_tap_url}}>`__
 .. |rsp-tap-url-code| replace:: ``{{env.api_tap_url}}``
-{% endif%}
+{% endif %}
+{% if env.times_square_url %}
+.. |times-square| replace:: `Times Square <{{env.times_square_url}}>`__
+{% endif %}
 
 .. Templated link targets =====================================================
 
