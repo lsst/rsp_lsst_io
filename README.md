@@ -7,4 +7,4 @@ The configuration is provided by Rubin's [Documenteer](https://documenteer.lsst.
 ## Contributing
 
 You can improve this documentation by sending a pull request or creating an issue.
-See the [Contributing](https://rsp.lsst.io/contributing/index.html) section of the docs for details.
+See the [Contributing](https://rsp.lsst.io/contributing/index.html) section of the docs for details; [Building the docs locally](https://rsp.lsst.io/contributing/building-the-docs.html) and [Writing environment-specific documentation](https://rsp.lsst.io/contributing/env-specific-docs.html) might be particularly helpful.
