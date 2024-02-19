@@ -52,6 +52,12 @@ class PhalanxEnv(BaseModel):
         example="https://data.lsst.cloud/nb/",
     )
 
+    webdav_url: Optional[HttpUrl] = Field(
+        None,
+        description="URL for the WebDAV spawner page.",
+        example="https://data.lsst.cloud/files/",
+    )
+
     api_url: Optional[HttpUrl] = Field(
         None,
         description="Root URL for VO APIs.",

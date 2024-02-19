@@ -19,6 +19,9 @@
 {% if env.nb_url %}
 .. |nb-url| replace:: `{{env.nb_url}} <{{env.nb_url}}>`__
 {% endif %}
+{% if env.webdav_url %}
+.. |webdav-url| replace:: `{{env.webdav_url}} <{{env.webdav_url}}>`__
+{% endif %}
 {% if env.api_tap_url %}
 .. |rsp-tap-url| replace:: `{{env.api_tap_url}} <{{env.api_tap_url}}>`__
 .. |rsp-tap-url-code| replace:: ``{{env.api_tap_url}}``
