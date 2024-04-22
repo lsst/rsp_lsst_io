@@ -54,10 +54,7 @@ Getting an account on the RSP
 
             - Choose an institution/provider with whom you have an established account.  (If your home institution is not listed, you can use ORCID, GitHub, Google, or any similar provider at which you already have an established account.)
             - You will be able to link additional identities later (if you have more than one).
-            - Home institutions not included on the the dropdown menu that are expecting to 
-              require numerous RSP accounts might consider reaching out to   
-              `CILogon <https://www.cilogon.org/home>`_ (or `COmanage <https://comanage.nersc.gov/registry/>`_) 
-              directly to have their institutions' names added.
+            - Home institutions not included on the the dropdown menu that are expecting to require numerous RSP accounts might consider reaching out to `CILogon <https://www.cilogon.org/home>`_ (or `COmanage <https://comanage.nersc.gov/registry/>`_) directly to have their institutions' names added.
 
          .. grid-item::
 
