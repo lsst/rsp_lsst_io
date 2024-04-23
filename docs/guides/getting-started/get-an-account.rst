@@ -52,8 +52,7 @@ Getting an account on the RSP
 
          .. grid-item::
 
-            - Choose an institution/provider with whom you have an established account.
-            - You will be able to link additional identities later (if you have more than one).
+            - Choose an institution or identity provider with whom you have an established account, for example your home institute, ORCID, GitHub, or Google. Additional identities can be added later, if you have more than one.
 
          .. grid-item::
 
