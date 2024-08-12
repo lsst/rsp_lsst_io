@@ -12,7 +12,6 @@ env:
       # optimization so there's no need to ensure this is comprehensive.
       - "dependabot/**"
       - "renovate/**"
-      - "tickets/**"
       - "u/**"
     tags:
       - "*"
