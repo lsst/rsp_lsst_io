@@ -53,6 +53,12 @@ if not rsp_env.times_square_url:
     exclude_patterns.append("guides/times-square/*.rst")
     exclude_patterns.append("guides/times-square/**/*.rst")
 
+# -- Options for linkcheck builder ----------------------------------------
+
+linkcheck_ignore = [
+    r"https://www.java.com/en/"
+]
+
 # Add environment switcher
 version = rsp_env.title  # noqa: F405
 html_theme_options["switcher"] = {  # noqa: F405
