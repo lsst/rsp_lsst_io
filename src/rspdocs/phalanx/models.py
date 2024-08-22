@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from collections import UserDict
-from typing import Optional
 
 from pydantic import BaseModel, Field, HttpUrl
 
@@ -16,57 +15,57 @@ class PhalanxEnv(BaseModel):
     """A Pydantic model of a Phalanx environment."""
 
     name: str = Field(
-        description="The environment's name in Phalanx.", example="idfprod"
+        description="The environment's name in Phalanx.", examples=["idfprod"]
     )
 
     title: str = Field(
         description="The short title of the environment, usually an acronym.",
-        example="IDF",
+        examples=["IDF"],
     )
 
-    title_full: Optional[str] = Field(
+    title_full: str | None = Field(
         None,
         description="Full title, that expands acronyms",
-        example="Rubin Interim Data Facility",
+        examples=["Rubin Interim Data Facility"],
     )
 
     domain: str = Field(
         description="Domain name of the environment.",
-        example="data.lsst.cloud",
+        examples=["data.lsst.cloud"],
     )
 
     squareone_url: HttpUrl = Field(
         description="Root URL of the RSP homepage.",
-        example="https://data.lsst.cloud/",
+        examples=["https://data.lsst.cloud/"],
     )
 
-    portal_url: Optional[HttpUrl] = Field(
+    portal_url: HttpUrl | None = Field(
         None,
         description="Root URL for the portal.",
-        example="https://data.lsst.cloud/portal/app",
+        examples=["https://data.lsst.cloud/portal/app"],
     )
 
-    nb_url: Optional[HttpUrl] = Field(
+    nb_url: HttpUrl | None = Field(
         None,
         description="URL for the Nublado spawner page.",
-        example="https://data.lsst.cloud/nb/",
+        examples=["https://data.lsst.cloud/nb/"],
     )
 
-    api_url: Optional[HttpUrl] = Field(
+    api_url: HttpUrl | None = Field(
         None,
         description="Root URL for VO APIs.",
-        example="https://data.lsst.cloud/api/",
+        examples=["https://data.lsst.cloud/api/"],
     )
 
-    api_tap_url: Optional[HttpUrl] = Field(
+    api_tap_url: HttpUrl | None = Field(
         None,
         description="Root URL for the TAP service.",
-        example="https://data.lsst.cloud/api/tap/",
+        examples=["https://data.lsst.cloud/api/tap/"],
     )
 
     gafaelfawr_tokens_url: HttpUrl = Field(
         description="URL for the Gafaelfawr user tokens page.",
-        example="https://data.lsst.cloud/auth/tokens/",
+        examples=["https://data.lsst.cloud/auth/tokens/"],
     )
 
     phalanx_docs_url: HttpUrl = Field(
@@ -75,13 +74,13 @@ class PhalanxEnv(BaseModel):
             "Don't show this URL for public RSPs, but it may be appropriate "
             "for staff (internal) RSPs."
         ),
-        example="https://phalanx.lsst.io/environments/base/index.html",
+        examples=["https://phalanx.lsst.io/environments/base/index.html"],
     )
 
-    times_square_url: Optional[HttpUrl] = Field(
+    times_square_url: HttpUrl | None = Field(
         None,
         description="URL for root Times Square page (if deployed).",
-        example="https://data.lsst.cloud/times-square/",
+        examples=["https://data.lsst.cloud/times-square/"],
     )
 
     @property
