@@ -22,4 +22,5 @@ ignore = [
     'https://summit-lsp.lsst.codes',
     'https://tucson-teststand.lsst.codes',
     'https://docushare.lsst.org',
+    'https://www.java.com/en/',  # Not accessible to the link checker
 ]
