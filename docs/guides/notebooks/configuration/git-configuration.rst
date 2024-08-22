@@ -46,7 +46,7 @@ The next time Git asks for your credentials, it will store them in a ``~/.git-cr
 Git LFS for LSST
 ================
 
-The Notebook Aspect includes the `Git LFS <https://git-lfs.github.com>`_ client.
+The Notebook Aspect includes the `Git LFS <https://git-lfs.com>`_ client.
 
 Git LFS is preconfigured to allow anonymous access to LSST’s Git LFS-backed data repositories (such as https://github.com/lsst/afwdata).
 Members of the `lsst organization <https://github.com/lsst>`_ on GitHub can set up authenticated Git LFS access to push to LSST’s Git LFS repositories.

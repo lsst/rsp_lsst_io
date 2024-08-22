@@ -42,7 +42,7 @@ DM's user documentation is written with soft wrapping, meaning that lines are as
 Never hard wrap to an arbitrary line length.
 Soft wrapping makes editing more approachable for more people (particularly those using the GitHub editor) and makes pull request line comments more useful.
 
-More specifically, use `semantic line formatting <http://rhodesmill.org/brandon/2012/one-sentence-per-line/>`__.
+More specifically, use `semantic line formatting <https://rhodesmill.org/brandon/2012/one-sentence-per-line/>`__.
 Generally this means that each sentence should be its own line in the text file.
 
 Titles and headings
