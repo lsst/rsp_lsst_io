@@ -41,7 +41,7 @@ class PhalanxEnvService:
         cache_data = json.loads(cache_path.read_text())
         envs = EnvironmentDict()
         for env_name, env_data in cache_data["environments"].items():
-            envs[env_name] = PhalanxEnv.parse_obj(env_data)
+            envs[env_name] = PhalanxEnv.model_validate(env_data)
         return PhalanxEnvService(envs)
 
     @property

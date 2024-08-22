@@ -132,4 +132,4 @@ strict_equality = true
 warn_redundant_casts = true
 warn_unreachable = true
 warn_unused_ignores = true
-# plugins =
+plugins = ["pydantic.mypy"]
