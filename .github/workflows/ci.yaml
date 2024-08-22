@@ -23,21 +23,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Run pre-commit hooks
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3.0.1
 
   testextensions:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run tox
         uses: lsst-sqre/run-tox@v1
@@ -61,7 +61,7 @@ jobs:
           - "usdfprod"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run tox
         uses: lsst-sqre/run-tox@v1
@@ -69,7 +69,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           tox-envs: "sphinx-${{ matrix.rsp }},linkcheck-${{ matrix.rsp }}"
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.rsp }}
           path: _build/html/${{ matrix.rsp }}/
@@ -82,13 +82,13 @@ jobs:
     if: ${{ (github.event_name == 'pull_request') && startsWith(github.head_ref, 'tickets/') }}
 
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: idfprod
           path: _build/html/idfprod
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -119,13 +119,13 @@ jobs:
           - "usdfprod"
 
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: ${{ matrix.rsp }}
           path: _build/html/${{ matrix.rsp }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
