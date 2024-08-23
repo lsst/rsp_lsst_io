@@ -21,7 +21,7 @@
       "squareone_url": "https://data-dev.lsst.cloud/",
       "portal_url": "https://data-dev.lsst.cloud/portal/app",
       "nb_url": "https://data-dev.lsst.cloud/nb/",
-      "api_url": "https://data-dev.lsst.cloud/api-aspect/",
+      "api_url": "https://data-dev.lsst.cloud/api/",
       "api_tap_url": "https://data-dev.lsst.cloud/api/",
       "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html",
