@@ -41,6 +41,17 @@ RSP users who are doing a lot of image processing might need to select a large s
 **Start the Server:**
 Pressing the orange "Start" button to start the server returns this page with a blue progress bar:
 
+   .. image:: images/RSP_NB_progress_bar.png
+       :alt: This image is a screenshot of the progress bar that displays for a minute or two while a user’s server is starting up in the Notebook Aspect. At the top there is text that says “Your server is starting up” and “You will be redirected automatically when it’s ready for you.” Below that is a progress bar. Underneath the bar, the date and time is shown. This page is not interactive and is replaced by the main work area of the Notebook Aspect once the server has started.
+       :width: 400
+       :name: RSP_NB_progress_bar
+
+A screenshot of the progress bar that will show while the server is starting up. Be patient. Sometimes it takes a couple of minutes to start a server.
+
+**Navigating the JupyterLab Interface:**
+The JupyterLab landing page in the figure below is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal, Python console).
+Return to this launch pad at any time by clicking the plus symbol at upper-left.
+
 .. toctree::
    :maxdepth: 2
    :titlesonly:
