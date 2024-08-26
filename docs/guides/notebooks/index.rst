@@ -32,6 +32,15 @@ Most users will choose the recommended software version and a medium server size
 
 A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
 
+The term "image" atop the left box refers to a "Docker image" that defines the software packages and their versions which will be automatically loaded in the server environment.
+The "recommended" image will be updated on a regular (monthly) basis to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
+Older images will remain accessible to users.
+
+RSP users who are doing a lot of image processing might need to select a large server, and those who are working with small subsets of catalog data can use a small server.
+
+**Start the Server:**
+Pressing the orange "Start" button to start the server returns this page with a blue progress bar:
+
 .. toctree::
    :maxdepth: 2
    :titlesonly:
