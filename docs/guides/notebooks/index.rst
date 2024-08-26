@@ -32,6 +32,3 @@ Most users will choose the recommended software version and a medium server size
    starting-and-stopping/index
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
-
-
-A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
