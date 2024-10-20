@@ -23,7 +23,7 @@ title
 
 (*string*) This is the title of the notebook as it appears in the Times Square UI.
 
-It should be fairly short because it is is deplayed in a narrow column.
+It should be fairly short because it is displayed in a narrow column.
 
 The name can be contextual with the notebook's directory path (and repository name and even GitHub organization name).
 
@@ -62,7 +62,7 @@ For example:
 .. code-block:: yaml
    :caption: Valid parameter names
 
-   parmeters:
+   parameters:
      start_date:
        type: string
        default: 2024-02-01
@@ -73,7 +73,7 @@ For example:
 .. code-block:: yaml
     :caption: Invalid parameter names
 
-    parmeters:
+    parameters:
       start date:
          type: string
          default: 2024-02-01
