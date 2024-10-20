@@ -52,12 +52,12 @@ A screenshot of the progress bar that will show while the server is starting up.
 The JupyterLab landing page in the figure below is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal, Python console).
 Return to this launch pad at any time by clicking the plus symbol at upper-left.
 
-.. figure:: images/RSP_NB_launcher_options.png
-    :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
-    :width: 400
-    :name: RSP_NB_launcher_options
+  .. image:: images/RSP_NB_launcher_options.png
+      :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
+      :width: 400
+      :name: RSP_NB_launcher_options
 
-    The JupyterLab landing page from which several tools can be launched and the file system can be browsed (left sidebar).
+The JupyterLab landing page from which several tools can be launched and the file system can be browsed (left sidebar).
 
 In the very left-most vertical sidebar of icons, the top icon is a file folder, and that is the default view.
 The left sidebar lists folders in the user's home directory (e.g., DATA, WORK, and notebooks).
