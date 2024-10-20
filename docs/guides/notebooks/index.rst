@@ -53,10 +53,7 @@ The JupyterLab landing page in the figure below is the launch pad for all Jupyte
 Return to this launch pad at any time by clicking the plus symbol at upper-left.
 
 .. figure:: images/RSP_NB_launcher_options.png
-    :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. 
-    	Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. 
-	The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. 
-	It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
+    :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
     :width: 400
     :name: RSP_NB_launcher_options
 
