@@ -319,8 +319,8 @@ How do I ask questions about Notebooks?
 Keep in mind that if you are not experienced at accessing data via Jupyter notebooks, or using a Science Platform more generally, you are not alone!
 Most of the DP0 delegates are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
 
-The `DP0 Delegate Homepage <https://dp0-2.lsst.io>`_ provides information about :ref:`Delegate-Homepage-Getting-Support` at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
-Another option is to attend the biweekly :ref:`Delegate-Homepage-DP0-Delegate-Assemblies` which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
+The `DP0 Delegate Homepage <https://dp0.lsst.io>`_ provides information about `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
+Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
 Beginner-level questions are very welcome, both in the Community Forum and during the Delegate Assemblies.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
