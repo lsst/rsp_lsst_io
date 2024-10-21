@@ -107,4 +107,5 @@ version of the introductory notebook, make a change, and notice that it can be s
    starting-and-stopping/index
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
+   tutorial-notebooks/index
    faq/index
