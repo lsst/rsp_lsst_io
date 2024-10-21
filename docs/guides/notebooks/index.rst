@@ -13,13 +13,15 @@ To help users avoid issues with stale instances, sessions will be automatically 
 
 .. _NB-Conceptual-Overview:
 
-RSP Notebook Aspect Conceptual Overview
+RSP Notebook Aspect conceptual overview
 ---------------------------------------
 
 The RSP Notebook Aspect offers a variety of functionality, including but not limited to Jupyter notebooks.
 The RSP Notebook Aspect is intended to function as your cloud server for analyzing and processing Rubin/LSST data (beyond issuing Portal queries, which can be done in the RSP Portal Aspect) and without needing to download the Rubin/LSST data to any local machine.
 In addition to Jupyter notebooks, the RSP Notebook Aspect offers powerful access to the Rubin/LSST software stack and the JupyterLab terminal, where one can issue shell commands to organize, analyze, and reprocess data.
 The pages within this guide, listed below, illustrate how to do RSP Notebook Aspect activities, from logging in, to using Jupyter Notebooks, to learning from Rubin/LSST tutorial notebooks, to accessing `LSST Science Pipelines`_ software, and logging out.
+
+
 This guide focuses on the basic instructions for using the RSP Notebook Aspect, and a few frequently asked questions (FAQs) and troubleshooting tips.
 The full documentation for the RSP Notebook Aspect is available at `nb.lsst.io <https://nb.lsst.io/>`_.
 
