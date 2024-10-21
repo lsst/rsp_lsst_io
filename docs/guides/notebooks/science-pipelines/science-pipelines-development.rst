@@ -28,8 +28,8 @@ Log in with a current daily image
 When you're developing an LSST Science Pipelines package, you're generally working from a branch based on the package's ``main`` branch.
 To ensure that your package can be compiled and used with other LSST Science Pipelines packages, you need to select a recent daily build of the LSST Science Pipelines when you log into the Notebook Aspect.
 
-If you aren't sure you are running the most recent daily, :ref:`save your work and exit <nb-save-and-exit>` from the current session.
-Then :doc:`log back in <../starting-and-stopping/start-a-notebook-session>` with the most recent daily build.
+If you aren't sure you are running the most recent daily, save your work and exit from the current session.
+Then log back in with the most recent daily build.
 
 Set up Git
 ----------
