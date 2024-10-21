@@ -333,7 +333,7 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 Can you install the lsst.rsp module outside the RSP?
 ----------------------------------------------------
 
-Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``. 
+Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``.
 
 Note that if you want to use it to access data that is hosted at the IDF, you will also need a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
