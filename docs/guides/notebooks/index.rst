@@ -130,8 +130,7 @@ unless you are working in the directory "notebooks/tutorial-notebooks/", which i
 How to use the Tutorial Notebooks
 =================================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the 
-"rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
 **The "notebooks/tutorial-notebooks" directory is read-only:**
 The read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
@@ -382,8 +381,8 @@ How can the appearance of the user interface be customized?
  * Under "View", selecting "Presentation Mode" makes the fonts larger in a Jupyter Notebook open in the main work area.
  * Under "View", selecting "Show Line Numbers" adds line numbers to the left side of every code cell or unexecuted markdown cell.
  * Under "Settings - Theme", selecting "Theme Scrollbars" makes the right-hand notebook scrollbar permanent in Dark Mode.
- * Under "Settings - Theme" it is possible to increase and decrease code font size (applies to code cells and unexecuted markdown cells) and content font size (applies to executed markdown cells). 
- * It is also possible to independently increase and decrease the user interface font size, which applies to the menu bar, side bar, and status bar (footer bar). 
+ * Under "Settings - Theme" it is possible to increase and decrease code font size (applies to code cells and unexecuted markdown cells) and content font size (applies to executed markdown cells).
+ * It is also possible to independently increase and decrease the user interface font size, which applies to the menu bar, side bar, and status bar (footer bar).
  * All of these font size changes will be applied independent of changes to the browser font size, and apply only to Notebooks.
 
 **Text editor**
