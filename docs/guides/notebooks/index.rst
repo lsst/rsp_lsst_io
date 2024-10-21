@@ -101,7 +101,13 @@ Type ``butler --help`` in any terminal to see a list of available butler functio
 How to use a Jupyter notebook
 =============================
 
-test
+**Executing code in a Notebook:**
+Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
+Choose the cell to execute by clicking in it with your mouse (the cursor must be in the desired cell).
+Hold down the *shift* key and press either *enter* or *return* (depending on your keyboard type), or click the 'Play' button in the notebook toolbar, and the contents of the cell will be executed.
+If the cell type is code, and the cell contains python code, the code will be executed.
+If the cell type is markdown, then it will be rendered upon execution to yield nicely formatted text.
+There is a `user guide for markdown cells in the Jupyter Notebooks documentation <https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html>`_.
 
 
 .. toctree::
