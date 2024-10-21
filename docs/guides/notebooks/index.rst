@@ -68,4 +68,5 @@ unless you are working in the directory "notebooks/tutorial-notebooks/", which i
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
    tutorial-notebooks/index
+   jupyterlab-terminal/index
    faq/index
