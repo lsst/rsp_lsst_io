@@ -7,7 +7,7 @@ Using Tutorial Notebooks
 How to use the Tutorial Notebooks
 =================================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_).
+The best way to learn how to use a Jupyter Notebook is to open the first of the Rubin/LSST tutorial notebooks which are provided in each user's home directory. For Data Preview 0 (DP0), these notebooks are also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization, and described within the `Data Preview 0.2 (DP0.2) <https://dp0-2.lsst.io/tutorials-examples/index.html#notebook-tutorials>`_ and `Data Preview 0.3 (DP0.3) <https://dp0-3.lsst.io/tutorials-dp0-3/index.html#notebook-tutorials>`_ data release documentation.
 
 **The "notebooks/tutorial-notebooks" directory is read-only:**
 The read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
