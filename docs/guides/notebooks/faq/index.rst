@@ -28,7 +28,7 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments for `Data Preview 0 <https://dp0.lsst.io/>`_ (DP0), which encompasses `Data Preview 0.2`_ (DP0.2; extragalactic and Galactic) and `Data Preview 0.3 <https://dp0-3.lsst.io/>`_ (DP0.3; solar system).
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the Rubin/LSST `tutorial notebooks <https://github.com/rubin-dp0/tutorial-notebooks/>`_ use Python as well.
+Much of the LSST Science Pipelines code is in Python, and the `Rubin/LSST tutorial notebooks <https://github.com/rubin-dp0/tutorial-notebooks/>`_ use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All Rubin/LSST users should feel free to copy and paste from the provided tutorials.
 
@@ -159,7 +159,7 @@ Most of the Rubin/LSST users are new to this environment, and all of your questi
 The `DP0 homepage <https://dp0.lsst.io>`_ provides information about `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
 Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
-Beginner-level questions are very welcome, both in the Community Forum and during the `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#rubin-science-assemblies>`_.
+Beginner-level questions are very welcome, both in the Community Forum and during the Rubin Science Assemblies.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
 learning `python <https://community.lsst.org/t/resources-for-python-beginners/5975>`_ and `SQL <https://community.lsst.org/t/sql-adql-beginner-resources/6051>`_.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
