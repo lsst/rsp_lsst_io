@@ -25,7 +25,6 @@ As described in the default message that appears in all newly-launched terminals
 
 .. code-block:: bash
 
-   source ${LOADSTACK}
    setup lsst_distrib
 
 For example, to query and retrieve data sets using the Butler (see `What is the Butler, and when do I use it? <https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html#nb-intro-use-a-nb-faq-butler>`_, below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
