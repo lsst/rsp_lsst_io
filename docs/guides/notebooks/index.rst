@@ -130,7 +130,7 @@ unless you are working in the directory "notebooks/tutorial-notebooks/", which i
 How to use the Tutorial Notebooks
 =================================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_).
 
 **The "notebooks/tutorial-notebooks" directory is read-only:**
 The read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
@@ -191,7 +191,7 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments for DP0.
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
+Much of the LSST Science Pipelines code is in Python, and the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
 
@@ -297,7 +297,7 @@ What is the Butler, and when do I use it?
 
 The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the Data Management System (DMS) for persisting and retrieving datasets.
 The third generation "Gen3" Butler is being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ demonstrate Butler use as well.
 The Butler is also described in the paper `The Vera C. Rubin Observatory Data Butler and Pipeline
 Execution System <https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract>`_ (Jenness et al. 2022).
 
