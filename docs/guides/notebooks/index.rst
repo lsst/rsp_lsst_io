@@ -50,6 +50,7 @@ unless you are working in the directory "notebooks/tutorial-notebooks/", which i
    starting-and-stopping/index
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
+   jupyter-notebooks/index
    tutorial-notebooks/index
    jupyterlab-terminal/index
    faq/index
