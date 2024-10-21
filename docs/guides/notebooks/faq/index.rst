@@ -28,12 +28,12 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments for `Data Preview 0 <https://dp0.lsst.io/>`_ (DP0), which encompasses `Data Preview 0.2`_ (DP0.2; extragalactic and Galactic) and `Data Preview 0.3 <https://dp0-3.lsst.io/>`_ (DP0.3; solar system).
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ use Python as well.
+Much of the LSST Science Pipelines code is in Python, and the Rubin/LSST `tutorial notebooks <https://github.com/rubin-dp0/tutorial-notebooks/>`_ use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
-All DP0 delegates should feel free to copy and paste from the provided tutorials.
+All Rubin/LSST users should feel free to copy and paste from the provided tutorials.
 
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
-or this Community Forum thread where DP0 delegates can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
+or this Community Forum thread where Rubin/LSST users can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
 Web searches for "python *(thing you want to do)*" are usually pretty successful too.
 
 
@@ -120,7 +120,7 @@ For more information, please consult `tutorial notebook for working with user pa
 Do I need to know Git?
 ----------------------
 
-Although use of Git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
+Although use of Git and GitHub are not necessary when using the RSP Notebook Aspect, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
 GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
 In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
@@ -133,8 +133,8 @@ What is the Butler, and when do I use it?
 -----------------------------------------
 
 The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the Data Management System (DMS) for persisting and retrieving datasets.
-The third generation "Gen3" Butler is being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ demonstrate Butler use as well.
+The third generation "Gen3" Butler is being used.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the Rubin/LSST `tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ demonstrate Butler use as well.
 The Butler is also described in the paper `The Vera C. Rubin Observatory Data Butler and Pipeline
 Execution System <https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract>`_ (Jenness et al. 2022).
 
@@ -154,12 +154,12 @@ How do I ask questions about Notebooks?
 ---------------------------------------
 
 Keep in mind that if you are not experienced at accessing data via Jupyter notebooks, or using a Science Platform more generally, you are not alone!
-Most of the DP0 delegates are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
+Most of the Rubin/LSST users are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
 
-The `DP0 Delegate Homepage <https://dp0.lsst.io>`_ provides information about `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
+The `DP0 homepage <https://dp0.lsst.io>`_ provides information about `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
 Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
-Beginner-level questions are very welcome, both in the Community Forum and during the Delegate Assemblies.
+Beginner-level questions are very welcome, both in the Community Forum and during the `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#rubin-science-assemblies>`_.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
 learning `python <https://community.lsst.org/t/resources-for-python-beginners/5975>`_ and `SQL <https://community.lsst.org/t/sql-adql-beginner-resources/6051>`_.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
