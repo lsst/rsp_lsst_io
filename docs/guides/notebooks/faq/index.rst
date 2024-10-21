@@ -25,7 +25,7 @@ To view a list of packages available to you, type "pip list" in a terminal.
 Is all the code in Python?
 --------------------------
 
-Yes, the RSP Notebook Aspect will only have python environments for DP0.
+Yes, the RSP Notebook Aspect will only have python environments for `Data Preview 0 <https://dp0.lsst.io/>`_ (DP0), which encompasses `Data Preview 0.2 <https://dp0-2.lsst.io/>`_ (DP0.2; extragalactic and Galactic) and `Data Preview 0.3 <https://dp0-3.lsst.io/>`_ (DP0.3; solar system).
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
 Much of the LSST Science Pipelines code is in Python, and the `DP0.2 tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ use Python as well.
