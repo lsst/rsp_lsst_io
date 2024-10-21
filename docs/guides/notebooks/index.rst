@@ -466,3 +466,4 @@ If successful, you will be able to ``git fetch`` and ``git push`` without enteri
    starting-and-stopping/index
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
+   faq/index
