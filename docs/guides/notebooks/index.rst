@@ -25,12 +25,12 @@ From the RSP landing page at `data.lsst.cloud <https://data.lsst.cloud/>`_ click
 The first page offers a choice of software environment version (left) and server size (right), as shown in the next figure.
 Most users will choose the recommended software version and a medium server size.
 
-  .. image:: images/RSP_NB_select_a_server.png
+  .. figure:: images/RSP_NB_select_a_server.png
       :alt: This image is a screenshot of the Server Options page that users encounter first when they log into the Notebook Aspect. At left, users can select the version of the LSST Science Pipelines that they want to use, with the recommended version pre-selected as the default. At right, users can select a server size of small, medium, or large. Small is pre-selected as the default. Two additional options to enable debug logs or clear the user’s dot-local directory also appear at right. Neither of these options are pre-selected. At the bottom is a button marked start.
       :width: 400
       :name: RSP_NB_select_a_server
 
-A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
+      A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
 
 The term "image" atop the left box refers to a "Docker image" that defines the software packages and their versions which will be automatically loaded in the server environment.
 The "recommended" image will be updated on a regular (monthly) basis to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
