@@ -130,8 +130,7 @@ unless you are working in the directory "notebooks/tutorial-notebooks/", which i
 How to use the Tutorial Notebooks
 =================================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the 
+The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory, and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the 
 "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
 **The "notebooks/tutorial-notebooks" directory is read-only:**
@@ -140,10 +139,7 @@ Notebooks can be edited and executed in this directory, but **changes cannot be 
 Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
 
 **How to obtain an editable version of a tutorial notebook:**
-The commands below demonstrate how to create a copy of the DP0.2 introductory notebook in the home directory which can be 
-opened, edited, and saved.
-Step-by-step, the commands below change directory (``cd``) into the home directory (``~``),
-copy the desired tutorial to the (``cp``) into the current directory (``.``),
+The commands below demonstrate how to create a copy of the DP0.2 introductory notebook in the home directory which can be opened, edited, and saved. Step-by-step, the commands below change directory (``cd``) into the home directory (``~``), copy the desired tutorial to the (``cp``) into the current directory (``.``),
 list (``ls``) the files starting with "DP02" that are in the current directory to confirm the copy worked,
 and list in long format all attributes in human-readable form (``-lah``) for the copied file.
 The standard output ``-r--r--r--`` indicates that the file is read-only (``r``) by the user, the group, and everyone
@@ -151,8 +147,7 @@ with access to the file (the three ``r``).
 Change the mode (``chmod``) of the file to add user write access (``u+w``), and repeate the
 list command (``ls -lah``) for the file to see that the user now has read and write access (``-rw-r--r--``).
 
-The dollar signs indicate terminal command line executable statements that should be copy-pasted into the 
-terminal (but do not copy-paste the ``$``).
+The dollar signs indicate terminal command line executable statements that should be copy-pasted into the terminal (but do not copy-paste the ``$``).
 Lines without dollar signs indicate standard output to be compared with the results in the terminal.
 
 .. code-block:: bash
@@ -161,10 +156,10 @@ Lines without dollar signs indicate standard output to be compared with the resu
       $ cp notebooks/tutorial-notebooks/DP02_01_Introduction_to_DP02.ipynb .
       $ ls DP02*
       DP02_01_Introduction_to_DP02.ipynb
-      $ ls -lah DP02_01_Introduction_to_DP02.ipynb 
+      $ ls -lah DP02_01_Introduction_to_DP02.ipynb
       -r--r--r-- 1 melissagraham melissagraham 37K Nov 13 21:14 DP02_01_Introduction_to_DP02.ipynb
-      $ chmod u+w DP02_01_Introduction_to_DP02.ipynb 
-      $ ls -lah DP02_01_Introduction_to_DP02.ipynb 
+      $ chmod u+w DP02_01_Introduction_to_DP02.ipynb
+      $ ls -lah DP02_01_Introduction_to_DP02.ipynb
       -rw-r--r-- 1 melissagraham melissagraham 37K Nov 13 21:14 DP02_01_Introduction_to_DP02.ipynb
 
 After executing the above statements, use the left menu bar to navigate to the home directory and open the newly altered
@@ -243,7 +238,7 @@ The tutorial notebook runs through the steps to user install the ``bagpipes`` pa
 
 The basic steps are:
 
-1. Open a terminal in the Notebook aspect of the RSP. 
+1. Open a terminal in the Notebook aspect of the RSP.
 
 2. Install the bagpipes package with :command:`pip`:
 
@@ -253,7 +248,7 @@ The basic steps are:
 
    (The ``--user`` flag is necessary because you don’t have root access.)
 
-   Among other packages, the above command installs ``PyMultiNest``, a python interface for MultiNest. The ``MultiNest`` package itself is not included. 
+   Among other packages, the above command installs ``PyMultiNest``, a python interface for MultiNest. The ``MultiNest`` package itself is not included.
    Before we can use the ``bagpipes`` package, we must install MultiNest and update the ``LD_LIBRARY`` environment variable.
 
 3. Install and build the dependencies -- in this case, the ``MultiNest`` package -- in your ``~/local`` direcotry.  In a terminal, execute:
@@ -301,24 +296,21 @@ A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of Git.
 What is the Butler, and when do I use it?
 -----------------------------------------
 
-The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the 
-Data Management System (DMS) for persisting and retrieving datasets.
+The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the Data Management System (DMS) for persisting and retrieving datasets.
 The third generation "Gen3" Butler is being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, 
-and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
 The Butler is also described in the paper `The Vera C. Rubin Observatory Data Butler and Pipeline
 Execution System <https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract>`_ (Jenness et al. 2022).
 
 The Butler is only accessible via the Notebook Aspect, whereas the Table Access Protocol (TAP) service can be
 used via all three aspects.
 TAP is generally better for catalog queries as it performs spatial queries faster (e.g., cone searches),
-can join tables together, and makes use of ADQL functionality like unit conversions. 
+can join tables together, and makes use of ADQL functionality like unit conversions.
 
-However, it is more convenient to use Butler-based catalogs when also using images accessed via the Butler. 
+However, it is more convenient to use Butler-based catalogs when also using images accessed via the Butler.
 The Butler is also used when doing any kind of image reprocessing (e.g., re-doing source detection),
 because in that situation the Butler is used for image access and the result is a user-generated catalog persisted by and accessible with Butler.
-Furthermore, a few data products are only available via the Butler, such as survey property maps, 
-raw images, and source footprints.
+Furthermore, a few data products are only available via the Butler, such as survey property maps, raw images, and source footprints.
 
 .. _NB-Intro-Use-A-NB-faq-questions:
 
@@ -342,13 +334,13 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 Can you install the lsst.rsp module outside the RSP?
 ----------------------------------------------------
 
-Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package  <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``. 
+Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``. 
 
 Note that if you want to use it to access data that is hosted at the IDF, you will also need a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
-As an example, we will walk through how you can access the Rubin LSST TAP service locally. 
+As an example, we will walk through how you can access the Rubin LSST TAP service locally.
 
-After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token. 
+After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token.
 
 Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"`` (e.g. for macOS, execute the following)
 
@@ -383,49 +375,41 @@ How can the appearance of the user interface be customized?
  * Under "Settings - Theme", options for JupyterLab Dark and Light are available, and this theme applies
    to the entire user interface and notebooks.
  * This theme will also apply to the text editor if the text editor theme is "jupyter",
-   and to the terminal if the terminal theme is "inherit". 
+   and to the terminal if the terminal theme is "inherit".
 
 **Jupyter Notebooks**
 
  * Under "View", selecting "Presentation Mode" makes the fonts larger in a Jupyter Notebook open in the main work area.
  * Under "View", selecting "Show Line Numbers" adds line numbers to the left side of every code cell or unexecuted markdown cell.
  * Under "Settings - Theme", selecting "Theme Scrollbars" makes the right-hand notebook scrollbar permanent in Dark Mode.
- * Under "Settings - Theme" it is possible to increase and decrease code font size 
-   (applies to code cells and unexecuted markdown cells) 
-   and content font size (applies to executed markdown cells). 
- * It is also possible to independently increase and decrease the user interface font size, 
-   which applies to the menu bar, side bar, and status bar (footer bar). 
- * All of these font size changes will be applied independent of changes to the browser font size,
-   and apply only to Notebooks.
+ * Under "Settings - Theme" it is possible to increase and decrease code font size (applies to code cells and unexecuted markdown cells) and content font size (applies to executed markdown cells). 
+ * It is also possible to independently increase and decrease the user interface font size, which applies to the menu bar, side bar, and status bar (footer bar). 
+ * All of these font size changes will be applied independent of changes to the browser font size, and apply only to Notebooks.
 
 **Text editor**
 
- * Under "Settings" there are options to increase or decrease text editor font size, choose
-   the preferred text editor indentation (spaces or tabs), and set the editor theme 
-   (includes options for, e.g., dark and light modes).
- * Text files saved with, e.g., a .py extension, will have syntax highlighting enabled automatically.
-   If the text editor theme is "jupyter", the theme will be inherited from the JupyterLab theme.
+ * Under "Settings" there are options to increase or decrease text editor font size, choose the preferred text editor indentation (spaces or tabs), and set the editor theme (includes options for, e.g., dark and light modes).
+ * Text files saved with, e.g., a .py extension, will have syntax highlighting enabled automatically. If the text editor theme is "jupyter", the theme will be inherited from the JupyterLab theme.
 
 **Terminal**
 
  * Under "Settings" there are options to increase or decrease the terminal font size and
-   choose light or dark mode. 
+   choose light or dark mode.
  * If the terminal theme is "inherit", the theme will be inherited from the JupyterLab theme.
  * Note that the text editor emacs is available, but in the terminal, and so the terminal
    options apply when using emacs in-terminal.
 
-**Advanced Settings Editor** 
+**Advanced Settings Editor**
 
  * At the bottom of the "Settings" drop-down menu is an advanced settings editor.
  * Font families, cursor blink rates, and a wide variety of other customizable parameters
    are available.
 
-**Restore to Defaults** 
+**Restore to Defaults**
 
  * Changes to settings are saved between Notebook Aspect sessions.
  * In the advanced settings editor, a list of the settings that have been modified floats to the top.
- * Click on any modified setting and find, at right, the option to click "Restore to Defaults" 
-   to undo every change that has been made.
+ * Click on any modified setting and find, at right, the option to click "Restore to Defaults" to undo every change that has been made.
 
 
 .. _NB-Intro-Use-A-NB-tips:
