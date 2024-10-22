@@ -51,16 +51,16 @@ In the RSP, ``pip`` actually invokes ``conda`` to do its work, ensuring that dep
 Packages installed with ``pip`` will be placed in a subdirectory of the home directory.
 These packages are only guaranteed to work when the conda environment in which they are installed is activated.
 
-If you need to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, you can install them into a new conda environment.
+If it's necessary to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, you can install them into a new conda environment.
 Start by doing ``source /opt/lsst/software/stack/loadLSST.bash`` to initialize conda.
 Use the ``conda create -n myenv`` command to create the new environment.
 Use the ``conda activate myenv`` command to activate this environment.
 Use the ``mamba install {package} ...`` command to install one or more packages into the environment.
 (``mamba`` is a faster version of conda for installing packages.)
 If the package to be installed is not available from the current channels, then the channel will have to be specified, e.g., ``mamba install -c {channel} {package}``.
-When you're done using the environment and want to revert to the ``rubin-env`` one, use ``conda deactivate``.
+When done using the environment and want to revert to the ``rubin-env`` one, use ``conda deactivate``.
 
-If you need to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
+If it's necessary to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
 This is a time- and space-consuming process, so we do not recommend it.
 
 More Complex User Installs
@@ -82,12 +82,12 @@ The basic steps are:
 
       pip install --user bagpipes
 
-   (The ``--user`` flag is necessary because you don’t have root access.)
+   (The ``--user`` flag is necessary due to lack of root access.)
 
    Among other packages, the above command installs ``PyMultiNest``, a python interface for MultiNest. The ``MultiNest`` package itself is not included.
    Before we can use the ``bagpipes`` package, we must install MultiNest and update the ``LD_LIBRARY`` environment variable.
 
-3. Install and build the dependencies -- in this case, the ``MultiNest`` package -- in your ``~/local`` direcotry.  In a terminal, execute:
+3. Install and build the dependencies -- in this case, the ``MultiNest`` package -- in the ``~/local`` directory.  In a terminal, execute:
 
    .. code-block:: bash
 
@@ -153,9 +153,6 @@ Furthermore, a few data products are only available via the Butler, such as surv
 How do I ask questions about Notebooks?
 ---------------------------------------
 
-Keep in mind that if you are not experienced at accessing data via Jupyter notebooks, or using a Science Platform more generally, you are not alone!
-Most of the Rubin/LSST users are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
-
 The `DP0 homepage <https://dp0.lsst.io>`_ provides information about `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
 Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
@@ -167,8 +164,8 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 
 .. _NB-Intro-Use-A-NB-faq-externalrsp:
 
-Can you install the lsst.rsp module outside the RSP?
-----------------------------------------------------
+Can the lsst.rsp module be installed outside the RSP?
+-----------------------------------------------------
 
 Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``.
 
