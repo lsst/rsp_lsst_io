@@ -7,7 +7,7 @@ Using the JupyterLab Terminal
 How to use the JupyterLab terminal
 ==================================
 
-The Rubin/LSST data products (for instance those from `Data Preview 0 <https://dp0.lsst.io/>`_) and the `LSST Science Pipelines`_ tools can both be accessed from the command line of a JupyterLab terminal tab.
+The Rubin/LSST data products and the `LSST Science Pipelines`_ tools can both be accessed from the command line of a JupyterLab terminal tab.
 A terminal session can be started by clicking on the terminal icon in the Jupyterlab launch pad.
 As described in the default message that appears in all newly-launched terminals, to create a Rubin Observatory environment in a JupyterLab terminal session and set up the full set of packages, users must first execute:
 
