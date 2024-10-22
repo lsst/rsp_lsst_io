@@ -46,12 +46,12 @@ Basic User Installs
 ~~~~~~~~~~~~~~~~~~~
 
 The Rubin Science Platform (RSP) comes with the ``rubin-env`` conda environment, including the LSST Science Pipelines, pre-installed and activated within the Notebook and Terminal.
-If it is necessary to extend the ``rubin-env`` environment by installing other Python packages to enable your work, you can use the ``pip install`` command.
+If it is necessary to extend the ``rubin-env`` environment by installing other Python packages, use the ``pip install`` command.
 In the RSP, ``pip`` actually invokes ``conda`` to do its work, ensuring that dependencies that are already present in ``rubin-env`` are used (if compatible).
 Packages installed with ``pip`` will be placed in a subdirectory of the home directory.
 These packages are only guaranteed to work when the conda environment in which they are installed is activated.
 
-If it's necessary to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, you can install them into a new conda environment.
+If it's necessary to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, install them into a new conda environment.
 Start by doing ``source /opt/lsst/software/stack/loadLSST.bash`` to initialize conda.
 Use the ``conda create -n myenv`` command to create the new environment.
 Use the ``conda activate myenv`` command to activate this environment.
@@ -167,13 +167,13 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 Can the lsst.rsp module be installed outside the RSP?
 -----------------------------------------------------
 
-Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``.
+Yes, it is possible to install ``lsst.rsp`` on one's own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``.
 
 Note that if you want to use it to access data that is hosted at the IDF, you will also need a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
-As an example, we will walk through how you can access the Rubin LSST TAP service locally.
+As an example, we will walk through how to access the Rubin LSST TAP service locally.
 
-After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token.
+After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to the token.
 
 Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"`` (e.g. for macOS, execute the following)
 
@@ -181,7 +181,7 @@ Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud
 
    export EXTERNAL_TAP_URL="https://data.lsst.cloud/api/tap"
 
-In a python shell or notebook environment, you should then be able to execute the following:
+In a python shell or notebook environment, it should then be possible to execute the following:
 
 .. code-block:: bash
 
