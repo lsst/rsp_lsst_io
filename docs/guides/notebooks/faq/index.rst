@@ -13,11 +13,11 @@ Jupyter notebook frequently asked questions
 What is a kernel?
 -----------------
 
-In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full LSST Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
+In the RSP Notebook Aspect, notebooks will be operating in a kernel that has access to the full LSST Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
 Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
 See also `this tutorial on installing python packages <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
 (which includes, e.g., use of "pip install").
-To view a list of packages available to you, type "pip list" in a terminal.
+To view a list of packages available, type "pip list" in a terminal.
 
 
 .. _NB-Intro-Use-A-NB-faq-python:
@@ -34,7 +34,7 @@ All Rubin/LSST users should feel free to copy and paste from the provided tutori
 
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
 or this Community Forum thread where Rubin/LSST users can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
-Web searches for "python *(thing you want to do)*" are usually pretty successful too.
+Web searches for "python ..." are usually pretty successful too.
 
 
 .. _NB-Intro-Use-A-NB-faq-environments:
@@ -46,10 +46,10 @@ Basic User Installs
 ~~~~~~~~~~~~~~~~~~~
 
 The Rubin Science Platform (RSP) comes with the ``rubin-env`` conda environment, including the LSST Science Pipelines, pre-installed and activated within the Notebook and Terminal.
-If you need to extend the ``rubin-env`` environment by installing other Python packages to enable your work, you can use the ``pip install`` command.
+If it is necessary to extend the ``rubin-env`` environment by installing other Python packages to enable your work, you can use the ``pip install`` command.
 In the RSP, ``pip`` actually invokes ``conda`` to do its work, ensuring that dependencies that are already present in ``rubin-env`` are used (if compatible).
-Packages installed with ``pip`` will be placed in a subdirectory of your home directory.
-These packages are only guaranteed to work when the conda environment in which you installed them is activated.
+Packages installed with ``pip`` will be placed in a subdirectory of the home directory.
+These packages are only guaranteed to work when the conda environment in which they are installed is activated.
 
 If you need to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, you can install them into a new conda environment.
 Start by doing ``source /opt/lsst/software/stack/loadLSST.bash`` to initialize conda.
@@ -97,19 +97,19 @@ The basic steps are:
 	cmake ..
 	make
 
-4. Update the ``LD_LIBRARY_PATH` in your ``~/.bashrc`` file (for terminal-based access):
+4. Update the ``LD_LIBRARY_PATH` in ``~/.bashrc`` file (for terminal-based access):
 
    .. code-block:: bash
 
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
 
-5. Update the ``LD_LIBRARY_PATH` in your ``~/notebooks/.user_setups`` file (for notebook access):
+5. Update the ``LD_LIBRARY_PATH` in ``~/notebooks/.user_setups`` file (for notebook access):
 
    .. code-block:: bash
 
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
 
-6. The first time you perfom Steps 4 and/or 5, log out and log back into the RSP.
+6. After the first time perfoming Steps 4 and/or 5, log out and log back into the RSP.
 
 For more information, please consult `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_.
 
@@ -292,5 +292,5 @@ First, using a terminal in the Notebook aspect, set the global Git configuration
 Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
 Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
 
-When you ``git clone`` new repositories, use the SSH key.
-If successful, you will be able to ``git fetch`` and ``git push`` without entering your Git password.
+When doing ``git clone`` of a repository, use the SSH key.
+If successful, ``git fetch`` and ``git push`` will work without entering a Git password.
