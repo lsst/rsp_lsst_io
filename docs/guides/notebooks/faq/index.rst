@@ -283,7 +283,7 @@ First, using a terminal in the Notebook aspect, set the global Git configuration
 
 .. code-block:: bash
 
-   git config --global user.email yourEmail@yourdomain
+   git config --global user.email myEmail@mydomain
    git config --global user.name GitUsername
 
 Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
