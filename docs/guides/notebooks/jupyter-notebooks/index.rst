@@ -19,7 +19,7 @@ There is a `user guide for markdown cells in the Jupyter Notebooks documentation
       :name: notebook_aspect
       :alt: This image is a screenshot of the tutorial notebook entitled Introduction to Jupyter Notebooks for Data Preview 0.2. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a greyscale image of a rich galaxy cluster. Across the top of the notebook there is a menu bar of actions for users. Actions include save notebook, set cell type, and insert, cut, copy, paste, run, or interrupt cells.
 
-      A screenshot from a `Rubin/LSST tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_, showing the panel of the Notebook Aspect where multiple interface tabs can be open at once. In this case, the first tab is a command-line terminal, the second is the Launcher interface, and the third (which is currently selected) is an executed version of tutorial notebook 01. Multiple notebooks can be opened in separate tabs.
+      A screenshot from a `Rubin/LSST tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_, showing the panel of the Notebook Aspect where multiple interface tabs can be open at once. In this case, the first tab is a command-line terminal, the second is the Launcher interface, and the third (which is currently selected) is an executed version of a tutorial notebook. Multiple notebooks can be opened in separate tabs.
 
 **Opening Multiple Notebooks:**
 You can have multiple notebooks and terminals open in your viewer at a time.
