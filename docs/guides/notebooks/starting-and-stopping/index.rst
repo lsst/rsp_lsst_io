@@ -1,5 +1,5 @@
 ###############################################
-Starting and stopping a Notebook aspect session
+Starting and Stopping a Notebook Aspect Session
 ###############################################
 
 .. _NB-Intro-Login:
