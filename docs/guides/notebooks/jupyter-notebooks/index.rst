@@ -8,9 +8,9 @@ How to use a Jupyter notebook
 =============================
 
 **Executing code in a Notebook:**
-Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
-Choose the cell to execute by clicking in it with your mouse (the cursor must be in the desired cell).
-Hold down the *shift* key and press either *enter* or *return* (depending on your keyboard type), or click the 'Play' button in the notebook toolbar, and the contents of the cell will be executed.
+Jupyter notebooks provide "cells" within which is typed either Python code or markdown language (for formatted text).
+Choose the cell to execute by clicking in it with the mouse (the cursor must be in the desired cell).
+Hold down the *shift* key and press either *enter* or *return* (depending on keyboard type), or click the 'Play' button in the notebook toolbar, and the contents of the cell will be executed.
 If the cell type is code, and the cell contains python code, the code will be executed.
 If the cell type is markdown, then it will be rendered upon execution to yield nicely formatted text.
 There is a `user guide for markdown cells in the Jupyter Notebooks documentation <https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html>`_.
@@ -22,11 +22,11 @@ There is a `user guide for markdown cells in the Jupyter Notebooks documentation
       A screenshot from a `Rubin/LSST tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_, showing the panel of the Notebook Aspect where multiple interface tabs can be open at once. In this case, the first tab is a command-line terminal, the second is the Launcher interface, and the third (which is currently selected) is an executed version of a tutorial notebook. Multiple notebooks can be opened in separate tabs.
 
 **Opening Multiple Notebooks:**
-You can have multiple notebooks and terminals open in your viewer at a time.
-This is very handy, but you can also arrange both notebooks and terminals next to or on top of each other by dragging the notebook or terminal around by the top bar.
+Multiple notebooks and terminals can be open at a time.
+Notebooks and/or terminal windows can be arranged next to or on top of each other by dragging the notebook or terminal around by the top bar.
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default interval of 2 minutes
-unless you are working in the directory "notebooks/tutorial-notebooks/", which is read-only (see :ref:`NB-Intro-Use-Tutorial-NBs`).
+Note that JupyterLab autosaves notebooks at a default interval of 2 minutes
+unless working in the directory "notebooks/tutorial-notebooks/", which is read-only (see :ref:`NB-Intro-Use-Tutorial-NBs`).
 
