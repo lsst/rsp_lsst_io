@@ -1,6 +1,6 @@
-########################
-Using Tutorial Notebooks
-########################
+##################
+Tutorial Notebooks
+##################
 
 .. _NB-Intro-Use-Tutorial-NBs:
 
