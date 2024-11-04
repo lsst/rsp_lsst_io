@@ -30,3 +30,9 @@ Arranging the windows can be convenient when working in both a terminal and note
 Note that JupyterLab autosaves notebooks at a default interval of 2 minutes
 unless working in the directory "notebooks/tutorial-notebooks/", which is read-only (see :ref:`NB-Intro-Use-Tutorial-NBs`).
 
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: How-to guides
+
+   tutorial-notebooks
