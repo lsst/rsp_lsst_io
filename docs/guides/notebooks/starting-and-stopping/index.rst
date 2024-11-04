@@ -52,8 +52,8 @@ The left sidebar lists folders in the user's home directory (e.g., DATA, WORK, a
 Launching a terminal (the default is a linux bash terminal) and using the command "ls" will return the same list.
 Navigate the file system and open files by double-clicking on folders and files in the left sidebar.
 
-Although the file browser is a handy way to navigate your user home space, it does not allow you to navigate to, e.g., the shared data space.
-One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ using the Terminal to the desired space somewhere in your home directory.
+Although the file browser is a handy way to navigate the user home space, it does not allow navagating to e.g., the shared data space.
+One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ pointing to the desired resource using the Terminal, with this symbolic link placed somewhere in the home directory.
 
 Jupyter Notebooks can be identified by their file extension ".ipynb".
 All users will find a set of tutorial notebooks provided in the "notebooks/tutorial-notebooks/" directory.
@@ -62,5 +62,5 @@ All users will find a set of tutorial notebooks provided in the "notebooks/tutor
 Use the "File" menu in the top menu bar.
 To safely shut down a Notebook, choose "Close and Shutdown Notebook".
 To safely shut down a JupyterLab server and log out of the RSP, choose "Save all, Exit, and Log Out".
-It is recommended you log out every time you are finished with a session in order to both preserve resources for other users and to ensure you re-enter the RSP in a known state every time.
+It is recommended to log out every time upon finishing with a session in order to both preserve resources for other users and to ensure re-entering the RSP in a known state every time.
 To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
