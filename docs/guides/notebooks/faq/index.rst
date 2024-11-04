@@ -169,7 +169,7 @@ Can the lsst.rsp module be installed outside the RSP?
 
 Yes, it is possible to install ``lsst.rsp`` on one's own computer and run it locally. It is a standard `PyPi package <https://pypi.org/project/lsst-rsp/>`_ and can be installed by using ``pip install lsst-rsp``.
 
-Note that if you want to use it to access data that is hosted at the IDF, you will also need a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
+Note that accessing data that are hosted at the IDF will additionally require a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
 As an example, we will walk through how to access the Rubin LSST TAP service locally.
 
@@ -287,7 +287,7 @@ First, using a terminal in the Notebook aspect, set the global Git configuration
    git config --global user.name GitUsername
 
 Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
-Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
+Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), because this generates an account's SSH key *within the RSP*.
 
 When doing ``git clone`` of a repository, use the SSH key.
 If successful, ``git fetch`` and ``git push`` will work without entering a Git password.
