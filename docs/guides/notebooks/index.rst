@@ -31,7 +31,6 @@ The full documentation for the RSP Notebook Aspect is available at `nb.lsst.io <
 
    starting-and-stopping/index
    jupyter-notebooks/index
-   tutorial-notebooks/index
    jupyterlab-terminal/index
    Using the Science Pipelines <science-pipelines/index>
    configuration/index
