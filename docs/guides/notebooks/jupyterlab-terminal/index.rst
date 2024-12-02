@@ -15,5 +15,5 @@ As described in the default message that appears in all newly-launched terminals
 
    setup lsst_distrib
 
-For example, to query and retrieve data sets using the Butler (see `What is the Butler, and when do I use it? <https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html#nb-intro-use-a-nb-faq-butler>`_, below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
-Type ``butler --help`` in any terminal to see a list of available butler functionality.
+For example, once the above command has been executed, `Butler command-line tools <https://pipelines.lsst.io/modules/lsst.daf.butler/scripts/butler.html>`_ to query data sets will be available.
+Type ``butler --help`` in any terminal to see a list of available Butler command-line functionality.
