@@ -25,8 +25,7 @@ with access to the file (the three ``r``).
 Change the mode (``chmod``) of the file to add user write access (``u+w``), and repeate the
 list command (``ls -lah``) for the file to see that the user now has read and write access (``-rw-r--r--``).
 
-The dollar signs indicate terminal command line executable statements that should be copy-pasted into the 
-terminal (but do not copy-paste the ``$``).
+The dollar signs indicate terminal command line executable statements that should be copy-pasted into the terminal (but do not copy-paste the ``$``).
 Lines without dollar signs indicate standard output to be compared with the results in the terminal.
 
 .. code-block:: bash
@@ -41,5 +40,4 @@ Lines without dollar signs indicate standard output to be compared with the resu
       $ ls -lah <filename>.ipynb
       -rw-r--r-- 1 melissagraham melissagraham 37K Nov 13 21:14 <filename>.ipynb
 
-After executing the above statements, use the left menu bar to navigate to the home directory and open the newly altered
-version of the introductory notebook, make a change, and notice that it can be saved.
+After executing the above statements, use the left menu bar to navigate to the home directory and open the newly altered version of the introductory notebook, make a change, and notice that it can be saved.
