@@ -28,7 +28,7 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments.
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the `Rubin/LSST tutorial notebooks <https://github.com/rubin-dp0/tutorial-notebooks/>`_ use Python as well.
+Much of the LSST Science Pipelines code is in Python, and the Rubin/LSST tutorial notebooks use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All Rubin/LSST users should feel free to copy and paste from the provided tutorials.
 
@@ -68,7 +68,7 @@ More Complex User Installs
 
 Suppose one wishes to install a user package on the RSP that has dependencies on non-python libraries.
 Typically, these non-python libraries must be installed and built separately, and the ``LD_LIBRARY_PATH`` must be updated.
-Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
+Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://community.lsst.org/t/installing-user-packages-with-dependencies-on-non-python-libraries/7831>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
 (The ``bagpipes`` package depends on ``PyMultiNest``, a python interface to the ``MultiNest`` package, which is written in C++.)
 The tutorial notebook runs through the steps to user install the ``bagpipes`` package and build its dependencies on the RSP so that it can be used both from the python command line shell and from inside a notebook.
 
@@ -111,7 +111,7 @@ The basic steps are:
 
 6. After the first time perfoming Steps 4 and/or 5, log out and log back into the RSP.
 
-For more information, please consult `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_.
+For more information, please consult `tutorial notebook for working with user packages <https://community.lsst.org/t/installing-user-packages-with-dependencies-on-non-python-libraries/7831>`_.
 
 
 
