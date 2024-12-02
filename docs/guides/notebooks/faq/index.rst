@@ -134,7 +134,7 @@ What is the Butler, and when do I use it?
 
 The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the Data Management System (DMS) for persisting and retrieving datasets.
 The third generation "Gen3" Butler is being used.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the Rubin/LSST `tutorial notebooks <https://dp0-2.lsst.io/tutorials-examples/index.html#dp0-2-tutorials-notebooks>`_ demonstrate Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the Rubin/LSST tutorial notebooks demonstrate Butler use as well.
 The Butler is also described in the paper `The Vera C. Rubin Observatory Data Butler and Pipeline
 Execution System <https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract>`_ (Jenness et al. 2022).
 
@@ -153,8 +153,8 @@ Furthermore, a few data products are only available via the Butler, such as surv
 How do I ask questions about Notebooks?
 ---------------------------------------
 
-`Get support <https://dp0.lsst.io/delegate-resources/support.html>`_ at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
-Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
+`Get support at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
+Another option is to attend the biweekly Rubin Science Assemblies which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
 Beginner-level questions are very welcome, both in the Community Forum and during the Rubin Science Assemblies.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
