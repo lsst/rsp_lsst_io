@@ -153,7 +153,7 @@ Furthermore, a few data products are only available via the Butler, such as surv
 How do I ask questions about Notebooks?
 ---------------------------------------
 
-`Get support at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
+Get support at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
 Another option is to attend the Rubin Science Assemblies which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
 Beginner-level questions are very welcome, both in the Community Forum and during the Rubin Science Assemblies.
