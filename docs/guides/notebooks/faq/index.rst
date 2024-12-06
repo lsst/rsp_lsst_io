@@ -154,7 +154,7 @@ How do I ask questions about Notebooks?
 ---------------------------------------
 
 `Get support at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
-Another option is to attend the biweekly Rubin Science Assemblies which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
+Another option is to attend the Rubin Science Assemblies which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
 Beginner-level questions are very welcome, both in the Community Forum and during the Rubin Science Assemblies.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
