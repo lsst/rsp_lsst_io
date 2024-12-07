@@ -32,7 +32,7 @@ Much of the LSST Science Pipelines code is in Python, and the Rubin/LSST tutoria
 These tutorials contain executable examples of the commands required to access and analyze data.
 All Rubin/LSST users should feel free to copy and paste from the provided tutorials.
 
-Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
+Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorials in a variety of languages),
 or this Community Forum thread where Rubin/LSST users can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
 Web searches for "python ..." are usually pretty successful too.
 
