@@ -22,7 +22,7 @@ list (``ls``) the files that are in the current directory to confirm the copy wo
 and list in long format all attributes in human-readable form (``-lah``) for the copied file.
 The standard output ``-r--r--r--`` indicates that the file is read-only (``r``) by the user, the group, and everyone
 with access to the file (the three ``r``).
-Change the mode (``chmod``) of the file to add user write access (``u+w``), and repeate the
+Change the permissions of the file (``chmod``) to add user write access (``u+w``), and repeat the
 list command (``ls -lah``) for the file to see that the user now has read and write access (``-rw-r--r--``).
 
 The dollar signs indicate terminal command line executable statements that should be copy-pasted into the terminal (but do not copy-paste the ``$``).
