@@ -7,7 +7,7 @@ Tutorial Notebooks
 How to use the Tutorial Notebooks
 =================================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the Rubin/LSST tutorial notebooks which are provided in each user's home directory.
+The best way to learn how to use a Jupyter Notebook is to open the first of the Rubin/LSST tutorial notebooks which are provided in each user's home directory, specifically within "~/notebooks/tutorial-notebooks".
 
 **The "notebooks/tutorial-notebooks" directory is read-only:**
 The read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
