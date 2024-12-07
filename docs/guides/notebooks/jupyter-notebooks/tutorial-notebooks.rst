@@ -17,7 +17,7 @@ Users wishing to edit, execute, *and save* versions of these notebooks should co
 **How to obtain an editable version of a tutorial notebook:**
 The commands below demonstrate how to create a copy of a tutorial notebook in the home directory which can be opened, edited, and saved.
 Step-by-step, the commands below change directory (``cd``) into the home directory (``~``),
-copy the desired tutorial to the (``cp``) into the current directory (``.``),
+copy (``cp``) the desired tutorial (``notebooks/tutorial-notebooks/<filename>.ipynb``) into the current directory (``.``),
 list (``ls``) the files that are in the current directory to confirm the copy worked,
 and list in long format all attributes in human-readable form (``-lah``) for the copied file.
 The standard output ``-r--r--r--`` indicates that the file is read-only (``r``) by the user, the group, and everyone
