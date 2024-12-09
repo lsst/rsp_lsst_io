@@ -15,6 +15,8 @@ If the cell type is code, and the cell contains python code, the code will be ex
 If the cell type is markdown, then it will be rendered upon execution to yield nicely formatted text.
 There is a `user guide for markdown cells in the Jupyter Notebooks documentation <https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html>`_.
 
+Jupyter notebook cells can be executed out of order. This provides a degree of flexibility in executing Jupyter notebooks, but could also lead to errors if, for instance, a cell is executed before prior cells that define necessary functions and/or variables. If you've executed a notebook's cells out of order and are concerned about having caused potential issues in doing so, you can restart the notebook's kernel.
+
   .. figure:: images/notebook.png
       :name: notebook_aspect
       :alt: This image is a screenshot of a Rubin tutorial notebook. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a greyscale sky image.
