@@ -51,6 +51,7 @@ In the very left-most vertical sidebar of icons, the top icon is a file folder, 
 The left sidebar lists folders in the user's home directory (e.g., DATA, WORK, and notebooks).
 Launching a terminal (the default is a linux bash terminal) and using the command "ls" will return the same list.
 Navigate the file system and open files by double-clicking on folders and files in the left sidebar.
+Clicking the folder icon above the list of files will take you back to your home directory.
 
 Although the file browser is a handy way to navigate the user home space, it does not allow navagating to e.g., the shared data space.
 One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ pointing to the desired resource using the Terminal, with this symbolic link placed somewhere in the home directory.
