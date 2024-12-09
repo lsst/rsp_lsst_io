@@ -62,6 +62,7 @@ All users will find a set of tutorial notebooks provided in the "notebooks/tutor
 **Safely Log Out of JupyterLab:**
 Use the "File" menu in the top menu bar.
 To safely shut down a Notebook, choose "Close and Shutdown Notebook".
+Note that clicking the "x" on a Notebook tab does not shut down the Notebook's kernel.
 To safely shut down a JupyterLab server and log out of the RSP, choose "Save all, Exit, and Log Out".
 It is recommended to log out every time upon finishing with a session in order to both preserve resources for other users and to ensure re-entering the RSP in a known state every time.
 To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
