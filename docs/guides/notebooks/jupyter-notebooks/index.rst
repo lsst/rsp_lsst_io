@@ -19,9 +19,9 @@ Jupyter notebook cells can be executed out of order. This provides a degree of f
 
   .. figure:: images/notebook.png
       :name: notebook_aspect
-      :alt: This image is a screenshot of a Rubin tutorial notebook. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a greyscale sky image.
+      :alt: This image is a screenshot of a Rubin tutorial notebook. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a grayscale sky image.
 
-      A screenshot from an executed Rubin/LSST tutorial notebook. Multiple notebooks can be opened in separate tabs.
+      A screenshot from an executed Rubin/LSST tutorial notebook. Multiple notebooks can be opened in separate tabs. You can monitor memory usage by checking the numbers listed after "Mem:" along the bottom gray bar of the RSP window.
 
 **Opening Multiple Notebooks:**
 Multiple notebooks and terminals can be open at a time.
