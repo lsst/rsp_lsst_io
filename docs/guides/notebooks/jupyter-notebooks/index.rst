@@ -17,7 +17,7 @@ There is a `user guide for markdown cells in the Jupyter Notebooks documentation
 
   .. figure:: images/notebook.png
       :name: notebook_aspect
-      :alt: This image is a screenshot of the tutorial notebook entitled Introduction to Jupyter Notebooks for Data Preview 0.2. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a greyscale image of a rich galaxy cluster. Across the top of the notebook there is a menu bar of actions for users. Actions include save notebook, set cell type, and insert, cut, copy, paste, run, or interrupt cells.
+      :alt: This image is a screenshot of a Rubin tutorial notebook. The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. The last code cell has produced a greyscale sky image.
 
       A screenshot from an executed Rubin/LSST tutorial notebook. Multiple notebooks can be opened in separate tabs.
 
