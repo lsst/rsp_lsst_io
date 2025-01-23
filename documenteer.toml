@@ -25,4 +25,5 @@ ignore = [
     'https://usdf-rsp.slac.stanford.edu',
     'https://docushare.lsst.org',
     'https://www.java.com/en/',  # Not accessible to the link checker
+    'https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract',
 ]
