@@ -104,7 +104,8 @@
       "api_url": "https://usdf-rsp.slac.stanford.edu/api/",
       "api_tap_url": "https://usdf-rsp.slac.stanford.edu/api/tap/",
       "gafaelfawr_tokens_url": "https://usdf-rsp.slac.stanford.edu/auth/tokens/",
-      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfprod/index.html"
+      "phalanx_docs_url": "https://phalanx.lsst.io/environments/usdfprod/index.html",
+      "times_square_url": "https://usdf-rsp.slac.stanford.edu/times-square/"
     }
   }
 }
