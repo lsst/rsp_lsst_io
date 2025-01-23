@@ -41,6 +41,6 @@ Linking additional identities
 
       This |rsp-at| is for internal Rubin Observatory engineering and testing.
 
-      If you are a DP0 delegate, switch to the main documentation at {{all_envs.primary.ltd_url_prefix}}.
+      If you are a science community member, switch to the main documentation at {{all_envs.primary.ltd_url_prefix}}.
 
    {% endif %}
