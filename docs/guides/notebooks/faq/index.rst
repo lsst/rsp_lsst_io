@@ -7,19 +7,6 @@ Frequently Asked Questions
 Jupyter notebook frequently asked questions
 ===========================================
 
-
-.. _NB-Intro-Use-A-NB-faq-kernel:
-
-What is a kernel?
------------------
-
-In the RSP Notebook Aspect, notebooks will be operating in a kernel that has access to the full LSST Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
-Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
-See also `this tutorial on installing python packages <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
-(which includes, e.g., use of "pip install").
-To view a list of packages available, type "pip list" in a terminal.
-
-
 .. _NB-Intro-Use-A-NB-faq-python:
 
 Is all the code in Python?
