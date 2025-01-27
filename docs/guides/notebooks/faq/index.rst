@@ -113,20 +113,6 @@ The basic steps are:
 
 For more information, please consult `tutorial notebook for working with user packages <https://community.lsst.org/t/installing-user-packages-with-dependencies-on-non-python-libraries/7831>`_.
 
-
-
-.. _NB-Intro-Use-A-NB-faq-github:
-
-Do I need to know Git?
-----------------------
-
-Although use of Git and GitHub are not necessary when using the RSP Notebook Aspect, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
-Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
-GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
-In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
-A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of Git.
-
-
 .. _NB-Intro-Use-A-NB-faq-butler:
 
 What is the Butler, and when do I use it?
