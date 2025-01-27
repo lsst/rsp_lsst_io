@@ -42,6 +42,9 @@ To encourage questions in the Forum, a couple of beginner-level topics have been
 learning `python <https://community.lsst.org/t/resources-for-python-beginners/5975>`_ and `SQL <https://community.lsst.org/t/sql-adql-beginner-resources/6051>`_.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
+User guide
+------------
+
 .. toctree::
    :maxdepth: 2
    :titlesonly:
