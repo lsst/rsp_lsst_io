@@ -23,7 +23,7 @@ The RSP Notebook Aspect offers a variety of functionality, including:
 * access and analyze data in the cloud
 * :doc:`terminal <jupyterlab-terminal/index>` and iPython interface
 * stable software environment
-* pre-installed LSST Science Pipelines
+* pre-installed `LSST Science Pipelines`_
 * shared disk space
 
 The pages within this guide, listed below, illustrate how to do RSP Notebook Aspect activities, from logging in, to using Jupyter Notebooks, to learning from Rubin/LSST tutorial notebooks, to accessing `LSST Science Pipelines`_ software, and logging out.
