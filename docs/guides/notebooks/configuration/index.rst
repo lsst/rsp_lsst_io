@@ -10,4 +10,5 @@ Configuring the Notebook Aspect
    git-configuration
    shell-configuration
    notebook-user-setups
+   user-installs
    ui-configuration
