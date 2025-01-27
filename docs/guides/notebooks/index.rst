@@ -13,8 +13,8 @@ To help users avoid issues with stale instances, sessions will be automatically 
 
 .. _NB-Conceptual-Overview:
 
-RSP Notebook Aspect conceptual overview
----------------------------------------
+Conceptual overview
+-------------------
 
 The RSP Notebook Aspect offers a variety of functionality, including but not limited to :doc:`Jupyter Notebooks <jupyter-notebooks/index>`.
 
