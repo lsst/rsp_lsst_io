@@ -36,6 +36,17 @@ unless working in the directory "notebooks/tutorial-notebooks/", which is read-o
 
 The JupyterLab Notebooks `documentation <https://jupyterlab.readthedocs.io/en/latest/user/notebook.html>`_ has more information on creating and using notebooks.
 
+.. _NB-Intro-Use-A-NB-kernel-def:
+
+What is a kernel?
+=================
+
+In the RSP Notebook Aspect, notebooks will be operating in a kernel that has access to the full LSST Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`).
+Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
+See also `this tutorial on installing python packages <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
+(which includes, e.g., use of "pip install").
+To view a list of packages available, type "pip list" in a terminal.
+
 .. toctree::
    :titlesonly:
    :maxdepth: 2
