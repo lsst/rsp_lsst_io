@@ -2,6 +2,11 @@
 Configuring Git for GitHub
 ##########################
 
+Although use of Git and GitHub are not necessary when using the RSP Notebook Aspect, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
+Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
+GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
+In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
+
 Like any other computer, you need to configure Git before you can begin developing software and collaborating on GitHub.
 This page will get you started.
 
