@@ -97,6 +97,55 @@ While a very powerful in-browser environment, working exclusively through the br
 Portal
 ======
 
+The RSP Portal Aspect provides query interfaces, image and catalog visualizations, and a set of basic tools for exploratory data analysis.
+These capabilities are meant to facilitate exploration of the Rubin/LSST data and assist users in becoming more familiar with both the data and the RSP data services.
+
+The Portal and the Notebook Aspects are intended to be complementary and serve a wide range of user levels of expertise and familiarity with the data, and individual preferences for programmatic or UI-based access to data.
+
+Some users, for some use cases, may work entirely within the Portal; others may use it for initial data selection, with subsequent detailed analysis in notebooks; others may use it only for "quick-look" purposes, or simply to remind themselves of elements of the LSST data model which they will then code against in notebooks.
+
+The Portal is *not* intended to replicate the full breadth of scientific visualization capabilities available in the wider scientific Python and JupyterLab ecosystem; however, the RSP aims at making the connections between the Aspects sufficiently easy to use that it is natural to begin work in the Portal and then segue to more in-depth analysis in a notebook, where such tools can be used.
+
+The Portal will in general always provide access to all the API Aspect data services.
+In its present state, it in particular supports:
+* TAP queries for catalog data, both through UI forms that provide a visual means of constructing queries, and through an interface for writing explicit ADQL queries;
+* ObsTAP and SIAv2 queries for images; and
+* following annotations in the data that lead users to additional queries they can perform -- e.g., retrieving light curves for individual objects in an Object table query result.
+
+The Portal supports multi-object queries based on the temporary-table-upload capabilities described above in the API Aspect section, and provides a simple interface for using the result of one query as an input to another.
+
+These capabilities are based on the IVOA standards adopted by the project for its APIs, and so are also applicable to a wide range of other astronomical archives, including Gaia at ESAC, NASA's IRSA and MAST, the CADC's extensive holdings, and beyond.
+Results from queries to other archives can be combined in a wide variety of ways with Rubin query results.
+
+The Portal provides image visualization capabilities that exploit Rubin-specific details of the image data, such as per-pixel flag overlays displaying data quality and other per-pixel assessments by the Rubin pipelines.
+
+As noted above, the Portal's visualization capabilities are easily accessed from notebooks in the RSP, and we will continue to improve those interfaces on the road to DR1.
+
+As is the case for the other RSP Aspects and services, the Portal is regularly updated with additional features and performance improvements, not only in association with new data releases.
+Since the original release of DP0.2, the Portal UI has been extensively refreshed and clarified, performance on large tabular query results has been significantly improved, and a wide variety of smaller-scale features added.
+
+Road map
+--------
+
+The Portal road map includes the following major planned developments:
+
+* An expanded and clarified query-status and query-history display capability, released together with the corresponding API services on the back end.  An initial version of this will be available for DP1 and it will continue to be developed with additional features.
+* Context-sensitive access to documentation on the Rubin data model, pipelines, and data quality.  This capability also depends on future back-end data services and will begin to be deployed later in 2025 and reach maturity with DP2 and beyond, as additional content is developed by the project.
+* An interface to the RSP API service for persistent user tables.  Portal users will be able to create and interact with such tables, and the Portal will support straightforward workflows for saving query results as persistent user tables.  This capability will be released in parallel with the underlying API service.
+* An interface to a future RSP API service for storing and sharing file-oriented data with other users, likely based on VOSpace.
+
+The user-facing capabilities of the Portal will also be expanded by taking more advantage of its existing ability to follow links embedded in the data to facilitate additional queries and data retrievals.  An example would be the ability to retrieve and display the specific input images associated with a coadd tile, based on provenance information in the data.
+
+The Portal is based on the underlying, open-source "IPAC Firefly" tool, with customizations for the Rubin environment.  Firefly development is supported by a combination of, primarily, IRSA and Rubin resources, and is closely tied in to development of improvements and extensions to the IVOA's community standards for astronomical data access.
+
+
+Full LSSTCam focal-plane visualizations
+---------------------------------------
+
+A separate capability from the Portal, but integrated with it and the rest of the RSP, is planned to be provided for the visualization of full LSSTCam focal-plane images by the DP2 era.  It may be released sooner in a version applicable to the DP1 (ComCam) data; development and scale testing is currently under way.
+
+The integration with the Portal will allow focal-plane-level image searches to be performed using the same ObsTAP and SIAv2 interfaces, but with the results directed to the dedicated viewer, as well as allowing the user to return from the dedicated viewer to the Portal for detailed visualization of CCD-scale images with the Portal's more extensive feature set.
+
 General
 =======
 
