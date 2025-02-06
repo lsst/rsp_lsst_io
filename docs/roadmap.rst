@@ -37,9 +37,7 @@ Catalog searches
 ----------------
 Catalog searches are provided through the IVOA TAP protocol, both for use inside the RSP's Notebook and Portal Aspects, and externally (with proper authentication).
 TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with the addition of spherical-geometry constructs, and then translated to be executed on the back-end database.
-Current TAP capabilities include the ability to do synchronous and asynchronous queries against Data Preview 0.2 catalogs stored in Qserv (our high performance database for large spatially sharded catalogs) and Data Preview 0.3 catalogs stored in Postgres (in DP0, for solar system objects only).
-TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with the addition of spherical-geometry constructs, and then translated to be executed on the back-end database.
-TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
+
 Current TAP capabilities include the ability to do synchronous and asynchronous queries against Data Preview 0.2 catalogs stored in Qserv (our high performance database for large spatially sharded catalogs) and Data Preview 0.3 catalogs stored in Postgres (in DP0, for solar system objects only).
 
 TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
