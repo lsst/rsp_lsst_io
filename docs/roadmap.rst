@@ -12,7 +12,7 @@ For the planned dates for those events please consult project documentation and 
 
 But before we get there, bear in mind there are three constraints to what you can do on the RSP:
 
-1. Scope. The Rubin Science Platform is aimed at providing access to Rubin Data Products and next-to-the-data analytics; there are some things it is not scoped to provide, for example large-scale re-processing of raw data (there are other inititatives that might help with that, but it's not a function of the RSP and is not planned to be).
+1. Scope. The Rubin Science Platform is aimed at providing access to Rubin Data Products and next-to-the-data analytics.  There are some things it is not scoped to provide, for example: large-scale re-processing of raw data, or re-creation of coadds across the sky (there are other initiatives that might help with that, but it's not a function of the RSP and is not planned to be given current expectations for the available physical resources).
 
 2. Affordability. There are limitations placed not by the capabilities of the RSP (its architecture and code), but by the budgeted cost to provide them to a very large user base. For example, the storage per user is set by what the project can afford to provide. This could change with funding, change in the underlying cost of computing infrastructure or usage (for example if we have fewer users than we modeled there would be more resources for those users); but at any given time, it places a strong constraint on what can be provided by the project to everyone in the data-rights holding community.
 
