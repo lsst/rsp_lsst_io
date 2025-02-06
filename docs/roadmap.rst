@@ -49,7 +49,7 @@ Temporary table uploads for Qserv-stored catalogs are planned to be available in
 
 There are currently some elements of the ADQL language that are not supported by our Qserv back end.  Some of these limitations (e.g, sub-queries are not supported) are fairly fundamental.  Others are more superficial, such as the current lack of support for the spatial `INTERSECTS()` operation, and improvements in this category are planned to be available by DP2.
 
-Currently there is no environmental data (eg observing conditions) available for query in the RSP. This is planned to be available by the start of the survey.
+Currently there is no environmental data (e.g., observing conditions) available for query in the RSP. These data _are_ being recorded, and an RSP query capability is planned to be available by the start of the survey.
 
 TAP query results are now returned in the IVOA VOTable ``TABLEDATA`` and ``BINARY2`` serialisations.  The latter, which is significantly more efficient, will shortly become the default.
 Additional serialisations better suited to large datasets (such as Apache Parquet) are in the roadmap.
