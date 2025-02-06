@@ -47,7 +47,7 @@ Temporary table uploads for Qserv-stored catalogs are planned to be available in
 
 (Note that temporary-table uploads are only for the lifetime of individual queries and should not be confused with support for persistent user databases.  These are planned to be available in time for DP2.  An extension to TAP originated by CADC is expected to be used to provide API access to this capability.  This is discussed in more detail below.)
 
-There are currently some ADQL compliant searches that cannot be serviced in Qserv (such as intersects). There are planned to be available by DP2.
+There are currently some elements of the ADQL language that are not supported by our Qserv back end.  Some of these limitations (e.g, sub-queries are not supported) are fairly fundamental.  Others are more superficial, such as the current lack of support for the spatial `INTERSECTS()` operation, and improvements in this category are planned to be available by DP2.
 
 Currently there is no environmental data (eg observing conditions) available for query in the RSP. This is planned to be available by the start of the survey.
 
