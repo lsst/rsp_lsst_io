@@ -51,3 +51,16 @@ Currently there is no environmental data (eg observing conditions) available for
 TAP query results are now returned in TABLEDATA and BINARY2 serialisations.
 Additional serialisations better suited to large datasets (such as parquet) are in the roadmap.
 
+Currently there is no way for a user to inspect or interact with their query history. An early version of this capability is planned for DP1, with more to come.
+
+Image searches
+--------------
+
+Currently image searches are possible through TAP (ObsCore) queries.
+
+Queries using the IVOA SIA (v2) protocol were planned for DP1 but have been deployed early.
+
+Within the RSP Notebook Aspect, images can also be retrieved directly from the Rubin middleware system (Butler).
+
+A HIPS data service is available.
+
