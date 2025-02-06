@@ -7,6 +7,8 @@ Rubin Science Platform Documentation
 The Rubin Science Platform is an online service that enables you to access and analyze Rubin LSST data.
 This documentation will help you set up your user account and work with the Rubin Science Platform's software and services.
 
+For the current status of RSP capabilities and future plans see <roadmap.rst>
+
 .. jinja:: rsp
 
    {% if not env.is_primary %}
