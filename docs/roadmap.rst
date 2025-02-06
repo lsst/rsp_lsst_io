@@ -43,7 +43,7 @@ Current TAP capabilities include the ability to do synchronous and asynchronous 
 
 TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
 
-Temporary table uploads for Qserv-stored catalogs are planned DP1 later this year.
+Temporary table uploads for Qserv-stored catalogs are planned to be available in time for DP1 later this year.
 
 Persistent user table uploads are planend to be available for DP2.
 
