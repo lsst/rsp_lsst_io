@@ -35,10 +35,11 @@ For example, we have been taking a leadership position in developing standards f
 
 Catalog searches
 ----------------
-
 Catalog searches are provided through the IVOA TAP protocol, both for use inside the RSP's Notebook and Portal Aspects, and externally (with proper authentication).
 TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with the addition of spherical-geometry constructs, and then translated to be executed on the back-end database.
-
+Current TAP capabilities include the ability to do synchronous and asynchronous queries against Data Preview 0.2 catalogs stored in Qserv (our high performance database for large spatially sharded catalogs) and Data Preview 0.3 catalogs stored in Postgres (in DP0, for solar system objects only).
+TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with the addition of spherical-geometry constructs, and then translated to be executed on the back-end database.
+TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
 Current TAP capabilities include the ability to do synchronous and asynchronous queries against Data Preview 0.2 catalogs stored in Qserv (our high performance database for large spatially sharded catalogs) and Data Preview 0.3 catalogs stored in Postgres (in DP0, for solar system objects only).
 
 TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
@@ -47,7 +48,7 @@ Temporary table uploads for Qserv-stored catalogs are planned to be available in
 
 (Note that temporary-table uploads are only for the lifetime of individual queries and should not be confused with support for persistent user databases.  These are planned to be available in time for DP2.  An extension to TAP originated by CADC is expected to be used to provide API access to this capability.  This is discussed in more detail below.)
 
-There are currently some elements of the ADQL language that are not supported by our Qserv back end.  Some of these limitations (e.g, sub-queries are not supported) are fairly fundamental.  Others are more superficial, such as the current lack of support for the spatial `INTERSECTS()` operation, and improvements in this category are planned to be available by DP2.
+There are currently some elements of the ADQL language that are not supported by our Qserv back end.  Some of these limitations (e.g, sub-queries are not supported) are fairly fundamental.  Others are more superficial, such as the current lack of support for the spatial ``INTERSECTS()`` operation, and improvements in this category are planned to be available by DP2.
 
 Currently there is no environmental data (e.g., observing conditions) available for query in the RSP. These data _are_ being recorded, and an RSP query capability is planned to be available by the start of the survey.
 
