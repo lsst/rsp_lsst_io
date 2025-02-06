@@ -28,7 +28,7 @@ When a capability is listed as "planned" it means there is a high degree of cert
 APIs
 ====
 
-There are a large number of programmatic APIs to RSP capabilities that can be used both from within and externall to the RSP.
+There are a large number of programmatic APIs to RSP capabilities that can be used both from within and externally to the RSP.
 Wherever possible, these are based on Virtual Observatory protocols for interoperability with existing clients (such as TOPCAT and pyvo) and other science archives.
 We have an active engagement with the IVOA community to extend those protocols for "big data" science and other needs that arise from the Rubin Community.
 
