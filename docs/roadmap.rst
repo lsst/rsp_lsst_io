@@ -78,3 +78,31 @@ A SODA-compliant image cutout service is available.
 A bulk cut-out service is planned by DP2.
 
 A PSF retrieval service is planned by DP2.
+
+Notebooks
+=========
+
+The Notebook service is based on JupyterLab (which is itself under active development) with a number of RSP enhancements with more to come.
+
+There is a growing suite of tutorial notebooks available directly in the Notebook demonstrating the capabilities of the RSP as well as helping users understand the LSST data products and pipelines. Many more are to come. A more user-friendly way of accessing the increasing number of tutorials will be available for DP1.
+
+A number of visualisation options are available, including Firefly, the same visualisation engine available via the RSP Portal.
+
+Starting with DP1, expect to see Portal integration features such as the ability to seed a notebook with a query that was one in the Portal. More such features are in the roadmap.
+
+While a very powerful in-browser environment, working exclusively through the browse can feel limiting. We have a number of features planned to improve user experience, such as a WebDAV service that would allow users to edit files on their RSP home space from their preferred device. An early version of this could be available for DP1.
+
+Portal
+======
+
+General
+=======
+
+During the DP0 small-cohort delegate program, some controls were not applied (such as disk quotas). Quotas will start being enforced starting with DP1.
+
+A new system for submitting feedback and needing with help such as authentication issues that are not suited for our open community forum will be available starting with DP1, replacing the Github Issues system we used during DP0.
+
+There is a high demand for more performant computation, which we are committed to provide within our resources. A dask service is on the roadmap, and we are investigating ways to competitively provide access to GPU and/or other resources friendly to machine learning.
+
+Context help and more documentation will be an on-going project, with some new features coming for DP1.
+
