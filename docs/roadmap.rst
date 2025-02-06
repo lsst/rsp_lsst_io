@@ -7,7 +7,7 @@ What can you do with the Rubin Science Platform?
 
 Below you will find a detailed (but not exhaustive) list of current and future RSP capabilities.
 
-Please not the difference between Data Previews (DP0, DP1, DP2) which are early access programs before the start of the survey, and Data Releases (DR1, DR2 etc) which are the official data releases after the survey starts.
+Please note the difference between Data Previews (DP0, DP1, DP2), which are early access programs before the start of the survey, and Data Releases (DR1, DR2, etc.), which are the official data releases after the survey starts.
 For the planned dates for those events please consult project documentation and announcements.
 
 But before we get there, bear in mind there are three constraints to what you can do on the RSP:
