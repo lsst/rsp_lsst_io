@@ -52,6 +52,9 @@ Currently there is no environmental data (eg observing conditions) available for
 TAP query results are now returned in the IVOA VOTable `TABLEDATA` and `BINARY2` serialisations.  The latter, which is significantly more efficient, will shortly become the default.
 Additional serialisations better suited to large datasets (such as Apache Parquet) are in the roadmap.
 
+We plan very extensive annotation of tables and tabular query results with high-quality metadata, including mechanisms to link data to associated documentation.
+A fraction of this capability was deployed for DP0.2 to support ongoing development, and additional metadata are being supplied progressively.
+We expect DP1 to reflect a substantial advance on the original state of DP0.2 in this respect.
 Currently there is no way for a user to inspect or interact with their query history. An early version of this capability is planned for DP1, with more to come.
 
 Image searches
