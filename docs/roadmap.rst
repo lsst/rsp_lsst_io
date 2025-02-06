@@ -64,3 +64,11 @@ Within the RSP Notebook Aspect, images can also be retrieved directly from the R
 
 A HIPS data service is available.
 
+Compute APIs
+------------
+
+A SODA-compliant image cutout service is available.
+
+A bulk cut-out service is planned by DP2.
+
+A PSF retrieval service is planned by DP2.
