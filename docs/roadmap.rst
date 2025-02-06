@@ -106,7 +106,8 @@ During the DP0 small-cohort delegate program, some controls were not applied (su
 
 A new system for submitting feedback, and to support help requests such as authentication issues that are not suited for our open community forum, will be available starting with DP1, replacing the GitHub Issues system we used during DP0.
 
-There is a high demand for more performant computation, which we are committed to provide within our resources. A dask service is on the roadmap, and we are investigating ways to competitively provide access to GPU and/or other resources friendly to machine learning.
+There is a high demand for more performant computation, which we are committed to provide within our resources. 
+A Dask (parallel Python computing) service is on the roadmap, and we are investigating ways to competitively provide access to GPU and/or other resources friendly to machine learning.
 
 Context help and more documentation will be an on-going project, with some new features coming for DP1.
 
