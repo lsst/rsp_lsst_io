@@ -45,7 +45,7 @@ TAP's temporary table uploads, which allow users to provide, at query time, a ca
 
 Temporary table uploads for Qserv-stored catalogs are planned to be available in time for DP1 later this year.
 
-Persistent user table uploads are planend to be available for DP2.
+(Note that temporary-table uploads are only for the lifetime of individual queries and should not be confused with support for persistent user databases.  These are planned to be available in time for DP2.  An extension to TAP originated by CADC is expected to be used to provide API access to this capability.  This is discussed in more detail below.)
 
 There are currently some ADQL compliant searches that cannot be serviced in Qserv (such as intersects). There are planned to be available by DP2.
 
