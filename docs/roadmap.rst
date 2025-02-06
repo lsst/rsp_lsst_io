@@ -49,7 +49,7 @@ There are currently some ADQL compliant searches that cannot be serviced in Qser
 
 Currently there is no environmental data (eg observing conditions) available for query in the RSP. This is planned to be available by the start of the survey.
 
-TAP query results are now returned in the IVOA VOTable `TABLEDATA` and `BINARY2` serialisations.  The latter, which is significantly more efficient, will shortly become the default.
+TAP query results are now returned in the IVOA VOTable ``TABLEDATA`` and ``BINARY2`` serialisations.  The latter, which is significantly more efficient, will shortly become the default.
 Additional serialisations better suited to large datasets (such as Apache Parquet) are in the roadmap.
 
 We plan very extensive annotation of tables and tabular query results with high-quality metadata, including mechanisms to link data to associated documentation.
