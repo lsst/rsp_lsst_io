@@ -60,7 +60,8 @@ Currently there is no way for a user to inspect or interact with their query his
 Image searches
 --------------
 
-Currently image searches are possible through TAP (ObsCore) queries.
+Currently image searches are possible through ObsTAP queries -- queries against the IVOA ObsCore data model for observation metadata.
+In DP0.2 the variety of spatial queries supported was limited by the ADQL issues mentioned above; by DP2 we expect this to be significantly improved.
 
 Queries using the IVOA SIA (v2) protocol were planned for DP1 but have been deployed early.
 
