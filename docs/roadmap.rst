@@ -31,6 +31,7 @@ APIs
 There are a large number of programmatic APIs to RSP capabilities that can be used both from within and externally to the RSP.
 Wherever possible, these are based on Virtual Observatory protocols for interoperability with existing clients (such as TOPCAT and pyvo) and other science archives.
 We have an active engagement with the IVOA community to extend those protocols for "big data" science and other needs that arise from the Rubin Community.
+For example, we have been taking a leadership position in developing standards for the use of Parquet in IVOA protocols, for more efficient transfer of large query results.
 
 Catalog searches
 ----------------
