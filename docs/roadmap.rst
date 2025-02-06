@@ -63,7 +63,8 @@ Image searches
 Currently image searches are possible through ObsTAP queries -- queries against the IVOA ObsCore data model for observation metadata.
 In DP0.2 the variety of spatial queries supported was limited by the ADQL issues mentioned above; by DP2 we expect this to be significantly improved.
 
-Queries using the IVOA SIA (v2) protocol were planned for DP1 but have been deployed early.
+Queries using the IVOA SIA (v2) protocol, which also operate against the ObsCore data model but with a simplified query protocol, were planned for DP1 but have been deployed early.
+The region-intersection type of query that was not supported in ObsTAP for DP0.2 (and won't be available in ObsTAP until DP2) _are_ supported in SIAv2 and will be available via that protocol for DP1.
 
 Within the RSP Notebook Aspect, images can also be retrieved directly from the Rubin middleware system (Butler).
 
