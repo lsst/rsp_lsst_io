@@ -41,7 +41,7 @@ TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with
 
 Current TAP capabilities include the ability to do synchronous and asynchronous queries against Data Preview 0.2 catalogs stored in Qserv (our high performance database for large spatially sharded catalogs) and Data Preview 0.3 catalogs stored in Postgres (in DP0, for solar system objects only).
 
-Temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table (such as returning only sources that are in listed in user provided table) are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
+TAP's temporary table uploads, which allow users to provide, at query time, a catalog to be joined with the queried table, enabling efficient multi-object searches, are currently available for Postgres-stored catalogs only (currently DP0.3 datasets).
 
 Temporary table uploads for Qserv-stored catalogs are planned DP1 later this year.
 
