@@ -74,7 +74,7 @@ Getting an account on the RSP
       - If your institution has additional authentication steps (such as 2FA) you will have to complete those too.
       - At this point the RSP will detect that you do not already have an established account and start the onboarding flow.
 
-  4. Onboarding flow - identity provider selection:
+   4. Onboarding flow - identity provider selection:
 
       .. grid:: 1 2 2 2
 
