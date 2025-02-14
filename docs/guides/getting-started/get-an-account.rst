@@ -112,7 +112,7 @@ Getting an account on the RSP
       - Clicking on the link in your email will take you to a page where you can accept your invitation.
       - Select a username.
         It has to be a valid Unix username.
-      - At this point your petition for a new RSP account is complete, and it proceeds automatically to step 8. 
+      - At this point your petition for a new RSP account is complete, and it proceeds automatically to step 8.
 
    8. Data rights verification:
 
