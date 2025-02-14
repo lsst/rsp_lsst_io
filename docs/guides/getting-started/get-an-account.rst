@@ -61,7 +61,7 @@ Getting an account on the RSP
 
          .. grid-item::
 
-            - Choose an institution or identity provider with whom you have an established account, for example your home institute, ORCID, GitHub, or Google. Additional identities can be added later, if you have more than one.
+            - Choose an identity provider with whom you have an established account, for example your home institute, ORCID, GitHub, or Google. Additional identities can be added later.
 
          .. grid-item::
 
@@ -74,44 +74,64 @@ Getting an account on the RSP
       - If your institution has additional authentication steps (such as 2FA) you will have to complete those too.
       - At this point the RSP will detect that you do not already have an established account and start the onboarding flow.
 
-   4. Onboarding flow: Identity provider selection
+  4. Onboarding flow - identity provider selection:
 
       .. grid:: 1 2 2 2
 
          .. grid-item::
 
-            - Choose whichever institution you picked above (should be selected on the menu already - this is not the time to change your mind!).
+            - Choose **the same institution that you picked above**. It should be pre-selected on the menu already. Do not change your mind!
               This looks deceptively like Step 2.
 
          .. grid-item::
 
             .. image:: images/acc_institution.png
 
-   5. Onboarding flow: Self signup pages
+   5. Onboarding flow - self signup pages:
 
-      - You can now start the self signup.
       - Provide your given and family name.
+
         *We do not require your legal name*; the reason you are being asked is to allow us to establish you are entitled to our data products.
         You should supply whichever name you use for publications or are known to your colleagues as.
 
         *Examples.* If you go by your middle name, supply your middle name as the given name.
         If you publish as *Lady Gaga*, don't sign up as *Stefani Joanne Angelina Germanotta*.
 
-      - Provide any email you want provided you can immediately access it (for the confirmation).
-        Additionally, using your main institutional email address (instead of say, a Gmail account) helps our verification process; please do so if you can.
+      - Provide any email address that you can immediately access (for the confirmation in step 6).
 
-   6. Onboarding flow: Email confirmation step
+        Using your institutional email address, if your in the US or Chile, helps our data rights verification process (step 8) but is not mandatory.
 
-      -  You will receive an email to the address you provided, from registry@cilogon.org.
-         Please look out for it in your spam folder, the subject will be "Please verify your LSST Registration".
-         Click on the link inside it to complete the process.
+   6. Onboarding flow - email confirmation:
 
-   7. Onboarding flow — Finishing steps:
+      - You will receive an email to the address you provided, from registry@cilogon.org.
+        Please look out for it in your spam folder, the subject will be "Please verify your LSST Registration".
+        Click on the link inside it to verify your email address and proceed to step 7.
 
-      -  Clicking on the link in your email will take you to a page where you can accept your invitation.
-      -  Your final job is to select a username; this has to be a valid Unix username.
-      -  This completes the account petition process; you will receive an email at the address you provided when your account access has been approved by the project.
-      -  The approval process includes verification of Rubin data rights and is done by a person (not automatic), so may take several days. Thank you for your patience.
+   7. Onboarding flow — select a username:
+
+      - Clicking on the link in your email will take you to a page where you can accept your invitation.
+      - Select a username.
+        It has to be a valid Unix username.
+      - At this point your petition for a new RSP account is complete, and it proceeds automatically to step 8. 
+
+   8. Data rights verification:
+
+      - Rubin staff will assess whether you have Rubin data rights based on your name, email, and institution.
+      - This verification process can take a few days and your patience is appreciated.
+      - When data rights are confirmed, and your petition is approved, you will receive an email notification.
+      - If data rights are unclear, you will receive an email with the subject "Confirming your data rights for the Rubin Science Platform". Rubin staff will help you through the data rights verification process. Please check your spam folder for our email!
+
+   9. Log in and get started!
+
+      - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
+      - It is recommended to link additional identities so that you have options for account access.
+      - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
+
+   10. Need help?
+
+      - If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__. Rubin staff will respond.
+      - Alternatively, contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
+
 
    {% else %}
    .. important::
