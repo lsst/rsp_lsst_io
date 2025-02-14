@@ -6,8 +6,8 @@ Getting an account on the RSP
 
    {% if env.is_primary %}
 
-   Before getting started
-   ======================
+   Things to know before you get started
+   =====================================
 
    1. Understand whether you have Rubin data rights.
 
