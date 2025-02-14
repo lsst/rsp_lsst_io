@@ -109,11 +109,11 @@ Step-by-step
    - This verification process can take a few days and your patience is appreciated.
    - When data rights are confirmed, and your petition is approved, you will receive an email notification.
    - If data rights are unclear, you will receive an email with the subject "Confirming your data rights for the Rubin Science Platform".
-     Rubin staff will help you through the data rights verification process. Please check your spam folder for our email!
+     Rubin staff will help you through the data rights verification process. Please check your spam folder.
    - After 1 month without a response, petitions will be denied, but this is not permanent.
      Please restart the process at any time, and see Step 10 if you need assistance.
 
-9. Log in and get started!
+9. Log in and get started.
 
    - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
    - It is recommended to link additional identities so that you have options for account access.
@@ -121,7 +121,5 @@ Step-by-step
 
 10. Need help?
 
-   - If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__.
-     Rubin staff will respond.
-   - Alternatively, contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
-
+   - If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__, and Rubin staff will respond.
+   - Alternatively, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
