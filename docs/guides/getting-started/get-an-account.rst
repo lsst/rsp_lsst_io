@@ -6,22 +6,31 @@ Getting an account on the RSP
 
    {% if env.is_primary %}
 
-   Things to know before you get started
-   =====================================
+   Before getting started
+   ======================
 
-   - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
-     All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
-     For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
-     If you’re not sure if you have Rubin data rights, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
+   1. Understand whether you have Rubin data rights.
 
-   - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) in order to allow you to gain RSP access with your institutional identity (via the InCommon federation) or certain other participating providers (such as GitHub or ORCiD).
-     Simply put, our system asks your institution’s system if you are who you say you are.
+      - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
+      - All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
+      - For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
+      - If you’re not sure whether you have Rubin data rights, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
 
-     You *must* have an account with one of the supported institutions or organizations to use the RSP.
-     If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
-     *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
 
-   - Our `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ is in plain language — you should review it; your access is contingent on abiding by it.
+   2. Have an account with an InCommon institution, GitHub, or ORCID.
+
+      - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing institutional identity.
+      - Accepted institutions include members of the `InCommon federation <https://incommon.org/>`__, and other providers like `GitHub <https://github.com/>`__, and `ORCID <https://orcid.org/>`__.
+      - Simply put, our system asks your institution’s system if you are who you say you are.
+      - If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
+      - *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
+      - You *must* have an account with one of the supported institutions or organizations to use the RSP.
+
+
+   3. Review the `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ (AUP).
+
+      - Access to the RSP is contingent on abiding by the AUP.
+
 
    Video
    =====
