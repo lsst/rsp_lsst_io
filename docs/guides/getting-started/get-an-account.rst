@@ -119,7 +119,10 @@ Getting an account on the RSP
       - Rubin staff will assess whether you have Rubin data rights based on your name, email, and institution.
       - This verification process can take a few days and your patience is appreciated.
       - When data rights are confirmed, and your petition is approved, you will receive an email notification.
-      - If data rights are unclear, you will receive an email with the subject "Confirming your data rights for the Rubin Science Platform". Rubin staff will help you through the data rights verification process. Please check your spam folder for our email!
+      - If data rights are unclear, you will receive an email with the subject "Confirming your data rights for the Rubin Science Platform".
+        Rubin staff will help you through the data rights verification process. Please check your spam folder for our email!
+      - After 1 month without a response, petitions will be denied, but this is not permanent.
+        Please restart the process at any time, and see step 10 if you need assistance.
 
    9. Log in and get started!
 
