@@ -6,7 +6,7 @@ Before getting started
    - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
    - All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
    - For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
-   - If you’re not sure whether you have Rubin data rights, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
+   - If you’re not sure whether you have Rubin data rights, please contact `Heather Shaughnessy <mailto:sheather@slac.stanford.edu>`__.
 
 2. Have an account with an InCommon institution, GitHub, or ORCID.
 
@@ -119,7 +119,10 @@ Step-by-step
    - It is recommended to link additional identities so that you have options for account access.
    - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
 
-10. Need help?
 
-   - If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__, and Rubin staff will respond.
-   - Alternatively, please contact Heather Shaughnessy at `sheather@slac.stanford.edu <mailto:sheather@slac.stanford.edu>`__.
+Need assistance?
+================
+
+If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__, and Rubin staff will respond.
+
+Alternatively, please contact `Heather Shaughnessy <mailto:sheather@slac.stanford.edu>`__.
