@@ -122,7 +122,7 @@ Notebook Aspect TAP (Table Access Protocol) service:
 
 Notebook Aspect Butler service:
 
-- Maximum number of simultaneous butler queries per user: TBD (2-5) 
+- Maximum number of simultaneous butler queries per user: TBD (2-5)
 - Maximum number of references returned: no limit
 - Maximum data volume returned: RAM limit of the user-selected server size
 
