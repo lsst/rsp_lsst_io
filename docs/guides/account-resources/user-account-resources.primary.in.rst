@@ -127,6 +127,7 @@ Notebook Aspect Butler service:
 - Maximum data volume returned: RAM limit of the user-selected server size
 
 API Aspect TAP (Table Access Protocol) service:
+
 - Maximum rows returned: 5,000,000
 - Maximum table size returned: TBD
 
@@ -138,14 +139,18 @@ The Data Previews will be used to quantify and optimize user experience with res
 
 The amount of data a user may download or upload, and the data transfer rates, depend also on the user's internet service provider.
 
-- Maximum download size per table: 6 GB
+Minimum data transfer rates:
 
-- Minimum download rate: TBD
-- Maximum downloaded size per image: TBD
-- Maximum download volume (daily): TBD
+- Download: TBD
+- Upload: TBD
 
-- Minimum upload rate: TBD
-- Maximum upload table size: TBD
+Maximum data volumes:
+
+- Download table size: 6 GB
+- Download image(s) size: TBD
+- Download daily total: TBD
+- Upload table size: TBD
+
 
 Resource Allocation Committee (RAC)
 ===================================
