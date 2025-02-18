@@ -29,6 +29,7 @@ Accounts & authentication
    :caption: Accounts
 
    auth/index
+   account-resources/index
 
 .. grid:: 1
 
@@ -37,6 +38,12 @@ Accounts & authentication
       :link-type: doc
 
       Learn how to set up and use tokens to access the Rubin Science Platform and its services.
+
+   .. grid-item-card:: Resources
+      :link: account-resources/index
+      :link-type: doc
+
+      Learn about the storage space and computational resources included with your account.
 
 Aspects
 =======
