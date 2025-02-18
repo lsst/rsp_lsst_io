@@ -16,21 +16,24 @@ Design specification: 10000 individual user accounts.
 
 Number of simultaneous users above which service may degrade:
 
-   - Notebook Aspect (JupyterLab servers): 517 :sup:`a`
-   - Portal Aspect sessions: TBD
-   - API connections: TBD
+- Notebook Aspect (JupyterLab servers): 517 :sup:`a`
+- Portal Aspect sessions: TBD
+- API connections: TBD
+
 
 Maximum number of simultaneous users (hard limit):
 
-   - Notebook Aspect (JupyterLab servers): TBD
-   - Portal Aspect sessions: TBD
-   - API connections: TBD
+- Notebook Aspect (JupyterLab servers): TBD
+- Portal Aspect sessions: TBD
+- API connections: TBD
+
 
 Maximum number of services accessed simultaneously per user:
 
-   - Notebook Aspect (JupyterLab servers): 1 :sup:`b`
-   - Portal Aspect sessions: 1 :sup:`b`
-   - API connections: TBD
+- Notebook Aspect (JupyterLab servers): 1 :sup:`b`
+- Portal Aspect sessions: 1 :sup:`b`
+- API connections: TBD
+
 
 Notebook sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
