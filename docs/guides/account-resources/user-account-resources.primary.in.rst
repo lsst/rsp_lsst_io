@@ -89,5 +89,5 @@ Backups
 
 Users are encouraged to use services such as GitHub for software version control and to take care not to accidentally delete files from their home directory.
 
-While there is no guarantee that accidentally deleted data can be recovered, users are encouraged to use the resources for :doc:`/docs/support/index` immediately if mistakes do happen.
+While there is no guarantee that accidentally deleted data can be recovered, users are encouraged to use the resources for :doc:`/support/index` immediately if mistakes do happen.
 
