@@ -47,7 +47,7 @@ Computational resources are available via the Notebook Aspect (JupyterLab).
 
 Notebook server options:
 
-- Small (1.0 CPU, 4G B RAM)
+- Small (1.0 CPU, 4 GB RAM)
 - Medium (2.0 CPU, 8 GB RAM)
 - Large (4.0 CPU, 16 GB RAM)
 
