@@ -1,7 +1,3 @@
-=============================================
-The API Aspect of the Rubin Science Platform
-=============================================
-
 The Application Programming Interface (API) allows users to interact with Rubin's data services remotely.
 An API (Application Programming Interface) is a structured way for software applications to communicate with each other.
 It can be thought of as a back-and-forth exchange between a client and a server: one program (the client) makes a request for data, and another program (the server) provides a response.
