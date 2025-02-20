@@ -4,7 +4,7 @@ API aspect
 
 .. jinja:: rsp
 
-   {% if primary %}
+   {% if env.primary %}
    .. include:: api.primary.in.rst
 
    {% else %}
