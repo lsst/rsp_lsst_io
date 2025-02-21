@@ -157,7 +157,7 @@ Resource Allocation Committee (RAC)
 
 Individuals and groups in need of more than the standard resources, and/or who require batch processing via the RSP deployed at the US DAC (data.lsst.cloud), will submit proposals to the Resource Allocation Committee (RAC).
 
-The quantities of the resources that the RAC will allocate, and the process by which the RAC will operate, are currently under development.
+The quantities of the resources that the RAC will allocate, and the process by which the RAC will operate, are currently under development (see `RTN-084 <https://rtn-084.lsst.io/>`_).
 
 Independent Data Access Centers (IDACs)
 =======================================
