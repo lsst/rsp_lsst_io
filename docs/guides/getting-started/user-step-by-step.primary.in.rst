@@ -110,8 +110,7 @@ Step-by-step
    - When data rights are confirmed, and your petition is approved, you will receive an email notification.
    - If data rights are unclear, you will receive an email with the subject "Confirming your data rights for the Rubin Science Platform".
      Rubin staff will help you through the data rights verification process. Please check your spam folder.
-   - After 1 month without a response, petitions will be denied, but this is not permanent.
-     Please restart the process at any time, and see Step 10 if you need assistance.
+   - After 1 month without a response, petitions will be denied, but this is not permanent; please restart the process at any time.
 
 9. Log in and get started.
 
