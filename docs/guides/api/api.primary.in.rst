@@ -6,9 +6,10 @@ In the context of the RSP, the API aspect allows access to Rubin data—includin
 
 **Use the API Aspect to:**
 
+- Access Rubin data from outside the RSP.
 - Automate data queries or downloads.
-- Integrate Rubin data into your own software tools.
-- Require access to external datasets in addition to LSST data.
+- Integrate Rubin data access into your own software tools.
+- Access to external datasets in addition to Rubin data.
 
 API Services
 ============
