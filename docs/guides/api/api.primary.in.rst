@@ -2,14 +2,14 @@ The Application Programming Interface (API) allows users to interact with Rubin'
 An API is a structured way for software applications to communicate with each other.
 It can be thought of as a back-and-forth exchange between a client and a server: one program (the client) makes a request for data, and another program (the server) provides a response.
 
-In the context of the RSP, the API aspect allows access to Rubin data—including images and catalogs—both within the RSP environment (e.g., via the RSP JupyterLab Notebook aspect) and externally (e.g., through the Tool for OPerations on Catalogues And Tables (`TOPCAT <https://www.star.bris.ac.uk/~mbt/topcat/>`_) or a `PyVO <https://pyvo.readthedocs.io/en/latest>`_-enabled environment like the National Optical-Infrared Astronomy Research Laboratory’s `Astro Data Lab <https://datalab.noirlab.edu/>`_).
+In the context of the RSP, the API aspect allows access to Rubin data—including images and catalogs—both within the RSP environment (e.g., via the RSP JupyterLab Notebook aspect) and externally (e.g., through the Tool for OPerations on Catalogues And Tables (`TOPCAT <https://www.star.bris.ac.uk/~mbt/topcat/>`_), a personal computer with the `PyVO <https://pyvo.readthedocs.io/en/latest>`_ software, or a `PyVO <https://pyvo.readthedocs.io/en/latest>`_-enabled environment like the National Optical-Infrared Astronomy Research Laboratory’s `Astro Data Lab <https://datalab.noirlab.edu/>`_).
 
 **Use the API Aspect to:**
 
 - Access Rubin data from outside the RSP.
 - Automate data queries or downloads.
 - Integrate Rubin data access into your own software tools.
-- Access to external datasets in addition to Rubin data.
+- Access external datasets in addition to Rubin data.
 
 API Services
 ************
@@ -23,13 +23,13 @@ By the time of the first data release, the Rubin Science Platform will also supp
 Table Access Protocol (TAP) Service
 ===================================
 
-The `Table Access Protocol <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ (TAP) is a specific type of service within the API, implemented according to the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_ (IVOA) standard.
+The `Table Access Protocol <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ (TAP) is a specific type of service within the API, implemented according to the `IVOA <https://www.ivoa.net/>`_ standard.
 
 Internal TAP Access
 ===================
 
 The primary means of accessing TAP within the RSP is through the RSP’s Portal and Notebook aspects.
-In the Notebook aspect, a client that's connected to the TAP service is instantiated within a Python notebook and used to execute an Astronomical Data Query Language (ADQL) query, returning a result set.
+In the Notebook aspect, a client that's connected to the TAP service is instantiated within a Python notebook and used to execute an `Astronomical Data Query Language <https://www.ivoa.net/documents/ADQL/>`_ (ADQL) query, returning a result set.
 
 External TAP Access
 ===================
