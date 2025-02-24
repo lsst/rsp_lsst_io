@@ -116,7 +116,7 @@ Step-by-step
 9. Log in and get started.
 
    - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
-   - It is recommended to link additional identities so that you have options for account access.
+   - It is strongly recommended to link additional identities so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional address you signed up with. Consider using a non-employment based provider (eg Github) as a secondary identity. 
    - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
 
 
