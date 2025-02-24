@@ -123,6 +123,6 @@ Step-by-step
 Need assistance?
 ================
 
-If you encounter issues with this process or have questions, please post a new topic in the Support category of the `Rubin Community Forum <https://community.lsst.org/>`__, and Rubin staff will respond.
+If you encounter issues with this process or have questions, please post a new topic in the `Support category <https://community.lsst.org/c/support/6>`__ of the `Rubin Community Forum <https://community.lsst.org/>`__, and Rubin staff will respond.
 
 Alternatively, please contact `Heather Shaughnessy <mailto:sheather@slac.stanford.edu>`__.
