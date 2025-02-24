@@ -12,7 +12,7 @@ In the context of the RSP, the API aspect allows access to Rubin data—includin
 - Access to external datasets in addition to Rubin data.
 
 API Services
-============
+************
 
 The API aspect of the RSP supports several types of services.
 These include the `Table Access Protocol <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ (TAP),  `Observation Table Access Protocol <https://www.ivoa.net/documents/ObsCore/>`_ (ObsTAP), the `Server-side Operations for Data Access <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ (SODA) service (which provides image cutouts and mosaics), and the `Hierarchical Progressive Survey <https://aladin.cds.unistra.fr/hips/>`_ (HiPS).
@@ -25,22 +25,20 @@ Table Access Protocol (TAP) Service
 
 The `Table Access Protocol <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ (TAP) is a specific type of service within the API, implemented according to the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_ (IVOA) standard.
 
-Internal and External TAP Services
------------------------------------
-
-The RSP TAP service is available in two configurations:
-
-**Internal TAP Service**
+Internal TAP Access
+===================
 
 The primary means of accessing TAP within the RSP is through the RSP’s Portal and Notebook aspects.
 In the Notebook aspect, a TAP service is instantiated within a Python notebook and used to execute an Astronomical Data Query Language (ADQL) query, returning a result set.
 
-**External TAP Service**
+External TAP Access
+===================
 
-The external TAP service is also accessible outside the RSP (e.g., from a personal computer), allowing users to query data using external software such as `PyVO <https://pyvo.readthedocs.io/en/latest>`_, `TOPCAT <https://www.star.bris.ac.uk/~mbt/topcat/>`_, or custom scripts.
+The RSP TAP service is also accessible remotely, from outside the RSP (e.g., from a personal computer), allowing users to query data using external software such as `PyVO <https://pyvo.readthedocs.io/en/latest>`_, `TOPCAT <https://www.star.bris.ac.uk/~mbt/topcat/>`_, or custom scripts.
 To access TAP from external software, users must generate an RSP access token.
 
-*Authentication and Access Tokens*
+Authentication and Access Tokens
+--------------------------------
 
 Access to Rubin data via the API requires authentication.
 Users must obtain an RSP authentication token, which serves as a credential when making API requests.
@@ -49,5 +47,5 @@ Instructions on generating and using an RSP access token can be found on the `Au
 Additional Resources
 =====================
 
-RSP tutorials are available in the data release documentation.
+For more information about Rubin data access, please refer to the `tutorials <https://rubinobservatory.org/for-scientists/resources/tutorials>`_.
 For the most recent data releases, visit the `Rubin Observatory page <https://rubinobservatory.org/for-scientists/data-products/recent-data-releases>`_.
