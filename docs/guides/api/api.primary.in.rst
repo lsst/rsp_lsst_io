@@ -14,7 +14,7 @@ In the context of the RSP, the API aspect allows access to Rubin data—includin
 API Services
 ************
 
-The API aspect of the RSP supports several types of services, primarily based on the `International Virtual Observatory Alliance <www.ivoa.net>`_ (IVOA) protocols.
+The API aspect of the RSP supports several types of services, primarily based on the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_ (IVOA) protocols.
 These include the `Table Access Protocol <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ (TAP),  the `Observation Table Access Protocol <https://www.ivoa.net/documents/ObsCore/>`_ (ObsTAP), the `Server-side Operations for Data Access <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ (SODA) service (which provides image cutouts and mosaics), the `Simple Image Access Protocol version 2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ (SIAv2) for image searches, and the `Hierarchical Progressive Survey <https://www.ivoa.net/documents/HiPS/>`_ (HiPS).
 
 By the time of the first data release, the Rubin Science Platform will also support the `Simple Cone Search (SCS) <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for basic catalog queries, and the `Virtual Observatory Space <https://www.ivoa.net/documents/VOSpace/>`_ (VOSpace)—alongside `Web Distributed Authoring and Versioning <https://en.wikipedia.org/wiki/WebDAV>`_ (WebDAV)—for user file access.
