@@ -18,7 +18,7 @@ Most users will choose the recommended software version and a medium server size
       :width: 400
       :name: RSP_NB_select_a_server
 
-      A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
+      A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles.
 
 The term "image" atop the left box refers to a "Docker image" that defines the software packages and their versions which will be automatically loaded in the server environment.
 The "recommended" image will be updated on a regular (monthly) basis to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
@@ -55,9 +55,6 @@ Clicking the folder icon above the list of files will take you back to your home
 
 Although the file browser is a handy way to navigate the user home space, it does not allow navagating to e.g., the shared data space.
 One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ pointing to the desired resource using the Terminal, with this symbolic link placed somewhere in the home directory.
-
-Jupyter Notebooks can be identified by their file extension ".ipynb".
-All users will find a set of tutorial notebooks provided in the "notebooks/tutorial-notebooks/" directory.
 
 **Safely Log Out of JupyterLab:**
 Use the "File" menu in the top menu bar.
