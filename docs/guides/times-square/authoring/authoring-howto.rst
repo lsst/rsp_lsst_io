@@ -77,8 +77,8 @@ In the example notebook, a user should be able to set the date when the moon ill
 
 The general process for parameterizing a notebook is:
 
-1. Add a variable to the parameters cell and assign a default value. The value of this variable is always a Python string even if you intend to treat it as a specific Python type (see :doc:`parameter-types`).
-2. Edit the notebook to use that parameter variable (or *variables*). In your code you might need to convert the parameter value to a Python type. See :doc:`parameter-types` for examples.
+1. Add a variable to the parameters cell and assign a default value. The value of this variable can be a Python string, int, float, bool, `datetime.date` or `datetime.datetime` (see :doc:`parameter-types`).
+2. Edit the notebook to use that parameter variable (or *variables*).
 
 .. figure:: screenshots/complete-notebook.png
    :alt: Screenshot of a notebook that's has the date variable in the parameters cell.

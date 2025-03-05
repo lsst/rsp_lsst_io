@@ -7,6 +7,8 @@ Different types of parameters are supported, and these types inform the interfac
 You define parameters in a notebook's :doc:`sidecar YAML-formatted metadata file <sidecar-schema>` and their values are assigned in the notebook's *parameters cell*, which is always the first code cell in the notebook.
 This page lists the different types of parameters that are supported.
 
+.. _ts-param-types-string:
+
 Strings
 =======
 
@@ -27,65 +29,65 @@ There isn't any validation performed on the string.
 
    message = "Hello world"
 
-Dates and times
-===============
+.. _ts-param-types-date:
 
-Times Square does not yet provide special support for dates and times.
-In the meantime you can use a string parameter and provide validation in the notebook's code.
+Dates
+=====
 
-Example with a date
--------------------
+Dates (without times) are a *format* of the basic string type.
+Users enter dates in the format ``YYYY-MM-DD`` (ISO 8601) and your notebook receives the date as a :py:obj:`datetime.date` object.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
 
    parameters:
-     date:
+     start_date:
        type: string
+       format: date
        description: An ISO8601 date
        default: "2024-01-01"
 
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   date = "2024-01-01"
+   import datetime
 
-.. code-block:: python
-   :caption: Notebook code
+   start_date = datetime.date.fromisoformat("2024-01-01")
 
-   from datetime import datetime
+Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
+Replicate this pattern in the default parameters cell of your notebook.
 
-   try:
-       dt = datetime.strptime(date, "%Y-%m-%d")
-   except ValueError:
-       raise ValueError("Invalid date format. Expected YYYY-MM-DD")
+.. _ts-param-types-datetime:
 
-Examples with a date and time
------------------------------
+Date and time
+=============
+
+Dates and times are another *format* of the basic string type that specify a precise moment in time.
+Date and time parameters are entered in the format ``YYYY-MM-DDTHH:MM:SS+HH:MM`` (ISO 8601) and your notebook receives the date as a :py:obj:`datetime.datetime` object.
+Note that a time zone is required.
+Besides specifying a time zone offset, you can also use the ``Z`` suffix to indicate UTC.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
 
    parameters:
-     date:
+     start_time:
        type: string
+       format: date-time
        description: An ISO8601 date and time
-       default: "2024-01-01T12:00:00+00:00"
+       default: "2024-01-01T12:00:00Z"
 
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   date = "2024-01-01T12:00:00+00:00"
+   import datetime
 
-.. code-block:: python
-   :caption: Notebook code
+   start_time = datetime.datetime.fromisoformat("2024-01-01T12:00:00Z")
 
-   from datetime import datetime
+Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
+Replicate this pattern in the default parameters cell of your notebook.
 
-   try:
-       dt = datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%z")
-   except ValueError:
-       raise ValueError("Invalid date format. Expected YYYY-MM-DDTHH:MM:SS+HH:MM")
+.. _ts-param-types-integer:
 
 Integers
 ========
@@ -124,6 +126,8 @@ You can specify minimum values and maximum values (both or either):
        minimum: 0
        maximum: 100
 
+.. _ts-param-types-number:
+
 Floating point numbers
 ======================
 
@@ -160,6 +164,8 @@ You can specify minimum values and maximum values (both or either):
        default: 27.5
        minimum: 0
        maximum: 100
+
+.. _ts-param-types-boolean:
 
 Booleans
 ========
