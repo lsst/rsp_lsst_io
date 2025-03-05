@@ -65,6 +65,7 @@ For example:
    parameters:
      start_date:
        type: string
+       format: date
        default: 2024-02-01
      end_date:
        type: string
@@ -76,9 +77,11 @@ For example:
     parameters:
       start date:
          type: string
+         format: date
          default: 2024-02-01
       end-date:
          type: string
+         format: date
          default: 2024-02-29
 
 Each parameter is an object with the following fields:
@@ -89,6 +92,8 @@ Each parameter is an object with the following fields:
   - ``integer`` (whole number)
   - ``number`` (floating-point number)
   - ``boolean``
+
+- ``format`` (*string*, optional) is a format string that describes the expected format of the parameter value. Specify ``date`` for date parameters and ``date-time`` for date-time parameters.
 
 - ``default`` (*string*, required) is the default value of the parameter.
 

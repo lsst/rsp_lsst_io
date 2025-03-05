@@ -65,7 +65,7 @@ If different environments require alternative versions of whole paragraphs, use 
 
    .. jinja:: rsp
 
-      {% if env.primary %}
+      {% if env.is_primary %}
       This paragraph appears in the documentation for the
       primary science platform environment.
 
@@ -95,7 +95,7 @@ To customize large portions of text, you can use the include statement in combin
 
    .. jinja:: rsp
 
-      {% if primary %}
+      {% if env.is_primary %}
       .. include:: the-page.primary.in.rst
 
       {% else %}

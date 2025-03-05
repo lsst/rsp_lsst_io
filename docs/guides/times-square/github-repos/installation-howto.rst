@@ -79,19 +79,24 @@ These are the Times Square GitHub Apps for each available environment:
 
    * - Environment
      - GitHub App
+   * - usdf-rsp.slac.stanford.edu
+     - `Times Square (USDF) <https://github.com/apps/times-square-usdf>`__
    * - usdf-rsp-dev.slac.stanford.edu
      - `Times Square (usdf-rsp-dev) <https://github.com/apps/times-square-usdf-rsp-dev>`__
    * - data-dev.slac.stanford.edu
      - `Times Square (data-dev.lsst.cloud) <https://github.com/apps/times-square-data-dev-lsst-cloud>`__
 
-From the GitHub App's page, click the :guilabel:`Install` button and select the repositories you want to enable for Times Square.
-For more information installing and uninstalling GitHub Apps, see `GitHub's documentation <https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-github-marketplace-for-your-organizations>`__.
+From the GitHub App's page, click the :guilabel:`Install` button.
+You may alternatively need to click on a :guilabel:`Configure` button if the app is already installed.
 
+Then from your organization's settings, select the repositories you want to enable for Times Square.
 While you can install Times Square's GitHub App on a whole organization, it's best to install it on a per-repository basis.
+
+For more information installing and uninstalling GitHub Apps, see `GitHub's documentation <https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-github-marketplace-for-your-organizations>`__.
 
 Also be aware that the repository's organization needs to be in an allowlist in Times Square's configuration.
 See the ``config.githubOrgs`` configuration in Times Square's `Phalanx documentation <https://phalanx.lsst.io/applications/times-square/values.html>`__.
-Send a message to ``dm-square`` on Slack to request additional organizations.
+Send a message to `#square-team <https://slack.com/app_redirect?team=T02SVMGU4&channel=C07Q45N7KHV>`_ on Slack to request additional organizations.
 
 .. note::
 

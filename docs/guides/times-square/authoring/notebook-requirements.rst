@@ -19,47 +19,6 @@ It often makes sense for these values to match the defaults you set in the :doc:
 Even if you don't have any parameters in your notebook, you must still reserve the first code cell for this purpose.
 You might include a comment in the cell to explain that it's reserved for parameter defaults.
 
-.. _ts-reqs-parameters-strings:
-
-Parameter variables are always assigned as strings
-==================================================
-
-Parameters can take many types (see :doc:`parameter-types`), including strings, integers, floating-point integers, and booleans.
-In the first code cell, Times Square always assigns parameter values as strings.
-Parameter typing is only a cue for building the user interface and validating user inputs.
-
-For example, an "integer" parameter is a string in the notebook. It's up to the notebook's code to further convert that string into the appropriate Python type.
-
-.. code-block:: python
-   :caption: Notebook parameters cell
-
-   # This cell is only for setting parameter defaults
-   parameter = "42"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   # Notebook code transforms the parameter to a relevant type:
-   param_int = int(parameter)
-
-Similarly for a date parameter, use the `datetime` module (or similar) to convert the string into a native `~datetime.datetime` object:
-
-.. code-block:: python
-   :caption: Notebook parameters cell
-
-   # This cell is only for setting parameter defaults
-   date = "2024-01-01"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   from datetime import datetime
-
-   try:
-       dt = datetime.strptime(date, "%Y-%m-%d")
-   except ValueError:
-       raise ValueError("Invalid date format. Expected YYYY-MM-DD")
-
 .. _ts-reqs-git-repo-referencing:
 
 Notebooks can't reference data or code in the Git repository

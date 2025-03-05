@@ -4,8 +4,10 @@ Parameter types
 
 Times Square notebooks use parameters to pass inputs into the notebook.
 Different types of parameters are supported, and these types inform the interface for users to enter values and the validation that's performed on those values.
+You define parameters in a notebook's :doc:`sidecar YAML-formatted metadata file <sidecar-schema>` and their values are assigned in the notebook's *parameters cell*, which is always the first code cell in the notebook.
 This page lists the different types of parameters that are supported.
-For information about the sidecar metadata file as a whole, see :doc:`sidecar-schema`.
+
+.. _ts-param-types-string:
 
 Strings
 =======
@@ -27,71 +29,71 @@ There isn't any validation performed on the string.
 
    message = "Hello world"
 
-Dates and times
-===============
+.. _ts-param-types-date:
 
-Times Square does not yet provide special support for dates and times.
-In the meantime you can use a string parameter and provide validation in the notebook's code.
+Dates
+=====
 
-Example with a date
--------------------
+Dates (without times) are a *format* of the basic string type.
+Users enter dates in the format ``YYYY-MM-DD`` (ISO 8601) and your notebook receives the date as a :py:obj:`datetime.date` object.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
 
    parameters:
-     date:
+     start_date:
        type: string
+       format: date
        description: An ISO8601 date
        default: "2024-01-01"
 
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   date = "2024-01-01"
+   import datetime
 
-.. code-block:: python
-   :caption: Notebook code
+   start_date = datetime.date.fromisoformat("2024-01-01")
 
-   from datetime import datetime
+Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
+Replicate this pattern in the default parameters cell of your notebook.
 
-   try:
-       dt = datetime.strptime(date, "%Y-%m-%d")
-   except ValueError:
-       raise ValueError("Invalid date format. Expected YYYY-MM-DD")
+.. _ts-param-types-datetime:
 
-Examples with a date and time
------------------------------
+Date and time
+=============
+
+Dates and times are another *format* of the basic string type that specify a precise moment in time.
+Date and time parameters are entered in the format ``YYYY-MM-DDTHH:MM:SS+HH:MM`` (ISO 8601) and your notebook receives the date as a :py:obj:`datetime.datetime` object.
+Note that a time zone is required.
+Besides specifying a time zone offset, you can also use the ``Z`` suffix to indicate UTC.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
 
    parameters:
-     date:
+     start_time:
        type: string
+       format: date-time
        description: An ISO8601 date and time
-       default: "2024-01-01T12:00:00+00:00"
+       default: "2024-01-01T12:00:00Z"
 
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   date = "2024-01-01T12:00:00+00:00"
+   import datetime
 
-.. code-block:: python
-   :caption: Notebook code
+   start_time = datetime.datetime.fromisoformat("2024-01-01T12:00:00Z")
 
-   from datetime import datetime
+Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
+Replicate this pattern in the default parameters cell of your notebook.
 
-   try:
-       dt = datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%z")
-   except ValueError:
-       raise ValueError("Invalid date format. Expected YYYY-MM-DDTHH:MM:SS+HH:MM")
+.. _ts-param-types-integer:
 
 Integers
 ========
 
 For decimal numbers, use the ``integer`` type.
-In your code, cast the value to a Python integer for use in calculations:
+In your code, these values are Python ``int`` objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -105,12 +107,7 @@ In your code, cast the value to a Python integer for use in calculations:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   number = "42"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   number = int(number)
+   number = 42
 
 Validation constraints
 ----------------------
@@ -129,11 +126,13 @@ You can specify minimum values and maximum values (both or either):
        minimum: 0
        maximum: 100
 
+.. _ts-param-types-number:
+
 Floating point numbers
 ======================
 
 For floating point numbers, use the ``number`` type.
-In your code, cast the value to a Python float for use in calculations:
+In your code, these values are Python ``float`` objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -147,12 +146,7 @@ In your code, cast the value to a Python float for use in calculations:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   number = "27.5"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   number = float(number)
+   number = 27.5
 
 Validation constraints
 ----------------------
@@ -171,12 +165,15 @@ You can specify minimum values and maximum values (both or either):
        minimum: 0
        maximum: 100
 
+.. _ts-param-types-boolean:
+
 Booleans
 ========
 
 Boolean (true/false) values are supported with the ``boolean`` type.
 The string representation is based on JSON's ``true`` and ``false`` values.
 To convert the string into a Python boolean, you can compare the string:
+In your code, these values are Python bool (``True`` / ``False``) objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -190,12 +187,7 @@ To convert the string into a Python boolean, you can compare the string:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   switch_param = "true"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   switch_param = switch_param == "true"
+   switch_param = True
 
 Related documentation
 =====================
