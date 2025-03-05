@@ -4,8 +4,8 @@ Parameter types
 
 Times Square notebooks use parameters to pass inputs into the notebook.
 Different types of parameters are supported, and these types inform the interface for users to enter values and the validation that's performed on those values.
+You define parameters in a notebook's :doc:`sidecar YAML-formatted metadata file <sidecar-schema>` and their values are assigned in the notebook's *parameters cell*, which is always the first code cell in the notebook.
 This page lists the different types of parameters that are supported.
-For information about the sidecar metadata file as a whole, see :doc:`sidecar-schema`.
 
 Strings
 =======
@@ -91,7 +91,7 @@ Integers
 ========
 
 For decimal numbers, use the ``integer`` type.
-In your code, cast the value to a Python integer for use in calculations:
+In your code, these values are Python ``int`` objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -105,12 +105,7 @@ In your code, cast the value to a Python integer for use in calculations:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   number = "42"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   number = int(number)
+   number = 42
 
 Validation constraints
 ----------------------
@@ -133,7 +128,7 @@ Floating point numbers
 ======================
 
 For floating point numbers, use the ``number`` type.
-In your code, cast the value to a Python float for use in calculations:
+In your code, these values are Python ``float`` objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -147,12 +142,7 @@ In your code, cast the value to a Python float for use in calculations:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   number = "27.5"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   number = float(number)
+   number = 27.5
 
 Validation constraints
 ----------------------
@@ -177,6 +167,7 @@ Booleans
 Boolean (true/false) values are supported with the ``boolean`` type.
 The string representation is based on JSON's ``true`` and ``false`` values.
 To convert the string into a Python boolean, you can compare the string:
+In your code, these values are Python bool (``True`` / ``False``) objects.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -190,12 +181,7 @@ To convert the string into a Python boolean, you can compare the string:
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   switch_param = "true"
-
-.. code-block:: python
-   :caption: Notebook code
-
-   switch_param = switch_param == "true"
+   switch_param = True
 
 Related documentation
 =====================
