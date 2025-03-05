@@ -12,15 +12,18 @@ Although its not strictly necessary, the best place to create and edit notebooks
 If the notebook runs from your interactive session, it will run on Times Square (provided it doesn't use user-specific software or data, see :ref:`ts-reqs-user-home-referencing`).
 
 First :doc:`start a JupyterLab session on the Notebook Aspect <../../notebooks/starting-and-stopping/index>`.
-Then from a JupyterLab terminal, clone a GitHub repository that's already installed on Times Square:
-
-.. code-block:: bash
-
-   git clone https://github.com/lsst-sqre/times-square-usdf
-   cd times-square-usdf
+Then from a JupyterLab terminal, clone a GitHub repository that's already installed on Times Square, and navigate into the repository.
 
 Make sure you've set up GitHub access in your JupyterLab environment (see :doc:`../../notebooks/configuration/git-configuration`).
 You'll "publish" your notebook to Times Square by pushing it to GitHub.
+
+.. tip::
+
+   To see what repositories are available on Times Square, visit the |times-square| homepage.
+   The sidebar shows what repositories already host notebooks.
+
+   If an existing repository doesn't fit your needs, you can create a new repository on GitHub and set it up for Times Square.
+   See :doc:`../github-repos/index` for more information.
 
 2. Creating a new notebook
 ==========================
