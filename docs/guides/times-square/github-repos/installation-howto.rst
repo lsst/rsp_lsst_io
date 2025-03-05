@@ -79,6 +79,8 @@ These are the Times Square GitHub Apps for each available environment:
 
    * - Environment
      - GitHub App
+   * - usdf-rsp.slac.stanford.edu
+     - `Times Square (USDF) <https://github.com/apps/times-square-usdf>`__
    * - usdf-rsp-dev.slac.stanford.edu
      - `Times Square (usdf-rsp-dev) <https://github.com/apps/times-square-usdf-rsp-dev>`__
    * - data-dev.slac.stanford.edu
