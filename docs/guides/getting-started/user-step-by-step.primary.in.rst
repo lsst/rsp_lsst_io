@@ -10,9 +10,10 @@ Before getting started
 
 2. Have an account with an InCommon institution, GitHub, or ORCID.
 
-   - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing institutional identity.
-   - Accepted institutions include members of the `InCommon federation <https://incommon.org/>`__, and other providers like `GitHub <https://github.com/>`__, and `ORCID <https://orcid.org/>`__.
-   - Simply put, our system asks your institution’s system if you are who you say you are.
+   - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing identity.
+   - Accepted identity providers include institutional members of the `InCommon federation <https://incommon.org/>`__ and other providers like `GitHub <https://github.com/>`__ and `ORCID <https://orcid.org/>`__.
+   - If your institution does not participate in InCommon (does not appear in the list of step 2 below), don't worry, and just use (or create a new) GitHub or ORCID (accounts are free). 
+   - Our system asks your identity provider’s system if you are who you say you are.
    - If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
    - *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
    - You *must* have an account with one of the supported institutions or organizations to use the RSP.
@@ -60,9 +61,9 @@ Step-by-step
 
 3. Institution login page(s):
 
-   - You are forwarded to your selected institution.
+   - You are forwarded to your selected identity provider.
    - Log on as you normally would.
-   - If your institution has additional authentication steps (such as 2FA) you will have to complete those too.
+   - If your identity provider has additional authentication steps (such as 2FA) you will have to complete those too.
    - At this point the RSP will detect that you do not already have an established account and start the onboarding flow.
 
 4. Onboarding flow - identity provider selection:
@@ -71,7 +72,7 @@ Step-by-step
 
       .. grid-item::
 
-         - Choose **the same institution that you picked above**.
+         - Choose **the same identity provider that you picked above**.
            It should be pre-selected on the menu already.
            Do not change your mind!
            Note that this step looks deceptively like Step 2.
