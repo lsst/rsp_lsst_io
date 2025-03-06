@@ -12,7 +12,7 @@ Before getting started
 
    - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing identity.
    - Accepted identity providers include institutional members of the `InCommon federation <https://incommon.org/>`__ and other providers like `GitHub <https://github.com/>`__ and `ORCID <https://orcid.org/>`__.
-   - If your institution does not participate in InCommon (does not appear in the list of step 2 below), don't worry, and just use (or create a new) GitHub or ORCID (accounts are free). 
+   - If your institution does not participate in InCommon (does not appear in the list of step 2 below), don't worry, and just use (or create a new) GitHub or ORCID (accounts are free).
    - Our system asks your identity provider’s system if you are who you say you are.
    - If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
    - *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
