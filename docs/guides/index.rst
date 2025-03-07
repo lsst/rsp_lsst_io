@@ -50,6 +50,7 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
    Portal <portal/index>
    Notebooks <notebooks/index>
    API <api/index>
+   Log of major updates <log/index>
 
 .. grid:: 1
 
@@ -70,6 +71,12 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
       :link-type: doc
 
       The API Aspect connects you to Rubin data, from within the Rubin Science Platform and beyond. It is based on IVOA Virtual Observatory standards.
+
+   .. grid-item-card:: Log
+      :link: log/index
+      :link-type: doc
+
+      A log of major updates for the Rubin Science Platform.
 
 .. jinja:: rsp
 
