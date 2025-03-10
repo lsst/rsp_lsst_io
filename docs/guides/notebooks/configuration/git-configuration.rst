@@ -1,14 +1,16 @@
-##########################
-Configuring Git for GitHub
-##########################
+#################################
+Configuring Git and GitHub access
+#################################
 
-Although use of Git and GitHub are not necessary when using the RSP Notebook Aspect, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
-Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
-GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
-In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
-
+`Git <https://git-scm.com>`__ is an open source change control system and `GitHub <https://github.com>`__ is a popular code hosting platform that uses Git.
+Using Git with GitHub (or another hosting platform) is an excellent way to manage, share, and collaborate on the code, notebooks, and articles you create on the RSP Notebook Aspect.
 Like any other computer, you need to configure Git before you can begin developing software and collaborating on GitHub.
 This page will get you started.
+
+.. tip::
+
+   New to Git and GitHub?
+   See this `Community forum topic for learning resources <https://community.lsst.org/t/resources-for-github/6153>`__.
 
 Setting up Git
 ==============
@@ -22,7 +24,8 @@ Open a `terminal`_ and run:
    git config --global user.email "your.email@example.com"
 
 You can configure many more aspects of Git.
-The `LSST DM Developer guide has some ideas <https://developer.lsst.io/git/setup.html>`_ to get you started. If you’ve already customized a ``~/.gitconfig`` file on your local computer, you might want to copy that over to the ``~/.gitconfig`` on the Notebook Aspect.
+The `Rubin Developer Guide has some ideas <https://developer.lsst.io/git/setup.html>`__ to get you started.
+If you’ve already customized a :file:`~/.gitconfig` file on your local computer, you might want to copy that over to the :file:`~/.gitconfig` on the Notebook Aspect.
 
 Storing GitHub credentials
 ==========================
