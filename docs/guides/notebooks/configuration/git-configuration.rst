@@ -72,16 +72,21 @@ Open a `terminal`_ and run:
 The next time Git asks for your credentials, it will store them in a ``~/.git-credentials`` file.
 You can `read more about the “store” credential helper in the Git documentation <https://git-scm.com/docs/git-credential-store>`__.
 
-Git LFS for LSST
-================
 Alternatively, your Git host might allow SSH key access.
 See their documentation for details.
 
+Git LFS for Rubin Observatory data repositories
+===============================================
 
 The Notebook Aspect includes the `Git LFS <https://git-lfs.com>`_ client.
 
-Git LFS is preconfigured to allow anonymous access to LSST’s Git LFS-backed data repositories (such as https://github.com/lsst/afwdata).
-Members of the `lsst organization <https://github.com/lsst>`_ on GitHub can set up authenticated Git LFS access to push to LSST’s Git LFS repositories.
-See the `LSST DM Developer Guide <https://developer.lsst.io/git/git-lfs.html#authenticating-for-push-access>`__ for details.
+Git LFS is preconfigured to allow anonymous access to Rubin Observatory’s Git LFS-backed data repositories (such as https://github.com/lsst/afwdata).
+
+.. jinja:: rsp
+
+   {% if not env.is_primary %}
+   Members of the `lsst organization <https://github.com/lsst>`_ on GitHub can set up authenticated Git LFS access to push to LSST’s Git LFS repositories.
+   See the `Developer Guide <https://developer.lsst.io/git/git-lfs.html#authenticating-for-push-access>`__ for details.
+   {% endif %}
 
 .. _`terminal`: https://jupyterlab.readthedocs.io/en/latest/user/terminal.html
