@@ -1,11 +1,11 @@
 from pathlib import Path
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 from typing import Optional
 
 from documenteer.conf.guide import *  # noqa: F401 F403
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from rspdocs.phalanx.service import PhalanxEnvService
 from rspdocs.phalanx.models import PhalanxEnv
+from rspdocs.phalanx.service import PhalanxEnvService
 
 env_cache_path = Path(__file__).parent.joinpath(".phalanxenvs.json")
 env_service = PhalanxEnvService.load_from_cache_file(env_cache_path)
@@ -78,3 +78,7 @@ html_static_path.append("docs/_static/versions.json")  # noqa: F405
 # Delete any objects that needn't be pickled with the Sphinx configuration
 del _config_template_loader
 del _jinja_env
+
+# FIXME(jonathansick): Remove TLS verification due to SSL issues with
+# TOPCAT. Should be temporary.
+tls_verify = False
