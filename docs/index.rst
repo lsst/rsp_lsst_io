@@ -22,8 +22,9 @@ This documentation will help you set up your user account and work with the Rubi
    Guides <guides/index>
    Support <support/index>
    Contributing <contributing/index>
+   Updates <updates/index>
 
-.. grid:: 3
+.. grid:: 4
 
    .. grid-item-card:: Sign up for an account
       :link: guides/getting-started/get-an-account
@@ -42,6 +43,13 @@ This documentation will help you set up your user account and work with the Rubi
       :link-type: doc
 
       Get additional help with the Rubin Science Platform and related Rubin Observatory projects.
+
+   .. grid-item-card:: Updates
+      :link: updates/index
+      :link-type: doc
+
+      Find out what's new regarding the services and tools in the Rubin Science Platform.
+
 
 Related documentation
 =====================
