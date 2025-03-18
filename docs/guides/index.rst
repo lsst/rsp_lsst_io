@@ -71,6 +71,7 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
 
       The API Aspect connects you to Rubin data, from within the Rubin Science Platform and beyond. It is based on IVOA Virtual Observatory standards.
 
+
 .. jinja:: rsp
 
    {% if env.has_apps %}
