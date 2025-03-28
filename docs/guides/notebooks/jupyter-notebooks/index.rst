@@ -43,7 +43,7 @@ If you've executed a notebook's cells out of order and are concerned about havin
 What is a kernel?
 -----------------
 
-The kernel is the process that interprets and executes the code in a notebook, and holds its data in memory, all within in a defined software environment.
+The kernel is the process that interprets and executes the code in a notebook, and holds its data in memory, all within a defined software environment.
 In the RSP Notebook aspect, notebooks use a kernel that has access to the full LSST Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`).
 Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
 See also `this tutorial on installing python packages <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
