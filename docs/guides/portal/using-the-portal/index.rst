@@ -21,7 +21,7 @@ From the main landing page (see the figure below), click on any tab to go to the
   .. figure:: images/portal_landing.png
       :alt: A screenshot of the Portal landing page with tabs and links to access the Portal query interfaces.
       :width: 400
-      :name: portal_landing
+      :name: portal_landing_2
 
       A screenshot of the Portal's main landing page after log in.
 

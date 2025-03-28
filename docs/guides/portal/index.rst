@@ -45,4 +45,4 @@ User guide
    using-the-portal/index
 
 
-Questions? :doc:`Get support </docs/support/index>`.
+Questions? :doc:`Get support </support/index>`.

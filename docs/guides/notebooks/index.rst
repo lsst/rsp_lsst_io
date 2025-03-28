@@ -44,4 +44,4 @@ User guide
    faq/index
 
 
-Questions? :doc:`Get support </docs/support/index>`.
+Questions? :doc:`Get support </support/index>`.
