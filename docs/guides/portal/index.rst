@@ -27,7 +27,7 @@ The Portal aspect offers a variety of functionality, including:
 * an interactive query results interface to:
 
    * filter and manipulate tabular data
-   * display and inspect sky images 
+   * display and inspect sky images
    * create and customize plots
 
 
