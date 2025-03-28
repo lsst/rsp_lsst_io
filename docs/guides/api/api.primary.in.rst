@@ -50,3 +50,5 @@ Additional Resources
 
 For more information about Rubin data access, please refer to the `tutorials <https://rubinobservatory.org/for-scientists/resources/tutorials>`_.
 For the most recent data releases, visit the `Rubin Observatory page <https://rubinobservatory.org/for-scientists/data-products/recent-data-releases>`_.
+
+Questions? :doc:`Get support </support/index>`.
