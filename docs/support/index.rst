@@ -5,15 +5,21 @@ Getting help
 .. jinja:: rsp
 
    {% if env.is_primary %}
-   Data Preview 0 science questions
+
+   Technical and scientific support
    ================================
 
-   For questions about the Data Preview dataset (DESC DC2) and analyzing those data (such as with the LSST Science Pipelines), `create a new topic in the Data Preview 0 Support category of the Community forum <https://community.lsst.org/c/support/dp0/49>`__.
+   Get support at any time via the `Rubin Community Forum <https://community.lsst.org/>`_.
 
-   Rubin Science Platform technical support and feature requests
-   =============================================================
+   To ask a question about any aspect of the RSP or the LSST data products, services, and tools,
+   `create a new topic <https://community.lsst.org/t/how-to-ask-a-question-in-the-forum/8198>`_
+   in the `Support category <https://community.lsst.org/c/support/6>`_ of the Community Forum.
+   Rubin staff monitor the Support category and will respond there.
+   Beginner-level, "naive" questions, and students are all very much encouraged.
 
-   For technical issues or feature requests related to the Rubin Science Platform itself (the Portal, Notebooks, and API services such as TAP) `create a GitHub issue in the rubin-dp0/Support repository <https://github.com/rubin-dp0/Support/issues/new/choose>`__.
+   For the rare cases where it might be necessary,
+   `confidential support <https://community.lsst.org/t/how-to-ask-a-question-confidentially/8200>`_ is also available.
+
    {% else %}
 
    Slack
@@ -35,7 +41,7 @@ Other documentation sites cover related projects:
 .. jinja:: rsp
 
    {% if env.is_primary %}
-   Learn more about the Data Preview datasets and learning programs from the `DP0.2 Guide`_.
+   For a list of recent data releases and their associated documentation, visit `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`_.
    {% endif %}
 
 You can also search the `Rubin Documentation Portal <https://www.lsst.io/>`__ for more technical information.

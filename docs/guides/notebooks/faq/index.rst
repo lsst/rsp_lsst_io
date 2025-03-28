@@ -2,11 +2,6 @@
 Frequently Asked Questions
 ##########################
 
-.. _NB-Intro-Use-A-NB-faq:
-
-Jupyter notebook frequently asked questions
-===========================================
-
 .. _NB-Intro-Use-A-NB-faq-python:
 
 Is all the code in Python?
