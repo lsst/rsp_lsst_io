@@ -23,12 +23,15 @@ The Portal aspect offers a variety of functionality, including:
 * a graphical user interface for data queries
 * an `ADQL <https://www.ivoa.net/documents/ADQL>`_ interface for data queries
 * data access via the Table Access Protocol (TAP) service
-* user-uploaded tables
 * an interactive query results interface to:
 
-   * filter and manipulate tabular data
-   * display and inspect sky images
-   * create and customize plots
+  * filter and manipulate tabular data
+  * display and inspect sky images with Firefly
+  * create and customize plots
+
+* user-uploaded tables
+* data download options
+
 
 
 .. _Portal-User-Guide:
