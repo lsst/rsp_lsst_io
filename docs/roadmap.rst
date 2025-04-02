@@ -35,6 +35,7 @@ For example, we have been taking a leadership position in developing standards f
 
 Catalog searches
 ----------------
+
 Catalog searches are provided through the IVOA TAP protocol, both for use inside the RSP's Notebook and Portal Aspects, and externally (with proper authentication).
 TAP queries are expressed in the IVOA's "ADQL" language, a dialect of SQL92 with the addition of spherical-geometry constructs, and then translated to be executed on the back-end database.
 
