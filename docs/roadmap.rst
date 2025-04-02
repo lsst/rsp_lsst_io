@@ -157,5 +157,5 @@ A new system for submitting feedback, and to support help requests such as authe
 There is a high demand for more performant computation, which we are committed to provide within our resources.
 A Dask (parallel Python computing) service is on the roadmap, and we are investigating ways to competitively provide access to GPU and/or other resources friendly to machine learning.
 
-Context help and more documentation will be an on-going project, with some new features coming for DP1.
+Contextual help and more documentation will be an on-going project, with some new features coming for DP1.
 
