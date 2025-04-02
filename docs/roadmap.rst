@@ -2,28 +2,26 @@
 Rubin Science Platform Status and Roadmap
 #########################################
 
-What can you do with the Rubin Science Platform?
-================================================
-
-Below you will find a detailed (but not exhaustive) list of current and future RSP capabilities.
+Below you will find a detailed (but not exhaustive) list of current (as of early 2025) and planned RSP capabilities.
 
 Please note the difference between Data Previews (DP0, DP1, DP2), which are early access programs before the start of the survey, and Data Releases (DR1, DR2, etc.), which are the official data releases after the survey starts.
 For the planned dates for those events please consult project documentation and `announcements <https://rubinobservatory.org/news>`__.
 
-But before we get there, bear in mind there are three constraints to what you can do on the RSP:
+What can you do with the Rubin Science Platform?
+================================================
+
+Bear in mind there are three constraints to what you can do on the RSP:
 
 1. Scope. The Rubin Science Platform is aimed at providing access to Rubin Data Products and next-to-the-data analytics.  There are some things it is not scoped to provide, for example: large-scale re-processing of raw data, or re-creation of coadds across the sky (there are other initiatives that might help with that, but it's not a function of the RSP and is not planned to be given current expectations for the available physical resources).
 
 2. Affordability. There are limitations placed not by the capabilities of the RSP (its architecture and code), but by the budgeted cost to provide them to a very large user base. For example, the storage per user is set by what the project can afford to provide. This could change with funding, change in the underlying cost of computing infrastructure or usage (for example if we have fewer users than we modeled there would be more resources for those users); but at any given time, it places a strong constraint on what can be provided by the project to everyone in the data-rights holding community.
 
 3. Developmental stage. At this time, the RSP is in preview mode; that means there are many capabilities that will be available by DR1 that are not yet available, either because they are still under development or because they have not yet been demonstrated to scale sufficiently well.
-In fact, we expect that there are significantly more developer-years ahead of us than behind us. We have a vigorous development program for the duration of the survey that gives us room to respond to needs beyond our construction requirements.
+   In fact, we expect that there are significantly more developer-years ahead of us than behind us. We have a vigorous development program for the duration of the survey that gives us room to respond to emerging needs well beyond our construction requirements.
 
 We deploy updates to the RSP every week (though many are behind-the-scenes improvements) and will continue to do so for the duration of operations.
 In the list below, when something is indicated as being "on the roadmap" it means we have a conceptual design for providing it but it has not been scheduled for work and no ETA can be given at this time.
 When a capability is listed as "planned" it means there is a high degree of certainty that it will be available by the start of operations, or if so indicated, sooner.
-
-
 
 APIs
 ====
@@ -67,7 +65,7 @@ Currently image searches are possible through ObsTAP queries -- queries against 
 In DP0.2 the variety of spatial queries supported was limited by the ADQL issues mentioned above; by DP2 we expect this to be significantly improved.
 
 Queries using the IVOA SIA (v2) protocol, which also operate against the ObsCore data model but with a simplified query protocol, were planned for DP1 but have been deployed early.
-The region-intersection type of query that was not supported in ObsTAP for DP0.2 (and won't be available in ObsTAP until DP2) _are_ supported in SIAv2 and will be available via that protocol for DP1.
+The region-intersection type of query that was not supported in ObsTAP for DP0.2 (and won't be available in ObsTAP until DP2) *are* supported in SIAv2 and will be available via that protocol for DP1.
 
 Within the RSP Notebook Aspect, images can also be retrieved directly from the Rubin middleware system (Butler).
 
@@ -87,7 +85,7 @@ Notebooks
 
 The Notebook service is based on JupyterLab (which is itself under active development) with a number of RSP enhancements with more to come.
 
-There is a growing suite of tutorial notebooks available directly in the Notebook demonstrating the capabilities of the RSP as well as helping users understand the LSST data products and pipelines. Many more are to come. A more user-friendly way of accessing the increasing number of tutorials will be available for DP1.
+There is a growing suite of tutorial notebooks available directly in the Notebook demonstrating the capabilities of the RSP as well as helping users understand the LSST data products and pipelines. Many more are to come. A more user-friendly way of accessing the increasing number of tutorials will be available for DP1 [update: `released <https://community.lsst.org/t/2025-03-06-rsp-data-lsst-cloud-updates/9881>`_ ]
 
 A number of visualisation options are available, including Firefly, the same visualisation engine available via the RSP Portal.
 
