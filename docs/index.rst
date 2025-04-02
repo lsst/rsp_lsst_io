@@ -23,6 +23,7 @@ For the current status of RSP capabilities and future plans, see :doc:`roadmap`.
 
    Guides <guides/index>
    Support <support/index>
+   Roadmap <roadmap>
    Contributing <contributing/index>
    Updates <updates/index>
 
