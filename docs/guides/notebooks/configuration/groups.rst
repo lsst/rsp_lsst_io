@@ -11,7 +11,7 @@ Create a closed group
 Comanage webpage
 ----------------
 
-* In a browser, navigate to `id.lsst.cloud <https:/id.lsst.cloud>`_ and log in.
+* In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 
 * In the left menu sidebar, click on "Groups" and then "My Groups".
 
