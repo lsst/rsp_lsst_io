@@ -7,7 +7,7 @@ April 28 2025
 
 The capability for users to create groups and set directory permissions to enable
 private file sharing between group members now exists, and instructions are
-available: see `User groups for file sharing`_.
+available: see :ref:`User groups for file sharing`.
 
 
 March 6 2025
