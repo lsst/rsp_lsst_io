@@ -7,7 +7,7 @@ April 28 2025
 
 The capability for users to create groups and set directory permissions to enable
 private file sharing between group members now exists, and instructions are
-available: see :doc:`User groups for file sharing </docs/guides/notebooks/configuration/groups>` 
+available: see :doc:`User groups for file sharing </docs/guides/notebooks/configuration/groups>`.
 
 
 March 6 2025
