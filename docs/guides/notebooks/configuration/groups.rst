@@ -116,4 +116,4 @@ Instructions for creating and sharing a directory with a group:
 
 
 A file created in the shared directory will, by default, be readable but not writeable by other group members.
-Modify individual files to be group-writeable with ``chmod g+w <filename>``. 
+Modify individual files to be group-writeable with ``chmod g+w <filename>``.
