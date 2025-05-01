@@ -1,13 +1,13 @@
-############################
-User groups for file sharing
-############################
+###################
+User-managed groups
+###################
 
 Create and manage closed user groups in order to share private files in the ``/project`` directory.
 
 .. _user-group-create:
 
-Create a closed group
-=====================
+Create a group
+==============
 
 Comanage webpage
 ----------------
