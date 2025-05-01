@@ -36,7 +36,7 @@ Comanage webpage
 
 
 The next time you enter the Notebook Aspect, this group will be accessible.
-
+A user can only be a member of up to 15 groups at this time. Joining additional groups will have no effect. 
 
 Command line
 ------------
