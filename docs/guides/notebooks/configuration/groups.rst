@@ -9,8 +9,8 @@ Create and manage closed user groups in order to share private files.
 Create a group
 ==============
 
-Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_,
-not from the terminal command line as in other systems.
+Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_
+(not from the terminal command line, as in some other systems).
 
 From the terminal command line it is possible to list all groups with ``getent group``.
 
@@ -63,20 +63,25 @@ How to manage group membership in Comanage:
 * At upper right, use the "Add member" box to find and add group members.
 * In the "Permissions" column, make other group members "Owners" using the check boxes.
 
+The next time these users enter the Notebook Aspect, they will be able to access files shared with the group.
+
+
 
 Set directory permissions
 =========================
 
-The point of creating a closed group is to use it to give access permissions to a privately shared directory.
+The point of creating a closed group is to permit group members to access privately shared files.
 
 Shared files are not managed via the Comanage webpage; use the terminal command line in the Notebook Aspect.
 
-These instructions are not unique to the Rubin Science Platform or JupyterLab;
-they are generic processes for manipulating directory permissions in Unix-like operating systems.
+These instructions are not all unique to the Rubin Science Platform or JupyterLab;
+some are generic processes for manipulating directory permissions in Unix-like operating systems.
+
+Instructions for creating and sharing a directory with a group:
 
 * In a browser, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and log in to the Notebook Aspect.
 
-* Open a terminal, navigate to the user home directory, and modify the permissions on your home directory to let others access shared directories within it.
+* Open a terminal, navigate to `/home`, and modify the permissions on your home directory to let others access any shared directories within it (see your own username with ``whoami``).
 
    .. code-block:: bash
 
