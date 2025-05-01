@@ -2,15 +2,19 @@
 User-managed groups
 ###################
 
-Create and manage closed user groups in order to share private files in the ``/project`` directory.
+Create and manage closed user groups in order to share private files.
 
 .. _user-group-create:
 
 Create a group
 ==============
 
-Comanage webpage
-----------------
+Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_,
+not from the terminal command line as in other systems.
+
+From the terminal command line it is possible to list all groups with ``getent group``.
+
+How to create a group in Comanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 
@@ -36,15 +40,6 @@ Comanage webpage
 
 
 The next time you enter the Notebook Aspect, this group will be accessible.
-A user can only be a member of up to 15 groups at this time. Joining additional groups will have no effect. 
-
-Command line
-------------
-
-At this time, it is not possible to create new groups from the terminal command line in the Notebook Aspect.
-
-It is possible to list all groups with ``getent group``, and to see all groups a
-user belongs to with ``groups <username>`` (see your own username with ``whoami``).
 
 
 Manage group membership
@@ -52,8 +47,13 @@ Manage group membership
 
 Only group owners can manage group membership.
 
-Comanage webpage
-----------------
+A user can only be a member of up to 15 groups at this time.
+Joining additional groups will have no effect.
+
+From the terminal command line it is possible to see all groups a user belongs to with ``groups <username>``
+(see your own username with ``whoami``).
+
+How to manage group membership in Comanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 * In the left menu sidebar, click on "Groups" and then "My Groups".
@@ -64,66 +64,48 @@ Comanage webpage
 * In the "Permissions" column, make other group members "Owners" using the check boxes.
 
 
-Command line
-------------
-
-At this time, it is not possible to add users to groups from the terminal command line in the Notebook Aspect.
-
-
-
 Set directory permissions
 =========================
 
-The point of creating a closed group is to use it to give access permissions to a privately shared directory
-in ``/project``.
+The point of creating a closed group is to use it to give access permissions to a privately shared directory.
 
-Comanage webpage
-----------------
-
-Shared files are not managed via the Comanage webpage.
-
-
-Command line
-------------
+Shared files are not managed via the Comanage webpage; use the terminal command line in the Notebook Aspect.
 
 These instructions are not unique to the Rubin Science Platform or JupyterLab;
 they are generic processes for manipulating directory permissions in Unix-like operating systems.
 
 * In a browser, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and log in to the Notebook Aspect.
 
-* Open a terminal and go to the shared ``/project`` directory.
+* Open a terminal, navigate to the user home directory, and modify the permissions on your home directory to let others access shared directories within it.
 
    .. code-block:: bash
 
-      cd /project
+      cd /home
+      chmod o+x <user-name>
 
-* Create a new directory for sharing, and name it ``new-dir-name``.
-
-   .. code-block:: bash
-
-      mkdir <new-dir-name>
-
-* Add the group to the new directory.
+* Navigate to your home directory and create a new directory for sharing.
 
    .. code-block:: bash
 
-      chgrp <group-name> <new-dir-name>
+      cd ~
+      mkdir <shared-dir-name>
 
-* Give the group read, write, and execute permission on the directory.
+* Add the group to the new directory and give the group read, write, and execute permission.
 
    .. code-block:: bash
 
-      chmod g+rwx <new-dir-name>
+      chgrp <group-name> <shared-dir-name>
+      chmod g+rwx <shared-dir-name>
 
 * Review the final permissions on the new directory.
 
    .. code-block:: bash
 
-      ls -lah <new-dir-name>
+      ls -lah <shared-dir-name>
 
   The results should resemble the following.
 
    .. code-block:: bash
 
-      drwxrwsr-x  2 <user-name> <group-name> 4.0K <MMM DD HH:SS> <new-dir-name>
+      drwxrwsr-x  2 <user-name> <group-name> 4.0K <MMM DD HH:SS> <shared-dir-name>
 
