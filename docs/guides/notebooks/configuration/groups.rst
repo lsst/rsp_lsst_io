@@ -114,3 +114,6 @@ Instructions for creating and sharing a directory with a group:
 
       drwxrwsr-x  2 <user-name> <group-name> 4.0K <MMM DD HH:SS> <shared-dir-name>
 
+
+A file created in the shared directory will, by default, be readable but not writeable by other group members.
+Modify individual files to be group-writeable with ``chmod g+w <filename>``. 
