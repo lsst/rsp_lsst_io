@@ -95,7 +95,7 @@ Instructions for creating and sharing a directory with a group:
       cd ~
       mkdir <shared-dir-name>
 
-* Add the group to the new directory and give group members write permissions (``g+w``) and add the "sticky" bit (``s``) so that all files created in the directory are accessible to group members.
+* Add the group to the new directory and give group members write permissions (``g+w``) and add the "sticky" bit (``s``) so that all files created in the directory are readable by group members.
 
    .. code-block:: bash
 
@@ -114,3 +114,6 @@ Instructions for creating and sharing a directory with a group:
 
       drwxrwsr-x  2 <user-name> <group-name> 4.0K <MMM DD HH:SS> <shared-dir-name>
 
+
+Files created in this directory will, by default, only be writeable by the user that created them.
+Modify any file to be writeable by any group member with ``chmod g+w <filename>``.
