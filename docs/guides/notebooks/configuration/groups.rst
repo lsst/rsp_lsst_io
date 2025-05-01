@@ -81,7 +81,7 @@ Instructions for creating and sharing a directory with a group:
 
 * In a browser, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and log in to the Notebook Aspect.
 
-* Open a terminal, navigate to `/home`, and modify the permissions on your home directory to let others access any shared directories within it (see your own username with ``whoami``).
+* Open a terminal, navigate to ``/home``, and modify the permissions on your home directory to let others access any shared directories within it (see your own username with ``whoami``).
 
    .. code-block:: bash
 
