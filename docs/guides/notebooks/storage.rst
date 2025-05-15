@@ -4,8 +4,6 @@
 User Storage
 ============
 
-
-
 .. jinja:: rsp
 
     {% if env.is_primary %}
@@ -66,5 +64,3 @@ Policies on scratch space size and clearance may change and are likely to be mad
 
 Scratch space is *not backed up* and deleted files cannot be retrieved.
 It is also possible for files to be lost in the event of a major disaster.
-
-
