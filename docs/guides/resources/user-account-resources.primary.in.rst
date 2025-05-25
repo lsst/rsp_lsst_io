@@ -1,12 +1,13 @@
-It is a requirement defined by the `Science Requirements Document <https://docushare.lsst.org/docushare/dsweb/Get/LPM-17>`_ that the "Data Management System will also provide at least 10% of its total capability for user-dedicated processing and user-dedicated storage" (Section 3.5).
-
 This page quantifies the individual and shared resources that every account at the US Data Access Center (US DAC) has access to, by default, via the Rubin Science Platform at |rsp-url|.
+The Rubin Science Platform, and the values on this page, will continue to evolve through Rubin Operations.
 
 .. important::
    The US DAC, the Rubin Science Platform, and this documentation are currently under construction.
    The estimates quoted below include current, planned, and to-be-determined (TBD) values, all of which are subject to change as hardware, software, and user habits evolve.
+   See the Roadmap for planned changes (top menu bar).
 
-**Page last updated:** March 17 2025
+
+**Page last updated:** May 25 2025
 
 
 Computational processing
@@ -52,14 +53,15 @@ Backups
 
 Users are encouraged to use services such as GitHub for software version control and to take care not to accidentally delete files from their home directory.
 
-While there is no guarantee that accidentally deleted data can be recovered, users are encouraged to use the resources for :doc:`/support/index` immediately if mistakes do happen.
+While there is no guarantee that accidentally deleted data can be recovered, backup mechanisms do exist to protect user data in case of system failures.
+
 
 Query and memory limits
 =======================
 
 All queries are executed with shared resources.
 The length of time to query completion depends firstly on query design (number of shards accessed), and secondly on number of queries across all users.
-There is no limit on the number of queries a user can do in total (or on daily or yearly timescales), but there are query rate limits.
+There is no limit on the number of queries a user can do in total but there are query rate limits.
 
 The size of a dataset retrieved by a query and held in memory depends on the server size which, for the Notebook Aspect, is selected by the user.
 
@@ -92,6 +94,7 @@ API Aspect TAP (Table Access Protocol) service:
 - Maximum rows returned: 5,000,000
 - Maximum table size returned: TBD
 
+
 Download and upload limits
 ==========================
 
@@ -100,17 +103,9 @@ The Data Previews will be used to quantify and optimize user experience with res
 
 The amount of data a user may download or upload, and the data transfer rates, depend also on the user's internet service provider.
 
-Minimum data transfer rates:
+The maximum size of a data table that can be downloaded is 6 GB.
 
-- Download: TBD
-- Upload: TBD
-
-Maximum data volumes:
-
-- Download table size: 6 GB
-- Download image(s) size: TBD
-- Download daily total: TBD
-- Upload table size: TBD
+Bulk download services will not be offered.
 
 
 Number of users
