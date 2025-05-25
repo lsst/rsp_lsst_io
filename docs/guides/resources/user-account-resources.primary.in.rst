@@ -22,7 +22,7 @@ Notebook server options:
 - Large (4.0 CPU, 16 GB RAM)
 
 Only CPUs (central processing units) are available.
-No GPU (graphical processing units) are available and there is no plan to add them.
+No GPU (graphical processing units) are available and there is no immediate plan to add them.
 
 - Cores per science user: 0.1 [#f1]_
 
