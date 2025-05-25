@@ -2,6 +2,14 @@
 Updates
 #######
 
+April 28 2025
+=============
+
+The capability for users to create groups and set directory permissions to enable
+private file sharing between group members now exists,
+see :ref:`how to create user groups <user-group-create>`.
+
+
 March 6 2025
 ============
 
