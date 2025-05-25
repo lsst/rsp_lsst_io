@@ -12,8 +12,6 @@ Create a group
 Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_
 (not from the terminal command line, as in some other systems).
 
-From the terminal command line it is possible to list all groups with ``getent group``.
-
 How to create a group in Comanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
