@@ -29,4 +29,5 @@ ignore = [
     'https://www.star.bris.ac.uk/~mbt/topcat/', # MLG added; frequently times out
     'http://www.star.bris.ac.uk/~mbt/topcat/', # MLG added; frequently times out
     'http://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#SyntheticColumnQueryWindow', # MLG added; frequently times out
+    'https://www.lsst.org/scientists/international-drh-list', # MLG added; was timing out
 ]
