@@ -3,7 +3,7 @@ The Rubin Science Platform, and the values on this page, will continue to evolve
 
 .. important::
    The US DAC, the Rubin Science Platform, and this documentation are currently under construction.
-   The estimates quoted below include current, planned, and to-be-determined (TBD) values, all of which are subject to change as hardware, software, and user habits evolve.
+   The estimates quoted below include current, planned, and to-be-determined (TBD) values, all of which are subject to change.
    See the Roadmap for planned changes (top menu bar).
 
 
@@ -115,7 +115,7 @@ Design specification: 10000 individual user accounts.
 
 Number of simultaneous users above which service may degrade:
 
-- Notebook Aspect (JupyterLab servers): 517 [#f6]_
+- Notebook Aspect (JupyterLab servers): 3000 [#f6]_
 - Portal Aspect sessions: TBD
 - API connections: TBD
 
@@ -158,6 +158,6 @@ More information about IDACs is in development.
 .. [#f3] This preliminary estimate comes from the "Storage per science user" row of Table 31, Section 7.2 of the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Table 39 shows this increasing to 1.3 TB by LSST year 10.
 .. [#f4] A nominal quota configuration in the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
 .. [#f5] Also from the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
-.. [#f6] This is the number of science platform cores for users, from row one of Table 37 in the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Note that the RSP was designed to include 517 cores for users, and to expand to accommodate more simultaneous users. Table 43 shows this increasing to 4664 by LSST year 10.
+.. [#f6] This is the number of science platform cores for users, from row one of Table 37 in the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. The RSP was designed to include at least 517 cores for users and to expand to accommodate more simultaneous users. Table 43 shows this increasing to 4664 by LSST year 10.
 .. [#f7] But, users can have multiple browser tabs open to the same session.
 .. [#f8] To be based on rate-limit quotas (e.g., requests per amount of time).
