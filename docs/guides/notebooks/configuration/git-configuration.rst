@@ -1,14 +1,16 @@
-##########################
-Configuring Git for GitHub
-##########################
+#################################
+Configuring Git and GitHub access
+#################################
 
-Although use of Git and GitHub are not necessary when using the RSP Notebook Aspect, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
-Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
-GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
-In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
-
+`Git <https://git-scm.com>`__ is an open source change control system and `GitHub <https://github.com>`__ is a popular code hosting platform that uses Git.
+Using Git with GitHub (or another hosting platform) is an excellent way to manage, share, and collaborate on the code, notebooks, and articles you create on the RSP Notebook Aspect.
 Like any other computer, you need to configure Git before you can begin developing software and collaborating on GitHub.
 This page will get you started.
+
+.. tip::
+
+   New to Git and GitHub?
+   See this `Community forum topic for learning resources <https://community.lsst.org/t/resources-for-github/6153>`__.
 
 Setting up Git
 ==============
@@ -22,39 +24,72 @@ Open a `terminal`_ and run:
    git config --global user.email "your.email@example.com"
 
 You can configure many more aspects of Git.
-The `LSST DM Developer guide has some ideas <https://developer.lsst.io/git/setup.html>`_ to get you started. If you’ve already customized a ``~/.gitconfig`` file on your local computer, you might want to copy that over to the ``~/.gitconfig`` on the Notebook Aspect.
+The `Rubin Developer Guide has some ideas <https://developer.lsst.io/git/setup.html>`__ to get you started.
+If you’ve already customized a :file:`~/.gitconfig` file on your local computer, you might want to copy that over to the :file:`~/.gitconfig` on the Notebook Aspect.
 
 Storing GitHub credentials
 ==========================
 
 You can cache your GitHub credentials in the Notebook Aspect so that you don’t have to type in your password each time you ``git push`` or work with a private repository.
+The `gh auth login <https://cli.github.com/manual/gh_auth_login>`__ command from GitHub's CLI is the recommended way to authenticate with GitHub.
 
-`Open a terminal <https://jupyterlab.readthedocs.io/en/latest/user/terminal.html>`__ and run:
+First, `open a terminal <https://jupyterlab.readthedocs.io/en/latest/user/terminal.html>`__ and run:
+
+.. code-block:: bash
+
+   gh auth login
+
+The first time you run this command, you'll be asked to set your authentication preferences.
+The default answers are best for more users:
+
+- *Where do you use GitHub?* Select ``GitHub.com``.
+- *What is your preferred protocol for Git operations on this host?* Select ``HTTPS``.
+- *Authenticate Git with your GitHub credentials?* Select ``Yes``.
+- *How would you like to authenticate GitHub CLI?* Select ``Login with a web browser``.
+
+  You will need to open the provided URL ``github.com`` in a new browser tab and enter the one-time code shown in the terminal.
+
+With this setup complete, you can now use Git with GitHub repositories without needing to enter your username and password each time.
+
+Clearing stored GitHub credentials
+----------------------------------
+
+The ``gh auth login`` command stores your GitHub credentials on the Rubin Science Platform.
+You may wish to clear these credentials after you're done using the Notebook Aspect.
+To do so, open a `terminal`_ and run:
+
+.. code-block:: bash
+
+   gh auth logout
+
+Store credentials for other Git hosts
+=====================================
+
+If you’re using a Git host other than GitHub, you can store your credentials in a ``~/.git-credentials`` file.
+Open a `terminal`_ and run:
 
 .. code-block:: bash
 
    git config --global credential.helper store
 
-The next time Git asks for your credentials, it will store them in a ``~/.git-credentials`` file. You can `read more about the “store” credential helper in the Git documentation <https://git-scm.com/docs/git-credential-store>`_.
+The next time Git asks for your credentials, it will store them in a ``~/.git-credentials`` file.
+You can `read more about the “store” credential helper in the Git documentation <https://git-scm.com/docs/git-credential-store>`__.
 
-.. important::
+Alternatively, your Git host might allow SSH key access.
+See their documentation for details.
 
-   If you’ve enabled `two-factor authentication <https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/>`_ for GitHub, you need to **use a personal access token instead of your GitHub password.**
-
-   `Follow GitHub’s documentation to create a personal access token <https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>`_.
-
-.. tip::
-
-   Even if you haven’t turned on two-factor authentication, we recommend using a personal access token instead of your password as a security best-practice.
-   That way you can monitor how your token is used and revoke it quickly if necessary.
-
-Git LFS for LSST
-================
+Git LFS for Rubin Observatory data repositories
+===============================================
 
 The Notebook Aspect includes the `Git LFS <https://git-lfs.com>`_ client.
 
-Git LFS is preconfigured to allow anonymous access to LSST’s Git LFS-backed data repositories (such as https://github.com/lsst/afwdata).
-Members of the `lsst organization <https://github.com/lsst>`_ on GitHub can set up authenticated Git LFS access to push to LSST’s Git LFS repositories.
-See the `LSST DM Developer Guide <https://developer.lsst.io/git/git-lfs.html#authenticating-for-push-access>`__ for details.
+Git LFS is preconfigured to allow anonymous access to Rubin Observatory’s Git LFS-backed data repositories (such as https://github.com/lsst/afwdata).
+
+.. jinja:: rsp
+
+   {% if not env.is_primary %}
+   Members of the `lsst organization <https://github.com/lsst>`_ on GitHub can set up authenticated Git LFS access to push to LSST’s Git LFS repositories.
+   See the `Developer Guide <https://developer.lsst.io/git/git-lfs.html#authenticating-for-push-access>`__ for details.
+   {% endif %}
 
 .. _`terminal`: https://jupyterlab.readthedocs.io/en/latest/user/terminal.html
