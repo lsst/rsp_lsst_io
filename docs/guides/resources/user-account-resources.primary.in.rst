@@ -42,11 +42,28 @@ Access to user batch processing will be allocated by the Resource Allocation Com
 Storage
 =======
 
-During the Early Science era (the Data Previews and Data Release 1), the total amount of shared user space across all user directories (home, project, and scratch) is 24 TB.
+User home directory quota: 20 GB.
 
-During the Operations era, the anticipated amount of individual home directory disk space (in the cloud) is 0.4 TB [#f3]_.
+This limit is applied to ensure fairness in access to shared resources during Data Preview 1,
+and will increase for Data Preview 2 (with further increases over the ten-year survey likely) [#f3]_.
 
 The total shared disk space for batch users approved by the RAC remains TBD.
+
+
+Scratch
+-------
+
+Shared scratch space: 20 TB.
+
+To enable processing and analysis that requires large intermediate files, a shared "scratch" directory where all users
+can write temporary files is provided.
+
+This directory will be named ``/cleared-weekly`` and all contents will be deleted on Sundays.
+Scratch space is *not backed up*.
+
+Users should take care to use this shared resource responsibly.
+Policies on scratch space size and clearance frequency may change.
+
 
 Backups
 -------
@@ -155,7 +172,7 @@ More information about IDACs is in development.
 
 .. [#f1] The number of cores per science user is from Table 37 in the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Table 43 shows this increasing to 0.6 by LSST year 10. It is :math:`<1` because it includes oversubscription and assumes not all users are simultaneously connected.
 .. [#f2] This preliminary estimate is 10% of the total number of core-hours needed for Data Release Processing as quoted in Table 27, Section 6.1 of the `DM Sizing Model <https://dmtn-135.lsst.io/>`_, and is number is subject to change.
-.. [#f3] This preliminary estimate comes from the "Storage per science user" row of Table 31, Section 7.2 of the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Table 39 shows this increasing to 1.3 TB by LSST year 10.
+.. [#f3] A preliminary (outdated) estimate of 0.4 TB can be found in the "Storage per science user" row of Table 31, Section 7.2 of the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Table 39 shows this increasing to 1.3 TB by LSST year 10. These values are superseded by this page.
 .. [#f4] A nominal quota configuration in the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
 .. [#f5] Also from the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
 .. [#f6] This is the number of science platform cores for users, from row one of Table 37 in the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. The RSP was designed to include at least 517 cores for users and to expand to accommodate more simultaneous users. Table 43 shows this increasing to 4664 by LSST year 10.
