@@ -7,7 +7,7 @@ The Rubin Science Platform, and the values on this page, will continue to evolve
    See the Roadmap for planned changes (top menu bar).
 
 
-**Page last updated:** May 25 2025
+**Page last updated:** June 4 2025
 
 
 Computational processing
