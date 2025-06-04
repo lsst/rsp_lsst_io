@@ -136,11 +136,7 @@ Number of simultaneous users above which service may degrade:
 - Portal Aspect sessions: TBD
 - API connections: TBD
 
-Maximum number of simultaneous users (hard limit):
-
-- Notebook Aspect (JupyterLab servers): TBD
-- Portal Aspect sessions: TBD
-- API connections: TBD
+There is no hard limit on the maximum number of simultaneous users.
 
 Maximum number of services accessed simultaneously per user:
 
