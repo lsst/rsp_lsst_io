@@ -147,6 +147,3 @@ More information about IDACs is in development.
 .. [#f3] A preliminary (outdated) estimate of 0.4 TB can be found in the "Storage per science user" row of Table 31, Section 7.2 of the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. Table 39 shows this increasing to 1.3 TB by LSST year 10. These values are superseded by this page.
 .. [#f4] A nominal quota configuration in the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
 .. [#f5] Also from the `RSP quotas and rate limiting document <https://sqr-073.lsst.io/>`_.
-.. [#f6] This is the number of science platform cores for users, from row one of Table 37 in the `DM Sizing Model <https://dmtn-135.lsst.io/>`_. The RSP was designed to include at least 517 cores for users and to expand to accommodate more simultaneous users. Table 43 shows this increasing to 4664 by LSST year 10.
-.. [#f7] But, users can have multiple browser tabs open to the same session.
-.. [#f8] To be based on rate-limit quotas (e.g., requests per amount of time).
