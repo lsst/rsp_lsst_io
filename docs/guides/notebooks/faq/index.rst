@@ -101,19 +101,7 @@ There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
 
-How to make Git stop asking for my password
--------------------------------------------
+How to make Git stop asking for my password?
+--------------------------------------------
 
-It is recommended that all Git users working in the RSP configure Git and set up an SSH key.
-First, using a terminal in the Notebook aspect, set the global Git configurations.
-
-.. code-block:: bash
-
-   git config --global user.email myEmail@mydomain
-   git config --global user.name GitUsername
-
-Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
-Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), because this generates an account's SSH key *within the RSP*.
-
-When doing ``git clone`` of a repository, use the SSH key.
-If successful, ``git fetch`` and ``git push`` will work without entering a Git password.
+Follow the :doc:`guide on configuring Git and credentials <../configuration/git-configuration>` to set your Git username and set up credentials for services like GitHub.
