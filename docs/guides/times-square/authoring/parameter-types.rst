@@ -57,6 +57,31 @@ Users enter dates in the format ``YYYY-MM-DD`` (ISO 8601) and your notebook rece
 Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
 Replicate this pattern in the default parameters cell of your notebook.
 
+.. _ts-param-types-dayobs:
+
+DAYOBS
+======
+
+Rubin Observatory uses DAYOBS to identify an observing night since the DAYOBS is consistent over the course of a night.
+DAYOBS is defined as the date in the UTC-12 timezone, and is represented as a string with eight digits: ``YYYYMMDD``.
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     start_dayobs:
+       type: string
+       format: dayobs
+       description: A DAYOBS date
+       default: "20240101"
+
+.. code-block:: python
+   :caption: Notebook parameters cell
+
+   start_dayobs = "20240101"
+
+The format of the DAYOBS string is validated, but no processing is done in the parameters cell.
+
 .. _ts-param-types-datetime:
 
 Date and time
