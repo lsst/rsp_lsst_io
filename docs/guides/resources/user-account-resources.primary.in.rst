@@ -7,7 +7,7 @@ The Rubin Science Platform, and the values on this page, will continue to evolve
    See the Roadmap for planned changes (top menu bar).
 
 
-**Page last updated:** June 4 2025
+**Page last updated:** June 6 2025
 
 
 Computational processing
@@ -42,7 +42,7 @@ Access to user batch processing will be allocated by the Resource Allocation Com
 Storage
 =======
 
-User home directory quota: 20 GB.
+User home directory quota: 35 GB.
 
 This limit is applied to ensure fairness in access to shared resources during Data Preview 1,
 and will increase for Data Preview 2 (with further increases over the ten-year survey likely) [#f3]_.
@@ -52,8 +52,6 @@ The total shared disk space for batch users approved by the RAC remains TBD.
 
 Scratch
 -------
-
-Shared scratch space: 20 TB.
 
 To enable processing and analysis that requires large intermediate files, a shared "scratch" directory where all users
 can write temporary files is provided.
@@ -123,28 +121,6 @@ The amount of data a user may download or upload, and the data transfer rates, d
 The maximum size of a data table that can be downloaded is 6 GB.
 
 Bulk download services will not be offered.
-
-
-Number of users
-===============
-
-Design specification: 10000 individual user accounts.
-
-Number of simultaneous users above which service may degrade:
-
-- Notebook Aspect (JupyterLab servers): 3000 [#f6]_
-- Portal Aspect sessions: TBD
-- API connections: TBD
-
-There is no hard limit on the maximum number of simultaneous users.
-
-Maximum number of services accessed simultaneously per user:
-
-- Notebook Aspect (JupyterLab servers): 1 [#f7]_
-- Portal Aspect sessions: 1 [#f7]_
-- API connections: TBD [#f8]_
-
-Notebook sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
 
 Resource Allocation Committee (RAC)
