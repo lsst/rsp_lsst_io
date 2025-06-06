@@ -69,6 +69,7 @@ For example:
        default: 2024-02-01
      end_date:
        type: string
+       format: date
        default: 2024-02-29
 
 .. code-block:: yaml
@@ -93,7 +94,11 @@ Each parameter is an object with the following fields:
   - ``number`` (floating-point number)
   - ``boolean``
 
-- ``format`` (*string*, optional) is a format string that describes the expected format of the parameter value. Specify ``date`` for date parameters and ``date-time`` for date-time parameters.
+- ``format`` (*string*, optional) is a format string that describes the expected format of the parameter value:
+
+  - ``date`` for date parameters (e.g., ``2024-10-10``)
+  - ``dayobs`` for Rubin DAYOBS dates (e.g., ``20241010``), defined as the date in UTC-12.
+  - ``date-time`` for date-time parameters (e.g., ``2024-10-10T04:00Z``).
 
 - ``default`` (*string*, required) is the default value of the parameter.
 

@@ -9,8 +9,9 @@ tags:
 parameters:
   date:
     type: string
-    description: Night (YYYY-MM-DD)
-    default: "2024-01-08"
+    format: dayobs
+    description: Night (YYYYMMDD)
+    default: "20240108"
   other_parameter:
     type: integer
     description: Another parameter
