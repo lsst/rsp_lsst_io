@@ -16,6 +16,7 @@ This section helps you understand how to write notebooks for Times Square, inclu
    :caption: How to guides
 
    authoring-howto
+   dynamic-date-defaults
 
 .. toctree::
    :titlesonly:

@@ -57,6 +57,19 @@ Users enter dates in the format ``YYYY-MM-DD`` (ISO 8601) and your notebook rece
 Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
 Replicate this pattern in the default parameters cell of your notebook.
 
+Instead of a fixed default date, you can also set a *dynamic default* that is relative to the date the notebook is viewed:
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     start_date:
+       type: string
+       format: date
+       dynamic_default: "today"
+
+See :doc:`dynamic-date-defaults` for more information about the syntax for ``dynamic_default``.
+
 .. _ts-param-types-dayobs:
 
 DAYOBS
@@ -81,6 +94,19 @@ DAYOBS is defined as the date in the UTC-12 timezone, and is represented as a st
    start_dayobs = "20240101"
 
 The format of the DAYOBS string is validated, but no processing is done in the parameters cell.
+
+Instead of a fixed default DAYOBS, you can also set a *dynamic default* that is relative to the date the notebook is viewed:
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     start_dayobs:
+       type: string
+       format: dayobs
+       dynamic_default: "yesterday"
+
+See :doc:`dynamic-date-defaults` for more information about the syntax for ``dynamic_default``.
 
 .. _ts-param-types-datetime:
 
