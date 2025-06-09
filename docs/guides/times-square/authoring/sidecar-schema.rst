@@ -18,6 +18,8 @@ Example file
 YAML field reference
 ====================
 
+.. _ts-sidecar-schema-title:
+
 title
 -----
 
@@ -27,10 +29,14 @@ It should be fairly short because it is displayed in a narrow column.
 
 The name can be contextual with the notebook's directory path (and repository name and even GitHub organization name).
 
+.. _ts-sidecar-schema-description:
+
 description
 -----------
 
 (*Markdown string*, optional) This is the description of the notebook as it appears in the Times Square UI. The description can be formatted as Markdown to include links to other URLs.
+
+.. _ts-sidecar-schema-authors:
 
 authors
 -------
@@ -42,10 +48,14 @@ authors
 - ``email`` (*string*, optional) The email address of the author.
 - ``affiliation_name`` (*string*, optional) The name of the author's affiliation.
 
+.. _ts-sidecar-schema-tags:
+
 tags
 ----
 
 (*array of strings*, optional) A notebook can have multiple tags. Each tag is a string.
+
+.. _ts-sidecar-schema-parameters:
 
 parameters
 ----------
@@ -111,6 +121,8 @@ Each parameter is an object with the following fields:
 - ``maximum`` (*integer* or *number*, optional) is the maximum value of the parameter, for numeric parameters.
 
 For more information about parameters, see :doc:`parameter-types`.
+
+.. _ts-sidecar-schema-schedule:
 
 schedule
 --------
@@ -194,6 +206,8 @@ Fields:
 - ``minute`` (*integer*, or *array of integers*, optional) The minutes of the hour (0-59) when recurrence happens. Defaults to ``[0]``.
 - ``second`` (*integer*, or *integer*, optional) The second of the minute (0-59) when recurrence happens. Defaults to ``0``.
 - ``exclude`` (*boolean*, optional) Set to ``true`` to exclude these events from the schedule. Defaults to ``false``.
+
+.. _ts-sidecar-schema-schedule-enabled:
 
 schedule_enabled
 ----------------

@@ -108,6 +108,8 @@ For example, you can run a notebook daily on weekdays, but also at the end of th
        hour: 23
        minute: 55
 
+.. seealso:: The :doc:`sidecar metadata schema <sidecar-schema>` provides details on the :ref:`schedule <ts-sidecar-schema-schedule>` and :ref:`schedule_enabled <ts-sidecar-schema-schedule-enabled>` fields.
+
 Rules can skip events indicated by other rules
 ----------------------------------------------
 
