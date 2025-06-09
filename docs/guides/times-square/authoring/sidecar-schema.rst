@@ -171,13 +171,13 @@ Fields:
 - ``count`` (*integer*, optional) The number of occurrences of this recurring rule. Cannot be used with ``end``.
 - ``exclude`` (*boolean*, optional) Set to ``true`` to exclude these events from the schedule. Defaults to ``false``.
 
-Complex recurring schedule
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Advanced recurring schedule
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A schedule rule with advanced recurrence patterns (based on RFC 5545 iCalendar standard):
 
 .. code-block:: yaml
-   :caption: Complex recurring schedule example
+   :caption: Advanced recurring schedule example
 
    schedule:
      - freq: monthly
@@ -192,19 +192,19 @@ Fields:
 
 - ``freq`` (*string*, required) Frequency of recurrence. One of: ``yearly``, ``monthly``, ``weekly``, ``daily``, ``hourly``, ``minutely``.
 - ``week_start`` (*string*, optional) The week start day for weekly frequencies. One of: ``sunday``, ``monday``, ``tuesday``, ``wednesday``, ``thursday``, ``friday``, ``saturday``. Defaults to ``monday``.
-- ``set_position`` (*integer*, or *array of integers*, optional) Specifies occurrence numbers within the recurrence frequency. For example, with monthly frequency and ``weekday`` of Friday, a value of ``1`` specifies the first Friday of the month, ``-1`` specifies the last Friday.
-- ``month`` (*integer*, or *array of integers*, optional) The months (1-12) when recurrence happens. Use negative integers to specify from end of year.
-- ``day_of_month`` (*integer*, or *array of integers*, optional) The days of the month (1-31) when recurrence happens. Use negative integers to specify from end of month.
-- ``day_of_year`` (*integer*, or *array of integers*, optional) The days of the year (1-366) when recurrence happens. Use negative integers to specify from end of year.
-- ``week`` (*integer*, or *array of integers*, optional) The weeks of the year (1-52) when recurrence happens. Use negative integers to specify from end of year.
+- ``set_position`` (*integer* or *array of integers*, optional) Specifies occurrence numbers within the recurrence frequency. For example, with monthly frequency and ``weekday`` of Friday, a value of ``1`` specifies the first Friday of the month, ``-1`` specifies the last Friday.
+- ``month`` (*integer* or *array of integers*, optional) The months (1-12) when recurrence happens. Use negative integers to specify from end of year.
+- ``day_of_month`` (*integer* or *array of integers*, optional) The days of the month (1-31) when recurrence happens. Use negative integers to specify from end of month.
+- ``day_of_year`` (*integer* or *array of integers*, optional) The days of the year (1-366) when recurrence happens. Use negative integers to specify from end of year.
+- ``week`` (*integer* or *array of integers*, optional) The weeks of the year (1-52) when recurrence happens. Use negative integers to specify from end of year.
 - ``weekday`` (*string*, *array of strings*, *object*, or *array of objects*, optional) The days of the week when recurrence happens. As a string this is the day of the week. Use the object form to also include an index in the frequency period. Each object has:
 
   - ``day`` (*string*, required) The day of the week: ``sunday``, ``monday``, ``tuesday``, ``wednesday``, ``thursday``, ``friday``, ``saturday``.
   - ``index`` (*integer*, optional) The index of the weekday. For monthly frequency, ``1`` means the first occurrence of that weekday in the month, ``-1`` means the last.
 
-- ``hour`` (*integer*, or *array of integers*, optional) The hours of the day (0-23) when recurrence happens. Defaults to ``[0]``.
-- ``minute`` (*integer*, or *array of integers*, optional) The minutes of the hour (0-59) when recurrence happens. Defaults to ``[0]``.
-- ``second`` (*integer*, or *integer*, optional) The second of the minute (0-59) when recurrence happens. Defaults to ``0``.
+- ``hour`` (*integer* or *array of integers*, optional) The hours of the day (0-23) when recurrence happens. Defaults to ``[0]``.
+- ``minute`` (*integer* or *array of integers*, optional) The minutes of the hour (0-59) when recurrence happens. Defaults to ``[0]``.
+- ``second`` (*integer*, optional) The second of the minute (0-59) when recurrence happens. Defaults to ``0``.
 - ``exclude`` (*boolean*, optional) Set to ``true`` to exclude these events from the schedule. Defaults to ``false``.
 
 .. _ts-sidecar-schema-schedule-enabled:

@@ -42,7 +42,7 @@ Other recipes for the ``schedule`` field include:
        minute: 15
 
 .. code-block:: yaml
-   :caption: Schedule a notebook to the last day of every month at 11:55 PM UTC:
+   :caption: Schedule a notebook to run on the last day of every month at 11:55 PM UTC:
 
    schedule:
      - freq: "monthly"
@@ -90,7 +90,7 @@ For example, you can run a notebook daily on weekdays, but also at the end of th
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every weekday at 8:00 AM UTC and at the end of the month.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every weekday at 8:00 AM UTC and at the end of the month."
    parameters: []
    schedule_enabled: true
@@ -115,14 +115,14 @@ Rules can skip events indicated by other rules
 
 Any schedule rule can have a ``exclude: true`` field that indicates any scheduled dates that match the rule should be skipped.
 The exclusion rules are processed after the inclusion rules, so you can think of this as "schedule these times, but not these times."
-This is useful to in combination with other rules that would otherwise run the notebook at unnecessary times.
+This is useful in combination with other rules that would otherwise run the notebook at unnecessary times.
 
 For example, if you want to run a notebook every day at 8:00 AM UTC, but skip weekends, you can use the following schedule:
 
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every day at 8:00 AM UTC, but skips weekends.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every day at 8:00 AM UTC, but skips weekends."
    parameters: []
    schedule_enabled: true
@@ -151,7 +151,7 @@ Times Square supports three basic types of schedule rules:
 
 - scheduling on a specific date (:ref:`example <ts-schedule-on-date>`)
 - scheduling a recurrence from a specific date (:ref:`example <ts-schedule-from-date>`)
-- complex rules based on days of the year, month, week, and hours and minutes in the day (:ref:`details <ts-complex-schedule-rules>`).
+- advanced rules based on days of the year, month, week, and hours and minutes in the day (:ref:`details <ts-advanced-schedule-rules>`).
 
 All of these schedule rules can be combined in the ``schedule`` array.
 The remainder of this guide describes each of these types of rules in detail.
@@ -166,7 +166,7 @@ To schedule a notebook to run on a single specific date and time, use schedule r
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run on a specific date.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs on a specific date."
    parameters: []
    schedule_enabled: true
@@ -184,7 +184,7 @@ For simple schedules, this can be the simplest type of schedule rule to set up a
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every day starting from a specific date.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every day starting from a specific date."
    parameters: []
    schedule_enabled: true
@@ -205,7 +205,7 @@ By default the interval is ``1``, but to run every other day, you can set the in
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every other day starting from a specific date.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every other day starting from a specific date."
    parameters: []
    schedule_enabled: true
@@ -214,13 +214,13 @@ By default the interval is ``1``, but to run every other day, you can set the in
        freq: "daily"
        interval: 2
 
-The remainder of this documentation describes how to set up more complex schedules based on days of the year, month, week, and hours and minutes in the day.
+The remainder of this documentation describes how to set up more advanced schedules based on days of the year, month, week, and hours and minutes in the day.
 The easiest way to understand these rules is through specific recipes.
 
-.. _ts-complex-schedule-rules:
+.. _ts-advanced-schedule-rules:
 
-Complex schedule rules
-======================
+Advanced schedule rules
+=======================
 
 Schedule a notebook to run every Monday at specific time
 --------------------------------------------------------
@@ -230,7 +230,7 @@ To schedule a notebook to run every Monday at a specific time, use the ``weekday
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every Monday at 8:00 AM UTC.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every Monday at 8:00 AM UTC."
    parameters: []
    schedule_enabled: true
@@ -249,7 +249,7 @@ Then for ``weekday`` field supply an object where ``day`` is ``monday``, and the
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run on the first Monday of every month at 8:00 AM UTC.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs on the first Monday of every month at 8:00 AM UTC."
    parameters: []
    schedule_enabled: true
@@ -273,7 +273,7 @@ This schedule is similar to the previous one, but now the index is ``-1`` to ind
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run on the last Friday of every month at 8:00 AM UTC.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs on the last Friday of every month at 8:00 AM UTC."
    parameters: []
    schedule_enabled: true
@@ -295,7 +295,7 @@ To schedule a notebook to run on the last day of every month, use the ``day_of_m
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run on the last day of every month at 8:00 AM UTC.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs on the last day of every month at 8:00 AM UTC."
    parameters: []
    schedule_enabled: true
@@ -313,7 +313,7 @@ To schedule a notebook to run on the first day of every month, use the ``day_of_
 .. code-block:: yaml
     :caption: Sidecar metadata YAML file that schedules a notebook to run on the first day of every month at 8:00 AM UTC.
 
-    tile: "My Notebook"
+    title: "My Notebook"
     description: "This notebook runs on the first day of every month at 8:00 AM UTC."
     parameters: []
     schedule_enabled: true
@@ -333,7 +333,7 @@ For example, to run the notebook both at 8:00 AM and at 5:00 PM UTC, you can use
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run at 8:00 AM and 5:00 PM UTC every day.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs at 8:00 AM and 5:00 PM UTC every day."
    parameters: []
    schedule_enabled: true
@@ -351,7 +351,7 @@ To schedule a notebook to run every hour, you can use the ``freq`` field with th
 .. code-block:: yaml
    :caption: Sidecar metadata YAML file that schedules a notebook to run every hour.
 
-   tile: "My Notebook"
+   title: "My Notebook"
    description: "This notebook runs every hour at 5 minutes past the hour."
    parameters: []
    schedule_enabled: true
@@ -367,8 +367,8 @@ To schedule a notebook to run every hour, you can use the ``freq`` field with th
 Troubleshooting and tips
 ========================
 
-Schedule rules can be complex, so here are some tips for troubleshooting and ensuring your schedules work as expected:
+Schedule rules can be advanced, so here are some tips for troubleshooting and ensuring your schedules work as expected:
 
 - **Times are in UTC**. The ``hour`` fields are in UTC, so make sure to convert your local time to UTC when setting the schedule. An alternative strategy is to set the ``start`` field in the schedule rule to a specific date and time in your local time zone, which will then be converted to UTC.
 - **Hour is in the 24-hour clock.** The ``hour`` field uses a 24-hour clock, so 8 AM is ``8`` and 5 PM is ``17``.
-- **Set freq to the interval the rule repeats over.** The ``freq`` field in schedule rules can be confusing. Is refers to the periodicity of the rule as a whole, rather than the rate that runs are scheduled. For example, a rule where weekday is ``[monday, tuesday, wednesday, thursday, friday]`` should have a ``freq`` of ``weekly`` rather than ``daily`` because that pattern as a whole repeats every week, not every day.
+- **Set freq to the interval the rule repeats over.** The ``freq`` field in schedule rules can be confusing. It refers to the periodicity of the rule as a whole, rather than the rate that runs are scheduled. For example, a rule where weekday is ``[monday, tuesday, wednesday, thursday, friday]`` should have a ``freq`` of ``weekly`` rather than ``daily`` because that pattern as a whole repeats every week, not every day.

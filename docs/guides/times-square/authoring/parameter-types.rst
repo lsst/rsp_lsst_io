@@ -135,7 +135,7 @@ Besides specifying a time zone offset, you can also use the ``Z`` suffix to indi
 
    start_time = datetime.datetime.fromisoformat("2024-01-01T12:00:00Z")
 
-Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.date` object.
+Note how Times Square automatically imports the :py:obj:`datetime` module for you in the parameters cell to parse the date into a :py:obj:`datetime.datetime` object.
 Replicate this pattern in the default parameters cell of your notebook.
 
 .. _ts-param-types-integer:
@@ -143,7 +143,7 @@ Replicate this pattern in the default parameters cell of your notebook.
 Integers
 ========
 
-For decimal numbers, use the ``integer`` type.
+For whole numbers, use the ``integer`` type.
 In your code, these values are Python ``int`` objects.
 
 .. code-block:: yaml
@@ -223,7 +223,6 @@ Booleans
 
 Boolean (true/false) values are supported with the ``boolean`` type.
 The string representation is based on JSON's ``true`` and ``false`` values.
-To convert the string into a Python boolean, you can compare the string:
 In your code, these values are Python bool (``True`` / ``False``) objects.
 
 .. code-block:: yaml
