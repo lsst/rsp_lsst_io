@@ -107,12 +107,13 @@ Each parameter is an object with the following fields:
 - ``format`` (*string*, optional) is a format string that describes the expected format of the parameter value:
 
   - ``date`` for date parameters (e.g., ``2024-10-10``)
-  - ``dayobs`` for Rubin DAYOBS dates (e.g., ``20241010``), defined as the date in UTC-12.
+  - ``dayobs`` for Rubin DAYOBS dates (e.g., ``20241010`` as an integer), defined as the date in UTC-12.
+  - ``dayobs-date`` for Rubin DAYOBS dates (e.g., ``2024-10-10``), defined as the date in UTC-12.
   - ``date-time`` for date-time parameters (e.g., ``2024-10-10T04:00Z``).
 
 - ``default`` (*string*, required) is the default value of the parameter. The default must be a valid value for the parameter.
 
-  For ``date`` and ``dayobs`` format parameters, the ``default`` field can be replaced with a ``dynamic_default`` field to set a default relative to the current date. See :doc:`dynamic-date-defaults` for more information.
+  For ``date``, ``dayobs``, and ``dayobs-date`` format parameters, the ``default`` field can be replaced with a ``dynamic_default`` field to set a default relative to the current date. See :doc:`dynamic-date-defaults` for more information.
 
 - ``description`` (*Markdown string*) is the description of the parameter as it appears in the Times Square UI.
 
