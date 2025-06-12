@@ -9,7 +9,7 @@ Using a dynamic default
 =======================
 
 Parameters require a default value, which is set with the ``default`` field for that parameter.
-To make a date or dayobs parameter's default dynamic, replace that ``default`` field with a ``dynamic_default`` field:
+To make a date, dayobs, or dayobs-date parameter's default dynamic, replace that ``default`` field with a ``dynamic_default`` field:
 
 .. code-block:: diff
    :caption: Example of a dynamic default for a date parameter
@@ -21,7 +21,7 @@ To make a date or dayobs parameter's default dynamic, replace that ``default`` f
    -  default: 2024-10-01
    +  dynamic_default: "today"
 
-Dynamic defaults work with both date and dayobs parameters:
+Dynamic defaults work with date, dayobs, and dayobs-date parameters:
 
 .. code-block:: yaml
    :caption: Example of a dynamic default for a dayobs parameter.
@@ -29,8 +29,10 @@ Dynamic defaults work with both date and dayobs parameters:
    parameters:
      start_dayobs:
        type: string
-       format: dayobs
+       format: dayobs-date
        dynamic_default: "today"
+
+In the case of dayobs and dayobs-date, the default follows the UTC-12 timezone that dayobs dates are defined in.
 
 Format for the dynamic_default field
 ====================================

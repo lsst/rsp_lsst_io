@@ -72,11 +72,11 @@ See :doc:`dynamic-date-defaults` for more information about the syntax for ``dyn
 
 .. _ts-param-types-dayobs:
 
-DAYOBS
+DayObs
 ======
 
-Rubin Observatory uses DAYOBS to identify an observing night since the DAYOBS is consistent over the course of a night.
-DAYOBS is defined as the date in the UTC-12 timezone, and is represented as a string with eight digits: ``YYYYMMDD``.
+Rubin Observatory uses DayObs to identify an observing night since the DayObs is consistent over the course of a night.
+DayObs is defined as the date formatted as a `natural number in the UTC-12 timezone <https://sitcomtn-032.lsst.io>`__, and is represented as a string with eight digits: ``YYYYMMDD``.
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -85,17 +85,17 @@ DAYOBS is defined as the date in the UTC-12 timezone, and is represented as a st
      start_dayobs:
        type: string
        format: dayobs
-       description: A DAYOBS date
+       description: A DayObs date
        default: "20240101"
 
 .. code-block:: python
    :caption: Notebook parameters cell
 
-   start_dayobs = "20240101"
+   start_dayobs = 20240101
 
-The format of the DAYOBS string is validated, but no processing is done in the parameters cell.
+In the notebook, the dayobs format parameter is assigned as an integer.
 
-Instead of a fixed default DAYOBS, you can also set a *dynamic default* that is relative to the date the notebook is viewed:
+Instead of a fixed default DayObs, you can also set a *dynamic default* that is relative to the date the notebook is viewed:
 
 .. code-block:: yaml
    :caption: Notebook YAML sidecar
@@ -107,6 +107,40 @@ Instead of a fixed default DAYOBS, you can also set a *dynamic default* that is 
        dynamic_default: "yesterday"
 
 See :doc:`dynamic-date-defaults` for more information about the syntax for ``dynamic_default``.
+
+DayObs-Date
+===========
+
+The dayobs-date format is similar to the dayobs format, but assigned as a `datetime.date` object in the notebook.
+The parameter value strings also contain dashes, like a regular date format: ``YYYY-MM-DD``.
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     start_dayobs_date:
+       type: string
+       format: dayobs-date
+       description: A DayObs date
+       default: "2024-01-01"
+
+.. code-block:: python
+   :caption: Notebook parameters cell
+
+   import datetime
+
+   start_dayobs_date = datetime.date.fromisoformat("2024-01-01")
+
+dayobs-date parameters also support dynamic defaults, which are relative to the date the notebook is viewed:
+
+.. code-block:: yaml
+   :caption: Notebook YAML sidecar
+
+   parameters:
+     start_dayobs_date:
+       type: string
+       format: dayobs-date
+       dynamic_default: "yesterday"
 
 .. _ts-param-types-datetime:
 
