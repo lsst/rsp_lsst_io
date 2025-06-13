@@ -19,7 +19,10 @@ Get started on the Rubin Science Platform
    linking-more-ids
 
 
-To get started, follow the first steps in the
+Find documentation and tutorials
+--------------------------------
+
+Once you can log in, start learning by following the first steps in the
 :doc:`Portal User Guide <../portal/index>`,
 :doc:`Notebooks User Guide <../notebooks/index>`, or the
 :doc:`API User Guide <../api/index>`.
