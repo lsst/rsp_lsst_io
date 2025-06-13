@@ -2,7 +2,7 @@
 Rubin Science Platform Guides
 #############################
 
-**Learn how to use the Rubin Science Platform for exploring LSST data.**
+**Learn how to use the Rubin Science Platform for LSST data analysis.**
 
 Getting started
 ===============
@@ -76,7 +76,7 @@ Inter-connected aspects enable you to discover and analyze data.
       :link: api/index
       :link-type: doc
 
-      Connecting you to data from within the Rubin Science Platform and beyond, using IVOA standards.
+      Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
 
 
 .. jinja:: rsp
