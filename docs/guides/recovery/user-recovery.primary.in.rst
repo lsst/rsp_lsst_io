@@ -25,7 +25,7 @@ the issue is usually that the wrong identity provider was chosen at login.
 
 Try your other identities (e.g., GitHub, ORCID).
 After successfully logging in, link the identity you had tried to use so that it will work next time.
-See :doc:`linking-more-ids`.
+See :doc:`../getting-started/linking-more-ids`.
 
 
 Forgotten password
@@ -33,7 +33,7 @@ Forgotten password
 
 Rubin staff do not have access to your password or any other data from your identity provider besides your name.
 Follow up with your identity provider.
-See :doc:`linking-more-ids`.
+See :doc:`../getting-started/linking-more-ids`.
 
 
 Moved institutions (expired identity)
