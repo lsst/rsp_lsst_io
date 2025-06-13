@@ -29,6 +29,7 @@ Accounts & authentication
    :caption: Accounts
 
    auth/index
+   recovery/index
 
 .. grid:: 1
 
