@@ -25,6 +25,6 @@ Get started on the Rubin Science Platform
       :name: getting-started-tutorials
       :titlesonly:
 
-      {% if env.portal_url %}:doc:`Portal User Guide <../portal/index>`{% endif %}
-      {% if env.nb_url %}:doc:`Notebooks User Guide <../notebooks/index>`{% endif %}
-      {% if env.nb_url %}:doc:`API User Guide <../api/index>`{% endif %}
+      :doc:`Portal User Guide <../portal/index>`{% endif %}
+      :doc:`Notebooks User Guide <../notebooks/index>`{% endif %}
+      :doc:`API User Guide <../api/index>`{% endif %}
