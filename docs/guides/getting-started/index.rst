@@ -18,13 +18,11 @@ Get started on the Rubin Science Platform
 
    linking-more-ids
 
-.. jinja:: rsp
 
-   .. toctree::
-      :caption: Quick start tutorials
-      :name: getting-started-tutorials
-      :titlesonly:
+To get started, follow the first steps in the
+:doc:`Portal User Guide <../portal/index>`,
+:doc:`Notebooks User Guide <../notebooks/index>`, or the
+:doc:`API User Guide <../api/index>`.
 
-      :doc:`Portal User Guide <../portal/index>`
-      :doc:`Notebooks User Guide <../notebooks/index>`
-      :doc:`API User Guide <../api/index>`
+For a list of recent data releases and links to their associated documentation and tutorials,
+visit `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`_.
