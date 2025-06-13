@@ -121,7 +121,7 @@ Step-by-step
 
 10. Link a non-institutional identity:
 
-   - **It is strongly recommended to link additional identities** so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional identity you signed up with. Consider using a non-employment based provider (e.g., GitHub) as a secondary identity. See :doc:`<linking-more-ids>`.
+   - **It is strongly recommended to link additional identities** so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional identity you signed up with. Consider using a non-employment based provider (e.g., GitHub) as a secondary identity. See :doc:`linking-more-ids`.
 
 
 Need assistance?
