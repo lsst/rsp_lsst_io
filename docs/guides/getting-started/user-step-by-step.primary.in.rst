@@ -17,6 +17,7 @@ Before getting started
    - If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
    - *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
    - You *must* have an account with one of the supported institutions or organizations to use the RSP.
+   - **It is highly recommended to link a non-institutional account** (e.g., GitHub, ORCID; see step 10, below) to ensure continuous access if you move institutions.
 
 3. Review the `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ (AUP).
 
@@ -113,11 +114,14 @@ Step-by-step
      Rubin staff will help you through the data rights verification process. Please check your spam folder.
    - After 1 month without a response, petitions will be denied, but this is not permanent; please restart the process at any time.
 
-9. Log in and get started.
+9. Log in and get started:
 
    - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
-   - It is strongly recommended to link additional identities so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional address you signed up with. Consider using a non-employment based provider (eg Github) as a secondary identity.
    - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
+
+10. Link a non-institutional identity:
+
+   - **It is strongly recommended to link additional identities** so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional identity you signed up with. Consider using a non-employment based provider (e.g., GitHub) as a secondary identity. See :doc:`<linking-more-ids>`.
 
 
 Need assistance?
