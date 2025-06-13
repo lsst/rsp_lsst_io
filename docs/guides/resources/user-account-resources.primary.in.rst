@@ -56,7 +56,7 @@ Scratch
 To enable processing and analysis that requires large intermediate files, a shared "scratch" directory where all users
 can write temporary files is provided.
 
-This directory will be named ``/cleared-weekly`` and all contents will be deleted on Sundays.
+This directory will be named ``/deleted-sundays`` and all contents will be deleted on Sundays.
 Scratch space is *not backed up*.
 
 Users should take care to use this shared resource responsibly.
