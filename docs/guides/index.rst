@@ -19,7 +19,7 @@ Getting started
       :link: getting-started/index
       :link-type: doc
 
-      If you're new to the |rsp-at|, get your account and learn the basics with these step-by-step guides.
+      Get a Rubin Science Platform account and learn the basics.
 
 Accounts & authentication
 =========================
@@ -36,12 +36,18 @@ Accounts & authentication
       :link: auth/index
       :link-type: doc
 
-      Learn how to set up and use tokens to access the Rubin Science Platform and its services.
+      Set up and use tokens to access the Rubin Science Platform and its services.
+
+   .. grid-item-card:: Recovery
+      :link: recovery/index
+      :link-type: doc
+
+      How to recover from lost passwords and other account access issues.
 
 Aspects
 =======
 
-The Rubin Science Platform is a collection of inter-connected aspects that enable you to discover and analyze data.
+Inter-connected aspects enable you to discover and analyze data.
 
 .. toctree::
    :hidden:
@@ -57,19 +63,19 @@ The Rubin Science Platform is a collection of inter-connected aspects that enabl
       :link: portal/index
       :link-type: doc
 
-      The Portal Aspect is a powerful graphical interface in your web browser for querying and visualizing Rubin catalogs and images.
+      A graphical interface in your web browser for querying and visualizing catalogs and images.
 
    .. grid-item-card:: Notebooks
       :link: notebooks/index
       :link-type: doc
 
-      The Notebook Aspect enables you to run Jupyter Notebooks and scripts to analyze Rubin data with your own code.
+      Run Jupyter Notebooks and scripts to analyze data with your own code.
 
    .. grid-item-card:: API
       :link: api/index
       :link-type: doc
 
-      The API Aspect connects you to Rubin data, from within the Rubin Science Platform and beyond. It is based on IVOA Virtual Observatory standards.
+      Connecting you to data from within the Rubin Science Platform and beyond, using IVOA standards.
 
 
 .. jinja:: rsp
