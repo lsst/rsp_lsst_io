@@ -13,10 +13,11 @@ Before getting started
    - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing identity.
    - Accepted identity providers include institutional members of the `InCommon federation <https://incommon.org/>`__ and other providers like `GitHub <https://github.com/>`__ and `ORCID <https://orcid.org/>`__.
    - If your institution does not participate in InCommon (i.e., if it does not appear in the drop-down menu in step 2, below), use GitHub or ORCID (accounts are free).
-   - Our system asks your identity provider’s system if you are who you say you are.
+   - The RSP's system asks your identity provider’s system if you are who you say you are.
    - If you have account issues (such as needing to reset your password) you should follow up with your institution as normal.
    - *Rubin staff do not have access to your password or any other data from your institutional account besides your name.*
    - You *must* have an account with one of the supported institutions or organizations to use the RSP.
+   - **It is highly recommended to link a non-institutional account** (e.g., GitHub, ORCID; see step 10, below) to ensure continuous access if you move institutions.
 
 3. Review the `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ (AUP).
 
@@ -84,12 +85,12 @@ Step-by-step
 5. Onboarding flow - self signup pages:
 
    - Provide your given and family name.
-   - *We do not require your legal name*; the reason you are being asked is to allow us to establish you are entitled to our data products.
+   - *Signup does not require your legal name*; the reason you are being asked is to allow Rubin to establish you are entitled to the data products.
      You should supply whichever name you use for publications or are known to your colleagues as.
    - *Examples.* If you go by your middle name, supply your middle name as the given name.
      If you publish as *Lady Gaga*, don't sign up as *Stefani Joanne Angelina Germanotta*.
    - Provide any email address that you can immediately access (for the confirmation in Step 6).
-   - Using your institutional email address, if you're in the US or Chile, helps our data rights verification process (Step 8) but is not mandatory.
+   - Using your institutional email address, if you're in the US or Chile, helps the data rights verification process (Step 8) but is not mandatory.
 
 6. Onboarding flow - email confirmation:
 
@@ -113,11 +114,14 @@ Step-by-step
      Rubin staff will help you through the data rights verification process. Please check your spam folder.
    - After 1 month without a response, petitions will be denied, but this is not permanent; please restart the process at any time.
 
-9. Log in and get started.
+9. Log in and get started:
 
    - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
-   - It is strongly recommended to link additional identities so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional address you signed up with. Consider using a non-employment based provider (eg Github) as a secondary identity.
    - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
+
+10. Link a non-institutional identity:
+
+   - **It is strongly recommended to link additional identities** so that you have options for account access. This is to ensure continuity of your access and files in the event that you lose access to the institutional identity you signed up with. Consider using a non-employment based provider (e.g., GitHub) as a secondary identity. See :doc:`linking-more-ids`.
 
 
 Need assistance?
