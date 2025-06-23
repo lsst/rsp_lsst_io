@@ -26,6 +26,10 @@
 {% if env.times_square_url %}
 .. |times-square| replace:: `Times Square <{{env.times_square_url}}>`__
 {% endif %}
+{% if env.api_webdav_url %}
+.. |webdav-app| replace:: `{{env.api_webdav_url}} <{{env.api_webdav_url}}>`__
+.. |webdav-server| replace:: ``{{env.api_webdav_url}}(your_username)``
+{% endif %}
 
 .. Templated link targets =====================================================
 

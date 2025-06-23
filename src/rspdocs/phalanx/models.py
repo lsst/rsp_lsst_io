@@ -63,6 +63,12 @@ class PhalanxEnv(BaseModel):
         examples=["https://data.lsst.cloud/api/tap/"],
     )
 
+    api_webdav_url: HttpUrl | None = Field(
+        None,
+        description="Root URL for the WebDAV service.",
+        examples=["https://data.lsst.cloud/files/"],
+    )
+
     gafaelfawr_tokens_url: HttpUrl = Field(
         description="URL for the Gafaelfawr user tokens page.",
         examples=["https://data.lsst.cloud/auth/tokens/"],

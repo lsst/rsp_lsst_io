@@ -23,6 +23,7 @@
       "nb_url": "https://data-dev.lsst.cloud/nb/",
       "api_url": "https://data-dev.lsst.cloud/api/",
       "api_tap_url": "https://data-dev.lsst.cloud/api/",
+      "api_webdav_url": "https://data-dev.lsst.cloud/files/",
       "gafaelfawr_tokens_url": "https://data-dev.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfdev/index.html",
       "times_square_url": "https://data-dev.lsst.cloud/times-square/"
@@ -37,6 +38,7 @@
       "nb_url": "https://data-int.lsst.cloud/nb/",
       "api_url": "https://data-int.lsst.cloud/api/",
       "api_tap_url": "https://data-int.lsst.cloud/api/",
+      "api_webdav_url": "https://data-int.lsst.cloud/files/",
       "gafaelfawr_tokens_url": "https://data-int.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfint/index.html"
     },
@@ -50,6 +52,7 @@
       "nb_url": "https://data.lsst.cloud/nb/",
       "api_url": "https://data.lsst.cloud/api/",
       "api_tap_url": "https://data.lsst.cloud/api/tap/",
+      "api_webdav_url": "https://data.lsst.cloud/files/",
       "gafaelfawr_tokens_url": "https://data.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfprod/index.html"
     },
