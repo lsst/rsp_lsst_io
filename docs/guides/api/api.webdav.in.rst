@@ -15,7 +15,7 @@ Start your WebDAV server
 One-time setup:
 ^^^^^^^^^^^^^^^
 
-1. Create a token with ``exec notebook`` scope. See :doc:`../auth/creating-user-tokens` on how to do this. Copy the generated token
+1. Create a token with ``write:files`` scope. See :doc:`../auth/creating-user-tokens` on how to do this. Copy the generated token
 
 2. (optionally) save your token in a password manager
 

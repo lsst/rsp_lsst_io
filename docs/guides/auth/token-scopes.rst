@@ -26,5 +26,8 @@ To learn how to create a token, see :doc:`creating-user-tokens`.
 ``read:tap``
     Execute SELECT queries in the TAP interface on project datasets.
 
+``write:files``
+    Write files in the user's directories (eg via WebDAV)
+
 ``user:token``
     Create and modify user tokens.
