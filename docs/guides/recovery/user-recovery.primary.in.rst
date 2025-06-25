@@ -27,7 +27,7 @@ the issue is usually that the wrong identity provider was chosen at login.
 Try your other identities (e.g., GitHub, ORCID), but if you are redirected into the new account process, stop
 or you will end up with multiple accounts.
 
-Instead, request assistance from Rubin staff to find out which identity ou used.
+Instead, request assistance from Rubin staff to find out which identity you used.
 
 After successfully logging in, link the identity you had tried to use so that it will work next time.
 See :doc:`../getting-started/linking-more-ids`.
