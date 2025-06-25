@@ -25,7 +25,6 @@ dependencies = [
     "pydantic",
     "Jinja2",
     "sphinx-jinja",
-    "sphinx-prompt",
     "sphinxcontrib-youtube",
 ]
 dynamic = ["version"]
