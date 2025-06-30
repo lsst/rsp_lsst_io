@@ -31,7 +31,8 @@ Accounts & authentication
    auth/index
    recovery/index
 
-.. grid:: 1
+.. grid:: 1 2 2 2
+   :gutter: 2
 
    .. grid-item-card:: Authentication
       :link: auth/index
@@ -58,7 +59,8 @@ Inter-connected aspects enable you to discover and analyze data.
    Notebooks <notebooks/index>
    API <api/index>
 
-.. grid:: 1
+.. grid:: 1 2 2 2
+   :gutter: 2
 
    .. grid-item-card:: Portal
       :link: portal/index
@@ -106,7 +108,8 @@ Various information tidbits to make life easier.
 
       {% if env.times_square_url %}times-square/index{% endif %}
 
-   .. grid:: 1
+   .. grid:: 1 2 2 2
+      :gutter: 2
 
       {% if env.times_square_url %}
       .. grid-item-card:: Times Square
