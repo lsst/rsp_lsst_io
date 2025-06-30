@@ -81,19 +81,18 @@ Inter-connected aspects enable you to discover and analyze data.
 Life on the RSP
 ===============
 
+Various information tidbits to make life easier.
+
 .. toctree::
    :hidden:
    :caption: Life
 
-   Patch Thursday <life/patch-thursday>
+   life/patch-thursday
+   life/updates
 
-.. grid:: 1
 
-   .. grid-item-card:: Patch Thursday
-      :link: life/patch-thursday
-      :link-type: doc
-
-      The "Patch Thursday" maintenance window - dos and don'ts
+* :doc:`life/patch-thursday`: The "Patch Thursday" maintenance window - dos and don'ts
+* :doc:`life/updates`: News you can use
 
 .. jinja:: rsp
 
