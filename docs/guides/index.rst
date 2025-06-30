@@ -78,6 +78,22 @@ Inter-connected aspects enable you to discover and analyze data.
 
       Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
 
+Life on the RSP
+===============
+
+.. toctree::
+   :hidden:
+   :caption: Life
+
+   Patch Thursday <life/patch-thursday>
+
+.. grid:: 1
+
+   .. grid-item-card:: Patch Thursday
+      :link: life/patch-thursday
+      :link-type: doc
+
+      The "Patch Thursday" maintenance window - dos and don'ts
 
 .. jinja:: rsp
 
