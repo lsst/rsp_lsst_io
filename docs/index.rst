@@ -27,7 +27,8 @@ For the current status of RSP capabilities and future plans, see :doc:`roadmap`.
    Contributing <contributing/index>
    Updates <updates/index>
 
-.. grid:: 4
+.. grid:: 1 2 4 4
+   :gutter: 2
 
    .. grid-item-card:: Sign up for an account
       :link: guides/getting-started/get-an-account
