@@ -15,7 +15,7 @@ For the current status of RSP capabilities and future plans, see :doc:`roadmap`.
    .. important::
 
       This documentation covers the |rsp-at|, an environment for Rubin Observatory staff.
-      For :abbr:`DP0 (Data Preview 0)`\ , please use the `documentation for the {{all_envs.primary.title_full}} <{{all_envs.primary.ltd_url_prefix}}>`__\ .
+      For :abbr:`DP1 (Data Preview 1)`\ , please use the `documentation for the {{all_envs.primary.title_full}} <{{all_envs.primary.ltd_url_prefix}}>`__\ .
    {% endif %}
 
 .. toctree::
@@ -57,5 +57,6 @@ For the current status of RSP capabilities and future plans, see :doc:`roadmap`.
 Related documentation
 =====================
 
-- `Data Preview 0.2`_ — Learn about the DESC DC2 simulated dataset and get tutorials for analyzing data with the Rubin Science Platform.
+- `Data Preview 1`_ — Data Preview 1 contains image and catalog products from LSST Science Pipelines v29 processing of observations obtained with the LSST Commissioning Camera of seven ~1 square degree fields over seven weeks in late 2024.
+- `Data Preview 0`_ — DP0 is the first of three data previews during the period leading up to the start of Rubin Observatory Operations. DP0.2 features simulated Galactic and extragalactic data products. DP0.3 contains simulated Solar System objects.
 - `LSST Science Pipelines`_ — Learn about the Rubin LSST's Python data processing, measurement, and access software, which you can use from the Rubin Science Platform.
