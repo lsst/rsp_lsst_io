@@ -17,6 +17,7 @@ env:
     tags:
       - "*"
   pull_request: {}
+  merge_group: {}
 
 jobs:
   lint:
