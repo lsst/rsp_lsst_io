@@ -5,7 +5,7 @@ Updates
 June 30 2025
 ============
 
-`Data Preview 1 <http://dp1.lsst.io>.`_ released.
+`Data Preview 1 <https://dp1.lsst.io/>`_ released.
 
 **Version 29.1.1**:
 The recommended build of the LSST Science Pipelines available in the RSP Notebook Aspect has been upgraded to r29.1.1.
