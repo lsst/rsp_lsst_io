@@ -1,3 +1,5 @@
+import glob
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -82,3 +84,94 @@ del _jinja_env
 # FIXME(jonathansick): Remove TLS verification due to SSL issues with
 # TOPCAT. Should be temporary.
 tls_verify = False
+
+
+def setup(app):
+    def add_orphan_to_inbox(app, docname, source):
+        # Add orphan metadata to files in guides/inbox/
+        if docname.startswith("guides/inbox/"):
+            import os
+
+            # Get the file extension to determine format
+            file_path = os.path.join(app.srcdir, docname + ".rst")
+            if not os.path.exists(file_path):
+                file_path = os.path.join(app.srcdir, docname + ".md")
+
+            file_ext = os.path.splitext(file_path)[1].lower()
+
+            if file_ext == ".rst":
+                # RST format: use :orphan: directive
+                print(f"Processing {docname} (RST) for orphan directive")
+                source[0] = ":orphan:\n\n" + source[0]
+            elif file_ext == ".md":
+                # Markdown format: use YAML front-matter
+                print(
+                    f"Processing {docname} (Markdown) for orphan front-matter"
+                )
+                content = source[0]
+
+                # Check if file already has YAML front-matter
+                if content.startswith("---\n"):
+                    # Find the end of existing front-matter
+                    lines = content.split("\n")
+                    end_idx = -1
+                    for i, line in enumerate(lines[1:], 1):
+                        if line.strip() == "---":
+                            end_idx = i
+                            break
+
+                    if end_idx > 0:
+                        # Insert orphan into existing front-matter
+                        front_matter = lines[1:end_idx]
+                        # Check if orphan already exists
+                        has_orphan = any(
+                            line.strip().startswith("orphan:")
+                            for line in front_matter
+                        )
+                        if not has_orphan:
+                            front_matter.append("orphan: true")
+
+                        # Reconstruct content
+                        new_lines = ["---"] + front_matter + lines[end_idx:]
+                        source[0] = "\n".join(new_lines)
+                    else:
+                        # Malformed front-matter, add new one
+                        source[0] = "---\norphan: true\n---\n\n" + content
+                else:
+                    # No existing front-matter, add new one
+                    source[0] = "---\norphan: true\n---\n\n" + content
+
+    def add_toctree_to_inbox_index(app, docname, source):
+        # Add auto-generated toctree to guides/inbox/index.rst
+        if docname == "guides/inbox/index":
+            # Find all .rst and .md files in guides/inbox/ except index.rst
+            inbox_dir = os.path.join(app.srcdir, "guides", "inbox")
+            rst_files = glob.glob(os.path.join(inbox_dir, "*.rst"))
+            md_files = glob.glob(os.path.join(inbox_dir, "*.md"))
+
+            # Get basenames and exclude index.rst
+            all_files = []
+            for file_path in rst_files + md_files:
+                basename = os.path.basename(file_path)
+                if basename != "index.rst":
+                    # Remove extension for toctree
+                    name_without_ext = os.path.splitext(basename)[0]
+                    all_files.append(name_without_ext)
+
+            # Sort files alphabetically
+            all_files.sort()
+
+            if all_files:
+                # Create toctree directive
+                toctree_content = "\n\n.. toctree::\n   :maxdepth: 1\n\n"
+                for file_name in all_files:
+                    toctree_content += f"   {file_name}\n"
+
+                # Append to the source
+                source[0] = source[0] + toctree_content
+                print(
+                    f"Added toctree to {docname} with {len(all_files)} files"
+                )
+
+    app.connect("source-read", add_orphan_to_inbox)
+    app.connect("source-read", add_toctree_to_inbox_index)
