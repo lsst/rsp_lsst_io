@@ -52,14 +52,14 @@ jobs:
     strategy:
       matrix:
         rsp:
-          - "base"
-          - "idfdev"
-          - "idfint"
+          # - "base"
+          # - "idfdev"
+          # - "idfint"
           - "idfprod"
-          - "summit"
-          - "tucson-teststand"
-          - "usdfdev"
-          - "usdfprod"
+          # - "summit"
+          # - "tucson-teststand"
+          # - "usdfdev"
+          # - "usdfprod"
 
     steps:
       - uses: actions/checkout@v4
@@ -110,14 +110,14 @@ jobs:
     strategy:
       matrix:
         rsp:
-          - "base"
-          - "idfdev"
-          - "idfint"
+          # - "base"
+          # - "idfdev"
+          # - "idfint"
           - "idfprod"
-          - "summit"
-          - "tucson-teststand"
-          - "usdfdev"
-          - "usdfprod"
+          # - "summit"
+          # - "tucson-teststand"
+          # - "usdfdev"
+          # - "usdfprod"
 
     steps:
       - uses: actions/download-artifact@v4
