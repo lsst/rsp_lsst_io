@@ -12,6 +12,9 @@ Getting started
    :caption: Getting Started
 
    getting-started/index
+   hybrid
+   life/patch-thursday
+   life/updates
 
 .. grid:: 1
 
@@ -79,22 +82,6 @@ Inter-connected aspects enable you to discover and analyze data.
       :link-type: doc
 
       Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
-
-Life on the RSP
-===============
-
-Various information tidbits to make life easier.
-
-.. toctree::
-   :hidden:
-   :caption: Life
-
-   life/patch-thursday
-   life/updates
-
-
-* :doc:`life/patch-thursday`: The "Patch Thursday" maintenance window - dos and don'ts
-* :doc:`life/updates`: News you can use
 
 .. jinja:: rsp
 

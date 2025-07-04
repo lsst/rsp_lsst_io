@@ -1,4 +1,4 @@
-# The Hybrid Model
+# Hybrid model
 
 The flagship Rubin Science Platform (RSP) at [data.lsst.cloud](https://data.lsst.cloud) is a hybrid deployment, with services and data distributed across multiple data centers:
 
@@ -33,7 +33,7 @@ The following table shows service availability when [data.lsst.cloud](https://da
 
 The following image shows which Portal tabs remain functional during a USDF/SLAC outage:
 
-![Working portal tabs](portal_nogo.png)
+![Working portal tabs](images/portal-slac-outage.png)
 
 ```{tip}
 If your portal does not look like the above image, you can configure the visible tabs by using the "hamburger" menu on the top left.
