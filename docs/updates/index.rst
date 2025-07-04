@@ -15,8 +15,9 @@ This is the same version that was used to process the Data Preview 1 (DP1) datas
 User's ``/home`` spaces in the Notebook Aspect now have a quota of 35 GB.
 Users in excess of the quota will still be able to log in, but will be unable to write any more files until they've deleted files and are under the quota.
 
-**/scrach is now /deleted-sundays**:
+**/scratch is now /deleted-sundays**:
 The ``/deleted-sundays`` directory in the Notebook Aspect is writeable by all, and has no quota, but is cleared out on Sundays.
+This directory is *temporary storage* for large intermediate files (e.g., byproducts of data processing).
 
 **Use the "Large" container for data analysis**:
 The "Medium" container size option has been removed from the Notebook Aspect.
