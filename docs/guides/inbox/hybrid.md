@@ -1,33 +1,44 @@
 # The Hybrid Model
 
-Our flagship Rubin Science Platform deployment at data.lsst.cloud is what we call a hybrid deployment:
+The flagship Rubin Science Platform (RSP) at [data.lsst.cloud](https://data.lsst.cloud) is a hybrid deployment, with services and data distributed across multiple data centers:
 
-* Most of the services and some data are hosted on the Google Cloud Platform
-* A few services and most of the data are hosted at our US Data Facility at SLAC
+- Most of the services and some data are hosted on the Google Cloud Platform.
+- A few services and most of the data are hosted at our US Data Facility (USDF) at SLAC.
 
-The good news is that this architecture gives us a lot of flexibility and performance while controlling the storage cost.
+This architecture provides flexibility and performance while controlling storage costs.
 
-The bad news is that outages can be complicated to understand, since depending on the problem some services can be fine for some data products but not others.
+When an outage occurs, service and data availability can be affected differently depending on which data center is impacted.
+During LSST Data Previews, the RSP does not yet provide detailed error messages from its services.
+This page provides guidance on what to expect when USDF/SLAC is offline and how to continue using the RSP during such outages.
 
-At this stage of the RSP preview period, we don't have the capability of having hyper-specific error messages from our services in such eventuality.
-Which is why you are probably reading this after having being directed to it from an outage message...
+## Service availability during a USDF (SLAC) outage
 
-At the time of DP1, this is what works if data.lsst.cloud is operating while SLAC is offline:
+The following table shows service availability when [data.lsst.cloud](https://data.lsst.cloud) is operational but USDF/SLAC is experiencing an outage:
 
-|                 | DP1 | DP0.3 | DP0.2|
-|-----------------|-----|-------|------|
-| TAP (catalogs)  | ❌   | ❌    | ❌   |
-| HIPS            | ✅   | ❌    | ❌   |
-| SIA (images)    | ✅   | ❌    | ❌   |
-| SODA (cutouts)  | ✅   | ❌    | ❌   |
-| ObsTAP (images) | ❌   | ❌    | ❌   |
+| Service         | DP1 | DP0.3 | DP0.2 |
+| --------------- | --- | ----- | ----- |
+| TAP (catalogs)  | ❌  | ❌    | ❌    |
+| HIPS            | ✅  | ❌    | ❌    |
+| SIA (images)    | ✅  | ❌    | ❌    |
+| SODA (cutouts)  | ✅  | ❌    | ❌    |
+| ObsTAP (images) | ❌  | ❌    | ❌    |
 
-You can still use the notebook aspect to access your files, use the services indicated as green above, analyze previously retrieved data and to practice your Jupyter/python skills.
+### What you can do during a USDF/SLAC outage
 
-In the portal, the following image indicates which tabs will work with DP1 data.
+- Access the Notebook aspect
+- Use services marked with ✅ above
+- Analyze previously retrieved data
+
+### Portal functionality during a USDF/SLAC outage
+
+The following image shows which Portal tabs remain functional during a USDF/SLAC outage:
 
 ![Working portal tabs](portal_nogo.png)
 
-(if your portal does not look like the above image, you can configure the visible tabs by using the "hamburger" menu on the top left)
+```{tip}
+If your portal does not look like the above image, you can configure the visible tabs by using the "hamburger" menu on the top left.
+```
 
-The location of data products may change as operations evolve.
+### Getting updates during a USDF/SLAC outage
+
+During a service outage, you can monitor updates from the [data.lsst.cloud homepage](https://data.lsst.cloud) or the [Community forum News category](https://community.lsst.org/c/news/data-services/64). See {doc}`/guides/life/updates`.
