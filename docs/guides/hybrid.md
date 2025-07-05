@@ -25,9 +25,10 @@ The following table shows service availability when [data.lsst.cloud](https://da
 | --------------- | --- | ----- | ----- |
 | TAP (catalogs)  | ❌  | ❌    | ❌    |
 | HIPS            | ✅  | ❌    | ❌    |
-| SIA (images)    | ✅  | ❌    | ❌    |
+| SIA (images)    | ✅  | N/A   | ❌    |
 | SODA (cutouts)  | ✅  | ❌    | ❌    |
-| ObsTAP (images) | ❌  | ❌    | ❌    |
+| Butler (images) | ✅  | N/A   | ❌    |
+| ObsTAP (images) | ❌  | N/A   | ❌    |
 
 ### What you can do during a USDF/SLAC outage
 
