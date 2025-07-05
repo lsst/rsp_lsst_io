@@ -24,9 +24,9 @@ The following table shows service availability when [data.lsst.cloud](https://da
 | Service         | DP1 | DP0.3 | DP0.2 |
 | --------------- | --- | ----- | ----- |
 | TAP (catalogs)  | ❌  | ❌    | ❌    |
-| HIPS            | ✅  | ❌    | ❌    |
+| HIPS            | ✅  | N/A   | ❌    |
 | SIA (images)    | ✅  | N/A   | ❌    |
-| SODA (cutouts)  | ✅  | ❌    | ❌    |
+| SODA (cutouts)  | ✅  | N/A   | ❌    |
 | Butler (images) | ✅  | N/A   | ❌    |
 | ObsTAP (images) | ❌  | N/A   | ❌    |
 
