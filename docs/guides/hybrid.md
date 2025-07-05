@@ -5,13 +5,19 @@ The flagship Rubin Science Platform (RSP) at [data.lsst.cloud](https://data.lsst
 - Most of the services and some data are hosted on the Google Cloud Platform.
 - A few services and most of the data are hosted at our US Data Facility (USDF) at SLAC.
 
+Together, these make up the US Data Access Center.
+
+![The hybrid architecture of data.lsst.cloud](images/hybrid.svg)
+
 This architecture provides flexibility and performance while controlling storage costs.
+However, it can make understanding the system's behavior during outages challenging.
+Read on to understand what to expect when USDF/SLAC is offline and how to continue using the RSP during such outages.
 
-When an outage occurs, service and data availability can be affected differently depending on which data center is impacted.
-During LSST Data Previews, the RSP does not yet provide detailed error messages from its services.
-This page provides guidance on what to expect when USDF/SLAC is offline and how to continue using the RSP during such outages.
+## Outages
 
-## Service availability during a USDF (SLAC) outage
+When an outage occurs, service and data availability can be affected differently depending on which data access center is impacted.
+
+### Service availability during a USDF (SLAC) outage
 
 The following table shows service availability when [data.lsst.cloud](https://data.lsst.cloud) is operational but USDF/SLAC is experiencing an outage:
 
@@ -28,6 +34,7 @@ The following table shows service availability when [data.lsst.cloud](https://da
 - Access the Notebook aspect
 - Use services marked with ✅ above
 - Analyze previously retrieved data
+- Access services from external archives
 
 ### Portal functionality during a USDF/SLAC outage
 
@@ -41,4 +48,5 @@ If your portal does not look like the above image, you can configure the visible
 
 ### Getting updates during a USDF/SLAC outage
 
-During a service outage, you can monitor updates from the [data.lsst.cloud homepage](https://data.lsst.cloud) or the [Community forum News category](https://community.lsst.org/c/news/data-services/64). See {doc}`/guides/life/updates`.
+During LSST Data Previews, the errors from RSP services may not always make it obvious what the issue is, so do monitor updates posted in banners on the [data.lsst.cloud homepage](https://data.lsst.cloud).
+See {doc}`/guides/life/updates` for other ways to stay informed.
