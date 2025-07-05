@@ -71,6 +71,12 @@ In a python shell or notebook environment, it should then be possible to execute
 
 *Although the LSST environment can be run locally, we strongly recommend to use it in the RSP environment.*
 
+
+Is the rubin_sim/rubin_scheduler data available on the RSP?
+-----------------------------------------------------------
+
+A shared copy of the current rubin_sim data is available under '/rubin/rubin_sim_data'. Adding an environment variable for RUBIN_SIM_DATA_DIR to your notebook or symlinking '/rubin/rubin_sim_data' to your home directory under 'rubin_sim_data' will let the rubin_sim package find the shared data.
+
 .. _NB-Intro-Use-A-NB-tips:
 
 Troubleshooting tips
@@ -105,3 +111,4 @@ How to make Git stop asking for my password?
 --------------------------------------------
 
 Follow the :doc:`guide on configuring Git and credentials <../configuration/git-configuration>` to set your Git username and set up credentials for services like GitHub.
+
