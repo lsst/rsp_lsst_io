@@ -9,7 +9,6 @@ Getting started
 
 .. toctree::
    :hidden:
-   :caption: Getting Started
 
    getting-started/index
    hybrid
@@ -29,7 +28,6 @@ Accounts & authentication
 
 .. toctree::
    :hidden:
-   :caption: Accounts
 
    auth/index
    recovery/index
@@ -56,7 +54,6 @@ Inter-connected aspects enable you to discover and analyze data.
 
 .. toctree::
    :hidden:
-   :caption: Aspects
 
    Portal <portal/index>
    Notebooks <notebooks/index>
@@ -91,7 +88,6 @@ Inter-connected aspects enable you to discover and analyze data.
 
    .. toctree::
       :hidden:
-      :caption: Applications
 
       {% if env.times_square_url %}times-square/index{% endif %}
 
