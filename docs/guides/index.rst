@@ -80,6 +80,11 @@ Inter-connected aspects enable you to discover and analyze data.
 
       Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
 
+.. toctree::
+   :hidden:
+
+   Contributions <contributions>
+
 .. jinja:: rsp
 
    {% if env.has_apps %}
