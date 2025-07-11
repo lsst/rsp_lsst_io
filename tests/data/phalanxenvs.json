@@ -52,6 +52,7 @@
       "nb_url": "https://data.lsst.cloud/nb/",
       "api_url": "https://data.lsst.cloud/api/",
       "api_tap_url": "https://data.lsst.cloud/api/tap/",
+      "api_webdav_url": "https://data.lsst.cloud/files/",
       "gafaelfawr_tokens_url": "https://data.lsst.cloud/auth/tokens/",
       "phalanx_docs_url": "https://phalanx.lsst.io/environments/idfprod/index.html"
     },
