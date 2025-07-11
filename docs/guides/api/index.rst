@@ -9,7 +9,3 @@ API aspect
    {% else %}
    .. include:: api.primary.in.rst
    {% endif %}
-
-   {% if env.api_webdav_url %}
-   .. include:: api.webdav.in.rst
-   {% endif %}
