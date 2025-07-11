@@ -36,6 +36,9 @@ WebDAV
     * Linux users can use a file manager such as Nautilus or Dolphin
     * Windows users can use File Explorer
 
+    MacOS and Windows users can also use the `Cyberduck <https://cyberduck.io/>`_ cloud storage browser.
+
+
     Use |webdav-server| as the server address, and the token you generated in the first step as the password.
 
     To conserve resources for all users, your WebDAV server is shut down after a period of inactivity. To start it again, simply repeat step 3.
