@@ -2,6 +2,15 @@
 Updates
 #######
 
+Chronological log of updates to the RSP's services.
+Learn more about :doc:`/guides/life/updates`.
+
+September 4 2025
+================
+
+**Version 29.2.0**:
+The recommended build of the LSST Science Pipelines available in the RSP Notebook Aspect has been upgraded to r29.2.0.
+
 June 30 2025
 ============
 

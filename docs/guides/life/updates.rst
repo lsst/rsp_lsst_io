@@ -31,3 +31,9 @@ Data Services news
 Lengthier content is posted in the `News → Data Services category of the Community Forum <https://community.lsst.org/c/news/data-services/64>`__
 
 Here is the RSS feed for that topic: `<https://community.lsst.org/c/news/data-services/64.rss>`__
+
+Updates history
+===============
+
+For a chronological log of past changes to the RSP's services, see the :doc:`/updates/index` page.
+
