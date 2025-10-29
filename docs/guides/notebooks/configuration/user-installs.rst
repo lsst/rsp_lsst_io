@@ -70,5 +70,3 @@ The basic steps are:
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
 
 6. After the first time perfoming Steps 4 and/or 5, log out and log back into the RSP.
-
-For more information, please consult `tutorial notebook for working with user packages <https://community.lsst.org/t/installing-user-packages-with-dependencies-on-non-python-libraries/7831>`_.
