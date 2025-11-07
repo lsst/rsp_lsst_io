@@ -31,6 +31,7 @@ Accounts & authentication
 
    auth/index
    recovery/index
+   resources/index
 
 .. grid:: 1 2 2 2
    :gutter: 2
