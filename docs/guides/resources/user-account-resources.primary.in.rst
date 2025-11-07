@@ -5,7 +5,7 @@ The Rubin Science Platform, the values on this page, and the RAC-allocated resou
 .. important::
    The US DAC, the Rubin Science Platform, and this documentation are currently under construction.
    The estimates quoted below include current, planned, and to-be-determined (TBD) values, all of which are subject to change.
-   See the :doc:`/docs/roadmap.rst` for planned changes.
+   See the :doc:`docs/roadmap.rst` for planned changes.
 
 
 **Page last updated:** Nov 7 2025
