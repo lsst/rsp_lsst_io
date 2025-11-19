@@ -124,6 +124,8 @@ The maximum size of a data table that can be downloaded is 6 GB.
 
 Bulk download services will not be offered.
 
+The maximum size of a file that can be transferred with WebDAV is 100 MB.
+
 
 Resource Allocation Committee (RAC)
 ===================================
