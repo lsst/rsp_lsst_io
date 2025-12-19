@@ -19,7 +19,7 @@ Follow these steps to create a user token.
    .. image:: images/security-tokens-menu.png
       :alt: Drop-down user menu
 
-#. On the settings page, choose :guilabel:"Access tokens" from the left menu.
+#. On the settings page, choose :guilabel:`Access tokens` from the left menu.
 
 #. Click on :guilabel:`Create a token`.
 
@@ -48,7 +48,7 @@ Follow these steps to create a user token.
 
 #. Existing tokens will be shown on the :guilabel:`Access tokens` page, and can be deleted.
 
-   .. image:: images/
+   .. image:: images/access-tokens-list.png
       :alt: Existing tokens cards
 
 .. jinja:: rsp
