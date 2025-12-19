@@ -17,6 +17,7 @@ Follow these steps to create a user token.
 #. Select :guilabel:`Settings` from the user drop-down menu at the upper right.
 
    .. image:: images/security-tokens-menu.png
+      :width: 300
       :alt: Drop-down user menu
 
 #. On the settings page, choose :guilabel:`Access tokens` from the left menu.
@@ -44,6 +45,7 @@ Follow these steps to create a user token.
    Be sure to copy this token and save it somewhere secure on your local system.
 
    .. image:: images/create-token-result.png
+      :width: 400
       :alt: Create token result
 
 #. Existing tokens will be shown on the :guilabel:`Access tokens` page, and can be deleted.
