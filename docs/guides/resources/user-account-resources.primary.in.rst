@@ -1,14 +1,22 @@
-This page quantifies the individual and shared resources that every account at the US Data Access Center (US DAC) has access to, by default, via the Rubin Science Platform at |rsp-url|.
-Additional, to-be-determined resources will be allocated via the Resource Allocation Committee (RAC).
-The Rubin Science Platform, the values on this page, and the RAC-allocated resources will continue to evolve through Rubin Operations.
+Understanding Rubin Science Platform resources
+==============================================
+
+As an appproved user of the Rubin Science Platform at |rsp-url| you have access to certain individual, group and shared resources.
+These resources are constrained by the budgeted cost of providing the Platform as well as fairness considerations to ensure the activity of some users does not disadvantage other users.
+
+This page documents resources currently available to all users.
+Additional resources may be allocated via the Resource Allocation Committee (RAC).
 
 .. important::
-   The US DAC, the Rubin Science Platform, and this documentation are currently under construction.
-   The estimates quoted below include current, planned, and to-be-determined (TBD) values, all of which are subject to change.
-   See the :doc:`/roadmap` for planned changes.
+   The Rubin Science Platform is currently in preview mode, and its capabilities are expected to evolve for the duration of the Survey (See the :doc:`/roadmap` for some highlights of planned changes.)
+   The nature and amount of these resources are also expected to evolve (mostly upwards) for the duration of the survey.
+
+   During times of peak demand, some of these limits may be lowered to maintain availability.
+   Always consult your quota page (found under your account settings or directly at |rsp-quotas-url| ) for limits being currently applied.
 
 
-**Page last updated:** Nov 7 2025
+**Page last updated:** 2025-12-18
+
 
 
 Computational processing
