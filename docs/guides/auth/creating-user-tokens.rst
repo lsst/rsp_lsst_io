@@ -25,6 +25,7 @@ Follow these steps to create a user token.
 #. Click on :guilabel:`Create a token`.
 
    .. image:: images/create-token-button.png
+      :width: 500
       :alt: Create token button
 
 #. Choose a token name, scopes, and expiration.
@@ -38,6 +39,7 @@ Follow these steps to create a user token.
    Otherwise, you can set the token to never expire.
 
    .. image:: images/create-token-dialog.png
+      :width: 500
       :alt: Create token dialog
 
 #. Click on :guilabel:`Create token`.
@@ -51,6 +53,7 @@ Follow these steps to create a user token.
 #. Existing tokens will be shown on the :guilabel:`Access tokens` page, and can be deleted.
 
    .. image:: images/access-tokens-list.png
+      :width: 500
       :alt: Existing tokens cards
 
 .. jinja:: rsp
