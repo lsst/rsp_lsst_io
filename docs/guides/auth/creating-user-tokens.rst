@@ -12,16 +12,20 @@ If you want to use a Science Platform API service from a local system, you can c
 
 Follow these steps to create a user token.
 
-#. Open the |rsp-at| in a web browser.
+#. Open the |rsp-at| in a web browser and log in.
 
-#. Select :guilabel:`Security tokens` from the user drop-down menu at the upper right.
+#. Select :guilabel:`Settings` from the user drop-down menu at the upper right.
 
    .. image:: images/security-tokens-menu.png
+      :width: 300
       :alt: Drop-down user menu
 
-#. Click on :guilabel:`Create Token` under User Tokens.
+#. On the settings page, choose :guilabel:`Access tokens` from the left menu.
+
+#. Click on :guilabel:`Create a token`.
 
    .. image:: images/create-token-button.png
+      :width: 500
       :alt: Create token button
 
 #. Choose a token name, scopes, and expiration.
@@ -35,14 +39,22 @@ Follow these steps to create a user token.
    Otherwise, you can set the token to never expire.
 
    .. image:: images/create-token-dialog.png
+      :width: 500
       :alt: Create token dialog
 
-#. Click on :guilabel:`Create`.
+#. Click on :guilabel:`Create token`.
    You will be shown the token, but only once.
    Be sure to copy this token and save it somewhere secure on your local system.
 
    .. image:: images/create-token-result.png
+      :width: 400
       :alt: Create token result
+
+#. Existing tokens will be shown on the :guilabel:`Access tokens` page, and can be deleted.
+
+   .. image:: images/access-tokens-list.png
+      :width: 500
+      :alt: Existing tokens cards
 
 .. jinja:: rsp
 
