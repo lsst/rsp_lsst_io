@@ -52,6 +52,7 @@ Interact with data in the portal
 --------------------------------
 
 To interact with data, click on one of the tabs that are displayed across the top of the Portal window, or one of the menu options from the menu shown above. There are menu options (which will open new tabs) with the following functionalities:
+
 * **Catalogs**: query catalog data products, either via an interactive GUI, or with ADQL queries
 * **Images**: search for images, including Rubin data as well as images from the IRSA archives
 * **HiPS**: find `HiPS <https://aladin.cds.unistra.fr/hips/>`_ (Hierarchical Progressive Survey) images created from the Rubin deep coadd images
