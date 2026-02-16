@@ -20,7 +20,7 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "documenteer[guide]>=1.4.5,<2.0",
+    "documenteer[guide]>=2.0,<3.0",
     "pydantic",
     "Jinja2",
     "sphinx-jinja",
