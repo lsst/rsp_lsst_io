@@ -1,3 +1,5 @@
+.. _portal-tutorials:
+
 ################
 Portal tutorials
 ################
@@ -6,7 +8,7 @@ The best way to learn how to use the Portal is to work through the tutorials tha
 are available in the documentation for each data release.
 
 For a list of recent data releases and links to their associated documentation,
-visit `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`_.
+visit `rubinobservatory.org <https://rubinobservatory.org/for-scientists/data-products/recent-data-releases>`_.
 
 Generally, the URL for the documentation for any data release is the
 acronym for the release number followed by ``.lsst.io``.
