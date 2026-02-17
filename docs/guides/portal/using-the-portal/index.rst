@@ -61,7 +61,7 @@ Exactly how to execute a query and view the results depends on which datasets ar
 queried, and the type of data retrieved (e.g., images or catalogs).
 Image and catalog queries can be done by specifying desired search parameters in the user interface,
 or may be entered directly as `ADQL <https://www.ivoa.net/documents/ADQL/>`_ queries.
-Users can toggle between the two view using the ``View`` buttons at the upper right of the query tabs (labeled ``UI assisted`` and ``Edit ADQL``).
+Users can toggle between the two views using the ``View`` buttons at the upper right of the query tabs (labeled ``UI assisted`` and ``Edit ADQL``).
 
 In addition to the general :ref:`Portal tutorials <portal-tutorials>`,
 the specific tutorials that accompany every data release are the best resource
