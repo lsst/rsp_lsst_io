@@ -45,13 +45,14 @@ Choose a tab to interact with data
 
 To interact with data, click on one of the tabs that are displayed across the top of the Portal window, or one of the menu options from the menu shown above. There are menu options (which will open new tabs) with the following functionalities:
 
-* **Catalogs**: query catalog data products, either via an interactive GUI, or with ADQL queries
-* **Images**: search for images, including Rubin data as well as images from the IRSA archives
-* **HiPS**: find `HiPS <https://aladin.cds.unistra.fr/hips/>`_ (Hierarchical Progressive Survey) images created from the Rubin deep coadd images
-* **Multi-archive TAP**: execute ADQL queries to retrieve catalogs from external (non-Rubin) TAP tables
-* **Upload**: upload your own tables, which can then be joined with Rubin catalogs
-* **Job Monitor**: check the status of your executed queries, see the actual query and information about the results (for completed queries)
+* **Catalogs**: query catalog data products, either via an interactive GUI, or with ADQL queries.
+* **Images**: search for images, including Rubin data as well as images from the IRSA archives.
+* **HiPS**: find `HiPS <https://aladin.cds.unistra.fr/hips/>`_ (Hierarchical Progressive Survey) images created from the Rubin deep coadd images.
+* **Multi-archive TAP**: execute ADQL queries to retrieve catalogs from external (non-Rubin) TAP tables.
+* **Upload**: upload your own tables, which can then be joined with Rubin catalogs.
+* **Job Monitor**: check the status of your executed queries, see the actual query and information about the results (for completed queries).
 * **Results**: see the catalogs and/or images resulting from your executed queries, and interact with them. The image viewer and interactive plotting tools are based on `Firefly <https://data-int.lsst.cloud/portal/app/onlinehelp/>`_, which is built by `IPAC <https://www.ipac.caltech.edu/>`_.
+
 
 
 Execute a query and view results
