@@ -1,3 +1,5 @@
+.. _portal-tutorials:
+
 ################
 Portal tutorials
 ################
