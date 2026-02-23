@@ -12,7 +12,7 @@ Create a group
 Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_
 (not from the terminal command line, as in some other systems).
 
-How to create a group in Comanage:
+How to create a closed group in Comanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 
@@ -40,10 +40,23 @@ How to create a group in Comanage:
 The next time you enter the Notebook Aspect, this group will be accessible.
 
 
+Open groups
+-----------
+
+**Consider a GitHub repository instead of an open group.**
+For broadly sharing files, `GitHub <https://github.com/>`_ is the recommended tool.
+
+An open group is a group that any other RSP account may discover and join.
+Open groups are not generally recommended, but the functionality exists.
+They may be particularly useful to support short-term access to files related to, e.g., workshops.
+In the instructions above, check the box next to "Open" to create an open group.
+Open groups should be deleted once they're no longer being used (e.g., after the workshop is over).
+
+
 Manage group membership
 =======================
 
-Only group owners can manage group membership.
+Only group owners can manage closed-group membership.
 
 A user can only be a member of up to 15 groups at this time.
 Joining additional groups will have no effect.
@@ -115,3 +128,16 @@ Instructions for creating and sharing a directory with a group:
 
 Files created in this directory will, by default, only be writeable by the user that created them.
 Modify any file to be writeable by any group member with ``chmod g+w <filename>``.
+
+
+Share with everyone (read-all)
+------------------------------
+
+**Do not** make folders *writable* by all, only *readable*.
+
+To make a folder readable by all RSP accounts, change the group to be the ``g_rubin`` group and then give that group read permission on the folder and all files put within it.
+
+   .. code-block:: bash
+
+      chgrp g_rubin <shared-dir-name>
+      chmod g+rs <shared-dir-name>
