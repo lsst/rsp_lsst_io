@@ -40,17 +40,6 @@ How to create a closed group in Comanage:
 The next time you enter the Notebook Aspect, this group will be accessible.
 
 
-Open groups
------------
-
-**Consider a GitHub repository instead of an open group.**
-For broadly sharing files, `GitHub <https://github.com/>`_ is the recommended tool.
-
-An open group is a group that any other RSP account may discover and join.
-Open groups are not generally recommended, but the functionality exists.
-They may be particularly useful to support short-term access to files related to, e.g., workshops.
-In the instructions above, check the box next to "Open" to create an open group.
-Open groups should be deleted once they're no longer being used (e.g., after the workshop is over).
 
 
 Manage group membership
@@ -59,7 +48,7 @@ Manage group membership
 Only group owners can manage closed-group membership.
 
 A user can only be a member of up to 15 groups at this time.
-Joining additional groups will have no effect.
+Joining additional groups will have no effect: they will show up in the Comanage UI, but will not have any effect on actual authorization to access directories and files.
 
 From the terminal command line it is possible to see all groups a user belongs to with ``groups <username>``
 (see your own username with ``whoami``).
@@ -141,3 +130,16 @@ To make a folder readable by all RSP accounts, change the group to be the ``g_ru
 
       chgrp g_rubin <shared-dir-name>
       chmod g+rs <shared-dir-name>
+
+
+Open groups
+===========
+
+**Consider a GitHub repository instead of an open group.**
+For broadly sharing files, `GitHub <https://github.com/>`_ is the recommended tool.
+
+An open group is a group that any other RSP account may discover and join.
+Open groups are not generally recommended, but the functionality exists.
+They may be particularly useful to support short-term access to files related to, e.g., workshops.
+In the instructions above, check the box next to "Open" to create an open group.
+Open groups should be deleted once they're no longer being used (e.g., after the workshop is over).
