@@ -13,3 +13,10 @@ Learn about signing into the |rsp-at| and using security tokens to access VO ser
       creating-user-tokens
       token-scopes
       {% if env.api_tap_url %}using-topcat-outside-rsp{% endif %}
+
+
+   .. toctree::
+      :caption: File sharing
+      :titlesonly:
+
+      groups

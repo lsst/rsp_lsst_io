@@ -11,5 +11,4 @@ Configuring the Notebook Aspect
    shell-configuration
    notebook-user-setups
    user-installs
-   groups
    ui-configuration
