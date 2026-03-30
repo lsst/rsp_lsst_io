@@ -19,7 +19,6 @@ ignore = [
     'https://data-dev.lsst.cloud',
     'https://data-int.lsst.cloud',
     'https://data.lsst.cloud',
-    'https://data.lsst.cloud/settings/sessions', # MLG added; wasn't being ignored
     'https://summit-lsp.lsst.codes',
     'https://tucson-teststand.lsst.codes',
     'https://usdf-rsp-dev.slac.stanford.edu',
