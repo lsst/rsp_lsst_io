@@ -7,7 +7,6 @@ Updates
 
    {% if env.is_primary %}
 
-
     Chronological log of updates to the |rsp-at|'s services.
     Learn more about :doc:`/guides/life/updates`.
 
@@ -111,3 +110,5 @@ Updates
 
    This page is kept updated for the RSP at ``data.lsst.cloud`` only.
    Use the drop-down menu at upper right to switch from the |rsp-at| to ``data.lsst.cloud``.
+
+   {% endif %}
