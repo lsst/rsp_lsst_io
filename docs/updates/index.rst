@@ -27,7 +27,7 @@ Updates
    The default, ``cutout-sync``, now returns smaller-sized files that contain only the data that the majority of cutout service users want, and improves performance for everyone.
 
    **Settings user interface (UI)**:
-   Accessed by clicking on your username in the ``data.lsst.cloud`` landing page, the Settings UI now contains four subpages: `Account <https://data.lsst.cloud/settings>`_, `Access tokens <https://data.lsst.cloud/settings/tokens>`_, `Quotas <https://data.lsst.cloud/settings/quotas>`_, and `Sessions <https://data.lsst.cloud/settings/sessions>`).
+   Accessed by clicking on your username in the ``data.lsst.cloud`` landing page, the Settings UI now contains four subpages: `Account <https://data.lsst.cloud/settings>`_, `Access tokens <https://data.lsst.cloud/settings/tokens>`_, `Quotas <https://data.lsst.cloud/settings/quotas>`_, and `Sessions <https://data.lsst.cloud/settings/sessions>`_).
 
    **Quota increases**:
    The disk storage quota was increased from 35 to 40 GB.
