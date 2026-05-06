@@ -98,7 +98,7 @@ To catch this, you can run Pre-commit in a GitHub Actions workflow:
              python-version: "3.12"
 
          - name: Run pre-commit
-           uses: pre-commit/action@v3.0.0
+           uses: j178/prek-action@v2
 
 Save this file to the :file:`.github/workflows` directory in your repository.
 
