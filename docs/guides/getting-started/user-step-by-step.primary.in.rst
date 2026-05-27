@@ -4,8 +4,9 @@ Before getting started
 1. Understand whether you have Rubin data rights.
 
    - Rubin data rights are required in order to hold an account in the Rubin Science Platform.
-   - All scientists and students affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
-   - For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`__.
+   - All scientists and students who are doing non-profit scientific research and are affiliated with an institution in the US and Chile have data rights, as well as the international scientists and students whose names appear on the `list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`__.
+   - For more information about data rights, please refer to the `Rubin Observatory Data Policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`__.
+   - See also the information for unaffiliated or `amateur astronomers <https://rubinobservatory.org/for-scientists/resources/amateurs>`__.
    - If you’re not sure whether you have Rubin data rights, please contact `Heather Shaughnessy <mailto:sheather@slac.stanford.edu>`__.
 
 2. Have an account with an InCommon institution, GitHub, or ORCID.
