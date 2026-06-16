@@ -44,4 +44,17 @@ User guide
    faq/index
 
 
+.. jinja:: rsp
+
+   {% if env.nb_url %}
+   Reference
+   ---------
+
+   .. toctree::
+      :titlesonly:
+
+      lsst.rsp/index
+   {% endif %}
+
+
 Questions? :doc:`Get support </support/index>`.

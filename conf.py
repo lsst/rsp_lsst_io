@@ -49,6 +49,7 @@ if not rsp_env.portal_url:
 if not rsp_env.nb_url:
     exclude_patterns.append("guides/nb/**/*.rst")
     exclude_patterns.append("guides/getting-started/notebook-first-steps.rst")
+    exclude_patterns.append("guides/notebooks/lsst.rsp/**")
 if not rsp_env.api_tap_url:
     exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
 if not rsp_env.times_square_url:
