@@ -1,6 +1,9 @@
 # Documentation build products
 _build
 
+# automodapi-generated API stub pages for lsst.rsp
+docs/guides/notebooks/lsst.rsp/api/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

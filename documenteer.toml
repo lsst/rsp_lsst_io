@@ -7,9 +7,34 @@ version = "Current"
 
 [sphinx]
 extensions = ["sphinx_jinja", "sphinxcontrib.youtube"]
+# Generate the lsst.rsp automodapi stub pages alongside their reference page
+# rather than in the default top-level docs/api/ directory.
+python_api_dir = "guides/notebooks/lsst.rsp/api"
+nitpick_ignore_regex = [
+    # pyvo classes are referenced by bare (unqualified) name in lsst.rsp
+    # docstrings and type annotations; pyvo's object inventory only carries the
+    # fully-qualified names, so these can't be cross-referenced.
+    ["py:.*", "AsyncTAPJob"],
+    ["py:.*", "DatalinkResults"],
+    ["py:.*", "SIA2Service"],
+    ["py:.*", "TAPService"],
+    # Typo in an upstream lsst.rsp docstring (should be RSPDiscovery).
+    ["py:obj", "RESPDiscovery"],
+    # typing.Union is a py:class in CPython's object inventory but is referenced
+    # as py:data by the type-hint renderer.
+    ["py:data", "typing\\.Union"],
+    # logging.Filterer is an undocumented internal base class, absent from
+    # CPython's object inventory.
+    ["py:class", "logging\\.Filterer"],
+]
 
 [sphinx.intersphinx.projects]
 python = "https://docs.python.org/3/"
+astropy = "https://docs.astropy.org/en/stable/"
+numpy = "https://numpy.org/doc/stable/"
+pandas = "https://pandas.pydata.org/docs/"
+pyvo = "https://pyvo.readthedocs.io/en/latest/"
+requests = "https://requests.readthedocs.io/en/latest/"
 
 [sphinx.linkcheck]
 ignore = [
@@ -19,6 +44,7 @@ ignore = [
     'https://data-dev.lsst.cloud',
     'https://data-int.lsst.cloud',
     'https://data.lsst.cloud',
+    'https://id.lsst.cloud',  # COmanage identity portal; blocks the link checker (403)
     'https://summit-lsp.lsst.codes',
     'https://tucson-teststand.lsst.codes',
     'https://usdf-rsp-dev.slac.stanford.edu',
