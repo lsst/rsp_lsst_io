@@ -14,6 +14,7 @@ Getting started
    hybrid
    life/patch-thursday
    life/updates
+   life/quotas
 
 .. grid:: 1
 
