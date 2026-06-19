@@ -11,6 +11,13 @@ Updates
    Learn more about :doc:`/guides/life/updates`.
 
 
+   June 18 2026
+   ============
+
+   **Alert services**:
+   The alert archive is now available, and can be accessed from the Notebook Aspect with the Alert Retrieval Service and the Portal Aspect with the Alert Viewer tab.
+
+
    January 9 2026
    ==============
 
