@@ -9,7 +9,8 @@ These resources are constrained by:
 * the current capability of the Platform to scale
 * fairness considerations (to ensure the activity of some users does not disadvantage other users)
 
-This page documents how to understand the limits currently in place. For information on other available resources beyond the RSP, including additional resources allocated via the Resource Allocation Committee (RAC) see (link).
+This page documents how to understand the RSP limits currently in place.
+For information on other available resources beyond the RSP, including additional resources allocated via the Resource Allocation Committee (RAC) see `this link <https://rubinobservatory.org/for-scientists/resources/add-compute>`__.
 
 .. important::
    The Rubin Science Platform is currently in preview mode, and its capabilities are expected to evolve for the duration of the Survey. The nature and amount of these resources are also expected to evolve (mostly upwards) for the duration of the survey.
