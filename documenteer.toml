@@ -65,4 +65,8 @@ ignore = [
     # GitHub's "new issue" form redirects anonymous requests to a login page;
     # the deep link is correct for signed-in users but can't be checked here.
     'https://github\.com/lsst/rsp_lsst_io/issues/new',
+    # TEMPORARY: the Aladin HiPS server intermittently returns a ReadTimeout to
+    # the link checker even though the link works normally. Re-validate and
+    # remove this ignore once the server-side timeouts settle.
+    'https://aladin\.cds\.unistra\.fr/hips/.*',
 ]
