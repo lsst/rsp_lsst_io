@@ -15,7 +15,7 @@ These tutorials contain executable examples of the commands required to access a
 All Rubin/LSST users should feel free to copy and paste from the provided tutorials.
 
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorials in a variety of languages),
-or this Community Forum thread where Rubin/LSST users can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
+or this Community Forum thread where Rubin/LSST users can share `resources for python beginners <https://community.lsst.org/t/resources-for-python-beginners/5975>`_.
 Web searches for "python ..." are usually pretty successful too.
 
 .. _NB-Intro-Use-A-NB-faq-butler:
