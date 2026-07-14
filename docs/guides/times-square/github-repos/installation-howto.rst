@@ -8,7 +8,7 @@ In this page you will learn how to set up a new GitHub repository for hosting no
 ====================================
 
 First, create the new GitHub repository in an appropriate GitHub organization for your team.
-Follow the `GitHub documentation <https://docs.github.com/en/get-started/quickstart/create-a-repo>`__ if you're new to the process.
+Follow the `GitHub documentation <https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories>`__ if you're new to the process.
 
 .. tip::
 

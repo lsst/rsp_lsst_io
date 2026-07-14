@@ -56,4 +56,17 @@ ignore = [
     'http://www.star.bris.ac.uk/~mbt/topcat/', # MLG added; frequently times out
     'http://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#SyntheticColumnQueryWindow', # MLG added; frequently times out
     'https://www.lsst.org/scientists/international-drh-list', # MLG added; was timing out
+    # Slack app_redirect deep-links require an authenticated session and always
+    # return HTTP 403 to the anonymous link checker.
+    'https://slack\.com/app_redirect.*',
+    # Slack workspace archive links redirect to a sign-in/workspace-switch page
+    # that the anonymous link checker can't follow.
+    'https://lsstc\.slack\.com/.*',
+    # GitHub's "new issue" form redirects anonymous requests to a login page;
+    # the deep link is correct for signed-in users but can't be checked here.
+    'https://github\.com/lsst/rsp_lsst_io/issues/new',
+    # TEMPORARY: the Aladin HiPS server intermittently returns a ReadTimeout to
+    # the link checker even though the link works normally. Re-validate and
+    # remove this ignore once the server-side timeouts settle.
+    'https://aladin\.cds\.unistra\.fr/hips/.*',
 ]

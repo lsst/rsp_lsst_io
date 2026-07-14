@@ -85,7 +85,7 @@ Notebooks
 
 The Notebook service is based on JupyterLab (which is itself under active development) with a number of RSP enhancements with more to come.
 
-There is a growing suite of tutorial notebooks available directly in the Notebook demonstrating the capabilities of the RSP as well as helping users understand the LSST data products and pipelines. Many more are to come. A more user-friendly way of accessing the increasing number of tutorials will be available for DP1 [update: `released <https://community.lsst.org/t/2025-03-06-rsp-data-lsst-cloud-updates/9881>`_ ]
+There is a growing suite of tutorial notebooks available directly in the Notebook demonstrating the capabilities of the RSP as well as helping users understand the LSST data products and pipelines. Many more are to come. A more user-friendly way of accessing the increasing number of tutorials will be available for DP1 [update: `released <https://community.lsst.org/t/2025-03-06-rsp-data-lsst-cloud-new-way-of-accessing-tutorials-and-more/9881>`_ ]
 
 A number of visualisation options are available, including Firefly, the same visualisation engine available via the RSP Portal.
 

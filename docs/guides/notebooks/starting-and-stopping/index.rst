@@ -58,7 +58,7 @@ Navigate the file system and open files by double-clicking on folders and files 
 Clicking the folder icon above the list of files will take you back to your home directory.
 
 Although the file browser is a handy way to navigate the user home space, it does not allow navigating to e.g., the shared data space.
-One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ pointing to the desired resource using the Terminal, with this symbolic link placed somewhere in the home directory.
+One way to make other spaces available in the file browser is to create a `symbolic link <https://en.wikipedia.org/wiki/Symbolic_link>`_ pointing to the desired resource using the Terminal, with this symbolic link placed somewhere in the home directory.
 
 
 Safely log out and stop the server
