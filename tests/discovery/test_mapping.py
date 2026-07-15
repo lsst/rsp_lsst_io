@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
+import pytest
 from rubin.repertoire import Discovery
 
 from rspdocs.discovery.metadata import EnvMeta
@@ -93,6 +95,19 @@ def test_staff_env_without_datasets(discovery_data_dir: Path) -> None:
     # WebDAV is now reported by discovery for all environments.
     assert str(env.api_webdav_url) == str(discovery.services.ui["webdav"].url)
     assert env.is_primary is False
+
+
+def test_missing_squareone_raises(discovery_data_dir: Path) -> None:
+    """A discovery payload without a squareone UI service raises a clear
+    error naming the environment.
+    """
+    data = json.loads((discovery_data_dir / "idfprod.json").read_text())
+    del data["services"]["ui"]["squareone"]
+    discovery = Discovery.model_validate(data)
+    meta = EnvMeta(title="data.lsst.cloud", title_full="data.lsst.cloud")
+
+    with pytest.raises(ValueError, match="idfprod"):
+        PhalanxEnv.from_discovery(discovery, name="idfprod", meta=meta)
 
 
 def test_primary_env_flag(discovery_data_dir: Path) -> None:

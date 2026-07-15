@@ -131,7 +131,12 @@ class PhalanxEnv(BaseModel):
             return service.url if service is not None else None
 
         # squareone is the RSP homepage and the base for all derived URLs.
-        squareone = ui["squareone"].url
+        squareone_service = ui.get("squareone")
+        if squareone_service is None:
+            raise ValueError(
+                f"discovery for {name!r} has no 'squareone' UI service"
+            )
+        squareone = squareone_service.url
         squareone_str = str(squareone)
         base = (
             squareone_str
