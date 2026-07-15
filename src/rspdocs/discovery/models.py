@@ -12,6 +12,44 @@ from .metadata import EnvMeta
 
 __all__ = ["PhalanxEnv", "EnvironmentDict"]
 
+# Default ports we omit from a derived origin so it matches the URL as written
+# (pydantic always fills ``HttpUrl.port`` with the scheme default).
+_DEFAULT_PORTS = {"http": 80, "https": 443}
+
+
+def _origin(url: HttpUrl) -> str:
+    """Return the ``scheme://host/`` origin of an ``HttpUrl``.
+
+    The port is included only when it is non-default for the scheme, so the
+    origin round-trips URLs as written (pydantic reports 443/80 even when the
+    URL string omits the port).
+    """
+    port = url.port
+    if port is not None and _DEFAULT_PORTS.get(url.scheme) != port:
+        return f"{url.scheme}://{url.host}:{port}/"
+    return f"{url.scheme}://{url.host}/"
+
+
+def _api_origin(discovery: Discovery) -> str:
+    """Return the origin hosting the VO APIs, from a discovered service.
+
+    Prefers a dataset's ``tap`` service URL as the representative API host,
+    falling back to any dataset service URL. Callers must only use this when
+    ``discovery.datasets`` is non-empty.
+    """
+    fallback: HttpUrl | None = None
+    for dataset in discovery.datasets.values():
+        tap = dataset.services.get("tap")
+        if tap is not None:
+            return _origin(tap.url)
+        if fallback is None:
+            for service in dataset.services.values():
+                fallback = service.url
+                break
+    if fallback is None:  # pragma: no cover - datasets always expose services
+        raise ValueError("discovery has datasets but no data services")
+    return _origin(fallback)
+
 
 class PhalanxEnv(BaseModel):
     """A Pydantic model of a Phalanx environment."""
@@ -147,17 +185,31 @@ class PhalanxEnv(BaseModel):
         if host is None:  # pragma: no cover - HttpUrl always has a host
             raise ValueError(f"squareone URL for {name} has no host")
 
+        # Derive each service's URL from that service's own discovered origin
+        # rather than squareone's: services can live on their own subdomains
+        # (nublado already does, at nb.<domain>), so assuming they share
+        # squareone's host would silently misroute if TAP or Times Square ever
+        # moved. We keep squareone's path scheme, only sourcing the host from
+        # the real service.
+
         # VO APIs only exist where the environment serves datasets.
         has_datasets = len(discovery.datasets) > 0
-        api_url = HttpUrl(f"{base}api/") if has_datasets else None
-        api_tap_url = HttpUrl(f"{base}api/tap/") if has_datasets else None
+        if has_datasets:
+            api_origin = _api_origin(discovery)
+            api_url = HttpUrl(f"{api_origin}api/")
+            api_tap_url = HttpUrl(f"{api_origin}api/tap/")
+        else:
+            api_url = None
+            api_tap_url = None
 
         # Times Square, in its user-facing UI form (not the /api internal URL).
         has_times_square = (
             "times-square" in internal and "times-square" not in hidden
         )
         times_square_url = (
-            HttpUrl(f"{base}times-square/") if has_times_square else None
+            HttpUrl(f"{_origin(internal['times-square'].url)}times-square/")
+            if has_times_square
+            else None
         )
 
         return cls(

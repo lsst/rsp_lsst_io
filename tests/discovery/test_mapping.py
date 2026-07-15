@@ -110,6 +110,40 @@ def test_missing_squareone_raises(discovery_data_dir: Path) -> None:
         PhalanxEnv.from_discovery(discovery, name="idfprod", meta=meta)
 
 
+def test_api_and_times_square_host_follow_discovery(
+    discovery_data_dir: Path,
+) -> None:
+    """The API and Times Square URLs take their host from the discovered
+    service, not from squareone, so a service on a subdomain is honored.
+    """
+    data = json.loads((discovery_data_dir / "idfprod.json").read_text())
+    # Move the TAP service and internal Times Square onto a subdomain of the
+    # squareone host, leaving squareone itself on the parent domain.
+    for dataset in data["datasets"].values():
+        tap = dataset.get("services", {}).get("tap")
+        if tap is not None:
+            tap["url"] = tap["url"].replace(
+                "data.lsst.cloud", "api.data.lsst.cloud"
+            )
+    times_square = data["services"]["internal"]["times-square"]
+    times_square["url"] = times_square["url"].replace(
+        "data.lsst.cloud", "api.data.lsst.cloud"
+    )
+    discovery = Discovery.model_validate(data)
+    # squareone stays on the parent host, proving the derivation follows the
+    # service rather than squareone.
+    assert discovery.services.ui["squareone"].url.host == "data.lsst.cloud"
+    meta = EnvMeta(title="data.lsst.cloud", title_full="data.lsst.cloud")
+
+    env = PhalanxEnv.from_discovery(discovery, name="idfprod", meta=meta)
+
+    assert str(env.api_url) == "https://api.data.lsst.cloud/api/"
+    assert str(env.api_tap_url) == "https://api.data.lsst.cloud/api/tap/"
+    assert str(env.times_square_url) == (
+        "https://api.data.lsst.cloud/times-square/"
+    )
+
+
 def test_primary_env_flag(discovery_data_dir: Path) -> None:
     """The primary environment (idfprod) sets ``is_primary``."""
     discovery = _load("idfprod", discovery_data_dir)
