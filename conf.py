@@ -6,11 +6,12 @@ from typing import Optional
 from documenteer.conf.guide import *  # noqa: F401 F403
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from rspdocs.phalanx.models import PhalanxEnv
-from rspdocs.phalanx.service import PhalanxEnvService
+from rspdocs.discovery.models import PhalanxEnv
+from rspdocs.discovery.service import PhalanxEnvService
 
-env_cache_path = Path(__file__).parent.joinpath(".phalanxenvs.json")
-env_service = PhalanxEnvService.load_from_cache_file(env_cache_path)
+env_service = PhalanxEnvService.load(
+    cache_dir=Path(__file__).parent / "_build" / "discovery"
+)
 
 # Select the environment given the sphinx tag (-t on sphinx-build CLI)
 # Default to the primary env if a tag is not set.

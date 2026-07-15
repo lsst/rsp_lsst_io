@@ -1,0 +1,99 @@
+{
+  "applications": [
+    "argo-workflows",
+    "argocd",
+    "auxtel",
+    "calsys",
+    "cert-manager",
+    "consdb",
+    "control-system-test",
+    "csc-versions",
+    "envsys",
+    "exposurelog",
+    "gafaelfawr",
+    "ingress-nginx",
+    "love",
+    "mobu",
+    "narrativelog",
+    "nightreport",
+    "nublado",
+    "obssys",
+    "portal",
+    "rapid-analysis",
+    "repertoire",
+    "rubintv",
+    "sasquatch",
+    "simonyitel",
+    "squareone",
+    "strimzi",
+    "strimzi-registry-operator",
+    "uws",
+    "vault-secrets-operator"
+  ],
+  "environment_name": "tucson-teststand",
+  "influxdb_databases": {
+    "tucson_teststand_efd": {
+      "credentials_url": "https://tucson-teststand.lsst.codes/repertoire/discovery/influxdb/tucson_teststand_efd",
+      "database": "efd",
+      "local": true,
+      "schema_registry": "http://sasquatch-schema-registry.sasquatch:8081/",
+      "url": "https://tucson-teststand.lsst.codes/influxdb/"
+    }
+  },
+  "services": {
+    "internal": {
+      "gafaelfawr": {
+        "openapi": "https://tucson-teststand.lsst.codes/auth/openapi.json",
+        "url": "https://tucson-teststand.lsst.codes/auth",
+        "versions": {
+          "v1": {
+            "url": "https://tucson-teststand.lsst.codes/auth/api/v1"
+          }
+        }
+      },
+      "login": {
+        "url": "https://tucson-teststand.lsst.codes/login"
+      },
+      "mobu": {
+        "openapi": "https://tucson-teststand.lsst.codes/mobu/openapi.json",
+        "url": "https://tucson-teststand.lsst.codes/mobu"
+      },
+      "nublado-controller": {
+        "url": "https://tucson-teststand.lsst.codes/nublado"
+      },
+      "repertoire": {
+        "openapi": "https://tucson-teststand.lsst.codes/repertoire/openapi.json",
+        "url": "https://tucson-teststand.lsst.codes/repertoire"
+      }
+    },
+    "ui": {
+      "argocd": {
+        "url": "https://tucson-teststand.lsst.codes/argo-cd"
+      },
+      "chronograf": {
+        "url": "https://tucson-teststand.lsst.codes/chronograf"
+      },
+      "kafdrop": {
+        "url": "https://tucson-teststand.lsst.codes/kafdrop"
+      },
+      "logout": {
+        "url": "https://tucson-teststand.lsst.codes/logout"
+      },
+      "nublado": {
+        "url": "https://tucson-teststand.lsst.codes/nb"
+      },
+      "portal": {
+        "url": "https://tucson-teststand.lsst.codes/portal/app/"
+      },
+      "settings": {
+        "url": "https://tucson-teststand.lsst.codes/settings"
+      },
+      "squareone": {
+        "url": "https://tucson-teststand.lsst.codes/"
+      },
+      "webdav": {
+        "url": "https://tucson-teststand.lsst.codes/files"
+      }
+    }
+  }
+}

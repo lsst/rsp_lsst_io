@@ -1,0 +1,110 @@
+{
+  "applications": [
+    "argocd",
+    "auxtel",
+    "calsys",
+    "cert-manager",
+    "consdb",
+    "control-system-test",
+    "csc-versions",
+    "envsys",
+    "exposurelog",
+    "gafaelfawr",
+    "ingress-nginx",
+    "love",
+    "mobu",
+    "narrativelog",
+    "nightlydigest",
+    "nightreport",
+    "nublado",
+    "nvr-control",
+    "obssys",
+    "portal",
+    "rapid-analysis",
+    "repertoire",
+    "rubin-too-producer",
+    "rubintv",
+    "rubintv-dev",
+    "sasquatch",
+    "sasquatch-backpack",
+    "simonyitel",
+    "squareone",
+    "strimzi",
+    "strimzi-access-operator",
+    "strimzi-registry-operator",
+    "uws",
+    "vault-secrets-operator"
+  ],
+  "environment_name": "summit",
+  "influxdb_databases": {
+    "summit_efd": {
+      "credentials_url": "https://summit-lsp.lsst.codes/repertoire/discovery/influxdb/summit_efd",
+      "database": "efd",
+      "local": true,
+      "schema_registry": "http://sasquatch-schema-registry.sasquatch:8081/",
+      "url": "https://summit-lsp.lsst.codes/influxdb/"
+    },
+    "usdf_efd": {
+      "credentials_url": "https://summit-lsp.lsst.codes/repertoire/discovery/influxdb/usdf_efd",
+      "database": "efd",
+      "schema_registry": "http://sasquatch-schema-registry.sasquatch:8081/",
+      "url": "https://usdf-rsp.slac.stanford.edu/influxdb-enterprise-data/"
+    }
+  },
+  "services": {
+    "internal": {
+      "gafaelfawr": {
+        "openapi": "https://summit-lsp.lsst.codes/auth/openapi.json",
+        "url": "https://summit-lsp.lsst.codes/auth",
+        "versions": {
+          "v1": {
+            "url": "https://summit-lsp.lsst.codes/auth/api/v1"
+          }
+        }
+      },
+      "login": {
+        "url": "https://summit-lsp.lsst.codes/login"
+      },
+      "mobu": {
+        "openapi": "https://summit-lsp.lsst.codes/mobu/openapi.json",
+        "url": "https://summit-lsp.lsst.codes/mobu"
+      },
+      "nublado-controller": {
+        "url": "https://summit-lsp.lsst.codes/nublado"
+      },
+      "repertoire": {
+        "openapi": "https://summit-lsp.lsst.codes/repertoire/openapi.json",
+        "url": "https://summit-lsp.lsst.codes/repertoire"
+      }
+    },
+    "ui": {
+      "argocd": {
+        "url": "https://summit-lsp.lsst.codes/argo-cd"
+      },
+      "chronograf": {
+        "url": "https://summit-lsp.lsst.codes/chronograf"
+      },
+      "kafdrop": {
+        "url": "https://summit-lsp.lsst.codes/kafdrop"
+      },
+      "logout": {
+        "url": "https://summit-lsp.lsst.codes/logout"
+      },
+      "nublado": {
+        "url": "https://summit-lsp.lsst.codes/nb"
+      },
+      "portal": {
+        "url": "https://summit-lsp.lsst.codes/portal/app/"
+      },
+      "settings": {
+        "url": "https://summit-lsp.lsst.codes/settings"
+      },
+      "squareone": {
+        "url": "https://summit-lsp.lsst.codes/"
+      },
+      "webdav": {
+        "url": "https://summit-lsp.lsst.codes/files"
+      }
+    }
+  }
+}
