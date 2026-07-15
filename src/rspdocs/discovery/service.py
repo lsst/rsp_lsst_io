@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from pathlib import Path
 
 import httpx
@@ -35,11 +36,12 @@ class PhalanxEnvService:
         *,
         cache_dir: Path,
         base_url: str = DEFAULT_BASE_URL,
+        env_names: Sequence[str] | None = None,
     ) -> PhalanxEnvService:
         """Create a `PhalanxEnvService` from freshly-fetched Repertoire
         discovery data, falling back to a local cache when offline.
 
-        For each environment in the build roster, the per-environment discovery
+        For each requested environment, the per-environment discovery
         JSON is fetched from ``{base_url}/{env}.json`` and cached to
         ``cache_dir/{env}.json``. If the fetch fails (no network, an HTTP
         error, etc.), the previously-cached copy is used instead and a loud
@@ -53,6 +55,11 @@ class PhalanxEnvService:
             fetch and read from when a fetch fails.
         base_url
             Base URL for the static per-environment discovery JSON files.
+        env_names
+            The environments to fetch. When `None` (the default), every
+            environment in the build roster is fetched. When provided, only
+            those environments are fetched; each must be present in the build
+            roster's environment metadata, or a `KeyError` is raised.
 
         Returns
         -------
@@ -63,8 +70,22 @@ class PhalanxEnvService:
         cache_dir = Path(cache_dir)
         cache_dir.mkdir(parents=True, exist_ok=True)
 
+        if env_names is None:
+            names = list(metadata.build_roster)
+        else:
+            requested = set(env_names)
+            missing = requested - set(metadata.environments)
+            if missing:
+                raise KeyError(
+                    "Unknown environment(s) requested: "
+                    f"{sorted(missing)}. Known environments: "
+                    f"{sorted(metadata.environments)}."
+                )
+            # Preserve the roster ordering for the requested subset.
+            names = [n for n in metadata.build_roster if n in requested]
+
         envs = EnvironmentDict()
-        for name in metadata.build_roster:
+        for name in names:
             meta = metadata.environments[name]
             discovery = cls._load_discovery(
                 name=name,

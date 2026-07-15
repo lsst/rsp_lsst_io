@@ -43,6 +43,35 @@ def test_load_from_network(
 
 
 @respx.mock
+def test_load_with_env_names(
+    tmp_path: Path, discovery_texts: dict[str, str]
+) -> None:
+    """`load` fetches only the requested environments when ``env_names`` is
+    given, caching and requesting only those.
+    """
+    routes = {
+        name: respx.get(f"{DEFAULT_BASE_URL}/{name}.json").mock(
+            return_value=httpx.Response(200, text=text)
+        )
+        for name, text in discovery_texts.items()
+    }
+
+    service = PhalanxEnvService.load(
+        cache_dir=tmp_path, env_names=["base", "idfprod"]
+    )
+
+    assert set(service.envs.env_names) == {"base", "idfprod"}
+
+    # Only the requested environments were requested over the network.
+    for name, route in routes.items():
+        assert route.called == (name in {"base", "idfprod"})
+
+    # Only the requested environments were cached.
+    cache_files = {path.name for path in tmp_path.glob("*.json")}
+    assert cache_files == {"base.json", "idfprod.json"}
+
+
+@respx.mock
 def test_load_with_custom_base_url(
     tmp_path: Path, discovery_texts: dict[str, str]
 ) -> None:
