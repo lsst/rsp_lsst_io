@@ -27,9 +27,12 @@ Usage
     ./scripts/refresh_discovery_fixtures.py [--base-url URL]
 
 Each fetched payload is validated against the ``rubin.repertoire.Discovery``
-model; the script exits non-zero if any environment fails to validate (a sign
-that the discovery schema changed and the model may need updating), after
-writing every fixture it could fetch so the new data can be inspected.
+model. Environments that cannot be fetched (network error, non-2xx response)
+are reported and skipped without disturbing their existing fixture, and the
+loop continues so every fixture it *could* fetch is written and revalidated.
+The script exits non-zero if any environment failed to fetch or failed to
+validate (validation failure being a sign that the discovery schema changed
+and the model may need updating).
 """
 
 from __future__ import annotations
@@ -63,12 +66,20 @@ def refresh(base_url: str) -> int:
     roster = load_roster()
     FIXTURE_DIR.mkdir(parents=True, exist_ok=True)
 
-    failures: list[str] = []
+    fetch_failures: list[str] = []
+    validation_failures: list[str] = []
     for name in roster:
         url = f"{base_url}/{name}.json"
-        response = httpx.get(url, timeout=30.0, follow_redirects=True)
-        response.raise_for_status()
-        payload = response.json()
+        try:
+            response = httpx.get(url, timeout=30.0, follow_redirects=True)
+            response.raise_for_status()
+            payload = response.json()
+        except httpx.HTTPError as exc:
+            # Leave this environment's existing fixture untouched and keep
+            # going so a single flaky env doesn't strand the others.
+            fetch_failures.append(name)
+            print(f"  ! {name} could not be fetched: {exc}", file=sys.stderr)
+            continue
 
         # Write in the same format lint expects: 2-space indent, trailing
         # newline. This matches the committed fixtures byte-for-byte.
@@ -79,20 +90,28 @@ def refresh(base_url: str) -> int:
         try:
             Discovery.model_validate(payload)
         except ValidationError as exc:
-            failures.append(name)
+            validation_failures.append(name)
             print(
                 f"  ! {name} does not validate against Discovery:\n{exc}",
                 file=sys.stderr,
             )
 
-    if failures:
-        print(
-            f"\n{len(failures)} environment(s) failed validation: "
-            f"{', '.join(failures)}.\n"
-            "The discovery schema may have changed; check whether "
-            "rspdocs.discovery.models needs updating.",
-            file=sys.stderr,
-        )
+    if fetch_failures or validation_failures:
+        if fetch_failures:
+            print(
+                f"\n{len(fetch_failures)} environment(s) could not be "
+                f"fetched: {', '.join(fetch_failures)}.\n"
+                "Their existing fixtures were left unchanged.",
+                file=sys.stderr,
+            )
+        if validation_failures:
+            print(
+                f"\n{len(validation_failures)} environment(s) failed "
+                f"validation: {', '.join(validation_failures)}.\n"
+                "The discovery schema may have changed; check whether "
+                "rspdocs.discovery.models needs updating.",
+                file=sys.stderr,
+            )
         return 1
     print(f"\nRefreshed {len(roster)} fixtures from {base_url}.")
     return 0
