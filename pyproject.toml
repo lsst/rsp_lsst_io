@@ -23,6 +23,8 @@ dependencies = [
     "documenteer[guide]>=2.1,<3.0",
     "lsst-rsp==1.0.1",
     "pydantic",
+    "httpx",
+    "rubin-repertoire>=2.0",
     "Jinja2",
     "sphinx-jinja",
     "sphinxcontrib-youtube",
@@ -34,6 +36,7 @@ dev = [
     # Testing
     "coverage[toml]",
     "pytest",
+    "respx",
     "pre-commit",
     "mypy",
 ]
@@ -52,6 +55,11 @@ build-backend = "setuptools.build_meta"
 # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
 where = ["src"]
 include = ["rspdocs*"]
+
+[tool.setuptools.package-data]
+# Ship the environments metadata shim with the package so it's available in
+# isolated (wheel) builds.
+rspdocs = ["discovery/environments.json"]
 
 [tool.coverage.run]
 parallel = true

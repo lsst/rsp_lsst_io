@@ -1,0 +1,364 @@
+{
+  "applications": [
+    "argocd",
+    "bigquery-kafka",
+    "butler",
+    "cert-manager",
+    "datalinker",
+    "gafaelfawr",
+    "ghostwriter",
+    "gke",
+    "google-cloud-observability",
+    "herald",
+    "hips",
+    "hoverdrive",
+    "ingress-nginx",
+    "mobu",
+    "noteburst",
+    "nublado",
+    "portal",
+    "ppdbtap",
+    "qserv-kafka",
+    "repertoire",
+    "rubin-rag",
+    "sasquatch",
+    "sasquatch-backpack",
+    "semaphore",
+    "sia",
+    "squareone",
+    "ssotap",
+    "strimzi",
+    "strimzi-access-operator",
+    "strimzi-registry-operator",
+    "tap",
+    "times-square",
+    "vault-secrets-operator",
+    "vo-cutouts",
+    "wobbly"
+  ],
+  "datasets": {
+    "dp02": {
+      "butler_config": "https://data-int.lsst.cloud/api/butler/repo/dp02/butler.yaml",
+      "description": "Data Preview 0.2 contains the image and catalog products of the Rubin Science Pipelines v23 processing of the DESC Data Challenge 2 simulation, which covered 300 square degrees of the wide-fast-deep LSST survey region over 5 years.",
+      "docs_url": "https://dp0-2.lsst.io/",
+      "services": {
+        "cutout": {
+          "openapi": "https://data-int.lsst.cloud/api/cutout/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/cutout",
+          "versions": {
+            "soda-async-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/jobs"
+            },
+            "soda-sync-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/sync"
+            }
+          }
+        },
+        "datalink": {
+          "openapi": "https://data-int.lsst.cloud/api/datalink/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/datalink",
+          "versions": {
+            "datalink-links-1.1": {
+              "url": "https://data-int.lsst.cloud/api/datalink/links"
+            }
+          }
+        },
+        "gms": {
+          "url": "https://data-int.lsst.cloud/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://data-int.lsst.cloud/auth/gms"
+            }
+          }
+        },
+        "hips": {
+          "url": "https://data-int.lsst.cloud/api/hips/v2/dp02/list",
+          "versions": {
+            "hips-list-1.0": {
+              "url": "https://data-int.lsst.cloud/api/hips/v2/dp02/list"
+            }
+          }
+        },
+        "sia": {
+          "openapi": "https://data-int.lsst.cloud/api/sia/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/sia/dp02",
+          "versions": {
+            "sia-query-2.0": {
+              "url": "https://data-int.lsst.cloud/api/sia/dp02/query"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://data-int.lsst.cloud/api/tap",
+          "versions": {
+            "tables": {
+              "url": "https://data-int.lsst.cloud/api/tap/tables"
+            }
+          }
+        }
+      }
+    },
+    "dp03": {
+      "description": "Data Preview 0.3 contains the catalog products of a Solar System Science Collaboration simulation of the results of SSO analysis of the wide-fast-deep data from the LSST dataset.",
+      "docs_url": "https://dp0-3.lsst.io/",
+      "services": {
+        "gms": {
+          "url": "https://data-int.lsst.cloud/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://data-int.lsst.cloud/auth/gms"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://data-int.lsst.cloud/api/ssotap",
+          "versions": {
+            "tables": {
+              "url": "https://data-int.lsst.cloud/api/ssotap/tables"
+            }
+          }
+        }
+      }
+    },
+    "dp1": {
+      "butler_config": "https://data-int.lsst.cloud/api/butler/repo/dp1/butler.yaml",
+      "description": "Data Preview 1 contains image and catalog products from the Rubin Science Pipelines v29 processing of observations obtained with the LSST Commissioning Camera of seven ~1 square degree fields, over seven weeks in late 2024.",
+      "docs_url": "https://dp1.lsst.io/",
+      "services": {
+        "cutout": {
+          "openapi": "https://data-int.lsst.cloud/api/cutout/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/cutout",
+          "versions": {
+            "soda-async-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/jobs"
+            },
+            "soda-sync-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/sync"
+            }
+          }
+        },
+        "datalink": {
+          "openapi": "https://data-int.lsst.cloud/api/datalink/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/datalink",
+          "versions": {
+            "datalink-links-1.1": {
+              "url": "https://data-int.lsst.cloud/api/datalink/links"
+            }
+          }
+        },
+        "gms": {
+          "url": "https://data-int.lsst.cloud/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://data-int.lsst.cloud/auth/gms"
+            }
+          }
+        },
+        "hips": {
+          "url": "https://data-int.lsst.cloud/api/hips/v2/dp1/list",
+          "versions": {
+            "hips-list-1.0": {
+              "url": "https://data-int.lsst.cloud/api/hips/v2/dp1/list"
+            }
+          }
+        },
+        "sia": {
+          "openapi": "https://data-int.lsst.cloud/api/sia/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/sia/dp1",
+          "versions": {
+            "sia-query-2.0": {
+              "url": "https://data-int.lsst.cloud/api/sia/dp1/query"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://data-int.lsst.cloud/api/tap",
+          "versions": {
+            "tables": {
+              "url": "https://data-int.lsst.cloud/api/tap/tables"
+            }
+          }
+        }
+      }
+    },
+    "dp2": {
+      "butler_config": "https://data-int.lsst.cloud/api/butler/repo/dp2/butler.yaml",
+      "description": "Data Preview 2.",
+      "docs_url": "https://dp2.lsst.io/",
+      "services": {
+        "cutout": {
+          "openapi": "https://data-int.lsst.cloud/api/cutout/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/cutout",
+          "versions": {
+            "soda-async-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/jobs"
+            },
+            "soda-sync-1.0": {
+              "url": "https://data-int.lsst.cloud/api/cutout/sync"
+            }
+          }
+        },
+        "datalink": {
+          "openapi": "https://data-int.lsst.cloud/api/datalink/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/datalink",
+          "versions": {
+            "datalink-links-1.1": {
+              "url": "https://data-int.lsst.cloud/api/datalink/links"
+            }
+          }
+        },
+        "gms": {
+          "url": "https://data-int.lsst.cloud/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://data-int.lsst.cloud/auth/gms"
+            }
+          }
+        },
+        "hips": {
+          "url": "https://data-int.lsst.cloud/api/hips/v2/dp2/list",
+          "versions": {
+            "hips-list-1.0": {
+              "url": "https://data-int.lsst.cloud/api/hips/v2/dp2/list"
+            }
+          }
+        },
+        "sia": {
+          "openapi": "https://data-int.lsst.cloud/api/sia/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/sia/dp2",
+          "versions": {
+            "sia-query-2.0": {
+              "url": "https://data-int.lsst.cloud/api/sia/dp2/query"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://data-int.lsst.cloud/api/tap",
+          "versions": {
+            "tables": {
+              "url": "https://data-int.lsst.cloud/api/tap/tables"
+            }
+          }
+        }
+      }
+    },
+    "prompt": {
+      "butler_config": "https://data-int.lsst.cloud/api/butler/repo/prompt/butler.yaml",
+      "description": "Prompt products.",
+      "services": {
+        "alerts": {
+          "openapi": "https://data-int.lsst.cloud/api/alerts/openapi.json",
+          "url": "https://data-int.lsst.cloud/api/alerts"
+        },
+        "gms": {
+          "url": "https://data-int.lsst.cloud/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://data-int.lsst.cloud/auth/gms"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://data-int.lsst.cloud/api/ppdbtap"
+        }
+      }
+    }
+  },
+  "environment_name": "idfint",
+  "services": {
+    "internal": {
+      "datalink": {
+        "openapi": "https://data-int.lsst.cloud/api/datalink/openapi.json",
+        "url": "https://data-int.lsst.cloud/api/datalink",
+        "versions": {
+          "datalink-links-1.1": {
+            "url": "https://data-int.lsst.cloud/api/datalink/links"
+          }
+        }
+      },
+      "gafaelfawr": {
+        "openapi": "https://data-int.lsst.cloud/auth/openapi.json",
+        "url": "https://data-int.lsst.cloud/auth",
+        "versions": {
+          "v1": {
+            "url": "https://data-int.lsst.cloud/auth/api/v1"
+          }
+        }
+      },
+      "login": {
+        "url": "https://data-int.lsst.cloud/login"
+      },
+      "mobu": {
+        "openapi": "https://data-int.lsst.cloud/mobu/openapi.json",
+        "url": "https://data-int.lsst.cloud/mobu"
+      },
+      "noteburst": {
+        "openapi": "https://data-int.lsst.cloud/noteburst/openapi.json",
+        "url": "https://data-int.lsst.cloud/noteburst",
+        "versions": {
+          "v1": {
+            "url": "https://data-int.lsst.cloud/noteburst/v1"
+          }
+        }
+      },
+      "nublado-controller": {
+        "url": "https://data-int.lsst.cloud/nublado"
+      },
+      "repertoire": {
+        "openapi": "https://data-int.lsst.cloud/repertoire/openapi.json",
+        "url": "https://data-int.lsst.cloud/repertoire"
+      },
+      "semaphore": {
+        "openapi": "https://data-int.lsst.cloud/semaphore/openapi.json",
+        "url": "https://data-int.lsst.cloud/semaphore",
+        "versions": {
+          "v1": {
+            "url": "https://data-int.lsst.cloud/semaphore/v1"
+          }
+        }
+      },
+      "times-square": {
+        "openapi": "https://data-int.lsst.cloud/times-square/api/openapi.json",
+        "url": "https://data-int.lsst.cloud/times-square/api",
+        "versions": {
+          "v1": {
+            "url": "https://data-int.lsst.cloud/times-square/api/v1"
+          }
+        }
+      },
+      "wobbly": {
+        "openapi": "https://data-int.lsst.cloud/wobbly/openapi.json",
+        "url": "https://data-int.lsst.cloud/wobbly"
+      }
+    },
+    "ui": {
+      "argocd": {
+        "url": "https://data-int.lsst.cloud/argo-cd"
+      },
+      "chronograf": {
+        "url": "https://data-int.lsst.cloud/chronograf"
+      },
+      "kafdrop": {
+        "url": "https://data-int.lsst.cloud/kafdrop"
+      },
+      "logout": {
+        "url": "https://data-int.lsst.cloud/logout"
+      },
+      "nublado": {
+        "url": "https://nb.data-int.lsst.cloud/nb"
+      },
+      "portal": {
+        "url": "https://data-int.lsst.cloud/portal/app/"
+      },
+      "settings": {
+        "url": "https://data-int.lsst.cloud/settings"
+      },
+      "squareone": {
+        "url": "https://data-int.lsst.cloud/"
+      },
+      "webdav": {
+        "url": "https://data-int.lsst.cloud/files"
+      }
+    }
+  }
+}

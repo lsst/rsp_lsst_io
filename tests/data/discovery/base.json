@@ -1,0 +1,104 @@
+{
+  "applications": [
+    "argo-workflows",
+    "argocd",
+    "auxtel",
+    "calsys",
+    "cert-manager",
+    "consdb",
+    "control-system-test",
+    "csc-versions",
+    "envsys",
+    "exposurelog",
+    "gafaelfawr",
+    "ingress-nginx",
+    "love",
+    "mobu",
+    "narrativelog",
+    "nightlydigest",
+    "nightreport",
+    "nublado",
+    "nvr-control",
+    "obsloctap",
+    "obssys",
+    "portal",
+    "rapid-analysis",
+    "repertoire",
+    "rubin-too-producer",
+    "rubintv",
+    "sasquatch",
+    "simonyitel",
+    "squareone",
+    "strimzi",
+    "strimzi-access-operator",
+    "strimzi-registry-operator",
+    "uws",
+    "vault-secrets-operator"
+  ],
+  "environment_name": "base",
+  "influxdb_databases": {
+    "base_efd": {
+      "credentials_url": "https://base-lsp.lsst.codes/repertoire/discovery/influxdb/base_efd",
+      "database": "efd",
+      "local": true,
+      "schema_registry": "http://sasquatch-schema-registry.sasquatch:8081/",
+      "url": "https://base-lsp.lsst.codes/influxdb/"
+    }
+  },
+  "services": {
+    "internal": {
+      "gafaelfawr": {
+        "openapi": "https://base-lsp.lsst.codes/auth/openapi.json",
+        "url": "https://base-lsp.lsst.codes/auth",
+        "versions": {
+          "v1": {
+            "url": "https://base-lsp.lsst.codes/auth/api/v1"
+          }
+        }
+      },
+      "login": {
+        "url": "https://base-lsp.lsst.codes/login"
+      },
+      "mobu": {
+        "openapi": "https://base-lsp.lsst.codes/mobu/openapi.json",
+        "url": "https://base-lsp.lsst.codes/mobu"
+      },
+      "nublado-controller": {
+        "url": "https://base-lsp.lsst.codes/nublado"
+      },
+      "repertoire": {
+        "openapi": "https://base-lsp.lsst.codes/repertoire/openapi.json",
+        "url": "https://base-lsp.lsst.codes/repertoire"
+      }
+    },
+    "ui": {
+      "argocd": {
+        "url": "https://base-lsp.lsst.codes/argo-cd"
+      },
+      "chronograf": {
+        "url": "https://base-lsp.lsst.codes/chronograf"
+      },
+      "kafdrop": {
+        "url": "https://base-lsp.lsst.codes/kafdrop"
+      },
+      "logout": {
+        "url": "https://base-lsp.lsst.codes/logout"
+      },
+      "nublado": {
+        "url": "https://base-lsp.lsst.codes/nb"
+      },
+      "portal": {
+        "url": "https://base-lsp.lsst.codes/portal/app/"
+      },
+      "settings": {
+        "url": "https://base-lsp.lsst.codes/settings"
+      },
+      "squareone": {
+        "url": "https://base-lsp.lsst.codes/"
+      },
+      "webdav": {
+        "url": "https://base-lsp.lsst.codes/files"
+      }
+    }
+  }
+}

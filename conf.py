@@ -6,22 +6,30 @@ from typing import Optional
 from documenteer.conf.guide import *  # noqa: F401 F403
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from rspdocs.phalanx.models import PhalanxEnv
-from rspdocs.phalanx.service import PhalanxEnvService
+from rspdocs.constants import PRIMARY_ENV
+from rspdocs.discovery import load_environments_metadata
+from rspdocs.discovery.models import PhalanxEnv
+from rspdocs.discovery.service import PhalanxEnvService
 
-env_cache_path = Path(__file__).parent.joinpath(".phalanxenvs.json")
-env_service = PhalanxEnvService.load_from_cache_file(env_cache_path)
-
-# Select the environment given the sphinx tag (-t on sphinx-build CLI)
-# Default to the primary env if a tag is not set.
-env_names = env_service.envs.env_names
-rsp_env: Optional[PhalanxEnv] = None
-for env_name in env_names:
+# Select the environment to build given the sphinx tag (-t on sphinx-build
+# CLI), defaulting to the primary env if no tag matches. Each sphinx-build
+# renders a single environment, so we only fetch that one -- plus the primary
+# env, which the docs always reference via ``all_envs.primary`` regardless of
+# which environment is being built.
+_metadata = load_environments_metadata()
+target_env = PRIMARY_ENV
+for env_name in _metadata.build_roster:
     if env_name in tags:  # noqa: F405 F821
-        rsp_env = env_service.envs[env_name]
+        target_env = env_name
         break
-if rsp_env is None:
-    rsp_env = env_service.envs.primary
+_fetch_envs = list(dict.fromkeys([target_env, PRIMARY_ENV]))
+
+env_service = PhalanxEnvService.load(
+    cache_dir=Path(__file__).parent / "_build" / "discovery",
+    env_names=_fetch_envs,
+)
+
+rsp_env: Optional[PhalanxEnv] = env_service.envs[target_env]
 
 _config_template_loader = FileSystemLoader(".")
 _jinja_env = Environment(

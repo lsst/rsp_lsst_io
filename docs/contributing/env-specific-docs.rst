@@ -18,8 +18,9 @@ Each section covers an approach that handles different levels of content customi
 Besides this documentation, you can also learn from the existing documentation.
 The homepage (:file:`docs/index.rst`) and log-in (:file:`docs/guides/getting-started/get-an-account.rst`) pages demonstrate all the techniques described here.
 
-Information about the RSP environments is maintained in a file named :file:`.phalanxenvs.json` in the `documentation repository <https://github.com/lsst/rsp_lsst_io>`_.
-In the future, this information will be automatically scraped from primary sources, like the Phalanx repository.
+Information about the RSP environments is fetched at build time from the per-environment `Repertoire <https://repertoire.lsst.io/>`__ service-discovery data that Phalanx publishes at ``https://phalanx.lsst.io/discovery/environments/{env}.json``.
+A small supplementary shim in the `documentation repository <https://github.com/lsst/rsp_lsst_io>`_ (:file:`src/rspdocs/discovery/environments.json`) provides the handful of things discovery doesn't cover, such as human-readable environment titles and the roster of environments to build.
+When the network is unavailable, the build falls back to a local cache (in :file:`_build/discovery/`) and announces the fallback in the build output.
 
 .. _envdocs-substitutions:
 

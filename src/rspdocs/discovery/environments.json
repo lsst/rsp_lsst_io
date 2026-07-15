@@ -1,0 +1,47 @@
+{
+  "build_roster": [
+    "base",
+    "idfdev",
+    "idfint",
+    "idfprod",
+    "summit",
+    "tucson-teststand",
+    "usdfdev",
+    "usdfprod"
+  ],
+  "environments": {
+    "base": {
+      "title": "Rubin Base Data Facility",
+      "title_full": null
+    },
+    "idfdev": {
+      "title": "Rubin IDF (Dev)",
+      "title_full": "Rubin Interim Data Facility (Dev)"
+    },
+    "idfint": {
+      "title": "Rubin IDF (Int)",
+      "title_full": "Rubin Interim Data Facility (Int)"
+    },
+    "idfprod": {
+      "title": "data.lsst.cloud",
+      "title_full": "data.lsst.cloud",
+      "hidden_services": ["times-square"]
+    },
+    "summit": {
+      "title": "Rubin Summit",
+      "title_full": "Rubin Summit Data Facility"
+    },
+    "tucson-teststand": {
+      "title": "Tucson Teststand",
+      "title_full": "Tucson Teststand (NOIRLab)"
+    },
+    "usdfdev": {
+      "title": "Rubin USDF (Dev)",
+      "title_full": "Rubin US Data Facility (Dev)"
+    },
+    "usdfprod": {
+      "title": "Rubin USDF",
+      "title_full": "Rubin US Data Facility"
+    }
+  }
+}

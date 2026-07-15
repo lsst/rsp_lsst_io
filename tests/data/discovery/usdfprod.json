@@ -1,0 +1,287 @@
+{
+  "applications": [
+    "argocd",
+    "butler",
+    "cert-manager",
+    "consdb",
+    "consdbtap",
+    "datalinker",
+    "exposurelog",
+    "fov-quicklook",
+    "gafaelfawr",
+    "grafana",
+    "jira-data-proxy",
+    "livetap",
+    "mobu",
+    "narrativelog",
+    "nightlydigest",
+    "nightreport",
+    "noteburst",
+    "nublado",
+    "obsloctap",
+    "plot-navigator",
+    "portal",
+    "postgres",
+    "ppdb-replication",
+    "qserv-kafka",
+    "repertoire",
+    "rubintv",
+    "s3proxy",
+    "sasquatch",
+    "semaphore",
+    "squareone",
+    "ssotap",
+    "strimzi",
+    "strimzi-access-operator",
+    "strimzi-registry-operator",
+    "tap",
+    "times-square",
+    "vault-secrets-operator"
+  ],
+  "datasets": {
+    "dp02": {
+      "description": "Data Preview 0.2 contains the image and catalog products of the Rubin Science Pipelines v23 processing of the DESC Data Challenge 2 simulation, which covered 300 square degrees of the wide-fast-deep LSST survey region over 5 years.",
+      "docs_url": "https://dp0-2.lsst.io/",
+      "services": {
+        "datalink": {
+          "openapi": "https://usdf-rsp.slac.stanford.edu/api/datalink/openapi.json",
+          "url": "https://usdf-rsp.slac.stanford.edu/api/datalink",
+          "versions": {
+            "datalink-links-1.1": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/datalink/links"
+            }
+          }
+        },
+        "gms": {
+          "url": "https://usdf-rsp.slac.stanford.edu/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/auth/gms"
+            }
+          }
+        },
+        "hips": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/hips/v2/dp02/list",
+          "versions": {
+            "hips-list-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/hips/v2/dp02/list"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/tap",
+          "versions": {
+            "tables": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/tap/tables"
+            }
+          }
+        }
+      }
+    },
+    "dp03": {
+      "description": "Data Preview 0.3 contains the catalog products of a Solar System Science Collaboration simulation of the results of SSO analysis of the wide-fast-deep data from the LSST dataset.",
+      "docs_url": "https://dp0-3.lsst.io/",
+      "services": {
+        "gms": {
+          "url": "https://usdf-rsp.slac.stanford.edu/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/auth/gms"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/ssotap",
+          "versions": {
+            "tables": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/ssotap/tables"
+            }
+          }
+        }
+      }
+    },
+    "dp1": {
+      "description": "Data Preview 1 contains image and catalog products from the Rubin Science Pipelines v29 processing of observations obtained with the LSST Commissioning Camera of seven ~1 square degree fields, over seven weeks in late 2024.",
+      "docs_url": "https://dp1.lsst.io/",
+      "services": {
+        "datalink": {
+          "openapi": "https://usdf-rsp.slac.stanford.edu/api/datalink/openapi.json",
+          "url": "https://usdf-rsp.slac.stanford.edu/api/datalink",
+          "versions": {
+            "datalink-links-1.1": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/datalink/links"
+            }
+          }
+        },
+        "gms": {
+          "url": "https://usdf-rsp.slac.stanford.edu/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/auth/gms"
+            }
+          }
+        },
+        "hips": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/hips/v2/dp1/list",
+          "versions": {
+            "hips-list-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/hips/v2/dp1/list"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/tap",
+          "versions": {
+            "tables": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/tap/tables"
+            }
+          }
+        }
+      }
+    },
+    "efd": {
+      "description": "Engineering Field Database.",
+      "services": {
+        "gms": {
+          "url": "https://usdf-rsp.slac.stanford.edu/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/auth/gms"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/consdbtap",
+          "versions": {
+            "tables": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/consdbtap/tables"
+            }
+          }
+        }
+      }
+    },
+    "live": {
+      "description": "Live internal data from the telescope.",
+      "services": {
+        "gms": {
+          "url": "https://usdf-rsp.slac.stanford.edu/auth/gms",
+          "versions": {
+            "gms-search-1.0": {
+              "url": "https://usdf-rsp.slac.stanford.edu/auth/gms"
+            }
+          }
+        },
+        "tap": {
+          "url": "https://usdf-rsp.slac.stanford.edu/api/livetap",
+          "versions": {
+            "tables": {
+              "url": "https://usdf-rsp.slac.stanford.edu/api/livetap/tables"
+            }
+          }
+        }
+      }
+    }
+  },
+  "environment_name": "usdfprod",
+  "influxdb_databases": {
+    "usdf_efd": {
+      "credentials_url": "https://usdf-rsp.slac.stanford.edu/repertoire/discovery/influxdb/usdf_efd",
+      "database": "efd",
+      "local": true,
+      "schema_registry": "http://sasquatch-schema-registry.sasquatch:8081/",
+      "url": "https://usdf-rsp.slac.stanford.edu/influxdb-enterprise-data/"
+    }
+  },
+  "services": {
+    "internal": {
+      "datalink": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/api/datalink/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/api/datalink",
+        "versions": {
+          "datalink-links-1.1": {
+            "url": "https://usdf-rsp.slac.stanford.edu/api/datalink/links"
+          }
+        }
+      },
+      "gafaelfawr": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/auth/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/auth",
+        "versions": {
+          "v1": {
+            "url": "https://usdf-rsp.slac.stanford.edu/auth/api/v1"
+          }
+        }
+      },
+      "login": {
+        "url": "https://usdf-rsp.slac.stanford.edu/login"
+      },
+      "mobu": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/mobu/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/mobu"
+      },
+      "noteburst": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/noteburst/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/noteburst",
+        "versions": {
+          "v1": {
+            "url": "https://usdf-rsp.slac.stanford.edu/noteburst/v1"
+          }
+        }
+      },
+      "nublado-controller": {
+        "url": "https://usdf-rsp.slac.stanford.edu/nublado"
+      },
+      "repertoire": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/repertoire/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/repertoire"
+      },
+      "semaphore": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/semaphore/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/semaphore",
+        "versions": {
+          "v1": {
+            "url": "https://usdf-rsp.slac.stanford.edu/semaphore/v1"
+          }
+        }
+      },
+      "times-square": {
+        "openapi": "https://usdf-rsp.slac.stanford.edu/times-square/api/openapi.json",
+        "url": "https://usdf-rsp.slac.stanford.edu/times-square/api",
+        "versions": {
+          "v1": {
+            "url": "https://usdf-rsp.slac.stanford.edu/times-square/api/v1"
+          }
+        }
+      }
+    },
+    "ui": {
+      "argocd": {
+        "url": "https://usdf-rsp.slac.stanford.edu/argo-cd"
+      },
+      "chronograf": {
+        "url": "https://usdf-rsp.slac.stanford.edu/chronograf"
+      },
+      "kafdrop": {
+        "url": "https://usdf-rsp.slac.stanford.edu/kafdrop"
+      },
+      "logout": {
+        "url": "https://usdf-rsp.slac.stanford.edu/logout"
+      },
+      "nublado": {
+        "url": "https://usdf-rsp.slac.stanford.edu/nb"
+      },
+      "portal": {
+        "url": "https://usdf-rsp.slac.stanford.edu/portal/app/"
+      },
+      "settings": {
+        "url": "https://usdf-rsp.slac.stanford.edu/settings"
+      },
+      "squareone": {
+        "url": "https://usdf-rsp.slac.stanford.edu/"
+      },
+      "webdav": {
+        "url": "https://usdf-rsp.slac.stanford.edu/files"
+      }
+    }
+  }
+}
