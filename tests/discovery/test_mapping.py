@@ -31,7 +31,8 @@ def test_public_env_mapping(discovery_data_dir: Path) -> None:
     # UI service URLs come straight from discovery.
     assert str(env.portal_url) == str(discovery.services.ui["portal"].url)
     assert str(env.nb_url) == str(discovery.services.ui["nublado"].url)
-    assert str(env.api_webdav_url) == str(discovery.services.ui["webdav"].url)
+    # WebDAV is normalized to a trailing slash (discovery gives .../files).
+    assert str(env.api_webdav_url) == "https://data.lsst.cloud/files/"
     # Derived VO API URLs (datasets are present for idfprod).
     assert str(env.api_url) == "https://data.lsst.cloud/api/"
     assert str(env.api_tap_url) == "https://data.lsst.cloud/api/tap/"
@@ -41,6 +42,22 @@ def test_public_env_mapping(discovery_data_dir: Path) -> None:
     )
     assert str(env.phalanx_docs_url) == (
         "https://phalanx.lsst.io/environments/idfprod/"
+    )
+
+
+def test_webdav_url_has_trailing_slash(discovery_data_dir: Path) -> None:
+    """The WebDAV URL ends in a slash so the documented server address
+    ``<url>(your_username)`` renders correctly.
+    """
+    discovery = _load("idfprod", discovery_data_dir)
+    meta = EnvMeta(title="data.lsst.cloud", title_full="data.lsst.cloud")
+
+    env = PhalanxEnv.from_discovery(discovery, name="idfprod", meta=meta)
+
+    assert str(env.api_webdav_url).endswith("/")
+    assert (
+        f"{env.api_webdav_url}(your_username)"
+        == "https://data.lsst.cloud/files/(your_username)"
     )
 
 
@@ -92,8 +109,9 @@ def test_staff_env_without_datasets(discovery_data_dir: Path) -> None:
     assert env.api_tap_url is None
     assert env.times_square_url is None
     assert env.has_apps is False
-    # WebDAV is now reported by discovery for all environments.
-    assert str(env.api_webdav_url) == str(discovery.services.ui["webdav"].url)
+    # WebDAV is now reported by discovery for all environments, normalized to
+    # a trailing slash (discovery gives .../files).
+    assert str(env.api_webdav_url) == "https://base-lsp.lsst.codes/files/"
     assert env.is_primary is False
 
 

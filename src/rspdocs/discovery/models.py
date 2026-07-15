@@ -30,6 +30,19 @@ def _origin(url: HttpUrl) -> str:
     return f"{url.scheme}://{url.host}/"
 
 
+def _with_trailing_slash(url: HttpUrl | None) -> HttpUrl | None:
+    """Return ``url`` with a trailing slash, or ``None`` unchanged.
+
+    The documented WebDAV server address is ``<url>(your_username)``, so the
+    root URL must end in ``/`` (matching the ``api_webdav_url`` field's
+    example) for the substitution to render correctly.
+    """
+    if url is None:
+        return None
+    s = str(url)
+    return url if s.endswith("/") else HttpUrl(f"{s}/")
+
+
 def _api_origin(discovery: Discovery) -> str:
     """Return the origin hosting the VO APIs, from a discovered service.
 
@@ -222,7 +235,7 @@ class PhalanxEnv(BaseModel):
             nb_url=ui_url("nublado"),
             api_url=api_url,
             api_tap_url=api_tap_url,
-            api_webdav_url=ui_url("webdav"),
+            api_webdav_url=_with_trailing_slash(ui_url("webdav")),
             gafaelfawr_tokens_url=HttpUrl(f"{base}auth/tokens/"),
             phalanx_docs_url=HttpUrl(
                 f"https://phalanx.lsst.io/environments/{name}/"
