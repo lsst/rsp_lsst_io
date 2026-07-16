@@ -42,6 +42,9 @@ dev = [
     "mypy",
 ]
 
+[project.scripts]
+rspdocs-validate-config = "rspdocs.validate:main"
+
 [project.urls]
 Homepage = "https://rsp.lsst.io"
 Source = "https://github.com/lsst/rsp_lsst_io"

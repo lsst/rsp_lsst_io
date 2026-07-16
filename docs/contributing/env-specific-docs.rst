@@ -272,3 +272,5 @@ To leave a page out where a service is missing:
 
 When excluding an index page that heads a subtree, exclude the subtree too (the ``**`` glob above), or its child pages become orphans in turn.
 The YAML keys must be recognized service tokens from the :ref:`service table <envdocs-roles>`; a typo fails the build rather than silently excluding nothing.
+
+This and the other hand-edited bundled config (:file:`src/rspdocs/discovery/environments.json`) are checked by the ``rspdocs-validate-config`` command, run automatically by pre-commit and the test suite, so a mistake is caught at commit time rather than only during a build.
