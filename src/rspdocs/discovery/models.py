@@ -10,11 +10,22 @@ from rubin.repertoire import Discovery
 from ..constants import DOCS_ROOT_URL, PRIMARY_ENV
 from .metadata import EnvMeta
 
-__all__ = ["PhalanxEnv", "EnvironmentDict"]
+__all__ = ["PhalanxEnv", "EnvironmentDict", "ltd_edition_url"]
 
 # Default ports we omit from a derived origin so it matches the URL as written
 # (pydantic always fills ``HttpUrl.port`` with the scheme default).
 _DEFAULT_PORTS = {"http": 80, "https": 443}
+
+
+def ltd_edition_url(env_name: str) -> str:
+    """Return the published LTD URL for an environment's documentation edition.
+
+    LTD serves the primary environment's edition at the site root and every
+    other edition under ``/v/{env_name}/``.
+    """
+    if env_name == PRIMARY_ENV:
+        return DOCS_ROOT_URL
+    return f"{DOCS_ROOT_URL}v/{env_name}/"
 
 
 def _origin(url: HttpUrl) -> str:
@@ -246,10 +257,7 @@ class PhalanxEnv(BaseModel):
     @property
     def ltd_url_prefix(self) -> str:
         """The root URL of the environment's documentation site."""
-        if self.name == PRIMARY_ENV:
-            return DOCS_ROOT_URL
-        else:
-            return f"{DOCS_ROOT_URL}{self.name}/"
+        return ltd_edition_url(self.name)
 
     @property
     def is_primary(self) -> bool:

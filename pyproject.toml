@@ -26,6 +26,7 @@ dependencies = [
     "httpx",
     "rubin-repertoire>=2.0",
     "Jinja2",
+    "PyYAML",
     "sphinx-jinja",
     "sphinxcontrib-youtube",
 ]
@@ -57,9 +58,9 @@ where = ["src"]
 include = ["rspdocs*"]
 
 [tool.setuptools.package-data]
-# Ship the environments metadata shim with the package so it's available in
-# isolated (wheel) builds.
-rspdocs = ["discovery/environments.json"]
+# Ship the bundled data files (environments metadata shim, page-exclude map)
+# with the package so they're available in isolated (wheel) builds.
+rspdocs = ["discovery/environments.json", "sphinxext/page_excludes.yaml"]
 
 [tool.coverage.run]
 parallel = true

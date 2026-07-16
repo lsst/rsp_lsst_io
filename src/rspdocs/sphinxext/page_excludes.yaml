@@ -1,0 +1,32 @@
+# Whole-page exclusions by service.
+#
+# Each key is an RSP service token (the same names used by the :rsp-url: /
+# :rsp-link: roles and the rsp-only directive; see the "Service names" table in
+# docs/contributing/env-specific-docs.rst). Its value is a list of glob
+# patterns, relative to the docs/ source directory, for pages that document
+# that service.
+#
+# When a service is *absent* from the environment being built, its patterns are
+# added to Sphinx's exclude_patterns so those pages are dropped from that
+# environment's build. A service is "absent" when discovery reports no URL for
+# it, or when it is listed in an environment's hidden_services shim.
+#
+# To stop shipping a page in environments that lack a service, add its source
+# path here under that service. Prefer the finer-grained roles, substitutions,
+# and rsp-only directive for anything short of an entire page.
+
+portal:
+  - guides/portal/**/*.rst
+  - guides/getting-started/portal-first-steps.rst
+
+nublado:
+  - guides/nb/**/*.rst
+  - guides/getting-started/notebook-first-steps.rst
+  - guides/notebooks/lsst.rsp/**
+
+tap:
+  - guides/auth/using-topcat-outside-rsp.rst
+
+times-square:
+  - guides/times-square/*.rst
+  - guides/times-square/**/*.rst
