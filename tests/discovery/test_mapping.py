@@ -171,3 +171,14 @@ def test_primary_env_flag(discovery_data_dir: Path) -> None:
 
     assert env.is_primary is True
     assert env.ltd_url_prefix == "https://rsp.lsst.io/"
+
+
+def test_non_primary_env_ltd_url(discovery_data_dir: Path) -> None:
+    """A non-primary environment is served under the ``/v/{env}/`` edition."""
+    discovery = _load("summit", discovery_data_dir)
+    meta = EnvMeta(title="Rubin Summit")
+
+    env = PhalanxEnv.from_discovery(discovery, name="summit", meta=meta)
+
+    assert env.is_primary is False
+    assert env.ltd_url_prefix == "https://rsp.lsst.io/v/summit/"

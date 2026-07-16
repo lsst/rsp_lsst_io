@@ -20,6 +20,7 @@ Reach for them in this order, from the most targeted to the most general:
 - :ref:`envdocs-conditional` to include or exclude whole blocks of content per environment.
 - :ref:`envdocs-jinja` when a branch's text must be *computed* from environment data (interpolation, loops, or expressions).
 - :ref:`envdocs-jinja-includes` to swap large included files.
+- :ref:`envdocs-page-excludes` to leave a whole page out of some environments: conditionalize its toctree entry and exclude its source so it isn't flagged as an orphan.
 
 The roles and the ``rsp-only`` directive are provided by the in-repo :file:`src/rspdocs/sphinxext` Sphinx extension.
 The homepage (:file:`docs/index.rst`) and log-in (:file:`docs/guides/getting-started/get-an-account.rst`) pages demonstrate these techniques.
@@ -212,3 +213,64 @@ Those included files are in the familiar reStructuredText syntax (you shouldn't 
 
 The included files **must** have a ``.in.rst`` suffix so that the Sphinx build won't incorporate those files as separate pages.
 Our further convention is to prefix the name with the root name of the page, followed by a description of the environment or context where the content applies.
+
+.. _envdocs-page-excludes:
+
+Leaving a whole page out of some environments
+=============================================
+
+Some pages document a single service end-to-end — for example, the Times Square guides or the "using TOPCAT outside the RSP" page — and shouldn't appear at all in an environment where that service isn't deployed.
+Leaving such a page out of a build is a **two-part** change: conditionalize its ``toctree`` entry, *and* exclude its source file.
+Both parts are necessary, and they must agree on the gating service.
+
+Conditionalize the toctree entry
+--------------------------------
+
+A page appears in a build only if a ``toctree`` links to it, so the first step is to drop the page's ``toctree`` entry in the environments that shouldn't have it.
+Wrap the entry in a :ref:`jinja <envdocs-jinja>` conditional on the gating service's URL attribute.
+For instance, :file:`docs/guides/auth/index.rst` lists the TOPCAT page only where the TAP service exists:
+
+.. code-block:: rst
+
+   .. jinja:: rsp
+
+      .. toctree::
+         :titlesonly:
+
+         creating-user-tokens
+         token-scopes
+         {% if env.api_tap_url %}using-topcat-outside-rsp{% endif %}
+
+The same pattern gates an entire subtree by its index page — :file:`docs/guides/index.rst` includes ``times-square/index`` (and everything under it) only when ``env.times_square_url`` is set.
+
+Exclude the now-unreferenced source
+-----------------------------------
+
+Conditionalizing the ``toctree`` stops linking the page, but its source file still sits in :file:`docs/`.
+Sphinx flags any document that no ``toctree`` reaches as an *orphan* (``document isn't included in any toctree``), which is a warning — and the build runs under ``-W``, so a stray orphan **fails the build**.
+The fix is to exclude the page's source in exactly the environments where its ``toctree`` entry disappears, so Sphinx never parses it and never sees an orphan.
+
+These exclusions live in :file:`src/rspdocs/sphinxext/page_excludes.yaml`.
+The file maps each :ref:`service token <envdocs-roles>` to a list of glob patterns, relative to the :file:`docs/` source directory, for the pages that document that service:
+
+.. code-block:: yaml
+
+   times-square:
+     - guides/times-square/*.rst
+     - guides/times-square/**/*.rst
+
+   tap:
+     - guides/auth/using-topcat-outside-rsp.rst
+
+When an environment is built, the patterns for every service **absent** from that environment are added to Sphinx's ``exclude_patterns``.
+A service counts as absent when discovery reports no URL for it (for example, TAP in an environment that serves no datasets) or when it's listed in that environment's ``hidden_services`` shim (see :file:`src/rspdocs/discovery/environments.json`) — the same condition the ``toctree``'s ``{% if env.… %}`` tests, which is why the two stay in sync.
+
+To leave a page out where a service is missing:
+
+#. gate its ``toctree`` entry on the service's URL attribute, as above; and
+#. add its source path (or a glob for its subtree) under the matching service token in :file:`page_excludes.yaml`.
+
+When excluding an index page that heads a subtree, exclude the subtree too (the ``**`` glob above), or its child pages become orphans in turn.
+The YAML keys must be recognized service tokens from the :ref:`service table <envdocs-roles>`; a typo fails the build rather than silently excluding nothing.
+
+This and the other hand-edited bundled config (:file:`src/rspdocs/discovery/environments.json`) are checked by the ``rspdocs-validate-config`` command, run automatically by pre-commit and the test suite, so a mistake is caught at commit time rather than only during a build.

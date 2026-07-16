@@ -37,3 +37,12 @@ repos:
     rev: 7.1.1
     hooks:
       - id: flake8
+
+  - repo: local
+    hooks:
+      - id: rspdocs-validate-config
+        name: Validate bundled rspdocs config (roster, page-excludes, tokens)
+        entry: rspdocs-validate-config
+        language: system
+        pass_filenames: false
+        files: ^src/rspdocs/(discovery/environments\.json|sphinxext/page_excludes\.yaml)$

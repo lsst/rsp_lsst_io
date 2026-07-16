@@ -22,6 +22,11 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
+      # Install the package so the rspdocs-validate-config console script (used
+      # by the local pre-commit hook) resolves on PATH.
+      - name: Install package
+        run: pip install -e .
+
       - name: Run pre-commit hooks
         uses: pre-commit/action@v3.0.1
 

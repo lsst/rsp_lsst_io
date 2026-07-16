@@ -48,38 +48,44 @@ Accounts & authentication
 
       How to recover from lost passwords and other account access issues.
 
-Aspects
-=======
+.. jinja:: rsp
 
-Inter-connected aspects enable you to discover and analyze data.
+   Aspects
+   =======
 
-.. toctree::
-   :hidden:
+   Inter-connected aspects enable you to discover and analyze data.
 
-   Portal <portal/index>
-   Notebooks <notebooks/index>
-   API <api/index>
+   .. toctree::
+      :hidden:
 
-.. grid:: 1 2 2 2
-   :gutter: 2
+      {% if env.portal_url %}Portal <portal/index>{% endif %}
+      {% if env.nb_url %}Notebooks <notebooks/index>{% endif %}
+      API <api/index>
 
-   .. grid-item-card:: Portal
-      :link: portal/index
-      :link-type: doc
+   .. grid:: 1 2 2 2
+      :gutter: 2
 
-      A graphical interface in your web browser for querying and visualizing catalogs and images.
+      {% if env.portal_url %}
+      .. grid-item-card:: Portal
+         :link: portal/index
+         :link-type: doc
 
-   .. grid-item-card:: Notebooks
-      :link: notebooks/index
-      :link-type: doc
+         A graphical interface in your web browser for querying and visualizing catalogs and images.
+      {% endif %}
 
-      Run Jupyter Notebooks and scripts to analyze data with your own code.
+      {% if env.nb_url %}
+      .. grid-item-card:: Notebooks
+         :link: notebooks/index
+         :link-type: doc
 
-   .. grid-item-card:: API
-      :link: api/index
-      :link-type: doc
+         Run Jupyter Notebooks and scripts to analyze data with your own code.
+      {% endif %}
 
-      Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
+      .. grid-item-card:: API
+         :link: api/index
+         :link-type: doc
+
+         Connect to data from within the Rubin Science Platform and beyond, using IVOA standards.
 
 
 

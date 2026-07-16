@@ -1,5 +1,6 @@
 import glob
 import hashlib
+import json
 import os
 from pathlib import Path
 from typing import Optional
@@ -11,6 +12,8 @@ from rspdocs.constants import PRIMARY_ENV
 from rspdocs.discovery import load_environments_metadata
 from rspdocs.discovery.models import PhalanxEnv
 from rspdocs.discovery.service import PhalanxEnvService
+from rspdocs.discovery.switcher import build_switcher_entries
+from rspdocs.sphinxext.services import excluded_page_patterns
 
 # Select the environment to build given the sphinx tag (-t on sphinx-build
 # CLI), defaulting to the primary env if no tag matches. Each sphinx-build
@@ -72,30 +75,31 @@ exclude_patterns = [
     "**/*.rst.jinja",  # Jinja templates for sphinx-jinja
 ]
 
-# Ignore specific files that are ignored because the relevant services
-# aren't available in that environment.
-if not rsp_env.portal_url:
-    exclude_patterns.append("guides/portal/**/*.rst")
-    exclude_patterns.append("guides/getting-started/portal-first-steps.rst")
-if not rsp_env.nb_url:
-    exclude_patterns.append("guides/nb/**/*.rst")
-    exclude_patterns.append("guides/getting-started/notebook-first-steps.rst")
-    exclude_patterns.append("guides/notebooks/lsst.rsp/**")
-if not rsp_env.api_tap_url:
-    exclude_patterns.append("guides/auth/using-topcat-outside-rsp.rst")
-if not rsp_env.times_square_url:
-    exclude_patterns.append("guides/times-square/*.rst")
-    exclude_patterns.append("guides/times-square/**/*.rst")
+# Ignore source files whose service is absent in this environment. The
+# service-token -> paths map and its is_available() logic live in the
+# Sphinx-free services module, shared with the roles and the rsp-only
+# directive.
+exclude_patterns.extend(excluded_page_patterns(rsp_env))
 
 # Add environment switcher
 version = rsp_env.title  # noqa: F405
+
+# Generate the version-switcher data from the build roster into the gitignored
+# _build/ dir and register it as a static asset (copied to
+# <edition>/_static/versions.json). The switcher points at THIS edition's own
+# copy, which is freshly written on every build and complete because it lists
+# every roster environment. This keeps each edition self-consistent and fresh
+# even when other editions are rebuilt independently.
+_switcher_path = Path(__file__).parent / "_build" / "versions.json"
+_switcher_path.parent.mkdir(parents=True, exist_ok=True)
+_switcher_path.write_text(
+    json.dumps(build_switcher_entries(_metadata), indent=2) + "\n"
+)
+html_static_path.append(str(_switcher_path))  # noqa: F405
+
 html_theme_options["switcher"] = {  # noqa: F405
-    "json_url": (
-        "https://gist.githubusercontent.com/jonathansick/bbe902507790911d4017"
-        "3f11a4a1a256/raw/50267ee4dc957bd817e93a12c79a1702377e6ae1"
-        "/rsp-versions.json"
-    ),
-    "version_match": rsp_env.title,
+    "json_url": f"{rsp_env.ltd_url_prefix}_static/versions.json",
+    "version_match": rsp_env.name,
 }
 html_theme_options["navbar_center"] = [  # noqa: F405
     "version-switcher",
@@ -106,8 +110,6 @@ html_theme_options["navbar_align"] = "left"  # noqa: F405
 # Update doc_path for the "Edit on GitHub" link. The DocumenteerGuide preset
 # doesn't work here because docs/ doesn't contain the Sphinx conf.py.
 html_context["doc_path"] = "docs"  # noqa: F405
-
-html_static_path.append("docs/_static/versions.json")  # noqa: F405
 
 # Delete any objects that needn't be pickled with the Sphinx configuration
 del _config_template_loader

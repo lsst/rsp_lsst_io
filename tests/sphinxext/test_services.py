@@ -6,6 +6,8 @@ from collections.abc import Callable
 
 from rspdocs.discovery.models import PhalanxEnv
 from rspdocs.sphinxext.services import (
+    SERVICE_PAGE_EXCLUDES,
+    excluded_page_patterns,
     is_available,
     is_known_service,
     resolve_condition,
@@ -80,3 +82,48 @@ def test_resolve_condition_service(make_env: MakeEnv) -> None:
 def test_resolve_condition_unknown(make_env: MakeEnv) -> None:
     """A token that is neither service, env, nor ``primary`` returns None."""
     assert resolve_condition(make_env("base"), "bogus") is None
+
+
+def test_service_page_excludes_loaded_from_yaml() -> None:
+    """The exclude map loads from YAML with only known-service keys."""
+    assert SERVICE_PAGE_EXCLUDES  # non-empty
+    for service, globs in SERVICE_PAGE_EXCLUDES.items():
+        assert is_known_service(service), service
+        assert globs and all(isinstance(g, str) for g in globs)
+
+
+def test_excluded_page_patterns_absent_services(make_env: MakeEnv) -> None:
+    """An env missing TAP and Times Square excludes their pages only.
+
+    ``base`` has no datasets (no TAP) and no Times Square, but keeps portal and
+    notebook guides.
+    """
+    patterns = excluded_page_patterns(make_env("base"))
+    assert patterns == [
+        "guides/auth/using-topcat-outside-rsp.rst",
+        "guides/times-square/*.rst",
+        "guides/times-square/**/*.rst",
+    ]
+    # Portal and notebook guides stay because those services are present.
+    assert "guides/portal/**/*.rst" not in patterns
+    assert "guides/nb/**/*.rst" not in patterns
+
+
+def test_excluded_page_patterns_full_env(make_env: MakeEnv) -> None:
+    """A fully-featured env (idfint) excludes nothing."""
+    assert excluded_page_patterns(make_env("idfint")) == []
+
+
+def test_excluded_page_patterns_hidden_service(make_env: MakeEnv) -> None:
+    """A ``hidden_services`` entry makes the service absent for exclusions.
+
+    idfprod deploys Times Square but hides it, so its pages are still excluded
+    even though discovery reports the service.
+    """
+    patterns = excluded_page_patterns(
+        make_env("idfprod", hidden_services=["times-square"])
+    )
+    assert patterns == [
+        "guides/times-square/*.rst",
+        "guides/times-square/**/*.rst",
+    ]
