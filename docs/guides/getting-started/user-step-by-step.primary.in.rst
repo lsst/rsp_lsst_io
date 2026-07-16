@@ -11,7 +11,7 @@ Before getting started
 
 2. Have an account with an InCommon institution, GitHub, or ORCID.
 
-   - The |rsp-at| (|rsp-url|) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing identity.
+   - The |rsp-at| (:rsp-link:`rsp`) uses the CILogon service (operated by NCSA) to allow you to gain RSP access with an existing identity.
    - Accepted identity providers include institutional members of the `InCommon federation <https://incommon.org/>`__ and other providers like `GitHub <https://github.com/>`__ and `ORCID <https://orcid.org/>`__.
    - If your institution does not participate in InCommon (i.e., if it does not appear in the drop-down menu in step 2, below), use GitHub or ORCID (accounts are free).
    - The RSP's system asks your identity provider’s system if you are who you say you are.
@@ -28,7 +28,7 @@ Before getting started
 Video
 =====
 
-This video shows the steps for creating a new account on |rsp-url|:
+This video shows the steps for creating a new account on :rsp-link:`rsp`:
 
 .. vimeo:: 800911530
 
@@ -41,7 +41,7 @@ Step-by-step
 
       .. grid-item::
 
-         - Go to the RSP at |rsp-url| in your browser.
+         - Go to the RSP at :rsp-link:`rsp` in your browser.
          - Click :guilabel:`Log In` at the upper right.
 
       .. grid-item::
@@ -117,7 +117,7 @@ Step-by-step
 
 9. Log in and get started:
 
-   - After receiving the email notification that your account is approved, return to the RSP at |rsp-url| and log in.
+   - After receiving the email notification that your account is approved, return to the RSP at :rsp-link:`rsp` and log in.
    - Find information about the available data releases and resources for scientists, such as documentation and tutorials, at `rubinobservatory.org <https://rubinobservatory.org/for-scientists>`__.
 
 10. Link a non-institutional identity:

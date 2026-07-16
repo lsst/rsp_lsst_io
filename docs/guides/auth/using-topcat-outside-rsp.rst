@@ -24,7 +24,7 @@ This example specifically shows how to access table data from the Science Platfo
 
 #. This will bring up a window with a list of available TAP services.
    We want to use a service with a known endpoint.
-   Enter |rsp-tap-url-code| in the box at the bottom of the page labeled :guilabel:`TAP URL`.
+   Enter :rsp-url:`tap` in the box at the bottom of the page labeled :guilabel:`TAP URL`.
 
    .. image:: images/topcat-tap-window.png
       :alt: The TAP service configuration window.

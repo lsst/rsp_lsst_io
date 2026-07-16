@@ -1,4 +1,5 @@
 import glob
+import hashlib
 import os
 from pathlib import Path
 from typing import Optional
@@ -30,6 +31,28 @@ env_service = PhalanxEnvService.load(
 )
 
 rsp_env: Optional[PhalanxEnv] = env_service.envs[target_env]
+
+# Enable the in-repo Sphinx extension providing the :rsp-url:/:rsp-link: roles
+# and the .. rsp-only:: directive. ``extensions`` is exported by
+# ``documenteer.conf.guide``. The extension's own setup() runs because it is in
+# ``extensions``; don't also invoke it from the setup() below.
+extensions.append("rspdocs.sphinxext")  # noqa: F405
+
+# Data channels the extension resolves roles/conditions against.
+rsp_all_envs = env_service.envs
+
+# Hash of the discovery JSON that was just loaded. Registered with
+# rebuild="env", this is the sole incremental-rebuild trigger: when discovery
+# data changes its hash changes, so Sphinx reparses every doc and the roles
+# re-bake fresh URLs into the doctrees.
+_discovery_hash = hashlib.sha256()
+for _name in _fetch_envs:
+    _discovery_hash.update(
+        (
+            Path(__file__).parent / "_build" / "discovery" / f"{_name}.json"
+        ).read_bytes()
+    )
+rsp_discovery_hash = _discovery_hash.hexdigest()
 
 _config_template_loader = FileSystemLoader(".")
 _jinja_env = Environment(

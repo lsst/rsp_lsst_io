@@ -28,7 +28,7 @@ WebDAV
     --------------------------
 
 
-    3. Navigate to |webdav-app| and wait for the page to load (the delay is the time it takes to start your personal WebDAV server if it's not running already).
+    3. Navigate to :rsp-link:`webdav` and wait for the page to load (the delay is the time it takes to start your personal WebDAV server if it's not running already).
 
     4. You can now connect to your WebDAV server with the tool of your choice. While there are dedicated clients, most operating systems support WebDAV in their file browsing built-in tools:
 

@@ -22,7 +22,7 @@ If you are a heavy user of the RSP APIs, make sure to read the relevant section 
 The Quotas page
 ===============
 
-You can find your |rsp-quotas-page| under your user profile, accessible through the |rsp-url| home page:
+You can find your |rsp-quotas-page| under your user profile, accessible through the :rsp-link:`rsp` home page:
 
 .. figure:: quotas_ani.gif
    :alt: animation for how to navigate to the Quotas page
