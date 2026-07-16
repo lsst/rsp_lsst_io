@@ -2,7 +2,7 @@
 How to write a notebook for Times Square
 ########################################
 
-If you know how to create a Jupyter notebook, publishing a notebook to |times-square| will be familiar.
+If you know how to create a Jupyter notebook, publishing a notebook to :rsp-link:`Times Square <times-square>` will be familiar.
 This page outlines the basic steps for adding and authoring a notebook for Times Square, and links to further documentation.
 
 1. Setting up on the Science Platform Notebook Aspect
@@ -24,7 +24,7 @@ You'll "publish" your notebook to Times Square by pushing it to GitHub.
 
 .. tip::
 
-   To see what repositories are available on Times Square, visit the |times-square| homepage.
+   To see what repositories are available on Times Square, visit the :rsp-link:`Times Square <times-square>` homepage.
    The sidebar shows what repositories already host notebooks.
 
    If an existing repository doesn't fit your needs, you can create a new repository on GitHub and set it up for Times Square.
@@ -208,4 +208,4 @@ Whenever you push an update, Times Square will re-check and re-run the notebook.
 Therefore you can keep trying your notebook on Times Square until you're satisfied with the results.
 
 When you're ready to merge the pull request, click the "Merge pull request" button on the pull request page.
-At this point, the notebook will be available from the |times-square| homepage.
+At this point, the notebook will be available from the :rsp-link:`Times Square <times-square>` homepage.

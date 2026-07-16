@@ -2,10 +2,11 @@
 API aspect
 ##########
 
-.. jinja:: rsp
+.. rsp-only:: primary
 
-   {% if env.is_primary %}
    .. include:: api.primary.in.rst
-   {% else %}
+
+.. rsp-only:: primary
+   :not:
+
    .. include:: api.primary.in.rst
-   {% endif %}
