@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from importlib.resources import files
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 __all__ = ["EnvMeta", "EnvironmentsMetadata", "load_environments_metadata"]
 
@@ -54,6 +54,17 @@ class EnvironmentsMetadata(BaseModel):
     environments: dict[str, EnvMeta] = Field(
         description="Supplementary metadata, keyed by environment name.",
     )
+
+    @model_validator(mode="after")
+    def _check_roster_has_metadata(self) -> EnvironmentsMetadata:
+        """Ensure every ``build_roster`` env has a metadata entry."""
+        missing = set(self.build_roster) - set(self.environments)
+        if missing:
+            raise ValueError(
+                "environments.json build_roster references environments "
+                f"with no metadata entry: {sorted(missing)}"
+            )
+        return self
 
 
 def load_environments_metadata() -> EnvironmentsMetadata:
