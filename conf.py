@@ -8,7 +8,7 @@ from typing import Optional
 from documenteer.conf.guide import *  # noqa: F401 F403
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from rspdocs.constants import DOCS_ROOT_URL, PRIMARY_ENV
+from rspdocs.constants import PRIMARY_ENV
 from rspdocs.discovery import load_environments_metadata
 from rspdocs.discovery.models import PhalanxEnv
 from rspdocs.discovery.service import PhalanxEnvService
@@ -86,8 +86,10 @@ version = rsp_env.title  # noqa: F405
 
 # Generate the version-switcher data from the build roster into the gitignored
 # _build/ dir and register it as a static asset (copied to
-# <edition>/_static/versions.json). The switcher itself points at the primary
-# edition's copy, which is stable across builds and lists every environment.
+# <edition>/_static/versions.json). The switcher points at THIS edition's own
+# copy, which is freshly written on every build and complete because it lists
+# every roster environment. This keeps each edition self-consistent and fresh
+# even when other editions are rebuilt independently.
 _switcher_path = Path(__file__).parent / "_build" / "versions.json"
 _switcher_path.parent.mkdir(parents=True, exist_ok=True)
 _switcher_path.write_text(
@@ -96,7 +98,7 @@ _switcher_path.write_text(
 html_static_path.append(str(_switcher_path))  # noqa: F405
 
 html_theme_options["switcher"] = {  # noqa: F405
-    "json_url": f"{DOCS_ROOT_URL}_static/versions.json",
+    "json_url": f"{rsp_env.ltd_url_prefix}_static/versions.json",
     "version_match": rsp_env.name,
 }
 html_theme_options["navbar_center"] = [  # noqa: F405
