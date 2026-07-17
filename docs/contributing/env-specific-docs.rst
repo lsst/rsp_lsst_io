@@ -127,9 +127,11 @@ Add the ``:substitutions:`` option to a ``code-block`` (or ``:content-substituti
       export EXTERNAL_TAP_URL="|rsp-tap-url|"
 
 ``|rsp-tap-url|`` is the TAP service's URL without a trailing slash, the form client configuration expects (whereas ``:rsp-url:`tap``` renders discovery's canonical trailing-slash URL).
-It is defined only in environments that have a TAP service, so wrap its uses in a matching ``.. rsp-only:: tap`` block — as in this rendered example:
+It is defined only in environments that have a TAP service, so wrap its uses in a matching ``.. rsp-only:: tap`` block — including any lead-in prose that would be left dangling in environments where the block is dropped.
 
 .. rsp-only:: tap
+
+   In this environment, the example above renders as:
 
    .. code-block:: bash
       :substitutions:
