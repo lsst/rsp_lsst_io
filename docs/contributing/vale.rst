@@ -15,7 +15,7 @@ What Vale checks
 Vale runs three sets of rules over the ``.rst`` and ``.md`` files under ``docs/``:
 
 - ``Vale.Spelling`` — spell-checking, using the project vocabulary (see below) for legitimate project and astronomy terms.
-- **Google** — the Google Developer Documentation Style Guide package, tuned for this corpus. Some of its rules are demoted to suggestions or disabled where they produce noise; see the comments in ``.vale.ini`` for the rationale behind each adjustment.
+- **Google** — the Google Developer Documentation Style Guide package, tuned for this corpus. Some of its rules are demoted to suggestions or turned off where they produce noise. See the comments in ``.vale.ini`` for the rationale behind each adjustment.
 
 .. vale off
 
@@ -37,7 +37,7 @@ Run Vale over the documentation with tox:
    tox -e vale
 
 This installs Vale and docutils, runs ``vale sync`` to download the Google package into ``styles/`` (which is gitignored), and lints ``docs/``.
-A non-zero exit code just means Vale found something to report; it is not an error.
+A non-zero exit code just means Vale found something to report — it's not an error.
 
 On a pull request, GitHub Actions runs Vale too, and posts any findings on the lines you changed as inline annotations.
 That job is always green, even when Vale has findings.
@@ -47,16 +47,17 @@ Adding words to the vocabulary
 
 When Vale flags a legitimate project term, an astronomy term, or a piece of software as a misspelling, add it to the project vocabulary rather than working around it.
 The vocabulary is a plain-text file at ``styles/config/vocabularies/RSP/accept.txt``.
-Each line is a case-sensitive regular expression; add the term on its own line, grouped under the appropriate comment heading.
+Each line is a case-sensitive regular expression.
+Add the term on its own line, grouped under the appropriate comment heading.
 
-Before you accept a word, make sure it is genuinely a term and not a typo.
+Before you accept a word, make sure it's genuinely a term and not a typo.
 The `lsst-texmf glossary <https://github.com/lsst/lsst-texmf/blob/main/etc/glossarydefs.csv>`__ is a useful reference for the canonical spelling of Rubin Observatory terms.
 If a flagged word is actually a typo, fix it in the source instead of accepting it.
 
 Suppressing false positives
 ===========================
 
-Occasionally a rule fires on something that is correct in context.
+Occasionally a rule fires on something that's correct in context.
 When that happens, you can turn Vale off for a span of source with comments:
 
 .. code-block:: rst
