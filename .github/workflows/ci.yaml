@@ -21,12 +21,13 @@ env:
   schedule:
     # Weekly rebuild so the published sites pick up fresh Repertoire
     # service-discovery data (fetched at build time) without needing a commit
-    # to land. Rubin deploys on Patch Thursdays in US Pacific time; this fires
-    # at 07:00 UTC Friday, which is Thursday 23:00 PST / Friday 00:00 PDT
-    # Pacific — after the Thursday deployment window has settled. Scheduled
-    # events always run on the default branch (main), so the upload-all job's
-    # refs/heads/main guard is satisfied.
-    - cron: "0 7 * * 5"
+    # to land. Rubin deploys on Patch Thursdays, with all updates in place by
+    # 3:15 pm US Pacific. GitHub cron is UTC-only, so 23:15 UTC Thursday is
+    # 3:15 pm PST (winter) and 4:15 pm PDT (summer) — never earlier than the
+    # end of the update window in either season. Scheduled events always run
+    # on the default branch (main), so the upload-all job's refs/heads/main
+    # guard is satisfied.
+    - cron: "15 23 * * 4"
   # On-demand rebuild. When dispatched on the main ref this runs the full
   # build + serialized LTD upload path (see the upload-all job's condition);
   # dispatched on any other ref it builds but does not publish.
