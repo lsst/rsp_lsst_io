@@ -12,6 +12,10 @@ Information about the RSP environments is fetched at build time from the per-env
 A small supplementary shim in the `documentation repository <https://github.com/lsst/rsp_lsst_io>`_ (:file:`src/rspdocs/discovery/environments.json`) provides the handful of things discovery doesn't cover, such as human-readable environment titles and the roster of environments to build.
 When the network is unavailable, the build falls back to a local cache (in :file:`_build/discovery/`) and announces the fallback in the build output.
 
+Because discovery data is fetched fresh at build time, the published sites only pick up environment changes when a build runs.
+Merges to ``main`` trigger a build and publish, and a weekly scheduled rebuild (Thursday 23:15 UTC, after the Patch Thursday update window ends at 3:15 pm Pacific) republishes every environment so fresh discovery data flows out without needing a commit.
+You can also trigger an on-demand rebuild by running the ``CI`` GitHub Actions workflow manually (its ``workflow_dispatch`` trigger); when dispatched from ``main`` it publishes all environments.
+
 This page describes the supported approaches for writing documentation that differs between environments.
 Reach for them in this order, from the most targeted to the most general:
 
