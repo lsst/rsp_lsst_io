@@ -68,4 +68,4 @@ The basic steps are:
 
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
 
-6. After the first time perfoming Steps 4 and/or 5, log out and log back into the RSP.
+6. After the first time performing Steps 4 and/or 5, log out and log back into the RSP.

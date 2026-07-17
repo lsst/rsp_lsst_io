@@ -53,7 +53,7 @@ Return to this launch pad at any time by clicking the blue plus symbol at upper-
 
 In the narrow left-most vertical sidebar of icons, the top icon is a file folder, and that is the default view for the left sidebar.
 The wider part of the left sidebar lists folders in the user's home directory (e.g., DATA, WORK, and notebooks).
-Launching a terminal (the default is a linux bash terminal) and using the command "ls" will return the same list.
+Launching a terminal (the default is a Linux bash terminal) and using the command "ls" will return the same list.
 Navigate the file system and open files by double-clicking on folders and files in the left sidebar.
 Clicking the folder icon above the list of files will take you back to your home directory.
 

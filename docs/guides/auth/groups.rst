@@ -9,10 +9,10 @@ Create and manage closed user groups in order to share private files.
 Create a group
 ==============
 
-Groups are created an managed in the Comanage system at `id.lsst.cloud <https://id.lsst.cloud>`_
+Groups are created and managed in the COmanage system at `id.lsst.cloud <https://id.lsst.cloud>`_
 (not from the terminal command line, as in some other systems).
 
-How to create a closed group in Comanage:
+How to create a closed group in COmanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 
@@ -48,12 +48,12 @@ Manage group membership
 Only group owners can manage closed-group membership.
 
 A user can only be a member of up to 15 groups at this time.
-Joining additional groups will have no effect: they will show up in the Comanage UI, but will not have any effect on actual authorization to access directories and files.
+Joining additional groups will have no effect: they will show up in the COmanage UI, but will not have any effect on actual authorization to access directories and files.
 
 From the terminal command line it is possible to see all groups a user belongs to with ``groups <username>``
 (see your own username with ``whoami``).
 
-How to manage group membership in Comanage:
+How to manage group membership in COmanage:
 
 * In a browser, navigate to `id.lsst.cloud <https://id.lsst.cloud>`_ and log in.
 * In the left menu sidebar, click on "Groups" and then "My Groups".
@@ -72,7 +72,7 @@ Set directory permissions
 
 The point of creating a closed group is to permit group members to access privately shared files.
 
-Shared files are not managed via the Comanage webpage; use the terminal command line in the Notebook Aspect.
+Shared files are not managed via the COmanage webpage; use the terminal command line in the Notebook Aspect.
 
 These instructions are not all unique to the Rubin Science Platform or JupyterLab;
 some are generic processes for manipulating directory permissions in Unix-like operating systems.

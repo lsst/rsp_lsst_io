@@ -62,6 +62,40 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_ALERT_WEBHOOK }}
 
+  # Advisory full-corpus Vale report. Non-blocking: it always succeeds and
+  # uploads the report as an artifact for review. It does not affect the
+  # build matrix or the Slack notifications. See docs/contributing/vale.rst.
+  vale-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # Vale (PyPI) ships the binary; docutils supplies rst2html for RST.
+      - name: Install Vale and docutils
+        run: pip install vale docutils
+
+      - name: Sync Vale packages
+        run: vale sync
+
+      # Run over the whole included corpus and capture the report. The path
+      # exclusions in .vale.ini (updates, inbox drafts, roadmap) still apply;
+      # `|| true` keeps the step green even though Vale exits non-zero when it
+      # has findings.
+      - name: Run Vale over the full corpus
+        run: vale docs/ | tee vale-report.txt || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vale-report
+          path: vale-report.txt
+          if-no-files-found: warn
+
   build:
     runs-on: ubuntu-latest
 

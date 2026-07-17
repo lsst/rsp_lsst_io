@@ -65,6 +65,44 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           tox-envs: "py,typing"
 
+  # Advisory prose linting with Vale (https://vale.sh). This job is
+  # deliberately non-blocking: vale-action runs reviewdog with
+  # fail_on_error: false and filter_mode: added, so findings surface as
+  # inline annotations on changed lines only and the job stays green even
+  # when Vale reports issues. See docs/contributing/vale.rst.
+  vale:
+    runs-on: ubuntu-latest
+    # Annotations are only meaningful on pull requests (reviewdog needs a diff).
+    if: ${{ github.event_name == 'pull_request' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # Vale shells out to rst2html (docutils) to parse reStructuredText.
+      - name: Install docutils
+        run: pip install docutils
+
+      - name: Run Vale
+        uses: errata-ai/vale-action@v2
+        # Vale is advisory: annotations should appear on the PR, but the
+        # check must stay green. fail_on_error alone isn't enough — the
+        # action still fails the step when reviewdog exits nonzero (for
+        # example when a prose-heavy PR overflows GitHub's per-step
+        # annotation cap), so tolerate any step failure outright.
+        continue-on-error: true
+        with:
+          # vale-action runs `vale sync` to download the Google package.
+          # The default reporter (github-pr-annotations) works with the
+          # read-only GITHUB_TOKEN on forked PRs, unlike github-pr-check.
+          fail_on_error: false
+          filter_mode: added
+          files: docs
+
   build:
     runs-on: ubuntu-latest
 

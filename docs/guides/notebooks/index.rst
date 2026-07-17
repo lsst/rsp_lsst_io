@@ -21,7 +21,7 @@ The Notebook aspect offers a variety of functionality, including:
 
 * programmatic access and analysis of LSST data
 * :doc:`Jupyter Notebooks <jupyter-notebooks/index>`
-* :doc:`terminal <jupyterlab-terminal/index>` and iPython interface
+* :doc:`terminal <jupyterlab-terminal/index>` and IPython interface
 * stable, Python-based software environment
 * pre-installed `LSST Science Pipelines`_
 * shared computational resources and disk space
