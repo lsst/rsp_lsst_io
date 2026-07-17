@@ -1,0 +1,18 @@
+extends: existence
+message: "Address the reader as 'you', not '%s'. If you mean the project, name 'Rubin Observatory'."
+link: https://rsp.lsst.io/contributing/style-guide.html
+# House style (docs/contributing/style-guide.rst, "Style and voice"): never
+# use "we" — it is ambiguous. Say "you" for the reader, or name "Rubin
+# Observatory" for the project. Supplements Google.We, whose token coverage of
+# reStructuredText prose on this corpus is thin.
+level: warning
+ignorecase: true
+tokens:
+  # "us" is deliberately omitted: it collides with "US" (US Pacific time, US
+  # facilities) far more often than it appears as the first-person pronoun.
+  - "we"
+  - "we're"
+  - "we've"
+  - "we'll"
+  - "our"
+  - "ours"

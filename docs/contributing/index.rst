@@ -39,3 +39,4 @@ Guides
    building-the-docs
    env-specific-docs
    style-guide
+   vale

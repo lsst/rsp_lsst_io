@@ -1,0 +1,14 @@
+extends: existence
+message: "Don't use '%s' as link text; make the relevant noun or phrase the link."
+link: https://rsp.lsst.io/contributing/style-guide.html
+# House style (docs/contributing/style-guide.rst, "Links"): never use "here"
+# as link text. This flags the RST hyperlink forms `here <url>`_ and
+# `click here <url>`_ (and "this page"), where the visible text precedes the
+# angle-bracketed target, plus the :doc:/:ref: role forms with the same text.
+# Matching is case-insensitive so `Click here <url>`_ is also caught.
+level: warning
+nonword: true
+scope: raw
+tokens:
+  - '(?i)`\s*(?:here|click here|this page)\s*<[^>]+>`_'
+  - '(?i):(?:doc|ref):`\s*(?:here|click here|this page)\s*<[^>]+>`'

@@ -4,6 +4,11 @@ _build
 # automodapi-generated API stub pages for lsst.rsp
 docs/guides/notebooks/lsst.rsp/api/
 
+# Vale external style packages synced by `vale sync` (see .vale.ini).
+# The RSP style (styles/RSP) and vocabulary (styles/config) are committed;
+# the downloaded Google package is not.
+/styles/Google/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

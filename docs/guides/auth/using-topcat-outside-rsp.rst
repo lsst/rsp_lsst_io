@@ -1,5 +1,5 @@
 #################################################################
-Tutorial: Authenticating from TOPCat outside the Science Platform
+Tutorial: Authenticating from TOPCAT outside the Science Platform
 #################################################################
 
 This tutorial shows you how to access the Rubin Science Platform datasets from outside the Science Platform with :doc:`user tokens <creating-user-tokens>`.
@@ -20,7 +20,7 @@ This example specifically shows how to access table data from the Science Platfo
 #. From TOPCAT, select :menuselection:`VO --> Table Access Protocol (TAP) Query`.
 
   .. image:: images/topcat-vo-menu.png
-     :alt: The VO menue
+     :alt: The VO menu
 
 #. This will bring up a window with a list of available TAP services.
    We want to use a service with a known endpoint.

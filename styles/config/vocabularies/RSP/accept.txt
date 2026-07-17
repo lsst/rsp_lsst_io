@@ -1,0 +1,84 @@
+# RSP vocabulary -- case-sensitive accepted spellings for Vale.Spelling.
+# Built empirically from a full-corpus spelling pass (issue #100 / DM-55528).
+# Entries are regular expressions; add legitimate project, astronomy, and
+# software terms here. Fix genuine typos in the source instead of accepting
+# them. See docs/contributing/vale.rst.
+
+# --- Rubin / RSP project terms ----------------------------------------------
+RSP
+RSPClient
+RSPDiscovery
+COmanage
+CILogon
+Onboarding
+onboarding
+Chronograf
+Grafana
+TOPCAT
+
+# --- People (release-note / credit lines) -----------------------------------
+Germanotta
+Jenness
+Shaughnessy
+Stefani
+
+# --- Astronomy / science terms ----------------------------------------------
+coadd
+coadded
+dayobs
+
+# --- Software / tooling terms -----------------------------------------------
+APIs?
+[Bb]oolean
+[Bb]ools?
+[Cc]onda
+config
+repo
+subtree
+templated
+toctree
+[Cc]onditionaliz(e|es|ed|ing)
+ipython
+IPython
+jinja
+jupyter
+Makefile
+pdb
+pyvo
+venv
+tox
+docutils
+gitignored
+gh
+emacs
+middleware
+traceback
+unexecuted
+preconfigured
+allowlist
+browsable
+grayscale
+scrollbar
+[Ss]crollbars?
+[Aa]utosaves?
+[Ss]ignup
+iCalendar
+[Pp]arameteriz(e|es|ed|ing|ation|ations)
+lsst_distrib
+pipe_tasks
+Astro
+Astropy
+nbstripout
+situ
+
+# --- RST syntax / code-identifier artifacts ---------------------------------
+# Snake_case identifiers (API function names, config keys) read as prose by
+# Vale's spell checker; accept any lowercase snake_case token.
+[a-z][a-z0-9]*(_[a-z0-9]+)+
+# Trailing-underscore RST reference names (e.g. `Astroplan_`, `tox_`).
+[A-Za-z][A-Za-z0-9_]*_
+# Common short technical tokens.
+DM
+LSST
+Docs
+Booleans

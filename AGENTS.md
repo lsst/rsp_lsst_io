@@ -40,6 +40,7 @@ Because content can differ across environments, authoring often uses the environ
 - `tox -e py` — run the pytest suite.
 - `tox -e typing` — run mypy over `src/rspdocs` and `tests`.
 - `tox -e lint` — run all pre-commit hooks over the tree.
+- `tox -e vale` — run the [Vale](https://vale.sh) editorial linter (Google + RSP styles) over `docs/`. Findings are **advisory**: they never fail CI (a non-zero exit just means Vale had something to report), there is no pre-commit hook, and on pull requests the CI annotations are non-blocking. See `docs/contributing/vale.rst`. Accept legitimate terms in `styles/config/vocabularies/RSP/accept.txt`; fix real typos in the source.
 - `tox -e linkcheck-idfprod` — check external links for that environment (a `linkcheck-{env}` exists per environment).
 
 **Builds run under `-W`, so every Sphinx warning is fatal.**
