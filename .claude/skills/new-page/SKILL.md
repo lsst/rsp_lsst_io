@@ -38,15 +38,24 @@ Match the heading-underline convention used across this repo (inspect a neighbor
 Use **sentence case** for the title and all headings (capitalize only the first word and proper nouns).
 Use **semantic line breaks**: one sentence (or clause) per source line — never hard-wrap to a fixed column.
 
+**Open with a context-setting paragraph.**
+The first paragraph after the title is a way-finding mechanism: it answers what the page is for (and for whom), so readers landing from search or a link can immediately tell whether they're in the right place.
+Link to related concepts and pages from it where that helps orientation.
+
+**Set an OpenGraph description.**
+Add an `:og:description:` field at the very top of the file (before the title) with a concise one-sentence description; [sphinxext-opengraph](https://sphinxext-opengraph.readthedocs.io/en/latest/#per-page-overrides) uses it for link previews.
+
 Skeleton to adapt:
 
 ```rst
+:og:description: How to start a Notebook server on the Rubin Science Platform and stop it when you're done.
+
 #########################
 Start and stop a server
 #########################
 
-From the RSP landing page, click on the central panel for Notebooks.
-This paragraph uses one sentence per source line.
+This page shows you how to start a Notebook Aspect server and shut it down when you're done.
+This opening paragraph sets context for the reader, one sentence per source line.
 
 Select a server size
 ====================
@@ -60,6 +69,11 @@ Text for a subsection.
 ```
 
 Try not to exceed two levels of heading hierarchy below the title (see the style guide).
+
+### Available Sphinx features
+
+Pages are built with [documenteer's guide configuration](https://documenteer.lsst.io/guides/index.html), so its bundled extensions are available without any conf changes — including [sphinx-design](https://sphinx-design.readthedocs.io/) tab sets, badges, and cards.
+Use these where they genuinely aid the reader (e.g. a `tab-set` for per-platform instructions); see the documenteer guides documentation for the full feature list.
 
 ## 3. Register the page in the parent toctree
 
