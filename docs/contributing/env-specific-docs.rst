@@ -100,14 +100,28 @@ These substitutions are defined in :file:`rst_prolog.rst.jinja`, which is itself
 
    * - Syntax
      - Example
+     - Description
    * - ``|rsp-at|``
      - |rsp-at|
+     - An inline link to this environment's homepage; outside the primary environment it also names the environment.
    * - ``|rsp-env|``
      - |rsp-env|
+     - The environment's full display name, as plain text.
    * - ``|rsp-env-link|``
      - |rsp-env-link|
+     - The environment's full display name, linked to its homepage.
+   * - ``|rsp-tap-url|``
+     - .. rsp-only:: tap
+
+          |rsp-tap-url|
+     - The TAP service's URL without a trailing slash, for :ref:`code samples <envdocs-code-substitutions>`.
+       Defined only in environments with a TAP service.
    * - ``|webdav-server|``
-     - |webdav-server|
+     - .. rsp-only:: webdav
+
+          |webdav-server|
+     - The WebDAV server address with a username placeholder, for :ref:`code samples <envdocs-code-substitutions>`.
+       Defined only in environments with a WebDAV service.
 
 Prefer a :ref:`role <envdocs-roles>` whenever you only need a service's URL, a link to it, or a URL derived by appending a path — the roles replaced the per-service URL, link, and derived-path substitutions the docs used to define.
 
