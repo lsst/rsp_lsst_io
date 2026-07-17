@@ -9,7 +9,7 @@ From the RSP landing page at :rsp-link:`rsp` click on the left panel for the Por
 
 From the main landing page (see the figure below), click on any tab to go to the graphical user interface for querying data.
 
-  .. figure:: images/portal_landing.png
+  .. figure:: images/portal-landing.png
       :alt: A screenshot of the Portal landing page with tabs and links to access the Portal query interfaces.
       :width: 400
       :name: portal_landing

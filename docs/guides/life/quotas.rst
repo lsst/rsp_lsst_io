@@ -24,7 +24,7 @@ The Quotas page
 
 You can find your :rsp-link:`Quotas page <rsp/settings/quotas>` under your user profile, accessible through the :rsp-link:`rsp` home page:
 
-.. figure:: quotas_ani.gif
+.. figure:: quotas-ani.gif
    :alt: animation for how to navigate to the Quotas page
 
 You can consult the Quotas page for what limits are being placed on your activity on |rsp-env-link| at any given time.

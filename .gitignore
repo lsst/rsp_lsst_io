@@ -1,3 +1,6 @@
+# macOS Finder metadata
+.DS_Store
+
 # Documentation build products
 _build
 

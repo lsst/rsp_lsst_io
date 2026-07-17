@@ -59,7 +59,7 @@ Full editorial guidance is in `docs/contributing/style-guide.rst`; it defers to 
 
 - **Semantic line breaks** — one sentence (or clause) per source line; never hard-wrap to a fixed column.
 - **Sentence case** for headings, not title case.
-- **Lowercase, hyphen-separated file names** — no underscores or spaces.
+- **Lowercase, hyphen-separated file names** — no underscores or spaces. File and directory names under `docs/` are enforced by `rspdocs-lint-paths` (runs in pre-commit / `tox -e lint`), which also blocks committed `.DS_Store` files.
 - Address the reader as **"you"**, never **"we"** (name "Rubin Observatory" if that's what's meant).
 - **Never use "here" as link text** — make the relevant noun or phrase the link.
 
