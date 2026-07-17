@@ -86,6 +86,13 @@ Biggest gotchas:
 
 Read the relevant page(s) under `docs/contributing/` before writing or restructuring content — `style-guide.rst` for conventions, `env-specific-docs.rst` for anything that varies by environment, and `building-the-docs.rst` for the build workflow. These are the source of truth; this file only points at them.
 
+## Repo skills
+
+This repo ships agent skills — step-by-step playbooks for common tasks — under `.claude/skills/` (mirrored at `.agents/skills` for non-Claude harnesses). Load the matching skill when you start one of these tasks:
+
+- **`new-page`** — scaffolding a new documentation page: file placement, the reStructuredText skeleton, heading style, and toctree registration. Use when adding a new page or section.
+- **`env-specific-content`** — writing content that differs across RSP environments: the `rsp-url`/`rsp-link` roles, the `rsp-only` directive, substitutions, `*.in.rst` includes, and page excludes. Use whenever content mentions an environment URL or varies per environment.
+
 ## Branch convention
 
 Work on a branch named `tickets/DM-XXXXX`, using the Jira ticket key for the work.
