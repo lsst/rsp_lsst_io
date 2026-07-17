@@ -89,3 +89,4 @@ Read the relevant page(s) under `docs/contributing/` before writing or restructu
 ## Branch convention
 
 Work on a branch named `tickets/DM-XXXXX`, using the Jira ticket key for the work.
+For small-scale work with no Jira ticket, use `u/<github-username>/<description>` instead.
