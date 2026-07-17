@@ -21,8 +21,9 @@ Pick the section under `docs/` that fits the content:
 File-name rules:
 
 - Lowercase, with hyphens between words. Never underscores or spaces (e.g. `starting-and-stopping`, not `starting_and_stopping`).
-- A page **with images** (or that heads a subsection) lives in its own directory as `index.rst`, with images in a sibling `images/` directory — e.g. `docs/guides/notebooks/starting-and-stopping/index.rst` and `docs/guides/notebooks/starting-and-stopping/images/`.
-- A simple single-file page can live directly in the section — e.g. `docs/guides/life/quotas.rst`.
+- A page **with images** (or that heads a subsection) has historically lived in its own directory as `index.rst`, with images in a sibling `images/` directory — e.g. `docs/guides/notebooks/starting-and-stopping/index.rst` and `docs/guides/notebooks/starting-and-stopping/images/`.
+  **Treat this as an anti-pattern to unwind, not a model to copy**: going forward, reserve `index.rst` for genuine index pages (ones that contain a `toctree`), and put images alongside the prose file that uses them.
+- Prefer a single-file page named for its topic, directly in the section — e.g. `docs/guides/life/quotas.rst`.
 
 Inspect the neighboring pages in the section you chose and match their layout.
 
