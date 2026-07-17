@@ -10,7 +10,12 @@ from rubin.repertoire import Discovery
 from ..constants import DOCS_ROOT_URL, PRIMARY_ENV
 from .metadata import EnvMeta
 
-__all__ = ["PhalanxEnv", "EnvironmentDict", "ltd_edition_url"]
+__all__ = [
+    "DatasetInfo",
+    "PhalanxEnv",
+    "EnvironmentDict",
+    "ltd_edition_url",
+]
 
 # Default ports we omit from a derived origin so it matches the URL as written
 # (pydantic always fills ``HttpUrl.port`` with the scheme default).
@@ -73,6 +78,64 @@ def _api_origin(discovery: Discovery) -> str:
     if fallback is None:  # pragma: no cover - datasets always expose services
         raise ValueError("discovery has datasets but no data services")
     return _origin(fallback)
+
+
+# User-facing data-access service tokens that a dataset may expose, in the
+# order they should appear in author-facing tables. Discovery also carries
+# per-dataset ``gms`` (group membership) and ``alerts`` services, but those are
+# not data-access endpoints users query for a dataset, so they are omitted.
+DATASET_SERVICES: tuple[str, ...] = (
+    "tap",
+    "sia",
+    "cutout",
+    "datalink",
+    "hips",
+)
+"""Dataset service tokens exposed to authors, in table-column order."""
+
+
+class DatasetInfo(BaseModel):
+    """A dataset available in an environment, with its data-access services.
+
+    Built from a Repertoire ``Dataset`` entry, this keeps only the
+    author-facing pieces: the dataset's description and documentation URL, and
+    the per-dataset data-access service URLs (TAP, SIA, cutout, datalink,
+    HiPS). A service token maps to ``None`` when the dataset does not expose it
+    in this environment.
+    """
+
+    name: str = Field(
+        description="The dataset's name (its discovery key).",
+        examples=["dp1"],
+    )
+
+    description: str | None = Field(
+        None,
+        description="Long description of the dataset.",
+        examples=["Data Preview 1 contains image and catalog products ..."],
+    )
+
+    docs_url: HttpUrl | None = Field(
+        None,
+        description="URL to more detailed documentation about the dataset.",
+        examples=["https://dp1.lsst.io/"],
+    )
+
+    services: dict[str, HttpUrl] = Field(
+        default_factory=dict,
+        description=(
+            "Data-access service token -> URL for the services this dataset "
+            "exposes. Only tokens in ``DATASET_SERVICES`` are retained."
+        ),
+    )
+
+    def service_url(self, service: str) -> HttpUrl | None:
+        """Return the URL for ``service`` in this dataset, or ``None``."""
+        return self.services.get(service)
+
+    def has_service(self, service: str) -> bool:
+        """Return whether this dataset exposes ``service``."""
+        return service in self.services
 
 
 class PhalanxEnv(BaseModel):
@@ -151,6 +214,15 @@ class PhalanxEnv(BaseModel):
         None,
         description="URL for root Times Square page (if deployed).",
         examples=["https://data.lsst.cloud/times-square/"],
+    )
+
+    datasets: dict[str, DatasetInfo] = Field(
+        default_factory=dict,
+        description=(
+            "Datasets served in this environment, keyed by dataset name, in "
+            "discovery order. Each carries its description, docs URL, and "
+            "per-dataset data-access service URLs."
+        ),
     )
 
     @classmethod
@@ -236,6 +308,22 @@ class PhalanxEnv(BaseModel):
             else None
         )
 
+        # Datasets and their user-facing data-access service URLs. Keep only
+        # the tokens in DATASET_SERVICES, preserving discovery's dataset order.
+        datasets: dict[str, DatasetInfo] = {}
+        for dataset_name, dataset in discovery.datasets.items():
+            services = {
+                token: dataset.services[token].url
+                for token in DATASET_SERVICES
+                if token in dataset.services
+            }
+            datasets[dataset_name] = DatasetInfo(
+                name=dataset_name,
+                description=dataset.description,
+                docs_url=dataset.docs_url,
+                services=services,
+            )
+
         return cls(
             name=name,
             title=meta.title,
@@ -252,6 +340,7 @@ class PhalanxEnv(BaseModel):
                 f"https://phalanx.lsst.io/environments/{name}/"
             ),
             times_square_url=times_square_url,
+            datasets=datasets,
         )
 
     @property

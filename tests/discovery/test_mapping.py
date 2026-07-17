@@ -182,3 +182,67 @@ def test_non_primary_env_ltd_url(discovery_data_dir: Path) -> None:
 
     assert env.is_primary is False
     assert env.ltd_url_prefix == "https://rsp.lsst.io/v/summit/"
+
+
+def test_datasets_mapped(discovery_data_dir: Path) -> None:
+    """Datasets and their user-facing service URLs map from discovery.
+
+    Discovery order is preserved, and only the user-facing data-access service
+    tokens (TAP, SIA, cutout, datalink, HiPS) are retained -- the per-dataset
+    ``gms`` and ``alerts`` services are dropped.
+    """
+    discovery = _load("idfprod", discovery_data_dir)
+    meta = EnvMeta(title="data.lsst.cloud")
+
+    env = PhalanxEnv.from_discovery(discovery, name="idfprod", meta=meta)
+
+    assert list(env.datasets) == ["dp02", "dp03", "dp1", "prompt"]
+    dp1 = env.datasets["dp1"]
+    assert dp1.name == "dp1"
+    assert dp1.description is not None
+    assert str(dp1.docs_url) == "https://dp1.lsst.io/"
+    # The user-facing data-access services, and nothing else (no gms).
+    assert set(dp1.services) == {"tap", "sia", "cutout", "datalink", "hips"}
+    assert str(dp1.service_url("tap")) == "https://data.lsst.cloud/api/tap"
+    assert dp1.has_service("sia")
+    # dp03 exposes only TAP (per discovery), so SIA is absent.
+    dp03 = env.datasets["dp03"]
+    assert set(dp03.services) == {"tap"}
+    assert not dp03.has_service("sia")
+    assert dp03.service_url("sia") is None
+    # The prompt dataset exposes only non-user-facing services (gms/alerts),
+    # so it maps to an empty service set but keeps its metadata.
+    assert env.datasets["prompt"].services == {}
+
+
+def test_datasets_absent_without_data(discovery_data_dir: Path) -> None:
+    """An environment serving no datasets has an empty ``datasets`` map."""
+    discovery = _load("base", discovery_data_dir)
+    meta = EnvMeta(title="Rubin Base Data Facility")
+
+    env = PhalanxEnv.from_discovery(discovery, name="base", meta=meta)
+
+    assert env.datasets == {}
+
+
+def test_dataset_services_differ_across_envs(
+    discovery_data_dir: Path,
+) -> None:
+    """A dataset can expose different services in different environments.
+
+    dp1 exposes SIA and cutout on idfprod but not on usdfprod, so the roles
+    and tables must resolve against the environment being built.
+    """
+    idfprod = PhalanxEnv.from_discovery(
+        _load("idfprod", discovery_data_dir),
+        name="idfprod",
+        meta=EnvMeta(title="idfprod"),
+    )
+    usdfprod = PhalanxEnv.from_discovery(
+        _load("usdfprod", discovery_data_dir),
+        name="usdfprod",
+        meta=EnvMeta(title="usdfprod"),
+    )
+
+    assert idfprod.datasets["dp1"].has_service("sia")
+    assert not usdfprod.datasets["dp1"].has_service("sia")

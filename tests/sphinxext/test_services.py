@@ -9,9 +9,13 @@ from rspdocs.sphinxext.services import (
     SERVICE_PAGE_EXCLUDES,
     excluded_page_patterns,
     is_available,
+    is_known_dataset_service,
     is_known_service,
     resolve_condition,
+    resolve_dataset_docs_url,
+    resolve_dataset_url,
     resolve_url,
+    split_dataset_target,
     split_service_path,
 )
 
@@ -143,6 +147,66 @@ def test_excluded_page_patterns_absent_services(make_env: MakeEnv) -> None:
 def test_excluded_page_patterns_full_env(make_env: MakeEnv) -> None:
     """A fully-featured env (idfint) excludes nothing."""
     assert excluded_page_patterns(make_env("idfint")) == []
+
+
+def test_is_known_dataset_service() -> None:
+    """Dataset service tokens are recognized; plain services aren't."""
+    assert is_known_dataset_service("tap")
+    assert is_known_dataset_service("sia")
+    assert is_known_dataset_service("hips")
+    assert not is_known_dataset_service("gms")  # not user-facing
+    assert not is_known_dataset_service("portal")  # a UI service
+    assert not is_known_dataset_service("bogus")
+
+
+def test_split_dataset_target() -> None:
+    """A dataset target splits into (service, dataset, path)."""
+    assert split_dataset_target("tap dp1") == ("tap", "dp1", "")
+    assert split_dataset_target("tap dp1/tables") == ("tap", "dp1", "tables")
+    # Any amount of whitespace may separate the two tokens.
+    assert split_dataset_target("sia   dp02") == ("sia", "dp02", "")
+    # A single token yields no dataset (malformed).
+    assert split_dataset_target("tap") == ("tap", "", "")
+    assert split_dataset_target("") == ("", "", "")
+    # More than two tokens is malformed too, not silently truncated.
+    assert split_dataset_target("tap dp1 tables") == ("tap", "", "")
+
+
+def test_resolve_dataset_url_present(make_env: MakeEnv) -> None:
+    """A dataset's service resolves to its exact URL, with optional path."""
+    env = make_env("idfprod", hidden_services=["times-square"])
+    assert (
+        resolve_dataset_url(env, "tap", "dp1")
+        == "https://data.lsst.cloud/api/tap"
+    )
+    assert resolve_dataset_url(env, "tap", "dp1", path="tables") == (
+        "https://data.lsst.cloud/api/tap/tables"
+    )
+    # A leading slash on the path is normalized, not host-root-resolved.
+    assert resolve_dataset_url(env, "tap", "dp1", path="/tables") == (
+        "https://data.lsst.cloud/api/tap/tables"
+    )
+
+
+def test_resolve_dataset_url_absent(make_env: MakeEnv) -> None:
+    """Absent datasets, absent services, and unknown datasets are None."""
+    env = make_env("idfprod", hidden_services=["times-square"])
+    # dp03 exposes only TAP, so SIA is absent.
+    assert resolve_dataset_url(env, "sia", "dp03") is None
+    # An unknown dataset name resolves to None.
+    assert resolve_dataset_url(env, "tap", "nope") is None
+    # An environment without datasets has nothing to resolve.
+    assert resolve_dataset_url(make_env("base"), "tap", "dp1") is None
+
+
+def test_resolve_dataset_docs_url(make_env: MakeEnv) -> None:
+    """A dataset's docs_url resolves, or None when absent/unset."""
+    env = make_env("idfprod", hidden_services=["times-square"])
+    assert resolve_dataset_docs_url(env, "dp1") == "https://dp1.lsst.io/"
+    # The prompt dataset has no docs_url in discovery.
+    assert resolve_dataset_docs_url(env, "prompt") is None
+    # An unknown dataset resolves to None.
+    assert resolve_dataset_docs_url(env, "nope") is None
 
 
 def test_excluded_page_patterns_hidden_service(make_env: MakeEnv) -> None:

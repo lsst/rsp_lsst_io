@@ -17,16 +17,19 @@ from rspdocs.sphinxext.services import excluded_page_patterns
 
 # Select the environment to build given the sphinx tag (-t on sphinx-build
 # CLI), defaulting to the primary env if no tag matches. Each sphinx-build
-# renders a single environment, so we only fetch that one -- plus the primary
-# env, which the docs always reference via ``all_envs.primary`` regardless of
-# which environment is being built.
+# renders a single environment (``rsp_env``), but we fetch every roster
+# environment so the cross-environment ``rsp-data-table`` (and any other
+# all-env construct) has data for the whole fleet, not just the target and
+# primary. The per-environment discovery JSON is small and disk-cached under
+# _build/discovery, so fetching all of it is cheap; the offline fallback still
+# applies per environment.
 _metadata = load_environments_metadata()
 target_env = PRIMARY_ENV
 for env_name in _metadata.build_roster:
     if env_name in tags:  # noqa: F405 F821
         target_env = env_name
         break
-_fetch_envs = list(dict.fromkeys([target_env, PRIMARY_ENV]))
+_fetch_envs = list(_metadata.build_roster)
 
 env_service = PhalanxEnvService.load(
     cache_dir=Path(__file__).parent / "_build" / "discovery",
@@ -50,10 +53,14 @@ extensions.append("sphinx_substitution_extensions")  # noqa: F405
 # Data channels the extension resolves roles/conditions against.
 rsp_all_envs = env_service.envs
 
-# Hash of the discovery JSON that was just loaded. Registered with
-# rebuild="env", this is the sole incremental-rebuild trigger: when discovery
-# data changes its hash changes, so Sphinx reparses every doc and the roles
-# re-bake fresh URLs into the doctrees.
+# Hash of the discovery JSON that was just loaded, over every fetched (roster)
+# environment. Registered with rebuild="env", this is the sole incremental-
+# rebuild trigger: when any environment's discovery data changes its hash
+# changes, so Sphinx reparses every doc and the roles and rsp-data-table
+# re-bake fresh URLs/availability into the doctrees. Hashing all roster
+# environments (not just the target and primary) keeps the cross-environment
+# rsp-data-table correct: a change to any environment's data invalidates the
+# build. _fetch_envs follows the ordered build roster, so the hash is stable.
 _discovery_hash = hashlib.sha256()
 for _name in _fetch_envs:
     _discovery_hash.update(

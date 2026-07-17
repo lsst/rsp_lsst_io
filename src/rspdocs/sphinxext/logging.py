@@ -21,9 +21,19 @@ __all__ = [
     "UNKNOWN_SERVICE",
     "UNAVAILABLE_SERVICE",
     "UNKNOWN_CONDITION",
+    "UNKNOWN_DATASET_SERVICE",
+    "UNKNOWN_DATASET",
+    "UNAVAILABLE_DATASET",
+    "UNAVAILABLE_DATASET_DOCS",
+    "MALFORMED_DATASET_TARGET",
     "warn_unknown_service",
     "warn_unavailable_service",
     "warn_unknown_condition",
+    "warn_unknown_dataset_service",
+    "warn_unknown_dataset",
+    "warn_unavailable_dataset",
+    "warn_unavailable_dataset_docs",
+    "warn_malformed_dataset_target",
 ]
 
 logger = logging.getLogger(__name__)
@@ -39,6 +49,21 @@ UNAVAILABLE_SERVICE = "unavailable-service"
 
 UNKNOWN_CONDITION = "unknown-condition"
 """Subtype: an ``rsp-only`` token that isn't a service/env/``primary``."""
+
+UNKNOWN_DATASET_SERVICE = "unknown-dataset-service"
+"""Subtype: a dataset role targets an unknown per-dataset service token."""
+
+UNKNOWN_DATASET = "unknown-dataset"
+"""Subtype: an ``rsp-data-table`` ``:datasets:`` name that is not served."""
+
+UNAVAILABLE_DATASET = "unavailable-dataset"
+"""Subtype: a dataset role targets a dataset/service absent in this env."""
+
+UNAVAILABLE_DATASET_DOCS = "unavailable-dataset-docs"
+"""Subtype: a dataset-docs role targets a dataset with no docs URL here."""
+
+MALFORMED_DATASET_TARGET = "malformed-dataset-target"
+"""Subtype: a dataset role target isn't the ``service dataset`` form."""
 
 
 def warn_unknown_service(name: str, *, location: Any) -> None:
@@ -81,4 +106,87 @@ def warn_unknown_condition(token: str, *, location: Any) -> None:
         location=location,
         type=WARNING_TYPE,
         subtype=UNKNOWN_CONDITION,
+    )
+
+
+def warn_unknown_dataset_service(name: str, *, location: Any) -> None:
+    """Warn that ``name`` is not a recognized per-dataset service token."""
+    logger.warning(
+        "unknown dataset service %r; expected one of the documented "
+        "per-dataset service tokens (see "
+        "docs/contributing/env-specific-docs.rst)",
+        name,
+        location=location,
+        type=WARNING_TYPE,
+        subtype=UNKNOWN_DATASET_SERVICE,
+    )
+
+
+def warn_unknown_dataset(name: str, where: str, *, location: Any) -> None:
+    """Warn that dataset ``name`` is not served in ``where``.
+
+    ``where`` is a human-readable scope, such as ``"the 'idfprod'
+    environment"`` or ``"any environment"``.
+    """
+    logger.warning(
+        "unknown dataset %r; it is not served in %s",
+        name,
+        where,
+        location=location,
+        type=WARNING_TYPE,
+        subtype=UNKNOWN_DATASET,
+    )
+
+
+def warn_unavailable_dataset(
+    service: str, dataset: str, env_name: str, *, location: Any
+) -> None:
+    """Warn that ``service`` on ``dataset`` is absent in ``env_name``.
+
+    This usually means the reference should be wrapped in a matching
+    ``.. rsp-only::`` block (gated on ``api``, ``tap``, or environment names;
+    the per-dataset service tokens are not ``rsp-only`` conditions) so it is
+    only emitted where the dataset and service exist.
+    """
+    logger.warning(
+        "dataset %r does not expose the %r service in the %r environment; "
+        "wrap the reference in a matching '.. rsp-only::' block",
+        dataset,
+        service,
+        env_name,
+        location=location,
+        type=WARNING_TYPE,
+        subtype=UNAVAILABLE_DATASET,
+    )
+
+
+def warn_unavailable_dataset_docs(
+    dataset: str, env_name: str, *, location: Any
+) -> None:
+    """Warn that no documentation URL exists for ``dataset`` in ``env_name``.
+
+    This covers both a dataset absent from the environment and one that is
+    served but whose discovery data carries no ``docs_url``.
+    """
+    logger.warning(
+        "no documentation URL for dataset %r in the %r environment (the "
+        "dataset is absent, or discovery reports no docs_url for it); wrap "
+        "the reference in a matching '.. rsp-only::' block",
+        dataset,
+        env_name,
+        location=location,
+        type=WARNING_TYPE,
+        subtype=UNAVAILABLE_DATASET_DOCS,
+    )
+
+
+def warn_malformed_dataset_target(target: str, *, location: Any) -> None:
+    """Warn that ``target`` is not the ``service dataset`` form."""
+    logger.warning(
+        "malformed dataset reference %r; expected 'service dataset' (for "
+        "example 'tap dp1')",
+        target,
+        location=location,
+        type=WARNING_TYPE,
+        subtype=MALFORMED_DATASET_TARGET,
     )

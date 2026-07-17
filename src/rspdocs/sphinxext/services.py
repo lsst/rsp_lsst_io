@@ -22,15 +22,20 @@ from importlib.resources import files
 import yaml
 
 from ..discovery.metadata import load_environments_metadata
-from ..discovery.models import PhalanxEnv
+from ..discovery.models import DATASET_SERVICES, PhalanxEnv
 
 __all__ = [
     "SERVICE_ATTRS",
     "SERVICE_PAGE_EXCLUDES",
+    "DATASET_SERVICE_LABELS",
     "KNOWN_ENVS",
     "is_known_service",
+    "is_known_dataset_service",
     "split_service_path",
+    "split_dataset_target",
     "resolve_url",
+    "resolve_dataset_url",
+    "resolve_dataset_docs_url",
     "is_available",
     "resolve_condition",
     "excluded_page_patterns",
@@ -50,6 +55,46 @@ SERVICE_ATTRS: dict[str, str] = {
     "phalanx-docs": "phalanx_docs_url",
 }
 """Canonical service token -> `PhalanxEnv` attribute holding its URL."""
+
+DATASET_SERVICE_LABELS: dict[str, str] = {
+    "tap": "TAP",
+    "sia": "SIA",
+    "cutout": "Cutout (SODA)",
+    "datalink": "DataLink",
+    "hips": "HiPS",
+}
+"""Dataset service token -> display label for author-facing tables.
+
+Its keys are exactly ``DATASET_SERVICES`` (order-preserving); a guard in
+`~rspdocs.sphinxext.setup` asserts the two stay in sync.
+"""
+
+
+def is_known_dataset_service(name: str) -> bool:
+    """Return whether ``name`` is a recognized per-dataset service token."""
+    return name in DATASET_SERVICES
+
+
+def split_dataset_target(target: str) -> tuple[str, str, str]:
+    """Split a ``:rsp-data-url:`` target into service, dataset, and path.
+
+    The target syntax is ``service dataset[/path]``: exactly two
+    whitespace-separated tokens — a service token and a dataset name — where
+    the dataset name may carry an appended ``/path`` joined onto the dataset's
+    service URL exactly as `split_service_path` does for plain services. The
+    two tokens may be separated by any amount of whitespace, but a target with
+    more (or fewer) than two tokens is malformed.
+
+    Returns a ``(service, dataset, path)`` tuple. A malformed target yields an
+    empty dataset (and empty path), which callers report as a malformed
+    reference.
+    """
+    parts = target.split()
+    service = parts[0] if parts else ""
+    if len(parts) != 2:
+        return service, "", ""
+    dataset, path = split_service_path(parts[1])
+    return service, dataset, path
 
 
 def _load_service_page_excludes() -> dict[str, list[str]]:
@@ -138,6 +183,42 @@ def resolve_url(env: PhalanxEnv, name: str, path: str = "") -> str | None:
     if not path:
         return base
     return f"{base.rstrip('/')}/{path.lstrip('/')}"
+
+
+def resolve_dataset_url(
+    env: PhalanxEnv, service: str, dataset: str, path: str = ""
+) -> str | None:
+    """Return the URL for ``service`` on ``dataset`` in ``env``, or ``None``.
+
+    ``None`` is returned when the dataset is absent from this environment or
+    when it does not expose that service; callers that need to tell an unknown
+    service token apart from an absent dataset/service should check
+    `is_known_dataset_service` first. A non-empty ``path`` is appended to the
+    dataset's service URL with the same slash-normalizing join as
+    `resolve_url`.
+    """
+    dataset_info = env.datasets.get(dataset)
+    if dataset_info is None:
+        return None
+    url = dataset_info.service_url(service)
+    if url is None:
+        return None
+    base = str(url)
+    if not path:
+        return base
+    return f"{base.rstrip('/')}/{path.lstrip('/')}"
+
+
+def resolve_dataset_docs_url(env: PhalanxEnv, dataset: str) -> str | None:
+    """Return the documentation URL for ``dataset`` in ``env``, or ``None``.
+
+    ``None`` is returned when the dataset is absent from this environment or
+    when discovery reports no ``docs_url`` for it.
+    """
+    dataset_info = env.datasets.get(dataset)
+    if dataset_info is None or dataset_info.docs_url is None:
+        return None
+    return str(dataset_info.docs_url)
 
 
 def is_available(env: PhalanxEnv, name: str) -> bool:

@@ -26,6 +26,8 @@ Stefani
 coadd
 coadded
 dayobs
+[Dd]ata[Ll]ink
+dataset's
 
 # --- Software / tooling terms -----------------------------------------------
 APIs?
