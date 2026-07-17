@@ -89,6 +89,12 @@ jobs:
 
       - name: Run Vale
         uses: errata-ai/vale-action@v2
+        # Vale is advisory: annotations should appear on the PR, but the
+        # check must stay green. fail_on_error alone isn't enough — the
+        # action still fails the step when reviewdog exits nonzero (for
+        # example when a prose-heavy PR overflows GitHub's per-step
+        # annotation cap), so tolerate any step failure outright.
+        continue-on-error: true
         with:
           # vale-action runs `vale sync` to download the Google package.
           # The default reporter (github-pr-annotations) works with the
