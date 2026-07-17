@@ -74,6 +74,10 @@ For Times Square to access your repository (even if its a public repository), yo
 
 These are the Times Square GitHub Apps for each available environment:
 
+.. Intentionally environment-specific: this table enumerates every
+   environment that runs Times Square, so its hostnames must stay hard-coded
+   (see https://github.com/lsst/rsp_lsst_io/issues/87).
+
 .. list-table::
    :header-rows: 1
 
@@ -83,7 +87,7 @@ These are the Times Square GitHub Apps for each available environment:
      - `Times Square (USDF) <https://github.com/apps/times-square-usdf>`__
    * - usdf-rsp-dev.slac.stanford.edu
      - `Times Square (usdf-rsp-dev) <https://github.com/apps/times-square-usdf-rsp-dev>`__
-   * - data-dev.slac.stanford.edu
+   * - data-dev.lsst.cloud
      - `Times Square (data-dev.lsst.cloud) <https://github.com/apps/times-square-data-dev-lsst-cloud>`__
 
 From the GitHub App's page, click the :guilabel:`Install` button.

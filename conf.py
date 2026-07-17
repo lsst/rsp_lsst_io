@@ -41,6 +41,12 @@ rsp_env: Optional[PhalanxEnv] = env_service.envs[target_env]
 # ``extensions``; don't also invoke it from the setup() below.
 extensions.append("rspdocs.sphinxext")  # noqa: F405
 
+# Enable |substitutions| inside code-block/literalinclude directives that carry
+# the :substitutions: option, so code samples can embed environment URLs (e.g.
+# the TAP URL in the notebooks FAQ). The substitutions themselves are defined
+# in rst_prolog below.
+extensions.append("sphinx_substitution_extensions")  # noqa: F405
+
 # Data channels the extension resolves roles/conditions against.
 rsp_all_envs = env_service.envs
 
@@ -61,7 +67,11 @@ _config_template_loader = FileSystemLoader(".")
 _jinja_env = Environment(
     loader=_config_template_loader, autoescape=select_autoescape()
 )
-rst_epilog = _jinja_env.get_template("rst_epilog.rst.jinja").render(
+# The substitutions and link targets are rendered into rst_prolog rather than
+# rst_epilog because sphinx-substitution-extensions resolves |substitutions|
+# inside code blocks at parse time: the definitions must already have been
+# parsed when the directive runs, so they have to precede the page content.
+rst_prolog = _jinja_env.get_template("rst_prolog.rst.jinja").render(
     env=rsp_env
 )
 
