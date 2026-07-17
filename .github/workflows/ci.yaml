@@ -57,14 +57,14 @@ jobs:
     strategy:
       matrix:
         rsp:
-          # - "base"
-          # - "idfdev"
-          # - "idfint"
+          - "base"
+          - "idfdev"
+          - "idfint"
           - "idfprod"
-          # - "summit"
-          # - "tucson-teststand"
-          # - "usdfdev"
-          # - "usdfprod"
+          - "summit"
+          - "tucson-teststand"
+          - "usdfdev"
+          - "usdfprod"
 
     steps:
       - uses: actions/checkout@v4
@@ -118,16 +118,25 @@ jobs:
     if: ${{ (github.event_name == 'push') && (github.ref == 'refs/heads/main') }}
 
     strategy:
+      # Serialize LTD uploads: only one environment uploads to LSST the Docs
+      # at a time. The builds themselves run in parallel in the `build` job;
+      # here we consume those artifacts one at a time so concurrent uploads
+      # can never race against each other. `max-parallel: 1` queues the matrix
+      # jobs sequentially within this workflow run without skipping or
+      # cancelling any of them. `fail-fast: false` ensures a failed upload for
+      # one environment does not cancel the pending uploads for the others.
+      fail-fast: false
+      max-parallel: 1
       matrix:
         rsp:
-          # - "base"
-          # - "idfdev"
-          # - "idfint"
+          - "base"
+          - "idfdev"
+          - "idfint"
           - "idfprod"
-          # - "summit"
-          # - "tucson-teststand"
-          # - "usdfdev"
-          # - "usdfprod"
+          - "summit"
+          - "tucson-teststand"
+          - "usdfdev"
+          - "usdfprod"
 
     steps:
       - uses: actions/download-artifact@v4
