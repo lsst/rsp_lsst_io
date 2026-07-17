@@ -1,6 +1,6 @@
-##############################
+###########################
 Editorial linting with Vale
-##############################
+###########################
 
 This project uses Vale_ to lint the prose in the documentation against the :doc:`style-guide` and the `Google Developer Documentation Style Guide`_.
 Vale's feedback is *advisory*: it never fails a build or blocks a pull request.
