@@ -46,7 +46,7 @@ Step-by-step
 
       .. grid-item::
 
-         .. image:: images/acc_login.png
+         .. image:: images/acc-login.png
 
 2. RSP (via CILogon) login page:
 
@@ -59,7 +59,7 @@ Step-by-step
 
       .. grid-item::
 
-         .. image:: images/acc_institution.png
+         .. image:: images/acc-institution.png
 
 3. Institution login page(s):
 
@@ -81,7 +81,7 @@ Step-by-step
 
       .. grid-item::
 
-         .. image:: images/acc_institution.png
+         .. image:: images/acc-institution.png
 
 5. Onboarding flow - self signup pages:
 

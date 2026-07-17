@@ -31,7 +31,7 @@ Linking additional identities
 
          .. grid-item::
 
-            .. image:: images/acc_more_ids.png
+            .. image:: images/acc-more-ids.png
 
    3. You can use any of your linked identities to log on from now on.
 

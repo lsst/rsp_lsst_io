@@ -18,7 +18,7 @@ Navigate the main landing page
 
 From the main landing page (see the figure below), click on any tab to go to the graphical user interface for querying data.
 
-  .. figure:: images/portal_landing.png
+  .. figure:: images/portal-landing.png
       :alt: A screenshot of the Portal landing page with tabs and links to access the Portal query interfaces.
       :width: 400
       :name: portal_landing_2
@@ -32,7 +32,7 @@ Access the menu
 In the figure above, at upper left there is a menu icon (three horizontal bars).
 Click on it to reveal the full menu of options.
 
-  .. figure:: images/portal_sidebar.png
+  .. figure:: images/portal-sidebar.png
       :alt: A screenshot of the Portal's sidebar.
       :width: 200
       :name: portal_sidebar

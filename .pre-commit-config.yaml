@@ -46,3 +46,8 @@ repos:
         language: system
         pass_filenames: false
         files: ^src/rspdocs/(discovery/environments\.json|sphinxext/page_excludes\.yaml)$
+      - id: rspdocs-lint-paths
+        name: Lint doc paths (lowercase, hyphen-separated; no .DS_Store)
+        entry: rspdocs-lint-paths
+        language: system
+        pass_filenames: false

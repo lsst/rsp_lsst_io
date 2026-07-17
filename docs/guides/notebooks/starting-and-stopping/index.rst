@@ -16,7 +16,7 @@ Older images will remain accessible to users.
 
 RSP users who are doing a lot of image processing might need to select a large server, and those who are working with small subsets of catalog data can use a small server.
 
-  .. figure:: images/RSP_NB_select_a_server.png
+  .. figure:: images/rsp-nb-select-a-server.png
       :alt: This image is a screenshot of the Server Options page that users encounter first when they log into the Notebook Aspect. At left, users can select the version of the LSST Science Pipelines that they want to use, with the recommended version pre-selected as the default. At right, users can select a server size of small, medium, or large. Small is pre-selected as the default. Two additional options to enable debug logs or clear the user’s dot-local directory also appear at right. Neither of these options are pre-selected. At the bottom is a button marked start.
       :width: 400
       :name: RSP_NB_select_a_server
@@ -29,7 +29,7 @@ Start the server
 
 Pressing the orange "Start" button to start the server returns this page with a blue progress bar:
 
-  .. figure:: images/RSP_NB_progress_bar.png
+  .. figure:: images/rsp-nb-progress-bar.png
       :alt: This image is a screenshot of the progress bar that displays for a minute or two while a user’s server is starting up in the Notebook Aspect. At the top there is text that says “Your server is starting up” and “You will be redirected automatically when it’s ready for you.” Below that is a progress bar. Underneath the bar, the date and time is shown. This page is not interactive and is replaced by the main work area of the Notebook Aspect once the server has started.
       :width: 400
       :name: RSP_NB_progress_bar
@@ -44,7 +44,7 @@ The default JupyterLab interface that appears after login is shown in the next i
 At right, in the main work area, is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal, Python console).
 Return to this launch pad at any time by clicking the blue plus symbol at upper-left.
 
-  .. figure:: images/RSP_NB_launcher_options.png
+  .. figure:: images/rsp-nb-launcher-options.png
       :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
       :width: 400
       :name: RSP_NB_launcher_options

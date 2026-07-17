@@ -45,6 +45,7 @@ dev = [
 
 [project.scripts]
 rspdocs-validate-config = "rspdocs.validate:main"
+rspdocs-lint-paths = "rspdocs.pathlint:main"
 
 [project.urls]
 Homepage = "https://rsp.lsst.io"
