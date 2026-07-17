@@ -28,6 +28,7 @@ dependencies = [
     "Jinja2",
     "PyYAML",
     "sphinx-jinja",
+    "Sphinx-Substitution-Extensions",
     "sphinxcontrib-youtube",
 ]
 dynamic = ["version"]

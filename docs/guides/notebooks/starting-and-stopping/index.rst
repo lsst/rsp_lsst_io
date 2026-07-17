@@ -2,7 +2,7 @@
 Start and stop a server
 #######################
 
-From the RSP landing page at `data.lsst.cloud <https://data.lsst.cloud/>`_ click on the central panel for Notebooks.
+From the RSP landing page at :rsp-link:`rsp` click on the central panel for Notebooks.
 
 Select software version and server size
 ---------------------------------------

@@ -53,6 +53,53 @@ def test_rsp_link_explicit_title(
     assert app.warning.getvalue() == ""
 
 
+def test_rsp_url_with_path(make_env: MakeEnv, app_factory: AppFactory) -> None:
+    """``:rsp-url:`service/path``` appends the path to the service URL."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-url:`rsp/settings/quotas`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "https://data.lsst.cloud/settings/quotas"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_link_with_path(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A titled link target may carry a path; extra slashes are normalized."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-link:`Account <rsp//settings>`")
+    ref = doctree.next_node(nodes.reference)
+    assert isinstance(ref, nodes.reference)
+    assert ref.astext() == "Account"
+    assert ref["refuri"] == "https://data.lsst.cloud/settings"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_link_path_joins_service_url_path(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """The join is against the service's full URL, not the host root."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-link:`Firefly <portal/onlinehelp/>`")
+    ref = doctree.next_node(nodes.reference)
+    assert isinstance(ref, nodes.reference)
+    assert ref["refuri"].endswith("/portal/app/onlinehelp/")
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_url_unknown_service_with_path_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """An unknown service with a path warns and echoes the whole target."""
+    app = app_factory(make_env("base"))
+    doctree = parse(app, ":rsp-url:`bogus/settings`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "bogus/settings"
+    assert "unknown-service" in app.warning.getvalue()
+
+
 def test_rsp_url_unknown_service_warns(
     make_env: MakeEnv, app_factory: AppFactory
 ) -> None:

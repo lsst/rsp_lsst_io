@@ -12,6 +12,7 @@ from rspdocs.sphinxext.services import (
     is_known_service,
     resolve_condition,
     resolve_url,
+    split_service_path,
 )
 
 MakeEnv = Callable[..., PhalanxEnv]
@@ -35,6 +36,36 @@ def test_resolve_url_present(make_env: MakeEnv) -> None:
     # Aliases resolve to the same attribute.
     assert resolve_url(env, "squareone") == resolve_url(env, "rsp")
     assert resolve_url(env, "nb") == resolve_url(env, "nublado")
+
+
+def test_split_service_path() -> None:
+    """A target splits at the first slash into (service, path)."""
+    assert split_service_path("rsp") == ("rsp", "")
+    assert split_service_path("rsp/settings") == ("rsp", "settings")
+    assert split_service_path("rsp//settings") == ("rsp", "/settings")
+    assert split_service_path("portal/onlinehelp/") == (
+        "portal",
+        "onlinehelp/",
+    )
+    assert split_service_path("times-square") == ("times-square", "")
+
+
+def test_resolve_url_with_path(make_env: MakeEnv) -> None:
+    """An appended path joins relative to the service URL, slash-normalized."""
+    env = make_env("idfprod", hidden_services=["times-square"])
+    expected = "https://data.lsst.cloud/settings/quotas"
+    assert resolve_url(env, "rsp", path="settings/quotas") == expected
+    # A leading slash on the path is normalized away, not host-root-resolved.
+    assert resolve_url(env, "rsp", path="/settings/quotas") == expected
+    # The join is against the service's full URL, including its own path, and
+    # the trailing slash of the result follows the path as written.
+    assert resolve_url(env, "portal", path="onlinehelp/") == (
+        "https://data.lsst.cloud/portal/app/onlinehelp/"
+    )
+    # An empty path returns the service URL untouched.
+    assert resolve_url(env, "rsp", path="") == "https://data.lsst.cloud/"
+    # An absent service stays None regardless of path.
+    assert resolve_url(make_env("base"), "tap", path="x") is None
 
 
 def test_resolve_url_absent(make_env: MakeEnv) -> None:

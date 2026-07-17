@@ -15,14 +15,14 @@ For information on other available resources beyond the RSP, including additiona
 .. important::
    The Rubin Science Platform is currently in preview mode, and its capabilities are expected to evolve for the duration of the Survey. The nature and amount of these resources are also expected to evolve (mostly upwards) for the duration of the survey.
 
-   During times of peak demand, some of these limits may be lowered temporarily to maintain availability. Always consult your |rsp-quotas-page| (found under your account settings or directly at |rsp-quotas-url| ) for limits being currently applied — that page is a live view of the system.
+   During times of peak demand, some of these limits may be lowered temporarily to maintain availability. Always consult your :rsp-link:`Quotas page <rsp/settings/quotas>` (found under your account settings or directly at :rsp-url:`rsp/settings/quotas` ) for limits being currently applied — that page is a live view of the system.
 
 If you are a heavy user of the RSP APIs, make sure to read the relevant section below.
 
 The Quotas page
 ===============
 
-You can find your |rsp-quotas-page| under your user profile, accessible through the :rsp-link:`rsp` home page:
+You can find your :rsp-link:`Quotas page <rsp/settings/quotas>` under your user profile, accessible through the :rsp-link:`rsp` home page:
 
 .. figure:: quotas_ani.gif
    :alt: animation for how to navigate to the Quotas page
@@ -43,7 +43,7 @@ Notebooks
 ---------
 
 When you access the Notebooks capability, your JupyterLab session is allocated its own container in which anything you do (run notebooks, run code from the JupyterLab terminal) executes.
-Your |rsp-quotas-page| shows the memory size and number of cores for the largest instance of container you can ask the Notebook service for.
+Your :rsp-link:`Quotas page <rsp/settings/quotas>` shows the memory size and number of cores for the largest instance of container you can ask the Notebook service for.
 
 .. important::
    Exhausting your allocated memory can cause your container to die.
@@ -55,7 +55,7 @@ APIs
 ----
 
 .. note::
-   At the current time, the service names shown in your |rsp-quotas-page| page are our internal engineering names for the various services.
+   At the current time, the service names shown in your :rsp-link:`Quotas page <rsp/settings/quotas>` are our internal engineering names for the various services.
    This will be fixed soon.
 
 This section describes current types of API limits.
@@ -67,7 +67,7 @@ Rate limits
 
 Most APIs are rate-limited with a cap on requests over a 1-minute period.
 These are listed under the "Rate limits" sub-section.
-Your |rsp-quotas-page| shows you how many requests you can make in 60 seconds before a given service starts refusing your requests.
+Your :rsp-link:`Quotas page <rsp/settings/quotas>` shows you how many requests you can make in 60 seconds before a given service starts refusing your requests.
 Once that happens, 60 seconds have to pass before the counter resets.
 
 Concurrent queries

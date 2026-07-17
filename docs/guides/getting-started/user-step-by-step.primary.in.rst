@@ -20,7 +20,7 @@ Before getting started
    - You *must* have an account with one of the supported institutions or organizations to use the RSP.
    - **It is highly recommended to link a non-institutional account** (e.g., GitHub, ORCID; see step 10, below) to ensure continuous access if you move institutions.
 
-3. Review the `Acceptable Use Policy <https://data.lsst.cloud/terms>`__ (AUP).
+3. Review the :rsp-link:`Acceptable Use Policy <rsp/terms>` (AUP).
 
    - Access to the RSP is contingent on abiding by the AUP.
 

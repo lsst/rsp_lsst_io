@@ -48,25 +48,28 @@ Yes, it is possible to install ``lsst.rsp`` on one's own computer and run it loc
 
 Note that accessing data that are hosted at the IDF will additionally require a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
-As an example, we will walk through how to access the Rubin LSST TAP service locally.
+.. rsp-only:: tap
 
-After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to the token.
+   As an example, we will walk through how to access the Rubin LSST TAP service locally.
 
-Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"`` (e.g. for macOS, execute the following)
+   After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to the token.
 
-.. code-block:: bash
+   Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to |rsp-tap-url| (e.g. for macOS, execute the following)
 
-   export EXTERNAL_TAP_URL="https://data.lsst.cloud/api/tap"
+   .. code-block:: bash
+      :substitutions:
 
-In a python shell or notebook environment, it should then be possible to execute the following:
+      export EXTERNAL_TAP_URL="|rsp-tap-url|"
 
-.. code-block:: bash
+   In a python shell or notebook environment, it should then be possible to execute the following:
 
-   from lsst.rsp import get_tap_service, retrieve_query
-   service = get_tap_service()
-   query = "SELECT * FROM tap_schema.schemas"
-   results = service.search(query).to_table()
-   print(results)
+   .. code-block:: bash
+
+      from lsst.rsp import get_tap_service, retrieve_query
+      service = get_tap_service()
+      query = "SELECT * FROM tap_schema.schemas"
+      results = service.search(query).to_table()
+      print(results)
 
 
 *Although the LSST environment can be run locally, we strongly recommend to use it in the RSP environment.*

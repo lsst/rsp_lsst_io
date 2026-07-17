@@ -1,5 +1,10 @@
 # Hybrid model
 
+% Intentionally environment-specific: this page describes the hybrid
+% Google Cloud + USDF architecture of the flagship RSP at data.lsst.cloud,
+% so its data.lsst.cloud URLs are deliberate and must not be templated
+% (see https://github.com/lsst/rsp_lsst_io/issues/87).
+
 The flagship Rubin Science Platform (RSP) at [data.lsst.cloud](https://data.lsst.cloud) is a hybrid deployment, with services and data distributed across multiple data centers:
 
 - Most of the services and some data are hosted on the Google Cloud Platform.

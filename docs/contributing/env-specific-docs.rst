@@ -17,6 +17,7 @@ Reach for them in this order, from the most targeted to the most general:
 
 - :ref:`envdocs-roles` for inline URLs and links to RSP services.
 - :ref:`envdocs-substitutions` for env-specific words and short phrases that a role can't produce.
+- :ref:`envdocs-code-substitutions` for environment URLs inside code samples (``code-block`` and ``literalinclude``).
 - :ref:`envdocs-conditional` to include or exclude whole blocks of content per environment.
 - :ref:`envdocs-jinja` when a branch's text must be *computed* from environment data (interpolation, loops, or expressions).
 - :ref:`envdocs-jinja-includes` to swap large included files.
@@ -42,6 +43,12 @@ Each takes a service name — listed in the table below — and resolves it to t
     For example, ``:rsp-link:`rsp``` renders as :rsp-link:`rsp`.
 
     Give an explicit link title with the familiar ``title <target>`` syntax: ``:rsp-link:`Rubin Science Platform <rsp>``` renders as :rsp-link:`Rubin Science Platform <rsp>`.
+
+Both roles also accept a path after the service name, appended to the service's URL for the environment being built.
+For example, ``:rsp-url:`rsp/settings/quotas``` renders as :rsp-url:`rsp/settings/quotas`, and ``:rsp-link:`Quotas page <rsp/settings/quotas>``` renders as :rsp-link:`Quotas page <rsp/settings/quotas>`.
+The path is always joined relative to the service's full URL (which may itself include a path — ``portal/onlinehelp/`` resolves under ``/portal/app/``), and slashes at the seam are normalized, so you don't need to worry about whether the path takes a leading slash: ``rsp/settings`` and ``rsp//settings`` are equivalent.
+The trailing slash of the result follows the path exactly as you write it, since some endpoints are sensitive to it.
+Note that only the service token is validated — a typo in the path builds without complaint, so check that the resulting URL exists.
 
 Some services aren't deployed in every environment; targeting a service that is absent in the environment being built raises a warning (fatal under ``-W``), which usually means the reference should be wrapped in a matching :ref:`rsp-only <envdocs-conditional>` block.
 
@@ -84,8 +91,9 @@ Some services aren't deployed in every environment; targeting a service that is 
 Using reStructuredText substitutions
 ====================================
 
-For env-specific *prose* — a word, a name, or a derived path that a role can't produce — use `reStructuredText substitutions <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`__.
-These substitutions are defined in :file:`rst_epilog.rst.jinja`, which is itself templated with Jinja so the replacement text can vary by environment.
+For env-specific *prose* — a word, a name, or a phrase that a role can't produce — use `reStructuredText substitutions <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`__.
+These substitutions are defined in :file:`rst_prolog.rst.jinja`, which is itself templated with Jinja so the replacement text can vary by environment.
+(The definitions are rendered into Sphinx's ``rst_prolog``, not ``rst_epilog``, so they precede every page's content and are therefore also available to :ref:`code samples <envdocs-code-substitutions>`.)
 
 .. list-table:: Available substitutions
    :header-rows: 1
@@ -98,14 +106,37 @@ These substitutions are defined in :file:`rst_epilog.rst.jinja`, which is itself
      - |rsp-env|
    * - ``|rsp-env-link|``
      - |rsp-env-link|
-   * - ``|rsp-quotas-url|``
-     - |rsp-quotas-url|
-   * - ``|rsp-quotas-page|``
-     - |rsp-quotas-page|
    * - ``|webdav-server|``
      - |webdav-server|
 
-Prefer a :ref:`role <envdocs-roles>` whenever you only need a service's URL or a link to it — the roles replaced the per-service URL and link substitutions the docs used to define.
+Prefer a :ref:`role <envdocs-roles>` whenever you only need a service's URL, a link to it, or a URL derived by appending a path — the roles replaced the per-service URL, link, and derived-path substitutions the docs used to define.
+
+.. _envdocs-code-substitutions:
+
+Substitutions inside code samples
+=================================
+
+Roles and ordinary substitution references don't work inside literal blocks, so environment URLs in code samples need one more ingredient: the `sphinx-substitution-extensions <https://pypi.org/project/Sphinx-Substitution-Extensions/>`__ package, which is enabled in this build.
+Add the ``:substitutions:`` option to a ``code-block`` (or ``:content-substitutions:`` to a ``literalinclude``) and any ``|substitution|`` in its content is replaced with the plain text of its definition:
+
+.. code-block:: rst
+
+   .. code-block:: bash
+      :substitutions:
+
+      export EXTERNAL_TAP_URL="|rsp-tap-url|"
+
+``|rsp-tap-url|`` is the TAP service's URL without a trailing slash, the form client configuration expects (whereas ``:rsp-url:`tap``` renders discovery's canonical trailing-slash URL).
+It is defined only in environments that have a TAP service, so wrap its uses in a matching ``.. rsp-only:: tap`` block — as in this rendered example:
+
+.. rsp-only:: tap
+
+   .. code-block:: bash
+      :substitutions:
+
+      export EXTERNAL_TAP_URL="|rsp-tap-url|"
+
+Because the substitution machinery matches text at parse time, only substitutions defined in :file:`rst_prolog.rst.jinja` (or earlier in the same page) are available inside code samples.
 
 .. _envdocs-conditional:
 

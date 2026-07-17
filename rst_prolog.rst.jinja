@@ -1,12 +1,17 @@
 .. Templated substitutions ====================================================
 ..
-.. Inline URLs and links are provided by the :rsp-url: and :rsp-link: roles
-.. from the rspdocs.sphinxext extension; these substitutions cover only the
-.. env-specific *prose* and derived paths those roles can't produce. See
-.. docs/contributing/env-specific-docs.rst.
+.. Inline URLs and links -- including URLs with appended paths, like
+.. :rsp-url:`rsp/settings/quotas` -- are provided by the :rsp-url: and
+.. :rsp-link: roles from the rspdocs.sphinxext extension; these substitutions
+.. cover only the env-specific *prose* and code-sample values those roles
+.. can't produce. See docs/contributing/env-specific-docs.rst.
+..
+.. This file is rendered into rst_prolog (not rst_epilog) so the definitions
+.. are parsed before any directive in a page: sphinx-substitution-extensions
+.. resolves |name| inside code-block/literalinclude directives marked with
+.. :substitutions: at parse time, which only finds definitions that precede
+.. the directive.
 
-.. |rsp-quotas-url| replace:: ``{{ env.squareone_url}}settings/quotas``
-.. |rsp-quotas-page| replace:: `Quotas page <{{ env.squareone_url}}settings/quotas>`__
 {% if env.is_primary %}
 .. |rsp-at| replace:: `Rubin Science Platform <{{ env.squareone_url }}>`__
 {% else %}
@@ -14,6 +19,9 @@
 {% endif %}
 .. |rsp-env| replace:: {{ env.title_full }}
 .. |rsp-env-link| replace:: `{{ env.title_full }} <{{ env.squareone_url }}>`__
+{% if env.api_tap_url %}
+.. |rsp-tap-url| replace:: ``{{ (env.api_tap_url | string).rstrip("/") }}``
+{% endif %}
 {% if env.api_webdav_url %}
 .. |webdav-server| replace:: ``{{ env.api_webdav_url }}(your_username)``
 {% endif %}

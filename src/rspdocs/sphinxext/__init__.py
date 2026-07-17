@@ -3,8 +3,10 @@ directive backed by Repertoire discovery data.
 
 The extension provides:
 
-* ``:rsp-url:`service``` -- a code literal of a service's URL,
-* ``:rsp-link:`service``` -- an external hyperlink to a service, and
+* ``:rsp-url:`service``` -- a code literal of a service's URL (optionally
+  with an appended path, as in ``:rsp-url:`rsp/settings```),
+* ``:rsp-link:`service``` -- an external hyperlink to a service (same
+  optional path syntax), and
 * ``.. rsp-only::`` -- content included only in matching environments.
 
 All three resolve against the `~rspdocs.discovery.models.PhalanxEnv` for the

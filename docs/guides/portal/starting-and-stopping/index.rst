@@ -5,7 +5,7 @@ Start and stop a session
 Start a Portal session
 ----------------------
 
-From the RSP landing page at `data.lsst.cloud <https://data.lsst.cloud/>`_ click on the left panel for the Portal.
+From the RSP landing page at :rsp-link:`rsp` click on the left panel for the Portal.
 
 From the main landing page (see the figure below), click on any tab to go to the graphical user interface for querying data.
 

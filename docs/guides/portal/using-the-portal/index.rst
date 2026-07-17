@@ -51,7 +51,7 @@ To interact with data, click on one of the tabs that are displayed across the to
 * **Multi-archive TAP**: execute ADQL queries to retrieve catalogs from external (non-Rubin) TAP tables.
 * **Upload**: upload your own tables, which can then be joined with Rubin catalogs.
 * **Job Monitor**: check the status of your executed queries, see the actual query and information about the results (for completed queries).
-* **Results**: see the catalogs and/or images resulting from your executed queries, and interact with them. The image viewer and interactive plotting tools are based on `Firefly <https://data-int.lsst.cloud/portal/app/onlinehelp/>`_, which is built by `IPAC <https://www.ipac.caltech.edu/>`_.
+* **Results**: see the catalogs and/or images resulting from your executed queries, and interact with them. The image viewer and interactive plotting tools are based on :rsp-link:`Firefly <portal/onlinehelp/>`, which is built by `IPAC <https://www.ipac.caltech.edu/>`_.
 
 
 

@@ -29,6 +29,7 @@ __all__ = [
     "SERVICE_PAGE_EXCLUDES",
     "KNOWN_ENVS",
     "is_known_service",
+    "split_service_path",
     "resolve_url",
     "is_available",
     "resolve_condition",
@@ -101,16 +102,42 @@ def is_known_service(name: str) -> bool:
     return name in SERVICE_ATTRS
 
 
-def resolve_url(env: PhalanxEnv, name: str) -> str | None:
+def split_service_path(target: str) -> tuple[str, str]:
+    """Split a role target into its service token and appended path.
+
+    The service token runs up to the first ``/``; everything after it is a
+    path for `resolve_url` to append to the service's URL. A target without a
+    ``/`` is a bare service token with an empty path. Service tokens must
+    therefore never contain a ``/``.
+    """
+    service, _, path = target.partition("/")
+    return service, path
+
+
+def resolve_url(env: PhalanxEnv, name: str, path: str = "") -> str | None:
     """Return the URL for service ``name`` in ``env``, or ``None``.
 
     ``None`` is returned both for an unknown service token and for a known
     service that is not deployed in this environment. Callers that need to
     distinguish the two should check `is_known_service` first.
+
+    A non-empty ``path`` is appended to the service's URL. The join always
+    treats ``path`` as relative to the full service URL (which may itself
+    carry a path, like the portal's ``/portal/app/``): slashes at the seam are
+    normalized away, so ``settings`` and ``/settings`` are equivalent. This is
+    deliberately not `~urllib.parse.urljoin`, whose RFC 3986 rules would
+    resolve a leading-slash path against the host root and drop the last
+    segment of a slashless base. The trailing slash of the result follows
+    ``path`` exactly as written.
     """
     attr = SERVICE_ATTRS.get(name)
     url = getattr(env, attr) if attr else None
-    return str(url) if url is not None else None
+    if url is None:
+        return None
+    base = str(url)
+    if not path:
+        return base
+    return f"{base.rstrip('/')}/{path.lstrip('/')}"
 
 
 def is_available(env: PhalanxEnv, name: str) -> bool:

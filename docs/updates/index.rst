@@ -34,7 +34,7 @@ Updates
    The default, ``cutout-sync``, now returns smaller-sized files that contain only the data that the majority of cutout service users want, and improves performance for everyone.
 
    **Settings user interface (UI)**:
-   Accessed by clicking on your username in the ``data.lsst.cloud`` landing page, the Settings UI now contains four subpages: `Account <https://data.lsst.cloud/settings>`_, `Access tokens <https://data.lsst.cloud/settings/tokens>`_, `Quotas <https://data.lsst.cloud/settings/quotas>`_, and `Sessions <https://data.lsst.cloud/settings/sessions>`_.
+   Accessed by clicking on your username in the ``{{ env.domain }}`` landing page, the Settings UI now contains four subpages: :rsp-link:`Account <rsp/settings>`, :rsp-link:`Access tokens <rsp/settings/tokens>`, :rsp-link:`Quotas <rsp/settings/quotas>`, and :rsp-link:`Sessions <rsp/settings/sessions>`.
 
    **Quota increases**:
    The disk storage quota was increased from 35 to 40 GB.
@@ -116,7 +116,7 @@ Updates
 
    {% else %}
 
-   This page is kept updated for the RSP at ``data.lsst.cloud`` only.
-   Use the drop-down menu at upper right to switch from the |rsp-at| to ``data.lsst.cloud``.
+   This page is kept updated for the RSP at ``{{ all_envs.primary.domain }}`` only.
+   Use the drop-down menu at upper right to switch from the |rsp-at| to ``{{ all_envs.primary.domain }}``.
 
    {% endif %}
