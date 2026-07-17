@@ -18,6 +18,19 @@ env:
       - "*"
   pull_request: {}
   merge_group: {}
+  schedule:
+    # Weekly rebuild so the published sites pick up fresh Repertoire
+    # service-discovery data (fetched at build time) without needing a commit
+    # to land. Rubin deploys on Patch Thursdays in US Pacific time; this fires
+    # at 07:00 UTC Friday, which is Thursday 23:00 PST / Friday 00:00 PDT
+    # Pacific — after the Thursday deployment window has settled. Scheduled
+    # events always run on the default branch (main), so the upload-all job's
+    # refs/heads/main guard is satisfied.
+    - cron: "0 7 * * 5"
+  # On-demand rebuild. When dispatched on the main ref this runs the full
+  # build + serialized LTD upload path (see the upload-all job's condition);
+  # dispatched on any other ref it builds but does not publish.
+  workflow_dispatch: {}
 
 jobs:
   lint:
@@ -111,11 +124,15 @@ jobs:
           username: ${{ secrets.LTD_USERNAME }}
           password: ${{ secrets.LTD_PASSWORD }}
 
-  # For merges to main, run an upload for all environments
+  # For merges to main — and scheduled or manually dispatched rebuilds on the
+  # main ref — run an upload for all environments. The refs/heads/main guard
+  # is required: `schedule` always runs on the default branch (so it passes),
+  # but `workflow_dispatch` can be invoked on any branch, and we must not
+  # publish from a ticket branch.
   upload-all:
     runs-on: ubuntu-latest
     needs: [build]
-    if: ${{ (github.event_name == 'push') && (github.ref == 'refs/heads/main') }}
+    if: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main') }}
 
     strategy:
       # Serialize LTD uploads: only one environment uploads to LSST the Docs
@@ -168,3 +185,13 @@ jobs:
         run: |
           pip install ltd-conveyor
           ltd upload --dir _build/html/${{ matrix.rsp }} --product rsp --git-ref ${{ matrix.rsp }}
+
+      - name: Report status
+        if: always()
+        uses: ravsamhq/notify-slack-action@v2
+        with:
+          status: ${{ job.status }}
+          notify_when: "failure"
+          notification_title: "LTD upload for `${{ matrix.rsp }}` in {repo} failed"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_ALERT_WEBHOOK }}
