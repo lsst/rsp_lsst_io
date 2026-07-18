@@ -71,6 +71,15 @@ Content that differs across RSP environments must use the project's machinery ra
 - **`rsp-url` / `rsp-link` roles** — resolve a named RSP service (e.g. `rsp`,
   `portal`, `nublado`, `tap`) to its URL (or a hyperlink) for the environment
   being built, optionally with a path appended. Use these for any RSP service URL.
+- **`rsp-data-url` / `rsp-data-link` / `rsp-dataset-docs` roles** — resolve a
+  *specific dataset's* data-access service URL (e.g. `:rsp-data-url:`tap dp1``),
+  a hyperlink to it, or a link to a dataset's own documentation site, for the
+  environment being built. Use these for per-dataset endpoints rather than
+  hard-coding them.
+- **`rsp-data-table` directive** — render a table of which datasets expose
+  which data-access services (or a datasets × dataset-serving-environments
+  availability matrix) from discovery data, instead of hand-maintaining such
+  a list.
 - **Substitutions** (e.g. `|rsp-env|`, `|rsp-at|`) — env-specific words/phrases, defined in `rst_prolog.rst.jinja`. Code samples need the `:substitutions:` option to expand them.
 - **`rsp-only` directive** — include/exclude a block of content by environment or by service presence.
 - **`jinja` directive** — when a branch's text must be *computed* from environment data, not just shown or hidden.

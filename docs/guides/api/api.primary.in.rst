@@ -19,6 +19,19 @@ These include the `Table Access Protocol <https://www.ivoa.net/documents/TAP/201
 
 By the time of the first data release, the Rubin Science Platform will also support the `Simple Cone Search (SCS) <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for basic catalog queries, and the `Virtual Observatory Space <https://www.ivoa.net/documents/VOSpace/>`_ (VOSpace)—alongside `Web Distributed Authoring and Versioning <https://en.wikipedia.org/wiki/WebDAV>`_ (WebDAV)—for user file access.
 
+.. rsp-only:: api
+
+   Data-access services by dataset
+   ===============================
+
+   The following table lists the data-access services each dataset exposes in |rsp-env|.
+   Not every dataset offers every service, and the same dataset can offer different services in different environments.
+   A check mark links directly to that dataset's service endpoint.
+
+   .. rsp-data-table::
+
+   These are the endpoint URLs to configure external clients such as `PyVO <https://pyvo.readthedocs.io/en/latest>`_ or `TOPCAT <https://www.star.bris.ac.uk/~mbt/topcat/>`_ with; see :doc:`/guides/auth/index` for the access token they require.
+
 
 Table Access Protocol (TAP) Service
 ===================================

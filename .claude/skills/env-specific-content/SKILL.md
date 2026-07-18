@@ -19,6 +19,9 @@ Reach from the most targeted to the most general:
 | Situation | Mechanism |
 | --- | --- |
 | A URL or link to an RSP service | `rsp-url` / `rsp-link` role |
+| A URL or link to a **specific dataset's** service (e.g. `dp1`'s TAP endpoint) | `rsp-data-url` / `rsp-data-link` role |
+| A link to a dataset's own documentation site | `rsp-dataset-docs` role |
+| A table of which datasets expose which data-access services | `rsp-data-table` directive |
 | An env-specific word, name, or phrase a role can't produce | substitution (`\|rsp-env\|`, `\|rsp-at\|`, …) |
 | A paragraph or section shown only in some environments | `rsp-only` directive |
 | A large block of divergent content | `rsp-only` (or `jinja`) + an `*.in.rst` include |
@@ -45,6 +48,17 @@ Always consult your :rsp-link:`Quotas page <rsp/settings/quotas>` (found under y
 ```
 
 Targeting a service absent from the environment being built raises a fatal warning — wrap such references in a matching `rsp-only` block (below).
+
+### Dataset-aware roles and the availability table
+
+Discovery describes services *per dataset* too. Three roles and a directive expose that dimension; all resolve against the environment being built.
+
+- `:rsp-data-url:`service dataset`` — a code literal of a dataset's data-access service URL. Service is one of `tap`, `sia`, `cutout`, `datalink`, `hips`; dataset is a name like `dp1`, `dp02`, `dp03`. Example: `:rsp-data-url:`tap dp1``. A path may follow the dataset (`tap dp1/tables`).
+- `:rsp-data-link:`service dataset`` — the hyperlink twin, with the usual `title <service dataset>` form.
+- `:rsp-dataset-docs:`dataset`` — a link to a dataset's own docs site (discovery's `docs_url`), with a `title <dataset>` form.
+- `.. rsp-data-table::` — a table of datasets × data-access services for the current environment, each available cell linking to the endpoint (datasets exposing none of these services are omitted; no datasets at all → no output). Options: `:services:` / `:datasets:` to narrow rows/columns, `:scope: environments` (+ `:service:`) for a datasets × dataset-serving-environments matrix, `:title:` for a caption.
+
+A dataset/service absent in the environment being built (or a dataset with no `docs_url`) raises a fatal warning, so wrap dataset references in an `rsp-only` block. Careful: the per-dataset service names (`sia`, `cutout`, `datalink`, `hips`) are NOT valid `rsp-only` conditions — only `tap` and `api` double as both. Gate on `api` (true wherever the environment serves datasets), `tap`, or environment names, and build the affected environments to confirm the guarded content resolves everywhere the condition holds. The `rsp-data-table` belongs inside `.. rsp-only:: api` so its lead-in prose is dropped where the environment serves no datasets. See `docs/guides/api/api.primary.in.rst` for a real use.
 
 ### Substitutions
 

@@ -20,6 +20,8 @@ This page describes the supported approaches for writing documentation that diff
 Reach for them in this order, from the most targeted to the most general:
 
 - :ref:`envdocs-roles` for inline URLs and links to RSP services.
+- :ref:`envdocs-dataset-roles` for inline URLs, links, and docs links tied to a specific dataset (for example a dataset's TAP endpoint).
+- :ref:`envdocs-data-table` for a table of which datasets expose which data-access services, rendered from discovery data.
 - :ref:`envdocs-substitutions` for env-specific words and short phrases that a role can't produce.
 - :ref:`envdocs-code-substitutions` for environment URLs inside code samples (``code-block`` and ``literalinclude``).
 - :ref:`envdocs-conditional` to include or exclude whole blocks of content per environment.
@@ -89,6 +91,75 @@ Some services aren't deployed in every environment; targeting a service that is 
    * - ``phalanx-docs``
      - Phalanx environment docs
      - yes
+
+.. _envdocs-dataset-roles:
+
+Linking to per-dataset services with roles
+==========================================
+
+The :ref:`roles above <envdocs-roles>` resolve an environment-wide service — the environment's single TAP endpoint, for example.
+Discovery also describes each service *per dataset*: which datasets (``dp1``, ``dp02``, ``dp03``, and so on) expose which data-access services, and at what URL.
+Three roles reach that dataset dimension so you don't hard-code a dataset's endpoint.
+
+``rsp-data-url``
+    ``:rsp-data-url:`service dataset``` renders a dataset's service URL as a code literal.
+    The target is exactly two tokens — a data-access service name and a dataset name — separated by a space.
+    For example, in the primary environment ``:rsp-data-url:`tap dp1``` renders as ``https://data.lsst.cloud/api/tap``.
+
+``rsp-data-link``
+    ``:rsp-data-link:`service dataset``` renders a hyperlink to that dataset's service, defaulting to the URL as its text, and accepts the familiar ``title <target>`` syntax.
+    For example, ``:rsp-data-link:`DP1 catalogs <tap dp1>``` renders as a link titled "DP1 catalogs" pointing at the dataset's TAP endpoint for the environment being built.
+
+``rsp-dataset-docs``
+    ``:rsp-dataset-docs:`dataset``` renders a hyperlink to a dataset's own documentation site (from discovery's ``docs_url``), also accepting a ``title <dataset>``.
+    For example, ``:rsp-dataset-docs:`Data Preview 1 <dp1>``` renders as a link titled "Data Preview 1" pointing at ``https://dp1.lsst.io/``.
+
+(The examples above show their primary-environment output as static text rather than rendering live, because no dataset is served in *every* environment — a live render would fail the builds for dataset-less environments, as described next.)
+
+The data-access service names are ``tap``, ``sia``, ``cutout``, ``datalink``, and ``hips``.
+Both URL roles accept a path after the dataset name — ``:rsp-data-url:`tap dp1/tables``` appends ``tables`` to the dataset's TAP URL — joined with the same slash-normalizing rules as the plain roles.
+
+A dataset can expose a service in one environment but not another (the same ``dp1`` offers SIA on the primary environment but not on every internal one), and some environments serve no datasets at all.
+Referencing a dataset or service that's absent in the environment being built — or a dataset with no ``docs_url`` — raises a warning (fatal under ``-W``), just like the plain roles.
+Wrap such references in a matching :ref:`rsp-only <envdocs-conditional>` block.
+Note that the per-dataset service names are **not** ``rsp-only`` condition tokens: only ``tap`` and ``api`` double as both.
+Gate on ``api`` (true wherever the environment serves datasets), on ``tap``, or on explicit environment names — and because the environment-level condition doesn't guarantee any particular dataset or per-dataset service, build the affected environments to confirm the guarded content resolves everywhere the condition holds.
+
+.. _envdocs-data-table:
+
+Tabulating dataset services with the ``rsp-data-table`` directive
+=================================================================
+
+To show which datasets expose which services — instead of hand-maintaining such a list — use the ``rsp-data-table`` directive, which renders a table from discovery data at build time:
+
+.. code-block:: rst
+
+   .. rsp-data-table::
+
+By default it produces one row per dataset served in the environment being built and one column per data-access service (TAP, SIA, cutout, datalink, HiPS), with each cell either a check mark linking to that dataset's service endpoint or an em dash where the service is absent.
+Datasets that expose none of the data-access services are omitted, and when no rows remain — notably in an environment that serves no datasets — the directive emits nothing at all.
+Even so, wrap it in a ``.. rsp-only:: api`` block so any surrounding lead-in prose is also dropped where the environment serves no datasets (see the :doc:`API aspect page </guides/api/index>`, which does exactly this).
+
+The directive takes a few options:
+
+``:services:``
+    A comma- or space-separated subset of the service tokens to use as columns (default: all five).
+    An unknown token warns (fatal under ``-W``).
+
+``:datasets:``
+    A subset of dataset names to use as rows (default: every dataset served in the environment).
+    An explicitly requested dataset is kept even when it exposes no data-access services, but a name that isn't served — in the environment being built (``env`` scope) or anywhere (``environments`` scope) — warns.
+
+``:scope:``
+    ``env`` (the default) tabulates datasets against services for the current environment, as above.
+    ``environments`` instead tabulates datasets against every environment *that serves datasets* (dataset-less environments get no column), marking where a single chosen service — set with ``:service:`` (default ``tap``) — is available for each dataset.
+    Use this cross-environment matrix to show, for example, which environments offer a dataset's TAP endpoint.
+
+``:service:``
+    The service the ``environments`` scope tabulates (default ``tap``); ignored in the default ``env`` scope.
+
+``:title:``
+    An optional table caption.
 
 .. _envdocs-substitutions:
 
@@ -238,7 +309,8 @@ As with any Sphinx directive, indent the content consistently with respect to th
 Two things to keep in mind:
 
 - For a simple two-way include/exclude, prefer :ref:`envdocs-conditional`: it reads more clearly and keeps excluded content out of search and the table of contents.
-- Each build fetches only the target environment and the primary environment (for speed), so ``all_envs`` holds just those one or two entries — a ``{% for %}`` loop over it will **not** enumerate all eight environments.
+- Each build fetches every roster environment, so ``all_envs`` holds all of them and a ``{% for %}`` loop over it enumerates the whole fleet.
+  ``env`` is still just the one environment being built, and ``all_envs.primary`` is the primary edition's environment.
 
 .. _envdocs-jinja-includes:
 

@@ -132,3 +132,143 @@ def test_role_warning_is_suppressible(
     )
     parse(app, ":rsp-link:`tap`")
     assert app.warning.getvalue() == ""
+
+
+# -- Dataset-aware roles --------------------------------------------------
+
+
+def test_rsp_data_url_emits_literal(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """``:rsp-data-url:`tap dp1``` renders the dataset TAP URL as a literal."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-url:`tap dp1`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "https://data.lsst.cloud/api/tap"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_data_url_with_path(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A path after the dataset joins onto the dataset service URL."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-url:`tap dp1/tables`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "https://data.lsst.cloud/api/tap/tables"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_data_link_default_and_titled(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """The link twin defaults to the URL and honors an explicit title."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-link:`sia dp1`")
+    ref = doctree.next_node(nodes.reference)
+    assert isinstance(ref, nodes.reference)
+    assert ref["refuri"] == "https://data.lsst.cloud/api/sia/dp1"
+    assert ref.astext() == "https://data.lsst.cloud/api/sia/dp1"
+    assert ref.get("internal") is False
+
+    titled = parse(app, ":rsp-data-link:`DP1 images <sia dp1>`")
+    ref2 = titled.next_node(nodes.reference)
+    assert isinstance(ref2, nodes.reference)
+    assert ref2.astext() == "DP1 images"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_data_url_malformed_target_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A target missing the dataset half warns and echoes the raw text."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-url:`tap`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "tap"
+    assert "malformed-dataset-target" in app.warning.getvalue()
+
+
+def test_rsp_data_url_extra_tokens_warn(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A target with more than two tokens is malformed, not truncated."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-url:`tap dp1 tables`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "tap dp1 tables"
+    assert "malformed-dataset-target" in app.warning.getvalue()
+
+
+def test_rsp_data_url_unknown_service_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A non-dataset service token warns as unknown-dataset-service."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-url:`gms dp1`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "gms dp1"
+    assert "unknown-dataset-service" in app.warning.getvalue()
+
+
+def test_rsp_data_url_unavailable_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A dataset that doesn't expose the service warns (fatal under -W)."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    # dp03 exposes only TAP, so SIA is unavailable.
+    doctree = parse(app, ":rsp-data-url:`sia dp03`")
+    literal = doctree.next_node(nodes.literal)
+    assert isinstance(literal, nodes.literal)
+    assert literal.astext() == "sia dp03"
+    assert "unavailable-dataset" in app.warning.getvalue()
+
+
+def test_rsp_data_link_absent_dataset_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A dataset absent from the environment warns and emits no link."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-data-link:`tap nope`")
+    assert doctree.next_node(nodes.reference) is None
+    assert "unavailable-dataset" in app.warning.getvalue()
+
+
+def test_rsp_dataset_docs_resolves(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """``:rsp-dataset-docs:`dp1``` links to the dataset's docs_url."""
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-dataset-docs:`dp1`")
+    ref = doctree.next_node(nodes.reference)
+    assert isinstance(ref, nodes.reference)
+    assert ref["refuri"] == "https://dp1.lsst.io/"
+
+    titled = parse(app, ":rsp-dataset-docs:`Data Preview 1 <dp1>`")
+    ref2 = titled.next_node(nodes.reference)
+    assert isinstance(ref2, nodes.reference)
+    assert ref2.astext() == "Data Preview 1"
+    assert app.warning.getvalue() == ""
+
+
+def test_rsp_dataset_docs_missing_url_warns(
+    make_env: MakeEnv, app_factory: AppFactory
+) -> None:
+    """A dataset without a docs_url warns and falls back to the title.
+
+    The warning is the dedicated docs subtype with an accurate message, not
+    the generic unavailable-dataset one (which would misleadingly call
+    ``docs`` a service the dataset fails to expose).
+    """
+    app = app_factory(make_env("idfprod", hidden_services=["times-square"]))
+    doctree = parse(app, ":rsp-dataset-docs:`Prompt <prompt>`")
+    assert doctree.next_node(nodes.reference) is None
+    assert doctree.astext().strip() == "Prompt"
+    warnings = app.warning.getvalue()
+    assert "unavailable-dataset-docs" in warnings
+    assert "no documentation URL for dataset 'prompt'" in warnings
