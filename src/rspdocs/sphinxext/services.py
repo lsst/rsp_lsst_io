@@ -25,20 +25,20 @@ from ..discovery.metadata import load_environments_metadata
 from ..discovery.models import DATASET_SERVICES, PhalanxEnv
 
 __all__ = [
-    "SERVICE_ATTRS",
-    "SERVICE_PAGE_EXCLUDES",
     "DATASET_SERVICE_LABELS",
     "KNOWN_ENVS",
-    "is_known_service",
-    "is_known_dataset_service",
-    "split_service_path",
-    "split_dataset_target",
-    "resolve_url",
-    "resolve_dataset_url",
-    "resolve_dataset_docs_url",
-    "is_available",
-    "resolve_condition",
+    "SERVICE_ATTRS",
+    "SERVICE_PAGE_EXCLUDES",
     "excluded_page_patterns",
+    "is_available",
+    "is_known_dataset_service",
+    "is_known_service",
+    "resolve_condition",
+    "resolve_dataset_docs_url",
+    "resolve_dataset_url",
+    "resolve_url",
+    "split_dataset_target",
+    "split_service_path",
 ]
 
 SERVICE_ATTRS: dict[str, str] = {

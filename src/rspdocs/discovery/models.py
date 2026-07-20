@@ -12,8 +12,8 @@ from .metadata import EnvMeta
 
 __all__ = [
     "DatasetInfo",
-    "PhalanxEnv",
     "EnvironmentDict",
+    "PhalanxEnv",
     "ltd_edition_url",
 ]
 

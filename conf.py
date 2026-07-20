@@ -3,9 +3,8 @@ import hashlib
 import json
 import os
 from pathlib import Path
-from typing import Optional
 
-from documenteer.conf.guide import *  # noqa: F401 F403
+from documenteer.conf.guide import *  # noqa: F403
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from rspdocs.constants import PRIMARY_ENV
@@ -26,7 +25,7 @@ from rspdocs.sphinxext.services import excluded_page_patterns
 _metadata = load_environments_metadata()
 target_env = PRIMARY_ENV
 for env_name in _metadata.build_roster:
-    if env_name in tags:  # noqa: F405 F821
+    if env_name in tags:  # noqa: F405
         target_env = env_name
         break
 _fetch_envs = list(_metadata.build_roster)
@@ -36,7 +35,7 @@ env_service = PhalanxEnvService.load(
     env_names=_fetch_envs,
 )
 
-rsp_env: Optional[PhalanxEnv] = env_service.envs[target_env]
+rsp_env: PhalanxEnv | None = env_service.envs[target_env]
 
 # Enable the in-repo Sphinx extension providing the :rsp-url:/:rsp-link: roles
 # and the .. rsp-only:: directive. ``extensions`` is exported by
@@ -99,7 +98,7 @@ exclude_patterns = [
 exclude_patterns.extend(excluded_page_patterns(rsp_env))
 
 # Add environment switcher
-version = rsp_env.title  # noqa: F405
+version = rsp_env.title
 
 # Generate the version-switcher data from the build roster into the gitignored
 # _build/ dir and register it as a static asset (copied to
