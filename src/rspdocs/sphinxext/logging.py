@@ -17,23 +17,23 @@ from typing import Any
 from sphinx.util import logging
 
 __all__ = [
-    "WARNING_TYPE",
-    "UNKNOWN_SERVICE",
-    "UNAVAILABLE_SERVICE",
-    "UNKNOWN_CONDITION",
-    "UNKNOWN_DATASET_SERVICE",
-    "UNKNOWN_DATASET",
+    "MALFORMED_DATASET_TARGET",
     "UNAVAILABLE_DATASET",
     "UNAVAILABLE_DATASET_DOCS",
-    "MALFORMED_DATASET_TARGET",
-    "warn_unknown_service",
-    "warn_unavailable_service",
-    "warn_unknown_condition",
-    "warn_unknown_dataset_service",
-    "warn_unknown_dataset",
+    "UNAVAILABLE_SERVICE",
+    "UNKNOWN_CONDITION",
+    "UNKNOWN_DATASET",
+    "UNKNOWN_DATASET_SERVICE",
+    "UNKNOWN_SERVICE",
+    "WARNING_TYPE",
+    "warn_malformed_dataset_target",
     "warn_unavailable_dataset",
     "warn_unavailable_dataset_docs",
-    "warn_malformed_dataset_target",
+    "warn_unavailable_service",
+    "warn_unknown_condition",
+    "warn_unknown_dataset",
+    "warn_unknown_dataset_service",
+    "warn_unknown_service",
 ]
 
 logger = logging.getLogger(__name__)

@@ -1,6 +1,6 @@
 """Constants (fixed, reusable configurations)."""
 
-__all__ = ["PRIMARY_ENV", "DOCS_ROOT_URL"]
+__all__ = ["DOCS_ROOT_URL", "PRIMARY_ENV"]
 
 
 PRIMARY_ENV = "idfprod"
