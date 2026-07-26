@@ -20,10 +20,10 @@ Updates
    The Data Preview 2 (DP2) dataset was processed with v30.
 
    **RSPDiscovery**:
-   This is a new class that automatically locates backend service endpoints for, e.g., TAP and SIA, manages authentication and credentials and builds PyVO clients for services (documentation: `documentation <https://rsp.lsst.io/guides/notebooks/lsst.rsp/api/lsst.rsp.RSPDiscovery.html>`_).
+   This is a new class that automatically locates backend service endpoints for, e.g., TAP and SIA, manages authentication and credentials and builds PyVO clients for services (`RSPDiscovery documentation <https://rsp.lsst.io/guides/notebooks/lsst.rsp/api/lsst.rsp.RSPDiscovery.html>`_).
 
    **lsst.images**:
-   A new image type and serialization for Rubin Observatory data products has been deployed for images processed with v30, providing capabilities for more intuitive interfaces and better interoperability Python and Astropy (documentation `lsst.images.io <https://images.lsst.io/>`_).
+   A new image type and serialization for Rubin Observatory data products has been deployed for images processed with v30, providing capabilities for more intuitive interfaces and better interoperability with Python and Astropy (documentation at `lsst.images.io <https://images.lsst.io/>`_).
 
 
 
