@@ -17,7 +17,7 @@ Updates
 
    **Version 30.0.10**:
    The recommended build of the LSST Science Pipelines available in the RSP Notebook Aspect has been upgraded to r30.0.10.
-   The Data Preview 2 (DP2) dataset was process with v30.
+   The Data Preview 2 (DP2) dataset was processed with v30.
 
    **RSPDiscovery**:
    This is a new class that automatically locates backend service endpoints for, e.g., TAP and SIA, manages authentication and credentials and builds PyVO clients for services (documentation: `documentation <https://rsp.lsst.io/guides/notebooks/lsst.rsp/api/lsst.rsp.RSPDiscovery.html>`_).
