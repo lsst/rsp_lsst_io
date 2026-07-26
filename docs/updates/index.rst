@@ -10,6 +10,22 @@ Updates
    Chronological log of updates to the |rsp-at|'s services.
    Learn more about :doc:`/guides/life/updates`.
 
+   July 27 2026
+   ============
+
+   `Early Data Preview 2 <https://dp2.lsst.io/>`_ released.
+
+   **Version 30.0.10**:
+   The recommended build of the LSST Science Pipelines available in the RSP Notebook Aspect has been upgraded to r30.0.10.
+   The Data Preview 2 (DP2) dataset was process with v30.
+
+   **RSPDiscovery**:
+   This is a new class that automatically locates backend service endpoints for, e.g., TAP and SIA, manages authentication and credentials and builds PyVO clients for services (documentation: `documentation <https://rsp.lsst.io/guides/notebooks/lsst.rsp/api/lsst.rsp.RSPDiscovery.html>`_).
+
+   **lsst.images**:
+   A new image type and serialization for Rubin Observatory data products has been deployed for images processed with v30, providing capabilities for more intuitive interfaces and better interoperability Python and Astropy (documentation `lsst.images.io <https://images.lsst.io/>`_).
+
+
 
    June 18 2026
    ============
