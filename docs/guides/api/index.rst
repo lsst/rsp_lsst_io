@@ -22,7 +22,7 @@ Available API services
 All Rubin Science Platform APIs are web (REST) services.
 
 .. important::
-   You can find the endpoints for all these APIs on the API page accessible from the masthead of the |rsp| home page.
+   You can find the endpoints for all these APIs on the API page accessible from the masthead of the :rsp-link:`RSP homepage <rsp>`.
 
 When possible, our API Services implement relevant `International Virtual Observatory Alliance <https://www.ivoa.net/>`_ (IVOA) protocols.
 In some cases, no appropriate IVOA standard exists (or not yet).
@@ -37,7 +37,7 @@ For other client suggestions, consult the documentation for individual services.
     Catalog and table search via the IVOA `Table Access <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ protocol.
 
 :doc:`sia`
-    Image search vie the IVOA `Simple Image Access <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ protocol version 2.
+    Image search via the IVOA `Simple Image Access <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ protocol version 2.
 
 **Image cutouts**
     Image cutouts via the IVOA `Server-side Operations for Data Access <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ (SODA) protocol.

@@ -24,7 +24,17 @@ The API accepts IDs in two forms:
 Endpoints
 =========
 
-All endpoints are available under ``/api/alerts``.
+.. rsp-only:: idfdev idfint idfprod
+   :any:
+
+   All endpoints are available under :rsp-url:`api/alerts`.
+
+.. rsp-only:: idfdev idfint idfprod
+   :any:
+   :not:
+
+   All endpoints are available under the ``/api/alerts`` path of an RSP environment that serves alerts.
+   Contact your RSP administrator for the Alerts API endpoint URL for this deployment.
 
 Retrieve an alert packet
 ------------------------

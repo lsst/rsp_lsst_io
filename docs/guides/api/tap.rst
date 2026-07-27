@@ -16,13 +16,14 @@ Results come back as `VOTable <https://www.ivoa.net/documents/VOTable/>`_, which
 TAP endpoint
 ============
 
-.. jinja:: rsp
+.. rsp-only:: tap
 
-   {% if env.api_tap_url %}
-   The TAP service is available at |rsp-tap-url|.
-   {% else %}
+   The TAP service is available at :rsp-url:`tap`.
+
+.. rsp-only:: tap
+   :not:
+
    Contact your RSP administrator for the TAP endpoint URL for this deployment.
-   {% endif %}
 
 Querying with PyVO
 ==================
@@ -41,7 +42,7 @@ For external access from outside the RSP, see `External access`_ below.
 Asynchronous queries (recommended)
 -----------------------------------
 
-For most queries,  the asynchronous interface is the preferrred query method.
+For most queries, the asynchronous interface is the preferred query method.
 The synchronous endpoint imposes a short server-side timeout (< 1 minute) that is easily exceeded by any non-trivial query, and are also subject to http client timeouts.
 Asynchronous jobs run to completion regardless of how long they take.
 
@@ -90,13 +91,14 @@ Asynchronous jobs are managed by the `Universal Worker Service <https://www.ivoa
 Each job is assigned a URL you can use to check its status, retrieve its results, or delete it.
 PyVO tracks the job URL automatically when you use ``submit_job``, but you can also browse your active and recently completed jobs directly.
 
-.. jinja:: rsp
+.. rsp-only:: tap
 
-   {% if env.api_tap_url %}
-   The job list is available at ``{{ env.api_tap_url }}/async``.
-   {% else %}
+   The job list is available at :rsp-url:`tap/async`.
+
+.. rsp-only:: tap
+   :not:
+
    Contact your RSP administrator for the UWS job list URL for this deployment.
-   {% endif %}
 
 The RSP Portal displays the same list under its **Job Monitor** tab.
 
@@ -119,7 +121,11 @@ For example, with PyVO:
 
    tap_service = vo.dal.TAPService("<TAP_URL>", session=session)
 
-For a step-by-step walkthrough of connecting TOPCAT to the TAP service, see :doc:`/guides/auth/using-topcat-outside-rsp`.
+.. rsp-only:: tap
+
+   In this environment, replace ``<TAP_URL>`` with |rsp-tap-url|.
+
+   For a step-by-step walkthrough of connecting TOPCAT to the TAP service, see :doc:`/guides/auth/using-topcat-outside-rsp`.
 
 TAP sub-endpoints
 =================

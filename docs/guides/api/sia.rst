@@ -15,15 +15,19 @@ Queries return metadata about matching images rather than the images themselves.
 SIA endpoint
 ============
 
-The SIA service is organised by data collection.
+The SIA service is organized by data collection.
 
-.. jinja:: rsp
+.. rsp-only:: idfdev idfint idfprod usdfdev
+   :any:
 
-   {% if env.api_url %}
-   The base URL for a given collection is ``{{ env.api_url }}/sia/{collection}``, where ``{collection}`` identifies the data release, for example, ``dp1``.
-   {% else %}
+   The base URL for a given collection is :rsp-url:`api/sia/{collection}`, where ``{collection}`` identifies the data release.
+   For example, the SIA endpoint for the ``dp1`` collection is :rsp-data-url:`sia dp1`.
+
+.. rsp-only:: idfdev idfint idfprod usdfdev
+   :any:
+   :not:
+
    Contact your RSP administrator for the SIA endpoint URL for this deployment.
-   {% endif %}
 
 Querying with PyVO
 ==================
