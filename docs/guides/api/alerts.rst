@@ -2,7 +2,7 @@
 Alerts API
 ##############################
 
-The Alerts API provides access to LSST alert packets via a phalanx service named Herald.
+The Alerts API provides access to LSST alert packets previously issued to the LSST brokers.
 These alert packets are the per-detection records produced by the Alert Production pipeline whenever a transient, variable, or moving source is found in a nightly difference image.
 Each packet contains source measurements, a historical light curve, and postage stamp cutout images, and can be retrieved in Avro, FITS, or JSON format.
 This API can be used programmatically, while the RSP Portal (Firefly) also provides a user interface for browsing and inspecting alert packets.
