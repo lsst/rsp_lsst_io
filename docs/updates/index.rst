@@ -10,6 +10,28 @@ Updates
    Chronological log of updates to the |rsp-at|'s services.
    Learn more about :doc:`/guides/life/updates`.
 
+   July 27 2026
+   ============
+
+   `Early Data Preview 2 <https://dp2.lsst.io/>`_ is now available.
+   `Read the announcement on the Community forum <https://community.lsst.org/t/early-data-preview-2-is-now-available/12346>`__.
+
+   **Version 30.0.10**:
+   The recommended build of the LSST Science Pipelines available in the RSP Notebook Aspect is upgraded to `v30.0.10 <https://pipelines.lsst.io/v/v30_0_10/index.html>`__ (`Release notes <https://pipelines.lsst.io/v/v30_0_10/releases/v30_0_0.html>`__).
+   The Data Preview 2 (DP2) dataset was processed with v30.
+
+   **lsst.images**:
+   A new image type and serialization for Rubin Observatory data products has been deployed for images processed with v30, providing capabilities for more intuitive interfaces and better interoperability with Python and Astropy (documentation at `lsst.images.io <https://images.lsst.io/>`__).
+
+   **Alert retrieval**:
+   A :doc:`new service </guides/api/alerts>` lets you retrieve alerts by ID.
+   `Try it out with a tutorial. <https://prompt-products.lsst.io/tutorials/notebook-prompt/notebook-101-1.html>`__
+
+   **Quota limits**:
+   You can find up-to-date RSP usage limits in your :rsp-link:`Account settings <rsp/settings/quotas>`.
+   These limits can change at any time — generally upwards with time, as the platform scales — but can also temporarily decrease in response to service outages.
+
+   `See the post in the Community forum for more details about today's RSP update. <https://community.lsst.org/t/2026-07-27-rsp-data-lsst-cloud-early-dp-2-new-file-format-and-more/12345>`__
 
    June 18 2026
    ============
