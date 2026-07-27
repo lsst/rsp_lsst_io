@@ -138,7 +138,7 @@ To show which datasets expose which services — instead of hand-maintaining suc
 
 By default it produces one row per dataset served in the environment being built and one column per data-access service (TAP, SIA, cutout, datalink, HiPS), with each cell either a check mark linking to that dataset's service endpoint or an em dash where the service is absent.
 Datasets that expose none of the data-access services are omitted, and when no rows remain — notably in an environment that serves no datasets — the directive emits nothing at all.
-Even so, wrap it in a ``.. rsp-only:: api`` block so any surrounding lead-in prose is also dropped where the environment serves no datasets (see the :doc:`API aspect page </guides/api/index>`, which does exactly this).
+Even so, wrap it in a ``.. rsp-only:: api`` block so any surrounding lead-in prose is also dropped where the environment serves no datasets.
 
 The directive takes a few options:
 
