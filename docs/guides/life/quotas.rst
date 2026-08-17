@@ -51,6 +51,34 @@ Your :rsp-link:`Quotas page <rsp/settings/quotas>` shows the memory size and num
 
 Any calls you make to our APIs inside the Notebook service count towards your API quota.
 
+Running out of disk quota
+-------------------------
+
+A given RSP instance may have a disk quota--a limit on the amount of
+storage space your files in the Notebook aspect are allowed to
+occupy--imposed.
+This does not currently appear on the quotas page, because it is a limit
+externally imposed by the storage system and not managed by the RSP machinery.
+
+If you exceed your disk quota, you will receive an error message similar to the following on lab startup:
+
+.. figure:: disk-quota.png
+   :alt: Error message when disk quota is exceeded
+
+When this happens, your lab will start up in degraded mode.
+What that means for you is that neither ``$HOME`` nor ``~`` will work to
+identify your home directory--the lab has to start up someplace it can
+write to, so your ``$HOME`` will be set to temporary space.
+
+If this should happen to you, do the following:
+
+#. Find out what your quota is, and how far over it you are, with ``quota -s``. This will also give you the volume for which you are over quota.
+#. Once you know that, you should be able to determine your actual home directory. In some instances, the error message will identify a filename that the Lab attempted to write and failed; however, if the message did not specify a filename, you can take the volume listed in the disk quota report (e.g. ``10.231.144.6:/lcv-home-share``) and run ``df -h`` to identify where that directory is mounted. Typically this will be ``/home`` or ``/home/<first-letter-in-your-username>`` but different RSP instances may have different conventions.
+#. ``cd`` to your actual home directory (typically ``/home/<your-username>`` or ``/home/<initial>/<username>``), and run ``(for i in . .* * ; do du -sh ${i} ; done) | sort -h`` to determine where you're using the most space.
+#. Remove files, using the previous output as a guide, until you are back under quota.
+#. Exit your lab, using the command near the bottom of the file menu, and start a new one, which should not have the same problem.
+
+
 APIs
 ----
 
