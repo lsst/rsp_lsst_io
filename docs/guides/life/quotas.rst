@@ -51,27 +51,21 @@ Your :rsp-link:`Quotas page <rsp/settings/quotas>` shows the memory size and num
 
 Any calls you make to our APIs inside the Notebook service count towards your API quota.
 
-Running out of disk quota
-=========================
+Disk Quota
+^^^^^^^^^^
 
-A given RSP instance may have a disk quota--a limit on the amount of storage space your files are allowed to occupy--imposed.  This does not currently appear on the quotas page, because it is a limit externally imposed by the storage system.
-
-If you exceed your disk quota, you will receive an error message similar to the following on lab startup:
+If you exceed your disk quota, next time you log in you will see a warning message. 
 
 .. figure:: disk-quota.png
    :alt: Error message when disk quota is exceeded
 
-When this happens, your lab will start up in degraded mode.
-What that means for you is that neither ``$HOME`` nor ``~`` will work to identify your home directory--the lab has to start up someplace it can write to, so your ``$HOME`` will be set to temporary space.
+You will be unable to use the Notebook service normally until you delete enough files to get back under the limit. 
 
-If this should happen to you, do the following:
+#. From a terminal, type ``quota -s`` to find out how much space you need to free up. 
+#. Delete (or download to your own computer and delete) files you no longer need. Use a command like ``find /home/<your_username> -type f -size 10M`` to find large files. 
+#. Exit your lab (``File->Exit``) and next time you will have a normal session. 
 
-#. Identify your home directory. This may vary by RSP site, so there is no generic guidance we can give; most commonly it will be ``/home/<username>`` or ``/home/<first-initial-of-username>/<username>``.
-#. Find out what your quota is, and how far over it you are, with ``quota -s``.
-#. ``cd`` to your actual home directory, and run ``(for i in . .* * ; do du -sh ${i} ; done) | sort -h`` to determine where you're using the most space.
-#. Remove files, using the previous output as a guide, until you are back under quota.
-#. Exit your lab, using the command near the bottom of the file menu, and start a new one, which should not have the same problem.
-
+Note: in this mode do not rely on``$HOME`` nor ``~`` to be your normal home directory.
 
 APIs
 ----
