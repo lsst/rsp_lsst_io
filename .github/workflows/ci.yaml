@@ -12,6 +12,7 @@ env:
       # optimization so there's no need to ensure this is comprehensive.
       - "dependabot/**"
       - "renovate/**"
+      - "t/**"
       - "tickets/**"
       - "u/**"
     tags:
@@ -142,8 +143,7 @@ jobs:
   upload-for-branch:
     runs-on: ubuntu-latest
     needs: [build]
-    if: ${{ (github.event_name == 'pull_request') && startsWith(github.head_ref, 'tickets/') }}
-
+    if: ${{ (github.event_name == 'pull_request') && (github.event_name == 'pull_request') && ((startsWith(github.head_ref, 'tickets/')) || (startsWith(github.head_ref, 't/')) || (startsWith(github.head_ref, 'u/'))) }}
     steps:
       - uses: actions/download-artifact@v4
         with:
