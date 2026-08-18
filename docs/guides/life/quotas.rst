@@ -54,16 +54,18 @@ Any calls you make to our APIs inside the Notebook service count towards your AP
 Disk Quota
 ^^^^^^^^^^
 
-If you exceed your disk quota, next time you log in you will see a warning message. 
+If you exceed your disk quota, next time you log in you will see a warning message.
 
 .. figure:: disk-quota.png
    :alt: Error message when disk quota is exceeded
 
-You will be unable to use the Notebook service normally until you delete enough files to get back under the limit. 
+You will be unable to use the Notebook service normally until you delete enough files to get back under the limit.
 
-#. From a terminal, type ``quota -s`` to find out how much space you need to free up. 
-#. Delete (or download to your own computer and delete) files you no longer need. Use a command like ``find /home/<your_username> -type f -size 10M`` to find large files. 
-#. Exit your lab (``File->Exit``) and next time you will have a normal session. 
+#. From a terminal, type ``quota -s`` to find out how much space you need to free up.
+#. Delete (or download to your own computer, and then delete) files you no longer need. Use a command like ``find /home/<your_username> -type f -size 10M`` to find large files.
+#. Exit your lab (``File->Exit``) and next time you will have a normal session.
+
+
 Note: in this mode do not rely on either ``$HOME`` or ``~`` to be your normal home directory.
 
 APIs
@@ -78,7 +80,7 @@ More nuanced API controls are likely to be available in the future that go beyon
 
 
 Rate limits
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Most APIs are rate-limited with a cap on requests over a 1-minute period.
 These are listed under the "Rate limits" sub-section.
@@ -86,7 +88,7 @@ Your :rsp-link:`Quotas page <rsp/settings/quotas>` shows you how many requests y
 Once that happens, 60 seconds have to pass before the counter resets.
 
 Concurrent queries
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Catalog queries also have a concurrency limit (listed under "Concurrent queries").
 These limit the number of concurrent queries in flight.
