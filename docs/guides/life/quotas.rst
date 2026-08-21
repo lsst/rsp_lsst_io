@@ -62,11 +62,12 @@ If you exceed your disk quota, next time you log in you will see a warning messa
 You will be unable to use the Notebook service normally until you delete enough files to get back under the limit.
 
 #. From a terminal, type ``quota -s`` to find out how much space you need to free up.
-#. Delete (or download to your own computer, and then delete) files you no longer need. Use a command like ``find /home/<your_username> -type f -size 10M`` to find large files.
+#. Delete (or download to your own computer, and then delete) files you no longer need. The warning message will tell you where to start removing files, and ``$NB_HOME`` will contain the value of your real home directory.  Use a command like ``find ${NB_HOME} -type f -size 10M`` to find large files.
 #. Exit your lab (``File->Exit``) and next time you will have a normal session.
 
 
-Note: in this mode do not rely on either ``$HOME`` or ``~`` to be your normal home directory.
+Note: in this mode, use the environment variable ``$NB_HOME`` to locate your home directory.
+Do not rely on either ``$HOME`` or ``~`` to be your normal home directory.
 
 APIs
 ----
