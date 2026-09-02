@@ -97,6 +97,11 @@ Accounts & authentication
 
 
 
+.. toctree::
+   :hidden:
+
+   Contributions <contributions>
+
 .. jinja:: rsp
 
    {% if env.has_apps %}
