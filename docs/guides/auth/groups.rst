@@ -124,11 +124,11 @@ Share with everyone (read-all)
 
 **Do not** make folders *writable* by all, only *readable*.
 
-To make a folder readable by all RSP accounts, change the group to be the ``g_rubin`` group and then give that group read permission on the folder and all files put within it.
+To make a folder readable by all RSP accounts, change the group to be the ``g_users`` group and then give that group read permission on the folder and all files put within it.
 
    .. code-block:: bash
 
-      chgrp g_rubin <shared-dir-name>
+      chgrp g_users <shared-dir-name>
       chmod g+rs <shared-dir-name>
 
 
