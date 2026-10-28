@@ -25,7 +25,7 @@ Updates
 
    **Alert retrieval**:
    A :doc:`new service </guides/api/alerts>` lets you retrieve alerts by ID.
-   `Try it out with a tutorial. <https://prompt-products.lsst.io/tutorials/notebook-prompt/notebook-101-1.html>`__
+   `Try it out with a tutorial. <https://prompt-products.lsst.io/tutorials/index.html>`__
 
    **Quota limits**:
    You can find up-to-date RSP usage limits in your :rsp-link:`Account settings <rsp/settings/quotas>`.
